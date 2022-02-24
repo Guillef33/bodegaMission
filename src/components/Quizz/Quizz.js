@@ -50,6 +50,7 @@ function Quizz() {
         </div>
       ) : (
         <div className="question-container">
+          
           <button className="closeBtn" onClick={handleClose}>
             X
           </button>

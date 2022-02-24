@@ -11,8 +11,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   height: 100vh;
   background-color: #f3f3f3;
+  overflow: hidden;
 }
 
 .container video {
@@ -20,7 +22,9 @@ body {
   z-index: -1;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .app {
@@ -43,13 +47,21 @@ body {
 
 /* QUESTION/TIMER/LEFT SECTION */
 
-question-container {
-  width: 600px;
+.question-container {
+  width: 100vw;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 200;
+  font-family: "Spartan", sans-serif;
+  /* padding: 100px; */
+}
+
+.question-section {
+  width: 800px;
 }
 
 .question-image {
@@ -88,11 +100,7 @@ question-container {
 .answer-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
   grid-gap: 10px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
 }
 
 .playGameButton {

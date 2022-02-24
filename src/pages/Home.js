@@ -18,6 +18,8 @@ import InitialText from "../components/InitialText/InitialText";
 import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
+import Video from '../assets/production.mp4'
+
 function Home() {
   const {
     showScore,
@@ -37,7 +39,7 @@ function Home() {
   return (
     <div className="container">
       <video loop autoPlay muted>
-        <source src={BackVideo2} type="video/mp4" />
+        <source src={Video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

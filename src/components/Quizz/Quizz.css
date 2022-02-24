@@ -1,9 +1,4 @@
-.question-container {
-  /* min-height: 450px; */
-  height: 600px;
-  font-weight: 200;
-  font-family: "Spartan", sans-serif;
-}
+
 
 .question-container .closeBtn {
   background-color: transparent;
