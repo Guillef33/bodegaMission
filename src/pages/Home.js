@@ -18,7 +18,7 @@ import InitialText from "../components/InitialText/InitialText";
 import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
-import Video from '../assets/production.mp4'
+import Video from '../assets/vinedos.mp4'
 
 function Home() {
   const {
@@ -40,7 +40,7 @@ function Home() {
     <div className="container">
       <video loop autoPlay muted>
         <source src={Video} type="video/mp4" />
-        Your browser does not support the video tag.
+        There is a video playing. 
       </video>
 
       {showQuizz ? (
