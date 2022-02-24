@@ -1,0 +1,11 @@
+.initial-text-container {
+  width: 400px;
+  background-color: black;
+  padding: 30px;
+  font-size: 14px;
+}
+
+.initial-text-container p {
+  font-weight: 200;
+  font-family: "Spartan", sans-serif;
+}

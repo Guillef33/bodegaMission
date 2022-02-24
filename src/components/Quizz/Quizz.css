@@ -1,0 +1,41 @@
+.question-container {
+  /* min-height: 450px; */
+  height: 600px;
+  font-weight: 200;
+  font-family: "Spartan", sans-serif;
+}
+
+.question-container .closeBtn {
+  background-color: transparent;
+  border: none;
+}
+
+.score-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-section h2 {
+  font-weight: 700;
+  font-family: "Spartan", sans-serif;
+}
+
+.score-section p {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+}
+
+.score-section button {
+  background-color: whitesmoke;
+  color: hsl(234, 17%, 12%);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.nextButton {
+  border: none;
+  background-color: hsl(345, 95%, 68%);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
