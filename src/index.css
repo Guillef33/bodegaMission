@@ -27,7 +27,7 @@ body {
   object-fit: cover;
 }
 
-.app {
+.game-container {
   background-color: #252d4a;
   min-height: 200px;
   height: min-content;

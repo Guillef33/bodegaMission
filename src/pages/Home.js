@@ -18,9 +18,8 @@ import InitialText from "../components/InitialText/InitialText";
 import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
-import BlancoNegro from '../assets/vinedos.mp4'
+import BlancoNegro from "../assets/vinedos.mp4";
 import ColorVideo from "../assets/production.mp4";
-
 
 function Home() {
   const {
@@ -47,17 +46,15 @@ function Home() {
 
       {showQuizz ? (
         <div className="game-container">
-          <div className="app">
-            <Quizz
-              currentQuestion={currentQuestion}
-              showScore={showScore}
-              score={score}
-              questions={questions}
-              restartGame={restartGame}
-              handleAnswerOptionClick={handleAnswerOptionClick}
-              setShowQuizz={setShowQuizz}
-            />
-          </div>
+          <Quizz
+            currentQuestion={currentQuestion}
+            showScore={showScore}
+            score={score}
+            questions={questions}
+            restartGame={restartGame}
+            handleAnswerOptionClick={handleAnswerOptionClick}
+            setShowQuizz={setShowQuizz}
+          />
 
           <Player />
           {/* <CircularProgressBar /> */}
