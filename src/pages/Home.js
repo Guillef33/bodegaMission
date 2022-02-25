@@ -18,7 +18,9 @@ import InitialText from "../components/InitialText/InitialText";
 import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
-import Video from '../assets/vinedos.mp4'
+import BlancoNegro from '../assets/vinedos.mp4'
+import ColorVideo from "../assets/production.mp4";
+
 
 function Home() {
   const {
@@ -39,8 +41,8 @@ function Home() {
   return (
     <div className="container">
       <video loop autoPlay muted>
-        <source src={Video} type="video/mp4" />
-        There is a video playing. 
+        <source src={ColorVideo} type="video/mp4" />
+        There is a video playing.
       </video>
 
       {showQuizz ? (
