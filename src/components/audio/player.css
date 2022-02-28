@@ -6,12 +6,25 @@
 }
 
 .playButton {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 10px 30px;
-    background-color: white;
-    color:hsl(345, 95%, 68%);
-    border: none;
-    border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 30px;
+  background-color: white;
+  color: hsl(345, 95%, 68%);
+  border: none;
+  border-radius: 20px;
 }
+
+.playIconWrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.playerIcon {
+width: 40px;
+height: 40px;
+}
+
+

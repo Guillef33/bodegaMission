@@ -1,5 +1,5 @@
 import RaicesBack1 from "../../assets/back1.jpg";
-import RaicesBack2 from "../../assets/back2.png";
+import RaicesBack2 from "../../assets/back2.jpg";
 import RaicesBack3 from "../../assets/back3.jpeg";
 import RaicesBack4 from "../../assets/back4.jpeg";
 import RaicesBack5 from "../../assets/back5.jpeg";

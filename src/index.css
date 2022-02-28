@@ -13,9 +13,13 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #f3f3f3;
-  overflow: hidden;
+   background-color: #6F2232;  overflow: hidden;
 }
+
+/* .container-box {
+   background-color: #6F2232;
+
+} */
 
 .container video {
   position: absolute;
@@ -28,7 +32,7 @@ body {
 }
 
 .game-container {
-  background-color: #252d4a;
+  background-color: #1A1A1A;
   min-height: 200px;
   height: min-content;
   border-radius: 15px;
@@ -40,6 +44,7 @@ body {
   display: flex;
   font-size: 24px;
   align-items: center;
+  padding: 20px 300px;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
@@ -113,7 +118,7 @@ body {
 }
 
 .playGameButton:focus {
-  border: 3px solid hsl(345, 95%, 68%);
+  border: 3px solid #6F2232;
 }
 
 .correct {
@@ -126,7 +131,7 @@ body {
 
 button:hover {
   color: white;
-  background-color: hsl(345, 95%, 68%);
+  background-color: #6F2232;
 }
 
 button:focus {

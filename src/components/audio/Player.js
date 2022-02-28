@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from "react";
+
+import { AiFillPlayCircle }  from "react-icons/ai";
+import { FaStopCircle } from "react-icons/fa";
+
+
+
 // import PlayButton from "../Buttons/PlayButton";
 
 import './player.css'
@@ -27,9 +33,15 @@ const Player = ({ url }) => {
   const [playing, toggle] = useAudio(url);
 
   return (
-    <button className="playButton" onClick={toggle}>
-      {playing ? "Pause" : "Play"}
-    </button>
+    <>
+      <span className="playIconWrapper" onClick={toggle}>
+        {playing ? (
+          <FaStopCircle className="playerIcon" />
+        ) : (
+          <AiFillPlayCircle className="playerIcon" />
+        )}
+      </span>
+    </>
   );
 };
 

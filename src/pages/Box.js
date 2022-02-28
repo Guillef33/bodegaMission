@@ -15,7 +15,13 @@ import BackVideo2 from "../assets/backVideo.mp4";
 
 import InitialText from "../components/InitialText/InitialText";
 
-function Box() {
+import CircularProgressBar from "../components/Counter/CircularProgressBar";
+import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
+
+import BlancoNegro from "../assets/vinedos.mp4";
+import ColorVideo from "../assets/production.mp4";
+
+function Home() {
   const {
     showScore,
     questions,
@@ -28,18 +34,15 @@ function Box() {
     setShowQuizz,
     setStatus,
     STATUS,
+    StartGame,
   } = useContext(AppContext);
-
-  const StartGame = () => {
-    showGame();
-    setStatus(STATUS.STARTED);
-  };
 
   return (
     <div className="container-box">
-      <Player />
+
+
       {showQuizz ? (
-        <div className="app">
+        <div className="game-container">
           <Quizz
             currentQuestion={currentQuestion}
             showScore={showScore}
@@ -49,6 +52,12 @@ function Box() {
             handleAnswerOptionClick={handleAnswerOptionClick}
             setShowQuizz={setShowQuizz}
           />
+
+          <Player />
+          {/* <CircularProgressBar /> */}
+          <div className="Counter">
+            <CircularProgressWithLabel />
+          </div>
         </div>
       ) : (
         <>
@@ -58,9 +67,9 @@ function Box() {
           </button>
         </>
       )}
-      <Counter />
+      {/* <Counter /> */}
     </div>
   );
 }
 
-export default Box;
+export default Home;
