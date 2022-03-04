@@ -21,6 +21,7 @@ import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 import BlancoNegro from "../assets/vinedos.mp4";
 import ColorVideo from "../assets/production.mp4";
 
+
 function Home() {
   const {
     showScore,
@@ -46,6 +47,7 @@ function Home() {
 
       {showQuizz ? (
         <div className="game-container">
+ 
           <Quizz
             currentQuestion={currentQuestion}
             showScore={showScore}
@@ -65,9 +67,7 @@ function Home() {
       ) : (
         <>
           <InitialText />
-          <button className="playGameButton" onClick={StartGame}>
-            Start
-          </button>
+
         </>
       )}
       {/* <Counter /> */}

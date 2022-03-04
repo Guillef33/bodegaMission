@@ -24,10 +24,10 @@ body {
    background-color: #6F2232;
 
 } */
-
+/* 
 .container {
   background-image: url("./assets/backgroundWine.jpg");
-}
+} */
 
 .container video {
   position: absolute;
@@ -40,7 +40,7 @@ body {
 }
 
 .game-container {
-  background-color: #1a1a1a;
+  background-color: #464646;
   min-height: 200px;
   height: min-content;
   border-radius: 15px;
