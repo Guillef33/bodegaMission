@@ -7,5 +7,8 @@
 
 .initial-text-container p {
   font-weight: 200;
-  font-family: "Spartan", sans-serif;
+     font-family: 'Conduit ITC Medium', sans-serif;
+         font-size: 3em;
+
+  /* font-family: "Spartan", sans-serif; */
 }

@@ -12,12 +12,16 @@
 
 .score-section h2 {
   font-weight: 700;
-  font-family: "Spartan", sans-serif;
+     font-family: 'Conduit ITC Medium', sans-serif;
+
+  /* font-family: "Spartan", sans-serif; */
 }
 
 .score-section p {
   font-size: 15px;
-  font-family: "Spartan", sans-serif;
+     font-family: 'Conduit ITC Medium', sans-serif;
+
+  /* font-family: "Spartan", sans-serif; */
 }
 
 .score-section button {
@@ -30,7 +34,8 @@
 
 .nextButton {
   border: none;
-  background-color: #C3073F;
+  background-color: #6f2232;
   padding: 10px 20px;
   border-radius: 5px;
+  margin: 20px 0px;
 }
