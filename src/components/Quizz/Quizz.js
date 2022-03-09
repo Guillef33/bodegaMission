@@ -8,6 +8,7 @@ import "./Quizz.css";
 
 function Quizz() {
   const {
+    addResp,
     showScore,
     questions,
     currentQuestion,
@@ -16,15 +17,15 @@ function Quizz() {
     handleAnswerOptionClick,
     handleClose,
     pasarPregunta,
+    omitirPregunta,
+    volverPregunta,
   } = useContext(AppContext);
 
   const [answers, setAnswers] = useState([]);
 
-  const handleOptionClick = ( resp ) => {
-
-    setAnswers( ...answers, resp );
-
-  }
+  const handleOptionClick = (resp) => {
+    setAnswers(...answers, resp);
+  };
 
   return (
     <>
@@ -33,9 +34,6 @@ function Quizz() {
           <h2>
             You scored {score} out of {questions.length}
           </h2>
-          {/* {losing 
-
-          } */}
           <p>
             SHOCKED WITH THE RESULTS? Congratulations, there is still much to
             learn! <br />
@@ -55,6 +53,8 @@ function Quizz() {
           <button className="closeBtn" onClick={handleClose}>
             <ImCross />
           </button>
+          <h2>Question nro:{questions[currentQuestion].id}</h2>
+
           <div className="question-section">
             <div className="question-count"></div>
             <img
@@ -72,26 +72,39 @@ function Quizz() {
               <>
                 <button
                   className="playGameButton"
-                  onClick={
-                    () =>
-                      // debe enviar la respuesta y añadirla al answers:  setAnswers( answer )
-                      handleAnswerOptionClick(answerOption.isCorrect)
-                    // handleOptionClick( answerOption )
-                  }
+                  onClick={() => {
+                    addResp({
+                      id: questions[currentQuestion].id,
+                      questionText: questions[currentQuestion].questionText,
+                      answerOption,
+                    });
+                  }}
                 >
                   {answerOption.answerText}
                 </button>
               </>
             ))}
           </div>
-          <button
-            className="nextButton"
-            //  sencAnswers(answers)    (  const [answers, setAnswers] = useState([]) )
-            onClick={() => pasarPregunta()}
-            // onClick={() => sendQuestion( answers )}
-          >
-            Next
-          </button>
+          <div className="button-wrapper">
+            <button
+              className="navigationButtons"
+              onClick={() => volverPregunta()}
+            >
+              Back
+            </button>
+            <button
+              className="navigationButtons"
+              onClick={() => omitirPregunta()}
+            >
+              Omitir
+            </button>
+            <button
+              className="navigationButtons"
+              onClick={() => pasarPregunta()}
+            >
+              Next
+            </button>
+          </div>
         </div>
       )}
     </>
@@ -99,4 +112,3 @@ function Quizz() {
 }
 
 export default Quizz;
-

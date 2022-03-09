@@ -8,22 +8,24 @@ function AppProvider(props) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
+  // Modelo para guardar los datos y las respuestas del usuario
+  const [resp, setResp] = useState([]);
+    // {
+    //   id:2,
+    //   questionText: "Which is the variety in Spain most planted?" //opcional
+    //   answerOptions: [{},{},{}...]
+    //   seg:0 //opcional
 
-  const STATUS = {
-    STARTED: "Started",
-    STOPPED: "Stopped",
-  };
+    // }
+    
+    const addResp = (newResp) => {
+      
+      //cuando más de una respuesta es correcta, solo identifico el id, y añado un objeto más al asnwerOption.
+      setResp([...resp, newResp]);
 
-    // LIMPIAR CONTADOR
-  // Parte del contador
-  // const INITIAL_COUNT = 90;
+    }
 
-  // const [secondsRemaining, setSecondsRemaining] = useState(INITIAL_COUNT);
-  // const [status, setStatus] = useState(STATUS.STOPPED);
 
-  // const [losing, SetLosing] = useState(false);
-
-  // const secondsToDisplay = secondsRemaining;
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -40,6 +42,19 @@ function AppProvider(props) {
       setShowScore(true);
     }
   };
+
+    const volverPregunta = () => {
+      const beforeQuestion = currentQuestion - 1;
+      if (beforeQuestion < questions.length) {
+        setCurrentQuestion(beforeQuestion);
+      } else {
+        setShowScore(true);
+      }
+    };
+
+    const omitirPregunta = () => {
+      pasarPregunta();
+    }
 
   const restartGame = (e) => {
     setShowScore(false);
@@ -62,38 +77,7 @@ function AppProvider(props) {
     // setStatus(STATUS.STARTED);
   };
 
-  // function useInterval(callback, delay) {
-  //   const savedCallback = useRef();
 
-  //   useEffect(() => {
-  //     savedCallback.current = callback;
-  //   }, [callback]);
-
-  //   // Set up the interval.
-  //   useEffect(() => {
-  //     function tick() {
-  //       savedCallback.current();
-  //     }
-  //     if (delay !== null) {
-  //       let id = setInterval(tick, delay);
-  //       return () => clearInterval(id);
-  //     }
-  //   }, [delay]);
-  // }
-
-  // const twoDigits = (num) => String(num).padStart(2, "0");
-
-  // useInterval(
-  //   () => {
-  //     if (secondsRemaining > 0) {
-  //       setSecondsRemaining(secondsRemaining - 1);
-  //     } else {
-  //       setStatus(STATUS.STOPPED);
-  //     }
-  //   },
-  //   status === STATUS.STARTED ? 1000 : null
-  //   // passing null stops the interval
-  // );
 
   function handleClose() {
     console.log(showQuizz);
@@ -104,6 +88,7 @@ function AppProvider(props) {
   return (
     <AppContext.Provider
       value={{
+        addResp,
         showScore,
         showQuizz,
         showGame,
@@ -124,6 +109,8 @@ function AppProvider(props) {
         setShowQuizz,
         StartGame,
         pasarPregunta,
+        omitirPregunta,
+        volverPregunta,
       }}
     >
       {props.children}
@@ -132,3 +119,20 @@ function AppProvider(props) {
 }
 
 export default AppProvider;
+
+
+  // const STATUS = {
+  //   STARTED: "Started",
+  //   STOPPED: "Stopped",
+  // };
+
+    // LIMPIAR CONTADOR
+  // Parte del contador
+  // const INITIAL_COUNT = 90;
+
+  // const [secondsRemaining, setSecondsRemaining] = useState(INITIAL_COUNT);
+  // const [status, setStatus] = useState(STATUS.STOPPED);
+
+  // const [losing, SetLosing] = useState(false);
+
+  // const secondsToDisplay = secondsRemaining;

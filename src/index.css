@@ -20,14 +20,6 @@ body {
   background-image: url("./assets/backColor.png");
 }
 
-/* .container-box {
-   background-color: #6F2232;
-
-} */
-/* 
-.container {
-  background-image: url("./assets/backgroundWine.jpg");
-} */
 
 .container video {
   position: absolute;
@@ -143,9 +135,9 @@ button:active, button:focus {
   background-color: #6f2232;
 }
 
-button:hover {
+/* button:hover {
   border: 3px solid #6f2232;
-}
+} */
 
 button:focus {
   outline: none;

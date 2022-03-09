@@ -33,12 +33,13 @@ const questions = [
   {
     questionText:
       "Talking about Aragon, which of the following wine regions belong to the region?",
+      
     answerOptions: [
-      { answerText: "Calatayud", isCorrect: true },
-      { answerText: "Utiel Requena", isCorrect: false },
-      { answerText: "Campo de Borja", isCorrect: false },
-      { answerText: "Yecla", isCorrect: false },
-      { answerText: "Cariñena", isCorrect: true },
+      // { answerText: "Calatayud", isCorrect: true },
+      // { answerText: "Utiel Requena", isCorrect: false },
+      // { answerText: "Campo de Borja", isCorrect: false },
+      // { answerText: "Yecla", isCorrect: false },
+      // { answerText: "Cariñena", isCorrect: true },
       { answerText: "Cigales", isCorrect: true },
       { answerText: "Somontano", isCorrect: false },
       { answerText: "Pla de bages", isCorrect: true },
@@ -50,12 +51,13 @@ const questions = [
   },
   {
     questionText: "Select 5 autochthonous varieties from Spain?",
+    
     answerOptions: [
-      { answerText: "Cigales", isCorrect: false },
-      { answerText: "Somontano", isCorrect: false },
-      { answerText: "Pla de bages", isCorrect: false },
-      { answerText: "Arlanza", isCorrect: false },
-      { answerText: "Bierzo", isCorrect: false },
+      // { answerText: "Cigales", isCorrect: false },
+      // { answerText: "Somontano", isCorrect: false },
+      // { answerText: "Pla de bages", isCorrect: false },
+      // { answerText: "Arlanza", isCorrect: false },
+      // { answerText: "Bierzo", isCorrect: false },
       { answerText: "Calatayud", isCorrect: true },
       { answerText: "Utiel Requena", isCorrect: false },
       { answerText: "Campo de Borja", isCorrect: false },
