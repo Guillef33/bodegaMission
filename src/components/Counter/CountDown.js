@@ -31,7 +31,7 @@ const CountDown = () => {
         <h1>Time is Up</h1>
       ) : (
         <h2>
-          90 sec Count Down: {minutes}m:
+          Time Left: {minutes}m:
           {seconds}s
         </h2>
       )}
