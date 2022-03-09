@@ -7,15 +7,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
 
-
 .Counter {
   position: absolute;
   top: 10px;
   right: 10px;
-    font-family: "Red Hat Text", sans-serif;
-
+  font-family: "Red Hat Text", sans-serif;
 }
-
 
 .countdown-container {
   /* display: flex; */
@@ -40,7 +37,6 @@
   color: var(--main-bg-color);
 }
 
-
 .countdown-container p {
   color: var(--main-bg-color);
   text-transform: uppercase;
@@ -58,19 +54,21 @@
 
   .Counter {
     right: 50px;
+  }
+
+  .Normal {
+    color: gray !important;
+  }
+
+  .Danger {
+    color: red !important;
+  }
+
+  .Finished {
+    border: blue !important;
+  }
 }
-
-
-.Normal {
-  color: gray !important;
-}
-
-.Danger {
-  color: red !important;
-}
-
-.Finished {
-  border: blue !important;
-}
-
+.timer-wrapper {
+  color: black;
+  background-color: aqua;
 }

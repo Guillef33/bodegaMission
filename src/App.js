@@ -7,6 +7,7 @@ import Box from "./pages/Box";
 import NotFound from "./pages/NotFound";
 import CircularProgressBar from "./components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "./components/Counter/MaterialProgress";
+import CountDown from "./components/Counter/CountDown";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/box" element={<Box />} />
           <Route path="/progress" element={<CircularProgressBar />} />
           <Route path="/material" element={<CircularProgressWithLabel />} />
+          <Route path="/countdown" element={<CountDown />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>
