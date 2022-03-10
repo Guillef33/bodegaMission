@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Bodega Mission
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El siguiente proyecto es un pequeño juego de preguntas y respuestas.
 
-## Available Scripts
+## Instalaciones previas
 
-In the project directory, you can run:
+Una vez clonado el respositorio, hay que cambiarse a la rama **development** para ello usaremos el siguiente comando:
 
-### `npm start`
+```
+$ git checkout -b development origin/development
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+De esta manera se creará una rama llamada **development** en nuestra computadora, que tendrá toda la información que se encuentra en el repositorio externo correspondiente a dicha rama. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Posteriormente, será necesario instalar las dependcias que se registraron en el package.json Para eso ejecutaremos el siguiente comando:
+```
+$ npm install
+```
 
-### `npm test`
+Antes de empezar a escribir código, es necesario consultar por si alguien más ha realizado algún cambio en la rama **development**, de esa manera estaremos seguros de que estamos trabajando con la última versión del repositorio. Para eso podemos ejecutar este comando:
+```
+$ git pull
+```
+Con este comando, nos traeremos todos los cambios que pueda tener el repositorio externo. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para subir nuestros cambios a github, bastará con estar logueados en nuestra terminal y ejecutar los siguientes comandos:
 
-### `npm run build`
+```
+git add .
+git commit -"un nuevo commit"
+git push
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Nota:**
+Solo cuando estemos 100% seguros, realizaremos un merge con la rama **main** Pero aún así, seguiremos manteniendo la rama **development** para futuras modificaciones o actualizaciones. 
