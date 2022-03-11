@@ -13,6 +13,7 @@ export default function App() {
     <AppProvider value={{ AppContext }}>
       <BrowserRouter>
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/box" element={<Box />} />
