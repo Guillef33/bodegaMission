@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
@@ -21,6 +21,10 @@ import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 import BlancoNegro from "../assets/vinedos.mp4";
 import ColorVideo from "../assets/production.mp4";
 
+// import { collection, getDocs } from "firebase/firestore";
+
+// import { db } from "../data/config.js";
+
 
 function Home() {
   const {
@@ -38,8 +42,23 @@ function Home() {
     StartGame,
   } = useContext(AppContext);
 
+  // useEffect (() => {
+
+  //     const obtenerDatos = async () => {
+  //     const datos = await getDocs(collection(db, "test"));
+  //     datos.forEach((dato) => {
+  //       return console.log(dato.data());
+  //     })
+
+  //     }
+  //     obtenerDatos();
+
+  // }, [])
+
   return (
     <div className="container">
+
+
       {/* <video loop autoPlay muted>
         <source src={ColorVideo} type="video/mp4" />
         There is a video playing.
