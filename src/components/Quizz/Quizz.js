@@ -4,6 +4,8 @@ import { AppContext } from "../../context/AppContext";
 
 import { ImCross } from "react-icons/im";
 
+import Score from '../score/Score';
+
 import "./Quizz.css";
 
 function Quizz() {
@@ -30,24 +32,8 @@ function Quizz() {
   return (
     <>
       {showScore ? (
-        <div className="score-section">
-          <h2>
-            You scored {score} out of {questions.length}
-          </h2>
-          <p>
-            SHOCKED WITH THE RESULTS? Congratulations, there is still much to
-            learn! <br />
-            Do not worry. 90% of the wine connoisseurs confess that they have
-            never heard of some of the Spanish varieties mentioned. <br />
-            Come & join us in the Prowein stand number XX of RAICESIBERICAS in
-            HALL 14, every day we will be uncovering a new autochthonous variety
-            or an unknown DO.
-          </p>
+        <Score />
 
-          {/* Aca deberia ir el mensaje de Perdiste, se te acbo el t */}
-
-          <button onClick={(e) => restartGame(e)}>Play Again</button>
-        </div>
       ) : (
         <div className="question-container">
           <button className="closeBtn" onClick={handleClose}>
@@ -86,12 +72,12 @@ function Quizz() {
             ))}
           </div>
           <div className="button-wrapper">
-            <button
+            {/* <button
               className="navigationButtons"
               onClick={() => volverPregunta()}
             >
               Back
-            </button>
+            </button> */}
             <button
               className="navigationButtons"
               onClick={() => omitirPregunta()}

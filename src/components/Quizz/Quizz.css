@@ -1,4 +1,4 @@
-
+/* 
 
 .question-container .closeBtn {
   background-color: transparent;
@@ -31,7 +31,7 @@
 .button-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  /* width: 800px; 
 }
 
 .navigationButtons {
@@ -40,4 +40,4 @@
   padding: 10px 20px;
   border-radius: 5px;
   margin: 20px 0px;
-}
+} */

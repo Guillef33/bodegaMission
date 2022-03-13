@@ -41,24 +41,50 @@ body {
 }
 
 .score-section {
-  display: flex;
+  // display: flex;
   font-size: 24px;
-  align-items: center;
-  padding: 20px 300px;
+  // align-items: center;
+  // padding: 20px 300px;
+  width: 600px;
 }
+
+
+.score-section button {
+  background-color: whitesmoke;
+  color: hsl(234, 17%, 12%);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.navigationButtons {
+  border: none;
+  background-color: #6f2232;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
 
 /* QUESTION/TIMER/LEFT SECTION */
 
 .question-container {
-  width: 100vw;
-  height: 100vh;
+  // Elimine estos estilos porque creaban overflow
+  // width: 100vw;
+  // height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-weight: 200;
   /* font-family: "Spartan", sans-serif; */
-  padding: 100px;
+  // padding: 100px;
 }
 
 .question-section {
@@ -116,6 +142,7 @@ body {
   border: none;
   height: 40px;
   font-family: "Conduit ITC Medium", sans-serif;
+  background-color: #ffffff;
 }
 
 .playGameButton:focus {
@@ -147,6 +174,38 @@ button svg {
   margin-right: 5px;
 }
 
+
+.initial-text-container {
+  width: 600px;
+  background-color: black;
+  padding: 30px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial-text-container img {
+  width: 400px;
+  padding: 40px 0px;
+}
+
+.initial-text-container p {
+  font-weight: 200;
+  font-family: "Conduit ITC Medium", sans-serif;
+  font-size: 2em;
+  width: 400px;
+  margin: 20px 0px;
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 760px) {
   /* .container video {
     height: 100vh;
@@ -176,4 +235,31 @@ button svg {
   .nextButton {
     margin: 20px 0px;
   }
+
+  .initial-text-container {
+    //
+}
+
+.initial-text-container img {
+  width: 200px;
+  // padding: 40px 0px;
+}
+
+.initial-text-container p {
+text-align: center;
+}
+
+.question-section {
+  width: auto;
+}
+
+.button-wrapper  {
+  width: 300px;
+}
+
+
+
+
+
+
 }
