@@ -22,7 +22,6 @@ import BlancoNegro from "../assets/vinedos.mp4";
 import ColorVideo from "../assets/production.mp4";
 
 // import { collection, getDocs } from "firebase/firestore";
-
 // import { db } from "../data/config.js";
 
 

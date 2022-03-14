@@ -6,7 +6,7 @@ import { ImCross } from "react-icons/im";
 
 import Score from '../score/Score';
 
-import "./Quizz.css";
+import "./Quizz.scss";
 
 function Quizz() {
   const {
