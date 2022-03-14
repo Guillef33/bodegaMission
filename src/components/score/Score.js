@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
 import { AppContext } from "../../context/AppContext";
 
@@ -7,14 +7,10 @@ import RaicesBack3 from "../../assets/back3.jpeg";
 import { WhatsappShareButton, WhatsappIcon } from "react-share";
 
 function Score() {
+  const shareUrl =
+    "https://api.whatsapp.com/send?phone=1167062068&text=Ven%20a%20jugar%20con%20Bodega%20Raices.%20Cuanto%20sabes%20de%20los%20vinos%20espanoles";
 
-  const shareUrl = "https://api.whatsapp.com/send?phone=1167062068&text=Ven%20a%20jugar%20con%20Bodega%20Raices.%20Cuanto%20sabes%20de%20los%20vinos%20espanoles"
-
-    const {
-    questions,
-    score,
-    restartGame
-  } = useContext(AppContext);
+  const { questions, score, restartGame } = useContext(AppContext);
 
   return (
     <div className="score-section">
@@ -42,4 +38,4 @@ function Score() {
   );
 }
 
-export default Score
+export default Score;
