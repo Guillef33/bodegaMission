@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-
+import Swal from "sweetalert2";
 import "./progressBar.css";
 
 function CircularProgressWithLabel(props) {
@@ -34,6 +34,28 @@ function CircularProgressWithLabel(props) {
     </Box>
   );
 }
+const endOfTimeAlert = () => {
+  Swal.fire({
+    title: "Time is Up!",
+    text: "Do you want to try again?",
+    icon: "info",
+    showDenyButton: true,
+    showCancelButton: false,
+    confirmButtonText: "Yes",
+    denyButtonText: `Go to Info`,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "great!",
+        text: "good luck",
+      });
+    } else if (result.isDenied) {
+      Swal.fire({
+        title: "redirected",
+      });
+    }
+  });
+};
 
 CircularProgressWithLabel.propTypes = {
   /**
@@ -49,18 +71,18 @@ export default function CircularStatic() {
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress <= 0 ? 0 : prevProgress - 1
-      );
+      setProgress((prevProgress) => (prevProgress <= 0 ? 0 : prevProgress - 1));
 
       // if (prevProgress === 0) {
       //   clearInterval(timer)
       // }
-    }, 800);
+    }, 80);
     return () => {
-      clearInterval(timer)
+      clearInterval(timer);
     };
   }, []);
-
+  if (progress === 0) {
+    endOfTimeAlert();
+  }
   return <CircularProgressWithLabel value={progress} />;
 }

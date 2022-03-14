@@ -5,7 +5,7 @@ import { AppContext } from "../../context/AppContext";
 
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-
+import Swal from "sweetalert2";
 function Counter() {
   const {
     twoDigits,
@@ -25,6 +25,7 @@ function Counter() {
   /* componentDidUnmount */
   useEffect(() => {
     TiempoDeJuego();
+    console.log("reloj que funciona");
   }, [secondsToDisplay]);
 
   function TiempoDeJuego() {
@@ -33,6 +34,12 @@ function Counter() {
       setStyle("Danger");
     }
     if (secondsToDisplay === 0) {
+      Swal.fire({
+        title: "Time is Up!",
+        text: "Do you want to try again?",
+        icon: "error",
+        confirmButtonText: "Yes!",
+      });
       setStatus(STATUS.STOPPED);
       setStyle("Finish");
       setShowQuizz(false);
