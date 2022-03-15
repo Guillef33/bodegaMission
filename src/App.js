@@ -4,9 +4,11 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import AppProvider, { AppContext } from "./context/AppContext";
 import Home from "./pages/Home";
 import Box from "./pages/Box";
+import PresentationalText from "./components/InitialText/PresentationalText"
 import NotFound from "./pages/NotFound";
 import CircularProgressBar from "./components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "./components/Counter/MaterialProgress";
+
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
           <Route path="/box" element={<Box />} />
           <Route path="/progress" element={<CircularProgressBar />} />
           <Route path="/material" element={<CircularProgressWithLabel />} />
+          <Route path="/presentacion" element={<PresentationalText />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

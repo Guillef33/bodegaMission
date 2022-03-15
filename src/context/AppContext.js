@@ -75,7 +75,7 @@ function AppProvider(props) {
     setShowStartMission(true);
   }
 
-  function showBefore() {
+  function showBefore(e) {
     setShowBeforeComponent(true);
   }
 
