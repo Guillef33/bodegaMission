@@ -80,7 +80,7 @@ export default function CircularStatic({ timeIsUp, setTimeIsUp }) {
       // if (prevProgress === 0) {
       //   clearInterval(timer)
       // }
-    }, 100);
+    }, 1000);
     return () => {
       clearInterval(timer);
     };
