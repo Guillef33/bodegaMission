@@ -56,16 +56,18 @@ function Home() {
 
   return (
     <div className="container">
-
-
       {/* <video loop autoPlay muted>
         <source src={ColorVideo} type="video/mp4" />
         There is a video playing.
       </video> */}
 
       {showQuizz ? (
-        <div className="game-container">
- 
+        <div
+          className="game-container"
+          // style={{
+          //   backgroundImage: `url(${questions.image[1]})`,
+          // }}
+        >
           <Quizz
             currentQuestion={currentQuestion}
             showScore={showScore}
@@ -85,7 +87,6 @@ function Home() {
       ) : (
         <>
           <InitialText />
-
         </>
       )}
       {/* <Counter /> */}
