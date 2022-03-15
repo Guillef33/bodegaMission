@@ -75,13 +75,13 @@
   width: 100vw;
   height: 100vh;
   background-color: #1A1A1A;
-
-  padding: 40px;
+  padding: 80px;
 }
 
 .grid-section {
   display: grid;
   grid-template-columns: 2fr 2fr;
+  height: 80vh;
 }
 
 .presentation-container h1 {
@@ -91,17 +91,28 @@
  color:#F5F5F5;
 }
 
+.presentation-container h2 {
+  font-family: "Montserrat", sans-serif;
+   font-size: 40px;
+   width: 70%;
+  font-weight: 700;
+ color:#F5F5F5;
+ margin-bottom: 20px;
+}
+
 .presentation-container p {
   font-weight: 200;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   margin: 20px 0px;
+  width: 80%;
 }
 
 .before-start-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .content-start-col {
