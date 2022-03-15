@@ -33,63 +33,68 @@ function Quizz() {
     <>
       {showScore ? (
         <Score />
-
       ) : (
-        <div className="question-container">
-          <button className="closeBtn" onClick={handleClose}>
-            <ImCross />
-          </button>
-          <h2>Question nro:{questions[currentQuestion].id}</h2>
+        <div
+          className="question-container"
+          style={{ backgroundRepeat: 'no-repeat', backgroundSize:'cover', backgroundImage: `url(${questions[currentQuestion].image})`,
+          }}
+        >
+          <div className="question-content-wrapper">
+            <button className="closeBtn" onClick={handleClose}>
+              <ImCross />
+            </button>
+            <h2>Question nro:{questions[currentQuestion].id}</h2>
 
-          <div className="question-section">
-            <div className="question-count"></div>
-            <img
+            <div className="question-section">
+              <div className="question-count"></div>
+              {/* <img
               className="question-image"
               src={questions[currentQuestion].image}
               alt="images"
-            />
+            /> */}
 
-            <div className="question-text">
-              {questions[currentQuestion].questionText}
+              <div className="question-text">
+                {questions[currentQuestion].questionText}
+              </div>
             </div>
-          </div>
-          <div className="answer-section">
-            {questions[currentQuestion].answerOptions.map((answerOption) => (
-              <>
-                <button
-                  className="playGameButton"
-                  onClick={() => {
-                    addResp({
-                      id: questions[currentQuestion].id,
-                      questionText: questions[currentQuestion].questionText,
-                      answerOption,
-                    });
-                  }}
-                >
-                  {answerOption.answerText}
-                </button>
-              </>
-            ))}
-          </div>
-          <div className="button-wrapper">
-            {/* <button
+            <div className="answer-section">
+              {questions[currentQuestion].answerOptions.map((answerOption) => (
+                <>
+                  <button
+                    className="playGameButton"
+                    onClick={() => {
+                      addResp({
+                        id: questions[currentQuestion].id,
+                        questionText: questions[currentQuestion].questionText,
+                        answerOption,
+                      });
+                    }}
+                  >
+                    {answerOption.answerText}
+                  </button>
+                </>
+              ))}
+            </div>
+            <div className="button-wrapper">
+              {/* <button
               className="navigationButtons"
               onClick={() => volverPregunta()}
             >
               Back
             </button> */}
-            <button
-              className="navigationButtons"
-              onClick={() => omitirPregunta()}
-            >
-              Omitir
-            </button>
-            <button
-              className="navigationButtons"
-              onClick={() => pasarPregunta()}
-            >
-              Next
-            </button>
+              <button
+                className="navigationButtons"
+                onClick={() => omitirPregunta()}
+              >
+                Omitir
+              </button>
+              <button
+                className="navigationButtons"
+                onClick={() => pasarPregunta()}
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       )}

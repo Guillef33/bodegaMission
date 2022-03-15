@@ -15,7 +15,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-background-color: black; 
+// background-color: black; 
   font-family: "Conduit ITC Medium", sans-serif;
   // background-image: url("/assets/backColor.png");
 }
@@ -32,7 +32,8 @@ background-color: black;
 }
 
 .game-container {
-  background-color: #464646;
+  // background-color: #464646;
+  // background-image: url();
   min-height: 200px;
   height: min-content;
   border-radius: 15px;
@@ -83,8 +84,18 @@ background-color: black;
   flex-direction: column;
   align-items: center;
   font-weight: 200;
+  height: 100vh;
+  width: 100vw;
   /* font-family: "Spartan", sans-serif; */
   // padding: 100px;
+}
+
+.question-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .question-section {
