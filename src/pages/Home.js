@@ -13,7 +13,7 @@ import Counter from "../components/Counter/Counter";
 import BackVideo from "../assets/backgroundvideo.mp4";
 import BackVideo2 from "../assets/backVideo.mp4";
 
-import InitialText from "../components/InitialText/InitialText";
+import Welcome from "../components/InitialText/Welcome";
 
 import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
@@ -56,18 +56,10 @@ function Home() {
 
   return (
     <div className="container">
-      {/* <video loop autoPlay muted>
-        <source src={ColorVideo} type="video/mp4" />
-        There is a video playing.
-      </video> */}
 
       {showQuizz ? (
         <div
-          className="game-container"
-          // style={{
-          //   backgroundImage: `url(${questions.image[1]})`,
-          // }}
-        >
+          className="game-container">
           <Quizz
             currentQuestion={currentQuestion}
             showScore={showScore}
@@ -86,7 +78,7 @@ function Home() {
         </div>
       ) : (
         <>
-          <InitialText />
+          <Welcome />
         </>
       )}
       {/* <Counter /> */}

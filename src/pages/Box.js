@@ -13,7 +13,7 @@ import Counter from "../components/Counter/Counter";
 import BackVideo from "../assets/backgroundvideo.mp4";
 import BackVideo2 from "../assets/backVideo.mp4";
 
-import InitialText from "../components/InitialText/InitialText";
+import Welcome from "../components/InitialText/Welcome";
 
 import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
@@ -39,8 +39,6 @@ function Home() {
 
   return (
     <div className="container-box">
-
-
       {showQuizz ? (
         <div className="game-container">
           <Quizz
@@ -61,7 +59,7 @@ function Home() {
         </div>
       ) : (
         <>
-          <InitialText />
+          <Welcome />
           <button className="playGameButton" onClick={StartGame}>
             Start
           </button>

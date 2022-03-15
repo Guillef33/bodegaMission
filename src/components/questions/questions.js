@@ -8,7 +8,7 @@ import RaicesBack7 from "../../assets/back7.jpg";
 import RaicesBack8 from "../../assets/back8.jpg";
 
 // Nuevas Imagenes
-import fondoCuna from '../../assets/fondoCuna.png';
+import vinoCuna from "../../assets/vinoCuna.png";
 import fondoPizarras from "../../assets/fondoPizarras.png";
 import fondoSombras from "../../assets/fondoSombras.png";
 import fondoVinedo from "../../assets/fondoVinedo.png";
@@ -26,7 +26,7 @@ const questions = [
       { answerText: "Tempranillo ", isCorrect: false },
       { answerText: "Albariño ", isCorrect: false },
     ],
-    image: fondoCuna,
+    image: vinoCuna,
     id: 1,
   },
   {
