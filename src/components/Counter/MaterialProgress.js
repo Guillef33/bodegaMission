@@ -3,13 +3,18 @@ import PropTypes from "prop-types";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import "./progressBar.css";
 
-function CircularProgressWithLabel(props) {
+function CircularProgressWithLabel(props, { timeIsUp, setTimeIsUp }) {
   return (
     <Box sx={{ position: "relative", display: "inline-flex" }}>
-      <CircularProgress variant="determinate" {...props} />
+      <CircularProgress
+        timeIsUp={timeIsUp}
+        setTimeIsUp={setTimeIsUp}
+        variant="determinate"
+        {...props}
+      />
       <Box
         sx={{
           top: 0,
@@ -34,28 +39,28 @@ function CircularProgressWithLabel(props) {
     </Box>
   );
 }
-const endOfTimeAlert = () => {
-  Swal.fire({
-    title: "Time is Up!",
-    text: "Do you want to try again?",
-    icon: "info",
-    showDenyButton: true,
-    showCancelButton: false,
-    confirmButtonText: "Yes",
-    denyButtonText: `Go to Info`,
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: "great!",
-        text: "good luck",
-      });
-    } else if (result.isDenied) {
-      Swal.fire({
-        title: "redirected",
-      });
-    }
-  });
-};
+// const endOfTimeAlert = () => {
+//   Swal.fire({
+//     title: "Time is Up!",
+//     text: "Do you want to try again?",
+//     icon: "info",
+//     showDenyButton: true,
+//     showCancelButton: false,
+//     confirmButtonText: "Yes",
+//     denyButtonText: `Go to Info`,
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       Swal.fire({
+//         title: "great!",
+//         text: "good luck",
+//       });
+//     } else if (result.isDenied) {
+//       Swal.fire({
+//         title: "redirected",
+//       });
+//     }
+//   });
+// };
 
 CircularProgressWithLabel.propTypes = {
   /**
@@ -66,7 +71,7 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularStatic() {
+export default function CircularStatic({ timeIsUp, setTimeIsUp }) {
   const [progress, setProgress] = React.useState(90);
 
   React.useEffect(() => {
@@ -75,13 +80,13 @@ export default function CircularStatic() {
       // if (prevProgress === 0) {
       //   clearInterval(timer)
       // }
-    }, 1000);
+    }, 100);
     return () => {
       clearInterval(timer);
     };
   }, []);
   if (progress === 0) {
-    endOfTimeAlert();
+    setTimeIsUp(true);
   }
   return <CircularProgressWithLabel value={progress} />;
 }
