@@ -7,10 +7,15 @@ import Box from "@mui/material/Box";
 // import Swal from "sweetalert2";
 import "./progressBar.css";
 
-function CircularProgressWithLabel(props) {
+function CircularProgressWithLabel(props, { timeIsUp, setTimeIsUp }) {
   return (
     <Box sx={{ position: "relative", display: "inline-flex" }}>
-      <CircularProgress variant="determinate" {...props} />
+      <CircularProgress
+        timeIsUp={timeIsUp}
+        setTimeIsUp={setTimeIsUp}
+        variant="determinate"
+        {...props}
+      />
       <Box
         sx={{
           top: 0,
@@ -67,7 +72,7 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularStatic() {
+export default function CircularStatic({ timeIsUp, setTimeIsUp }) {
   const [progress, setProgress] = React.useState(90);
 
   React.useEffect(() => {
@@ -76,13 +81,13 @@ export default function CircularStatic() {
       // if (prevProgress === 0) {
       //   clearInterval(timer)
       // }
-    }, 1000);
+    }, 100);
     return () => {
       clearInterval(timer);
     };
   }, []);
   if (progress === 0) {
-    // endOfTimeAlert();
+    setTimeIsUp(true);
   }
   return <CircularProgressWithLabel value={progress} />;
 }

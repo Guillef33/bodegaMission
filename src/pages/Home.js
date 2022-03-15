@@ -20,10 +20,11 @@ import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
 import BlancoNegro from "../assets/vinedos.mp4";
 import ColorVideo from "../assets/production.mp4";
+import { useState } from "react";
+import OutOfTime from "../components/outOfTime/OutOfTime";
 
 // import { collection, getDocs } from "firebase/firestore";
 // import { db } from "../data/config.js";
-
 
 function Home() {
   const {
@@ -40,7 +41,7 @@ function Home() {
     STATUS,
     StartGame,
   } = useContext(AppContext);
-
+  const [timeIsUp, setTimeIsUp] = useState(false);
   // useEffect (() => {
 
   //     const obtenerDatos = async () => {
@@ -60,8 +61,9 @@ function Home() {
         <source src={ColorVideo} type="video/mp4" />
         There is a video playing.
       </video> */}
-
-      {showQuizz ? (
+      {timeIsUp ? (
+        <OutOfTime />
+      ) : showQuizz ? (
         <div
           className="game-container"
           // style={{
@@ -81,7 +83,10 @@ function Home() {
           <Player />
           {/* <CircularProgressBar /> */}
           <div className="Counter">
-            <CircularProgressWithLabel />
+            <CircularProgressWithLabel
+              timeIsUp={timeIsUp}
+              setTimeIsUp={setTimeIsUp}
+            />
           </div>
         </div>
       ) : (
@@ -89,6 +94,7 @@ function Home() {
           <InitialText />
         </>
       )}
+
       {/* <Counter /> */}
     </div>
   );
