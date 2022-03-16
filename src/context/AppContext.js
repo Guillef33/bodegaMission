@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
+// import { useNavigate } from "react-router-dom";
 import questions from "../components/questions/questions";
 
 export const AppContext = createContext(null);
@@ -13,13 +14,7 @@ function AppProvider(props) {
   const [score, setScore] = useState(0);
   // Modelo para guardar los datos y las respuestas del usuario
   const [resp, setResp] = useState([]);
-  // {
-  //   id:2,
-  //   questionText: "Which is the variety in Spain most planted?" //opcional
-  //   answerOptions: [{},{},{}...]
-  //   seg:0 //opcional
-
-  // }
+  // let navigate = useNavigate();
 
   const addResp = (newResp) => {
     //cuando más de una respuesta es correcta, solo identifico el id, y añado un objeto más al asnwerOption.
@@ -57,13 +52,12 @@ function AppProvider(props) {
   const restartGame = (e) => {
     setShowScore(false);
     setCurrentQuestion(0);
-    // setSecondsRemaining(INITIAL_COUNT);
+    // navigate('/home')
+
   };
 
   const StartGame = (e) => {
     showGame();
-    // setStatus(STATUS.STARTED);
-    // setSecondsRemaining(INITIAL_COUNT);
     setCurrentQuestion(0);
   };
 

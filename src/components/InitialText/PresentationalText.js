@@ -2,6 +2,9 @@ import React, { useContext } from "react";
 
 import AppProvider, { AppContext } from "../../context/AppContext";
 
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+
+
 import alert from '../../assets/Vector.png'
 
 import "./welcome.scss";
@@ -18,9 +21,13 @@ function PresentationalText() {
             ​​Did you know that Spain has the largest vineyard surface in the
             world with more than 70 autochthonous varieties?
           </h2>
-          <button className="playGameButton" onClick={(e) => StartGame(e)}>
-            Play
-          </button>
+          <Link to="/game">
+            <button className="playGameButton" 
+            // onClick={(e) => StartGame(e)}
+            >
+              Play
+            </button>
+          </Link>
         </div>
         <div className="content-start-col">
           <p>

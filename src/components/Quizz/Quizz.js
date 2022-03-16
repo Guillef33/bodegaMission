@@ -47,11 +47,6 @@ function Quizz() {
 
             <div className="question-section">
               <div className="question-count"></div>
-              {/* <img
-              className="question-image"
-              src={questions[currentQuestion].image}
-              alt="images"
-            /> */}
 
               <div className="question-text">
                 {questions[currentQuestion].questionText}
@@ -76,12 +71,7 @@ function Quizz() {
               ))}
             </div>
             <div className="button-wrapper">
-              {/* <button
-              className="navigationButtons"
-              onClick={() => volverPregunta()}
-            >
-              Back
-            </button> */}
+
               <button
                 className="navigationButtons"
                 onClick={() => omitirPregunta()}

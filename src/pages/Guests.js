@@ -26,7 +26,7 @@ import OutOfTime from "../components/outOfTime/OutOfTime";
 // import { collection, getDocs } from "firebase/firestore";
 // import { db } from "../data/config.js";
 
-function Home() {
+function Guests() {
   const {
     showScore,
     questions,
@@ -86,9 +86,8 @@ function Home() {
         </>
       )}
 
-      {/* <Counter /> */}
     </div>
   );
 }
 
-export default Home;
+export default Guests;
