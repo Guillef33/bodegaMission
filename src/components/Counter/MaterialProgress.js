@@ -28,9 +28,10 @@ function CircularProgressWithLabel(props, { timeIsUp, setTimeIsUp }) {
       >
         <Typography
           variant="caption"
-          color={props.value < 10 ? "red" : "white"}
-          component="h3"
+          color={props.value < 11 ? "red" : "white"}
+          component="h2"
           fontSize={18}
+          fontWeight={600}
           // className="counter-text"
           // color="text.secondary"
         >
