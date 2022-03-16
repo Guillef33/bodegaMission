@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 // import AppProvider, { AppContext } from "../../context/AppContext";
 import Player from "../audio/Player";
 
@@ -14,7 +14,8 @@ const OutOfTime = () => {
           <button
             className="tryAgainButton"
             onClick={() => console.log("restartGame")}
-          >
+            //  onClick={(e) => restartGame(e)}
+             >
             Try Again
           </button>
         </div>
