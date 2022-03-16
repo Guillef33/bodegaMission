@@ -40,22 +40,6 @@ body {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
 }
 
-.score-section {
-  // display: flex;
-  font-size: 24px;
-  // align-items: center;
-  // padding: 20px 300px;
-  width: 600px;
-}
-
-.score-section button {
-  background-color: whitesmoke;
-  color: hsl(234, 17%, 12%);
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-}
-
 .button-wrapper {
   display: flex;
   justify-content: space-between;
@@ -183,8 +167,6 @@ button svg {
   margin-right: 5px;
 }
 
-
-
 .initial-text-container {
   width: 100vw;
   height: 100vh;
@@ -195,7 +177,7 @@ button svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .initial-text-container img {

@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import CircularProgressBar from "./components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "./components/Counter/MaterialProgress";
 import Game from "./pages/Game";
+import Score from "./components/score/Score";
 
 export default function App() {
   return (
@@ -27,12 +28,14 @@ export default function App() {
 
           {/*Rutas propuestas*/}
           <Route path="/game" element={<Game />} />
-     
+
+          {/*Pruebas*/}
 
           <Route path="/progress" element={<CircularProgressBar />} />
           <Route path="/material" element={<CircularProgressWithLabel />} />
           <Route path="/presentacion" element={<PresentationalText />} />
           <Route path="/outoftime" element={<OutOfTime />} />
+          <Route path="/score" element={<Score />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>
