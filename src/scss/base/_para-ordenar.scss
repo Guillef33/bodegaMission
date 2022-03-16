@@ -140,16 +140,16 @@ body {
 }
 
 .playGameButton {
-  width: 400px;
-  font-size: 16px;
-  color: #234668;
-  border-radius: 3px;
-  padding: 5px;
+  width: 200px;
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+  border-radius: 20px;
   cursor: pointer;
-  margin: 5px 0px;
+  // margin: 5px 0px;
   border: none;
   height: 40px;
-  font-family: "Conduit ITC Medium", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
 }
 
@@ -183,8 +183,11 @@ button svg {
   margin-right: 5px;
 }
 
+
+
 .initial-text-container {
-  width: 600px;
+  width: 100vw;
+  height: 100vh;
   background-color: black;
   padding: 30px;
   font-size: 14px;
@@ -192,6 +195,7 @@ button svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .initial-text-container img {

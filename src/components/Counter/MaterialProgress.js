@@ -4,7 +4,6 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 // import Swal from "sweetalert2";
-// import Swal from "sweetalert2";
 import "./progressBar.css";
 
 function CircularProgressWithLabel(props, { timeIsUp, setTimeIsUp }) {

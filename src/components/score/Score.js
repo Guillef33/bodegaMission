@@ -28,8 +28,6 @@ function Score() {
         unknown DO.
       </p>
 
-      {/* Aca deberia ir el mensaje de Perdiste, se te acbo el t */}
-
       <button onClick={(e) => restartGame(e)}>Play Again</button>
       <WhatsappShareButton url={shareUrl}>
         <WhatsappIcon size={32} round={true} />

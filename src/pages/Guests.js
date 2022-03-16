@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
@@ -20,8 +20,13 @@ import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
 import BlancoNegro from "../assets/vinedos.mp4";
 import ColorVideo from "../assets/production.mp4";
+import { useState } from "react";
+import OutOfTime from "../components/outOfTime/OutOfTime";
 
-function Home() {
+// import { collection, getDocs } from "firebase/firestore";
+// import { db } from "../data/config.js";
+
+function Guests() {
   const {
     showScore,
     questions,
@@ -36,10 +41,25 @@ function Home() {
     STATUS,
     StartGame,
   } = useContext(AppContext);
+  const [timeIsUp, setTimeIsUp] = useState(false);
+  // useEffect (() => {
+
+  //     const obtenerDatos = async () => {
+  //     const datos = await getDocs(collection(db, "test"));
+  //     datos.forEach((dato) => {
+  //       return console.log(dato.data());
+  //     })
+
+  //     }
+  //     obtenerDatos();
+
+  // }, [])
 
   return (
-    <div className="container-box">
-      {showQuizz ? (
+    <div className="container">
+      {timeIsUp ? (
+        <OutOfTime />
+      ) : showQuizz ? (
         <div className="game-container">
           <Quizz
             currentQuestion={currentQuestion}
@@ -54,20 +74,20 @@ function Home() {
           <Player />
           {/* <CircularProgressBar /> */}
           <div className="Counter">
-            <CircularProgressWithLabel />
+            <CircularProgressWithLabel
+              timeIsUp={timeIsUp}
+              setTimeIsUp={setTimeIsUp}
+            />
           </div>
         </div>
       ) : (
         <>
           <Welcome />
-          <button className="playGameButton" onClick={StartGame}>
-            Start
-          </button>
         </>
       )}
-      {/* <Counter /> */}
+
     </div>
   );
 }
 
-export default Home;
+export default Guests;
