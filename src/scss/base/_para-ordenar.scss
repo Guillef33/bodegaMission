@@ -41,9 +41,11 @@ body {
 }
 
 .button-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  width: 600px;
+  margin-top: 70px;
 }
 
 .navigationButtons {
@@ -77,6 +79,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-top: 0px;
 }
 
 .question-section {
@@ -94,15 +97,21 @@ body {
 .question-count {
   margin-bottom: 20px;
 }
-
+.question-number {
+  font-size: 2.5rem;
+}
 .question-count span {
   font-size: 16px;
 }
 
 .question-text {
   /* margin-bottom: 12px; */
-  padding: 20px 0px;
+  padding: 10px 0px;
   text-transform: capitalize;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .timer-text {
@@ -119,20 +128,22 @@ body {
 .answer-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 25%;
+  column-gap: 15%;
+  margin-top: 3%;
   font-family: "Conduit ITC Medium", sans-serif;
 }
 
 .playGameButton {
-  width: 200px;
-  font-size: 22px;
+  width: 250px;
+  height: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: black;
   border-radius: 20px;
   cursor: pointer;
   // margin: 5px 0px;
   border: none;
-  height: 40px;
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
 }
@@ -227,7 +238,50 @@ button svg {
 
   background-color: #050505;
 }
-
+.aboutUs-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUs-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.aboutUs-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  width: 500px;
+  font-weight: 700;
+  text-align: center;
+  color: #f5f5f5;
+}
+.aboutUs-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutUs-text {
+  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  width: 300px;
+  text-align: left;
+  margin: 40px 0px;
+  color: #f5f5f5;
+}
+.aboutUs-image {
+  width: 350px;
+  padding: 1rem;
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: flex-end;
+}
 @media screen and (max-width: 760px) {
   /* .container video {
     height: 100vh;

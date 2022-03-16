@@ -16,6 +16,7 @@ import CircularProgressWithLabel from "./components/Counter/MaterialProgress";
 import Game from "./pages/Game";
 import Score from "./components/score/Score";
 import FormInvitados from "./components/Form/FormInvitados";
+import AboutUs from "./components/about/AboutUs";
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/material" element={<CircularProgressWithLabel />} />
           <Route path="/presentacion" element={<PresentationalText />} />
           <Route path="/outoftime" element={<OutOfTime />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/score" element={<Score />} />
           <Route path="/form" element={<FormInvitados />} />
         </Routes>

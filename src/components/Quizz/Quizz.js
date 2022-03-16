@@ -4,7 +4,7 @@ import { AppContext } from "../../context/AppContext";
 
 import { ImCross } from "react-icons/im";
 
-import Score from '../score/Score';
+import Score from "../score/Score";
 
 import "./Quizz.scss";
 
@@ -36,18 +36,21 @@ function Quizz() {
       ) : (
         <div
           className="question-container"
-          style={{ backgroundRepeat: 'no-repeat', backgroundSize:'cover', backgroundImage: `url(${questions[currentQuestion].image})`,
+          style={{
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundImage: `url(${questions[currentQuestion].image})`,
           }}
         >
           <div className="question-content-wrapper">
             <button className="closeBtn" onClick={handleClose}>
-              <ImCross />
+              {/* <ImCross /> */}
             </button>
-            <h2>Question nro:{questions[currentQuestion].id}</h2>
-
+            <h2 className="question-number">
+              Question : {questions[currentQuestion].id} of 8
+            </h2>
             <div className="question-section">
               <div className="question-count"></div>
-
               <div className="question-text">
                 {questions[currentQuestion].questionText}
               </div>
@@ -70,8 +73,8 @@ function Quizz() {
                 </>
               ))}
             </div>
-            <div className="button-wrapper">
 
+            <div className="button-wrapper">
               <button
                 className="navigationButtons"
                 onClick={() => omitirPregunta()}
