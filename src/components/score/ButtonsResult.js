@@ -23,7 +23,7 @@ function ButtonsResult() {
         <BiShareAlt />
       </button>
 
-      <ShareModal show={show} />
+      {/* <ShareModal show={show} /> */}
     </div>
   );
 }
