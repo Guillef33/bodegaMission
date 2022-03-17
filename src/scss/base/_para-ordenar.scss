@@ -43,16 +43,17 @@ body {
 .button-wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 600px;
   margin-top: 70px;
 }
 
 .navigationButtons {
-  border: none;
-  background-color: #6f2232;
+  border: black;
+  background-color: white;
+  color: black;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   margin: 20px 0px;
 }
 

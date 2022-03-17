@@ -75,14 +75,14 @@ function Quizz() {
             </div>
 
             <div className="button-wrapper">
-              <button
+              {/* <button
                 className="navigationButtons"
                 onClick={() => omitirPregunta()}
               >
                 Omitir
-              </button>
+              </button> */}
               <button
-                className="navigationButtons"
+                className="playGameButton"
                 onClick={() => pasarPregunta()}
               >
                 Next
