@@ -1,13 +1,10 @@
 import React, { useState, useContext } from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-
 // import { useNavigate } from "react-router-dom";
-
 import AppProvider, { AppContext } from "./context/AppContext";
 import Home from "./pages/Home";
 import Box from "./pages/Box";
 import Invitados from "./pages/Guests";
-
 import PresentationalText from "./components/InitialText/PresentationalText";
 import OutOfTime from "./components/outOfTime/OutOfTime";
 import NotFound from "./pages/NotFound";
@@ -37,9 +34,9 @@ export default function App() {
           <Route path="/material" element={<CircularProgressWithLabel />} />
           <Route path="/presentacion" element={<PresentationalText />} />
           <Route path="/outoftime" element={<OutOfTime />} />
-          <Route path="/about" element={<AboutUs />} />
           <Route path="/score" element={<Score />} />
           <Route path="/form" element={<FormInvitados />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

@@ -266,6 +266,9 @@ button svg {
   align-items: center;
   justify-content: space-between;
 }
+.aboutUs-mid {
+  height: 100px;
+}
 .aboutUs-text {
   font-weight: 200;
   font-family: "Montserrat", sans-serif;
@@ -279,7 +282,14 @@ button svg {
   width: 350px;
   padding: 1rem;
   display: flex;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
+  justify-content: flex-end;
+}
+.aboutUs-image-vid {
+  width: 150px;
+  padding: 2rem;
+  display: flex;
+  margin-bottom: -10px;
   justify-content: flex-end;
 }
 @media screen and (max-width: 760px) {
