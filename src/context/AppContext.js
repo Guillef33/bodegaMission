@@ -82,10 +82,18 @@ function AppProvider(props) {
     // setStatus(STATUS.STOPPED);
   }
   function localStorageSet(key, item) {
-    localStorage.setItem(key, JSON.stringify(item));
+    try {
+      localStorage.setItem(key, JSON.stringify(item));
+    } catch (error) {
+      console.log(error);
+    }
   }
   function localStorageGet(key) {
-    let result = JSON.parse(localStorage.getItem(key));
+    try {
+      let result = JSON.parse(localStorage.getItem(key));
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
