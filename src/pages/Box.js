@@ -10,17 +10,12 @@ import Play from "../components/audio/Play";
 import Player from "../components/audio/Player";
 import Counter from "../components/Counter/Counter";
 
-import BackVideo from "../assets/backgroundvideo.mp4";
-import BackVideo2 from "../assets/backVideo.mp4";
 
 import Welcome from "../components/InitialText/Welcome";
 
 import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
-
-import BlancoNegro from "../assets/vinedos.mp4";
-import ColorVideo from "../assets/production.mp4";
-
+  
 function Home() {
   const {
     showScore,
