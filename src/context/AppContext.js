@@ -53,7 +53,6 @@ function AppProvider(props) {
     setShowScore(false);
     setCurrentQuestion(0);
     // navigate('/home')
-
   };
 
   const StartGame = (e) => {
@@ -81,6 +80,20 @@ function AppProvider(props) {
     console.log(showQuizz);
     setShowQuizz(false);
     // setStatus(STATUS.STOPPED);
+  }
+  function localStorageSet(key, item) {
+    try {
+      localStorage.setItem(key, JSON.stringify(item));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  function localStorageGet(key) {
+    try {
+      let result = JSON.parse(localStorage.getItem(key));
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
@@ -138,4 +151,4 @@ export default AppProvider;
 
 // const [losing, SetLosing] = useState(false);
 
-// const secondsToDisplay = secondsRemaining;
+// const secondsToDisplay = secondsRemaini
