@@ -61,6 +61,7 @@ function CircularProgressBar() {
             value={percentage}
             text={`${percentage}`}
             className="circle-counter"
+
             // styles={{
             //   background: {
             //     fill: "red",

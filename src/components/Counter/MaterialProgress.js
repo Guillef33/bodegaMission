@@ -3,13 +3,17 @@ import PropTypes from "prop-types";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+// import "./progressBar.css";
 
-import "./progressBar.css";
-
-function CircularProgressWithLabel(props) {
+function CircularProgressWithLabel(props, { timeIsUp, setTimeIsUp }) {
   return (
     <Box sx={{ position: "relative", display: "inline-flex" }}>
-      <CircularProgress variant="determinate" {...props} />
+      <CircularProgress
+        timeIsUp={timeIsUp}
+        setTimeIsUp={setTimeIsUp}
+        variant="determinate"
+        {...props}
+      />
       <Box
         sx={{
           top: 0,
@@ -24,8 +28,11 @@ function CircularProgressWithLabel(props) {
       >
         <Typography
           variant="caption"
-          component="h3"
-          className="counter-text"
+          color={props.value < 11 ? "red" : "white"}
+          component="h2"
+          fontSize={18}
+          fontWeight={600}
+          // className="counter-text"
           // color="text.secondary"
         >
           {`${Math.round(props.value)}`}
@@ -44,23 +51,22 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularStatic() {
-  const [progress, setProgress] = React.useState(90);
+export default function CircularStatic({ timeIsUp, setTimeIsUp }) {
+  const [progress, setProgress] = React.useState(99);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress <= 0 ? 0 : prevProgress - 1
-      );
-
+      setProgress((prevProgress) => (prevProgress <= 0 ? 0 : prevProgress - 1));
       // if (prevProgress === 0) {
       //   clearInterval(timer)
       // }
-    }, 800);
+    }, 1000);
     return () => {
-      clearInterval(timer)
+      clearInterval(timer);
     };
   }, []);
-
+  if (progress === 0) {
+    setTimeIsUp(true);
+  }
   return <CircularProgressWithLabel value={progress} />;
 }
