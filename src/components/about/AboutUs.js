@@ -1,8 +1,7 @@
 import React from "react";
-add;
 import fondoVinedo from "../../assets/fondoVinedo.png";
-import vector from "../../assets/vidProv.png";
-import logo from "../../assets/LOGO3.png";
+// import vector from "../../assets/vidProv.png";
+import logo from "../../assets/logoConVid.jpg";
 
 const AboutUs = () => {
   return (
@@ -18,8 +17,8 @@ const AboutUs = () => {
         <div className="aboutUs-div">
           <div className="aboutUs-title-container">
             <h2 className="aboutUs-title">About Us. </h2>
-            <div className="aboutUs-mid"></div>
-            <img className="aboutUs-image-vid" src={vector} alt="logo" />
+            {/* <div className="aboutUs-mid"></div>
+            <img className="aboutUs-image-vid" src={vector} alt="logo" /> */}
             <img className="aboutUs-image" src={logo} alt="logo" />
           </div>
           <div>
