@@ -7,9 +7,10 @@ function NewCounter() {
   useEffect(() => {
     if (segundos > 0) {
       setInterval(restaSegundos, 1000);
-    } if  (segundos === 0) {
-        // setSegundos(0)
-        clearInterval(segundos);
+    }
+    if (segundos === 0) {
+      // setSegundos(0)
+      clearInterval(segundos);
     }
   }, [segundos]);
 
