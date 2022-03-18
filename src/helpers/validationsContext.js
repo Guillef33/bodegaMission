@@ -1,0 +1,1 @@
+export const inCollection = (id, array) => array.some(el => el.id === id);
