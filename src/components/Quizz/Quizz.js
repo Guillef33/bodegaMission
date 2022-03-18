@@ -25,8 +25,9 @@ function Quizz() {
 
   const [answers, setAnswers] = useState([]);
 
-  const handleOptionClick = (resp) => {
-    setAnswers(...answers, resp);
+  //TODO: Este hangleOptionClick va a decidir si tenemos que agregar la respuesta o eliminarla
+  const handleOptionClick = (e,newResp) => {
+    addResp(newResp);
   };
 
   return (
@@ -60,12 +61,12 @@ function Quizz() {
                 <>
                   <button
                     className="playGameButton"
-                    onClick={() => {
-                      addResp({
+                    onClick={(e) => {
+                      handleOptionClick(e,{
                         id: questions[currentQuestion].id,
                         questionText: questions[currentQuestion].questionText,
-                        answerOption,
-                      });
+                        answerOption:[answerOption],
+                      })
                     }}
                   >
                     {answerOption.answerText}
