@@ -2,18 +2,14 @@ import React, { useContext, useState } from "react";
 
 import { AppContext } from "../../context/AppContext";
 import "./Score.scss";
-
 import ShareModal from "./ShareModal";
-
 import { BiShareAlt } from "react-icons/bi";
-
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 function ButtonsResult() {
   const [show, setShow] = useState(false);
-
   const { setShowScore } = useContext(AppContext);
-
+  console.log(window.location.href);
   console.log(show);
 
   return (

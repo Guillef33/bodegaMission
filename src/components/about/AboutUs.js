@@ -1,8 +1,9 @@
 import React from "react";
+add;
 import fondoVinedo from "../../assets/fondoVinedo.png";
 import vector from "../../assets/vidProv.png";
-
 import logo from "../../assets/LOGO3.png";
+
 const AboutUs = () => {
   return (
     <>
