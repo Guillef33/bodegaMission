@@ -3,10 +3,14 @@ import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 
 import { ImCross } from "react-icons/im";
+import { IoIosArrowBack } from 'react-icons/io'
+import { IoIosArrowForward } from "react-icons/io";
 
 import Score from "../score/Score";
 
 import "./Quizz.scss";
+
+
 
 function Quizz() {
   const {
@@ -14,19 +18,18 @@ function Quizz() {
     showScore,
     questions,
     currentQuestion,
-    score,
-    restartGame,
-    handleAnswerOptionClick,
     handleClose,
     pasarPregunta,
-    omitirPregunta,
     volverPregunta,
   } = useContext(AppContext);
 
   const [answers, setAnswers] = useState([]);
 
-  const handleOptionClick = (resp) => {
-    setAnswers(...answers, resp);
+  console.log(currentQuestion);
+
+  //TODO: Este hangleOptionClick va a decidir si tenemos que agregar la respuesta o eliminarla
+  const handleOptionClick = (e,newResp) => {
+    addResp(newResp);
   };
 
   return (
@@ -42,12 +45,29 @@ function Quizz() {
             backgroundImage: `url(${questions[currentQuestion].image})`,
           }}
         >
+          <div className="buttons-indicators">
+            <button className="arrow-forward" onClick={() => volverPregunta()}>
+              {" "}
+              <IoIosArrowBack />
+              <p>Back</p>
+            </button>
+            <button className="arrow-back" onClick={() => pasarPregunta()}>
+              {" "}
+              <IoIosArrowForward />
+              <p>Next</p>
+            </button>
+          </div>
+
           <div className="question-content-wrapper">
             <button className="closeBtn" onClick={handleClose}>
               {/* <ImCross /> */}
             </button>
             <h2 className="question-number">
-              Question : {questions[currentQuestion].id} of 8
+              Question{" "}
+              <span style={{ fontWeight: "bold" } }>
+                {questions[currentQuestion].id}
+              </span>{" "}
+              of 8
             </h2>
             <div className="question-section">
               <div className="question-count"></div>
@@ -60,11 +80,11 @@ function Quizz() {
                 <>
                   <button
                     className="playGameButton"
-                    onClick={() => {
-                      addResp({
+                    onClick={(e) => {
+                      handleOptionClick(e, {
                         id: questions[currentQuestion].id,
                         questionText: questions[currentQuestion].questionText,
-                        answerOption,
+                        answerOption: [answerOption],
                       });
                     }}
                   >
@@ -74,20 +94,21 @@ function Quizz() {
               ))}
             </div>
 
+            {/* 
             <div className="button-wrapper">
-              <button
+              {/* <button
                 className="navigationButtons"
                 onClick={() => omitirPregunta()}
               >
                 Omitir
-              </button>
+              </button> 
               <button
-                className="navigationButtons"
+                className="playGameButton"
                 onClick={() => pasarPregunta()}
               >
                 Next
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

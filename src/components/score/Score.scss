@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 
 // .score-container {
 //   color: blueviolet;
@@ -6,8 +6,16 @@
 
 .text-result-wrapper {
   font-family: "Montserrat", sans-serif;
+  width: 800px;
+}
 
-    width: 800px;
+.score-section {
+  width: 100vw;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .score-title {
   font-size: 60px;
@@ -15,7 +23,7 @@
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-.score-result-title{
+.score-result-title {
   font-size: 30px;
   color: rgb(27, 24, 24);
   text-align: center;
@@ -25,7 +33,7 @@
 }
 
 .score-result-text {
-      font-size: 20px;
+  font-size: 20px;
   color: rgb(27, 24, 24);
   text-align: center;
   margin: 20px 0px;
@@ -42,8 +50,8 @@
 }
 
 .buttons-results {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 .tryAgain-button-container {
   margin-top: 19%;
@@ -78,11 +86,11 @@
 }
 
 .share-modal-container {
-    width: 400px;
-    heigh: 200px;
-    background-color: white;
+  width: 400px;
+  heigh: 200px;
+  background-color: white;
 }
 
 .share-modal-container h2 {
-    color: black;
+  color: black;
 }

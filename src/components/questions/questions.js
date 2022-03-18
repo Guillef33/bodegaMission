@@ -73,7 +73,7 @@ const questions = [
       { answerText: "Yecla", isCorrect: false },
       { answerText: "Cariñena", isCorrect: true },
     ],
-    image: RaicesBack4,
+    image: fondoPaisaje,
     id: 4,
   },
   {
@@ -83,7 +83,7 @@ const questions = [
       { answerText: "Red", isCorrect: false },
       { answerText: "Both", isCorrect: false },
     ],
-    image: RaicesBack5,
+    image: fondoPaisaje,
     id: 5,
   },
   {
@@ -92,7 +92,7 @@ const questions = [
       { answerText: "Yes", isCorrect: true },
       { answerText: "No", isCorrect: false },
     ],
-    image: RaicesBack6,
+    image: fondoPaisaje,
     id: 6,
   },
   {
@@ -102,7 +102,7 @@ const questions = [
       { answerText: "Jerez", isCorrect: false },
       { answerText: "Galicia", isCorrect: false },
     ],
-    image: RaicesBack7,
+    image: fondoPaisaje,
     id: 7,
   },
   {
@@ -113,7 +113,7 @@ const questions = [
       { answerText: "Priorat", isCorrect: false },
       { answerText: "All", isCorrect: true },
     ],
-    image: RaicesBack8,
+    image: fondoPaisaje,
     id: 8,
   },
 ];

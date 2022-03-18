@@ -16,7 +16,6 @@ function Score() {
     <>
       {score >= 7 ? (
         <div className="score-section">
-          {/* <img src={RaicesBack3} alt="sucess-pic" /> */}
           <h2 className="score-title">You scored</h2>
           <h3 className="score-numbers">
             {score}/ {questions.length}
@@ -35,7 +34,6 @@ function Score() {
         </div>
       ) : (
         <div className="score-section">
-          {/* <img src={RaicesBack3} alt="sucess-pic" /> */}
           <h2 className="score-title">You scored</h2>
           <h3 className="score-numbers">
             {score}/{questions.length}
