@@ -6,10 +6,11 @@ import { ImCross } from "react-icons/im";
 import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from "react-icons/io";
 
-
 import Score from "../score/Score";
 
 import "./Quizz.scss";
+
+
 
 function Quizz() {
   const {
@@ -17,16 +18,14 @@ function Quizz() {
     showScore,
     questions,
     currentQuestion,
-    score,
-    restartGame,
-    handleAnswerOptionClick,
     handleClose,
     pasarPregunta,
-    omitirPregunta,
     volverPregunta,
   } = useContext(AppContext);
 
   const [answers, setAnswers] = useState([]);
+
+  console.log(currentQuestion);
 
   //TODO: Este hangleOptionClick va a decidir si tenemos que agregar la respuesta o eliminarla
   const handleOptionClick = (e,newResp) => {
