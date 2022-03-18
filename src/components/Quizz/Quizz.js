@@ -47,25 +47,28 @@ function Quizz() {
           }}
         >
           <div className="buttons-indicators">
-          <button className="arrow-forward" onClick={() => volverPregunta()}>
-            {" "}
-            <IoIosArrowBack />
-            <p>Back</p>
-          </button>
-          <button className="arrow-back" onClick={() => pasarPregunta()}>
-            {" "}
-            <IoIosArrowForward />
-            <p>Next</p>
-          </button>
+            <button className="arrow-forward" onClick={() => volverPregunta()}>
+              {" "}
+              <IoIosArrowBack />
+              <p>Back</p>
+            </button>
+            <button className="arrow-back" onClick={() => pasarPregunta()}>
+              {" "}
+              <IoIosArrowForward />
+              <p>Next</p>
+            </button>
           </div>
-          
 
           <div className="question-content-wrapper">
             <button className="closeBtn" onClick={handleClose}>
               {/* <ImCross /> */}
             </button>
             <h2 className="question-number">
-              Question : {questions[currentQuestion].id} of 8
+              Question{" "}
+              <span style={{ fontWeight: "bold" } }>
+                {questions[currentQuestion].id}
+              </span>{" "}
+              of 8
             </h2>
             <div className="question-section">
               <div className="question-count"></div>
@@ -79,11 +82,11 @@ function Quizz() {
                   <button
                     className="playGameButton"
                     onClick={(e) => {
-                      handleOptionClick(e,{
+                      handleOptionClick(e, {
                         id: questions[currentQuestion].id,
                         questionText: questions[currentQuestion].questionText,
-                        answerOption:[answerOption],
-                      })
+                        answerOption: [answerOption],
+                      });
                     }}
                   >
                     {answerOption.answerText}
