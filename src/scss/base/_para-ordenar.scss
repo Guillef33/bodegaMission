@@ -4,7 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 
-
 * {
   color: #ffffff;
   margin: 0;
@@ -18,9 +17,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  // background-color: black;
-  font-family: "Conduit ITC Medium", sans-serif;
-  // background-image: url("/assets/backColor.png");
+  font-family: "Montserrat", sans-serif;
 }
 
 .container video {
@@ -34,12 +31,10 @@ body {
 }
 
 .game-container {
-  // background-color: #464646;
-  // background-image: url();
   min-height: 200px;
   height: min-content;
   border-radius: 15px;
-  padding: 20px;
+  // padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -76,10 +71,11 @@ body {
 .question-content-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   height: 100vh;
   margin-top: 0px;
+  margin: 150px;
 }
 
 .question-section {
@@ -87,8 +83,6 @@ body {
 }
 
 .question-image {
-  /* width: 400px;
-  height: 100px; */
   width: 100%;
   height: 160px;
   object-fit: cover;
@@ -99,6 +93,7 @@ body {
 }
 .question-number {
   font-size: 2.5rem;
+  font-weight: 300;
   
 }
 .question-count span {
@@ -106,13 +101,13 @@ body {
 }
 
 .question-text {
-  /* margin-bottom: 12px; */
   padding: 10px 0px;
   text-transform: capitalize;
   font-size: 2rem;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 900;
 }
 
 .timer-text {
@@ -294,10 +289,6 @@ button svg {
   justify-content: flex-end;
 }
 @media screen and (max-width: 760px) {
-  /* .container video {
-    height: 100vh;
-    width: 100vw;
-  } */
 
   .question-container {
     padding: 40px;
@@ -323,13 +314,12 @@ button svg {
     margin: 20px 0px;
   }
 
-  .initial-text-container {
-    //
-  }
+  // .initial-text-container {
+  //   //
+  // }
 
   .initial-text-container img {
     width: 200px;
-    // padding: 40px 0px;
   }
 
   .initial-text-container p {

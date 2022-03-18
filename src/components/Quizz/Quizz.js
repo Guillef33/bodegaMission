@@ -3,6 +3,9 @@ import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 
 import { ImCross } from "react-icons/im";
+import { IoIosArrowBack } from 'react-icons/io'
+import { IoIosArrowForward } from "react-icons/io";
+
 
 import Score from "../score/Score";
 
@@ -42,6 +45,20 @@ function Quizz() {
             backgroundImage: `url(${questions[currentQuestion].image})`,
           }}
         >
+          <div className="buttons-indicators">
+          <button className="arrow-forward" onClick={() => volverPregunta()}>
+            {" "}
+            <IoIosArrowBack />
+            <p>Back</p>
+          </button>
+          <button className="arrow-back" onClick={() => pasarPregunta()}>
+            {" "}
+            <IoIosArrowForward />
+            <p>Next</p>
+          </button>
+          </div>
+          
+
           <div className="question-content-wrapper">
             <button className="closeBtn" onClick={handleClose}>
               {/* <ImCross /> */}
@@ -74,20 +91,21 @@ function Quizz() {
               ))}
             </div>
 
+            {/* 
             <div className="button-wrapper">
               {/* <button
                 className="navigationButtons"
                 onClick={() => omitirPregunta()}
               >
                 Omitir
-              </button> */}
+              </button> 
               <button
                 className="playGameButton"
                 onClick={() => pasarPregunta()}
               >
                 Next
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       )}
