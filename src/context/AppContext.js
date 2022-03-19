@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
 // import { useNavigate } from "react-router-dom";
 import questions from "../components/questions/questions";
+import { inCollection } from "../helpers/validationsContext";
 
 export const AppContext = createContext(null);
 
@@ -16,9 +17,26 @@ function AppProvider(props) {
   const [resp, setResp] = useState([]);
   // let navigate = useNavigate();
 
+  //TODO:
   const addResp = (newResp) => {
-    //cuando más de una respuesta es correcta, solo identifico el id, y añado un objeto más al asnwerOption.
-    setResp([...resp, newResp]);
+    // const {  }
+    //inCollection verifica si el id de la pregunta ya existe en la coleción
+    if (inCollection(newResp.id, resp)) {
+      console.log("entré", resp);
+      //Este map retorna un nuevo array añadiendo un respuesta más para una determinada pregunta
+      let newCollection = resp.map((el) => {
+        if (el.id === newResp.id) {
+          el.answerOption.push(newResp.answerOption[0]);
+          return el;
+        } else {
+          return el;
+        }
+      });
+      setResp(newCollection);
+    } else {
+      //cuando más de una respuesta es correcta, solo identifico el id, y añado un objeto más al asnwerOption.
+      setResp([...resp, newResp]);
+    }
   };
 
   const handleAnswerOptionClick = (isCorrect) => {
@@ -37,11 +55,13 @@ function AppProvider(props) {
   };
 
   const volverPregunta = () => {
-    const beforeQuestion = currentQuestion - 1;
-    if (beforeQuestion < questions.length) {
-      setCurrentQuestion(beforeQuestion);
-    } else {
-      setShowScore(true);
+    if (currentQuestion !== 0) {
+      const beforeQuestion = currentQuestion - 1;
+      if (beforeQuestion < questions.length) {
+        setCurrentQuestion(beforeQuestion);
+      } else {
+        setShowScore(true);
+      }
     }
   };
 
@@ -99,6 +119,7 @@ function AppProvider(props) {
   return (
     <AppContext.Provider
       value={{
+        resp,
         addResp,
         showScore,
         showQuizz,

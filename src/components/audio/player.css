@@ -18,13 +18,11 @@
 
 .playIconWrapper {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
 }
 
 .playerIcon {
-width: 40px;
-height: 40px;
+  width: 40px;
+  height: 40px;
 }
-
-
