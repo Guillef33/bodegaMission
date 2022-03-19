@@ -11,7 +11,13 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 function ButtonsResult() {
   const [show, setShow] = useState(false);
 
-  console.log(show)
+  console.log(show) 
+
+  
+  const closeModal = () => {
+    setShow(false);
+  }
+
 
   return (
     <div className="buttons-results">
@@ -21,9 +27,10 @@ function ButtonsResult() {
       <button className="shareButton" onClick={() => setShow(true)}>
         Share the mission
         <BiShareAlt />
+        {show && (
+          <ShareModal show={show} setShow={setShow} closeModal={closeModal} />
+        )}
       </button>
-
-      <ShareModal show={show} />
     </div>
   );
 }
