@@ -23,9 +23,9 @@ function ButtonsResult() {
   return (
     <div className="buttons-results">
       <Link to="/game">
-        <button className="tryAgainButton" onClick={setShowScore(false)}>
+        {/* <button className="tryAgainButton" onClick={setShowScore(false)}>
           Play Again
-        </button>
+        </button> */}
       </Link>
       <button className="shareButton" onClick={() => setShow(true)}>
         Share the mission
