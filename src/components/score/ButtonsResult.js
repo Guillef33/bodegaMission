@@ -8,7 +8,6 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 function ButtonsResult() {
   const [show, setShow] = useState(false);
-<<<<<<< HEAD
 
   console.log(show) 
 
@@ -17,11 +16,9 @@ function ButtonsResult() {
     setShow(false);
   }
 
-=======
   const { setShowScore } = useContext(AppContext);
   console.log(window.location.href);
   console.log(show);
->>>>>>> 364cd3650ea0471ff1dfe53424d7f2f82a8f6a6c
 
   return (
     <div className="buttons-results">
@@ -37,11 +34,6 @@ function ButtonsResult() {
           <ShareModal show={show} setShow={setShow} closeModal={closeModal} />
         )}
       </button>
-<<<<<<< HEAD
-=======
-
-      {/* <ShareModal show={show} /> */}
->>>>>>> 364cd3650ea0471ff1dfe53424d7f2f82a8f6a6c
     </div>
   );
 }
