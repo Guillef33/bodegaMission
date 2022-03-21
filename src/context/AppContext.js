@@ -16,7 +16,7 @@ function AppProvider(props) {
   // Modelo para guardar los datos y las respuestas del usuario
   const [resp, setResp] = useState([]);
   // let navigate = useNavigate();
-
+  const [timeIsUp, setTimeIsUp] = useState(false);
   //TODO:
   const addResp = (newResp) => {
     // const {  }
@@ -70,6 +70,7 @@ function AppProvider(props) {
   };
 
   const restartGame = (e) => {
+    setTimeIsUp(false);
     setShowScore(false);
     setCurrentQuestion(0);
     // navigate('/home')
@@ -149,6 +150,8 @@ function AppProvider(props) {
         showBefore,
         setShowBeforeComponent,
         showBeforeComponent,
+        timeIsUp,
+        setTimeIsUp,
       }}
     >
       {props.children}
