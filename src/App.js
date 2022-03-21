@@ -5,7 +5,7 @@ import AppProvider, { AppContext } from "./context/AppContext";
 import Home from "./pages/Home";
 import Box from "./pages/Box";
 import Invitados from "./pages/Guests";
-import PresentationalText from "./components/InitialText/PresentationalText";
+import PresentationalText from "./components/Welcome/PresentationalText";
 import OutOfTime from "./components/outOfTime/OutOfTime";
 import NotFound from "./pages/NotFound";
 import CircularProgressBar from "./components/Counter/CircularProgressBar";

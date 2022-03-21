@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-// import AppProvider, { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../context/AppContext";
 
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Player from "../audio/Player";
 
 const OutOfTime = () => {
-  // const { restartGame } = useContext(AppContext);
+  const { restartGame } = useContext(AppContext);
   return (
     <>
       <Player url={undefined} />
@@ -15,20 +15,10 @@ const OutOfTime = () => {
         <h3 className="outOfTime-text"> No problem, you can try again!</h3>
         <div className="tryAgain-button-container">
           <Link to="/game">
-          <button
-            className="tryAgainButton"
-              >
+            <button className="tryAgainButton" onClick={restartGame}>
               Try again
             </button>
-            </Link>
-          {/* <button
-            className="tryAgainButton"
-            onClick={}
-            // onClick={() => console.log("restartGame")}
-            //  onClick={(e) => restartGame(e)}
-             >
-            Try Again
-          </button> */}
+          </Link>
         </div>
       </div>
     </>

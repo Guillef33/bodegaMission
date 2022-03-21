@@ -10,7 +10,7 @@ import Play from "../components/audio/Play";
 import Player from "../components/audio/Player";
 import Counter from "../components/Counter/Counter";
 
-import Welcome from "../components/InitialText/Welcome";
+import Welcome from "../components/Welcome/Welcome";
 
 import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";

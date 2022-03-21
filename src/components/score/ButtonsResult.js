@@ -17,7 +17,6 @@ function ButtonsResult() {
 
   const { restartGame } = useContext(AppContext);
   console.log(window.location.href);
-  console.log(show);
 
   return (
     <div className="buttons-results">

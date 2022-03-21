@@ -10,7 +10,7 @@ import questions from "../components/questions/questions";
 import Play from "../components/audio/Play";
 import Player from "../components/audio/Player";
 
-import Welcome from "../components/InitialText/Welcome";
+import Welcome from "../components/Welcome/Welcome";
 
 import OutOfTime from "../components/outOfTime/OutOfTime";
 

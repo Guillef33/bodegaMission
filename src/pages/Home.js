@@ -6,7 +6,7 @@ import Quizz from "../components/Quizz/Quizz";
 import questions from "../components/questions/questions";
 import Player from "../components/audio/Player";
 
-import Welcome from "../components/InitialText/Welcome";
+import Welcome from "../components/Welcome/Welcome";
 
 import { useParams } from "react-router-dom";
 
