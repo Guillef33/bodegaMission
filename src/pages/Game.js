@@ -29,7 +29,7 @@ const Game = () => {
     timeIsUp,
     setTimeIsUp,
   } = useContext(AppContext);
-  console.log(timeIsUp, "time is up en game");
+
   return (
     <>
       {timeIsUp ? (
@@ -45,13 +45,9 @@ const Game = () => {
             handleAnswerOptionClick={handleAnswerOptionClick}
             setShowQuizz={setShowQuizz}
           />
-
           <Player />
           <div className="Counter">
-            <CircularProgressWithLabel
-            // timeIsUp={timeIsUp}
-            // setTimeIsUp={setTimeIsUp}
-            />
+            <CircularProgressWithLabel />
           </div>
         </div>
       )}
