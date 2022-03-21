@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useParam} from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
@@ -32,7 +32,6 @@ function Home() {
   } = useContext(AppContext);
   const [timeIsUp, setTimeIsUp] = useState(false);
   // useEffect (() => {
-
   //     const obtenerDatos = async () => {
   //     const datos = await getDocs(collection(db, "test"));
   //     datos.forEach((dato) => {
@@ -41,12 +40,11 @@ function Home() {
 
   //     }
   //     obtenerDatos();
-
   // }, [])
-
+  //TODO: ver si se tiene que ir eligiendo las pantallas o las rutas
   return (
     <div className="container">
-          <Welcome />
+      <Welcome type={ "sin botella" }/>
     </div>
   );
 }

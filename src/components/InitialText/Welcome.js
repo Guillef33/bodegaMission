@@ -10,7 +10,7 @@ import "./welcome.scss";
 
 import logo from "../../assets/LOGO3.png";
 
-function Welcome() {
+function Welcome({ type }) {
   const { showStartMission, showMission, showBefore, StartGame } =
     useContext(AppContext);
   return (

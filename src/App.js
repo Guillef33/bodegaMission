@@ -32,7 +32,10 @@ export default function App() {
 
           <Route path="/progress" element={<CircularProgressBar />} />
           <Route path="/material" element={<CircularProgressWithLabel />} />
+
           <Route path="/presentacion" element={<PresentationalText />} />
+          {/* <Route path="/presentacionDos" element={<PresentationalText />} /> */}
+
           <Route path="/outoftime" element={<OutOfTime />} />
           <Route path="/score" element={<Score />} />
           <Route path="/form" element={<FormInvitados />} />
