@@ -8,6 +8,8 @@ import Player from "../components/audio/Player";
 
 import Welcome from "../components/InitialText/Welcome";
 
+import { useParams } from "react-router-dom";
+
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
 import OutOfTime from "../components/outOfTime/OutOfTime";
@@ -41,6 +43,10 @@ function Home() {
   //     }
   //     obtenerDatos();
   // }, [])
+
+
+    const { homeRoute } = useParams();
+
   //TODO: ver si se tiene que ir eligiendo las pantallas o las rutas
   return (
     <div className="container">
