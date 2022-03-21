@@ -19,7 +19,9 @@ function ButtonsResult() {
   return (
     <div className="buttons-results">
       <Link to="/game">
-        <button className="tryAgainButton" onClick={setShowScore(false)}>
+        <button className="tryAgainButton" 
+        // onClick={setShowScore(false)}
+        >
           Play Again
         </button>
       </Link>
