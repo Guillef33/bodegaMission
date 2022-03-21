@@ -4,13 +4,12 @@ import { WhatsappShareButton, WhatsappIcon } from "react-share";
 
 import './Score.scss';
 
-function ShareModal( show, setShow, closeModal ) {
+function ShareModal({ show, setShow, closeModal }) {
   // if (!show) {
   //   return null;
   // }
 
-  console.log(show)
-
+  console.log(show);
 
   const shareUrl =
     "https://api.whatsapp.com/send?phone=1167062068&text=Ven%20a%20jugar%20con%20Bodega%20Raices.%20Cuanto%20sabes%20de%20los%20vinos%20espanoles";
@@ -18,7 +17,12 @@ function ShareModal( show, setShow, closeModal ) {
   return (
     <div className="share-modal-container">
       <h2>Compate por WhatsApp con tus amigos</h2>
-      <button style={{ fontSize: '50px',  color: 'black'}} onClick={(e) => closeModal(e)}>X</button>
+      <button
+        style={{ fontSize: "50px", color: "black" }}
+        onClick={() => setShow(false)}
+      >
+        X
+      </button>
 
       <div style={{ display: "flex" }}>
         <input value="https://prowein.raicesibericas.com/"></input>

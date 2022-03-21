@@ -16,16 +16,16 @@ function ButtonsResult() {
     setShow(false);
   }
 
-  const { setShowScore } = useContext(AppContext);
+    const { restartGame } = useContext(AppContext);
   console.log(window.location.href);
   console.log(show);
 
   return (
     <div className="buttons-results">
       <Link to="/game">
-        {/* <button className="tryAgainButton" onClick={setShowScore(false)}>
+        <button className="tryAgainButton" onClick={restartGame}>
           Play Again
-        </button> */}
+        </button>
       </Link>
       <button className="shareButton" onClick={() => setShow(true)}>
         Share the mission
