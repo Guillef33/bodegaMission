@@ -15,6 +15,8 @@ import Score from "./components/score/Score";
 import FormInvitados from "./components/Form/FormInvitados";
 import AboutUs from "./components/about/AboutUs";
 
+import PresentationalBox from './components/Welcome/PresentationBox'
+
 export default function App() {
   return (
     <AppProvider value={{ AppContext }}>
@@ -34,6 +36,8 @@ export default function App() {
           <Route path="/material" element={<CircularProgressWithLabel />} />
 
           <Route path="/presentacion" element={<PresentationalText />} />
+          <Route path="/presentacion-box" element={<PresentationalBox />} />
+
           {/* <Route path="/presentacionDos" element={<PresentationalText />} /> */}
 
           <Route path="/outoftime" element={<OutOfTime />} />

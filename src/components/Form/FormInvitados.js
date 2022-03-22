@@ -33,6 +33,7 @@ function FormInvitados() {
 
     setValues(initialState);
     setEmailSend(docRef.id);
+    // navigate
   };
 
   return (

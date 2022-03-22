@@ -1,22 +1,23 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useEffect, useParam } from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
 import Quizz from "../components/Quizz/Quizz";
-// import Audio from './components/audio/Audio';
 import questions from "../components/questions/questions";
-
-import Play from "../components/audio/Play";
 import Player from "../components/audio/Player";
-import Counter from "../components/Counter/Counter";
 
+import WelcomeBox from "../components/Welcome/WelcomeBox";
 
-import Welcome from "../components/Welcome/Welcome";
+import { useParams } from "react-router-dom";
 
-import CircularProgressBar from "../components/Counter/CircularProgressBar";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
-  
-function Home() {
+
+import OutOfTime from "../components/outOfTime/OutOfTime";
+
+// import { collection, getDocs } from "firebase/firestore";
+// import { db } from "../data/config.js";
+
+function Box() {
   const {
     showScore,
     questions,
@@ -31,38 +32,26 @@ function Home() {
     STATUS,
     StartGame,
   } = useContext(AppContext);
+  const [timeIsUp, setTimeIsUp] = useState(false);
+  // useEffect (() => {
+  //     const obtenerDatos = async () => {
+  //     const datos = await getDocs(collection(db, "test"));
+  //     datos.forEach((dato) => {
+  //       return console.log(dato.data());
+  //     })
 
+  //     }
+  //     obtenerDatos();
+  // }, [])
+
+  const { homeRoute } = useParams();
+
+  //TODO: ver si se tiene que ir eligiendo las pantallas o las rutas
   return (
-    <div className="container-box">
-      {showQuizz ? (
-        <div className="game-container">
-          <Quizz
-            currentQuestion={currentQuestion}
-            showScore={showScore}
-            score={score}
-            questions={questions}
-            restartGame={restartGame}
-            handleAnswerOptionClick={handleAnswerOptionClick}
-            setShowQuizz={setShowQuizz}
-          />
-
-          <Player />
-          {/* <CircularProgressBar /> */}
-          <div className="Counter">
-            <CircularProgressWithLabel />
-          </div>
-        </div>
-      ) : (
-        <>
-          <Welcome />
-          <button className="playGameButton" onClick={StartGame}>
-            Start
-          </button>
-        </>
-      )}
-      {/* <Counter /> */}
+    <div className="container">
+      <WelcomeBox type={"sin botella"} />
     </div>
   );
 }
 
-export default Home;
+export default Box;
