@@ -72,8 +72,8 @@ function AppProvider(props) {
   const restartGame = (e) => {
     setTimeIsUp(false);
     setShowScore(false);
+    setResp( [] );
     setCurrentQuestion(0);
-    // navigate('/home')
   };
 
   const StartGame = (e) => {

@@ -46,6 +46,7 @@ function Score() {
             </p>
           </div>
           <ButtonsResult />
+
         </div>
       )}
     </>
