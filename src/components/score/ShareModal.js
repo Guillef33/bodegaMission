@@ -6,6 +6,11 @@ import "./Score.scss";
 
 function ShareModal({ show, setShow, closeModal }) {
 
+  // if (!show) {
+  //   return null;
+  // }
+
+
   console.log(show);
 
   const shareUrl =
@@ -38,8 +43,11 @@ function ShareModal({ show, setShow, closeModal }) {
 
 export default ShareModal;
 
-{
-  /* <WhatsappShareButton url={shareUrl}>
+
+
+      {
+        /* <WhatsappShareButton url={shareUrl}>
         <WhatsappIcon size={32} round={true} />
       </WhatsappShareButton> */
-}
+      }
+
