@@ -26,3 +26,19 @@
     background-color: transparent;
 }
 
+@media  screen and (max-width: 760px) {
+    .arrow-back {
+        top: 80%;
+    right: 90px;
+  }
+
+  .arrow-forward {
+    top: 80%;
+    left: 90px;
+  }
+
+  .arrow-forward svg, .arrow-back svg {
+        font-size: 50px;
+  }
+  
+}
