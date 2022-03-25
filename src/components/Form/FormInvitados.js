@@ -66,7 +66,7 @@ function FormInvitados() {
         {emailSucess && <p className="thank-you-message">Thank you. Good luck!</p>}
         <div className="privacy-checkbox">
           <input type="checkbox" />
-          <label>Acepto los terminos y condiciones</label>
+          <label>Accept terms and conditions</label>
         </div>
       </form>
     </div>

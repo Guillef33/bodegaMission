@@ -79,3 +79,21 @@
   color: green;
   font-size: 15px;
 }
+
+@media  screen and (max-width: 760px) {
+
+  .form-wrapper input[type=text], .share-modal-container input, input[type=email] {
+    width: auto;
+  }
+
+  .form-text  {
+    font-size: 18px;
+  }
+
+  .send-form-button {
+    width: 200px;
+  }
+  
+}
+
+
