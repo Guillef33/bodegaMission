@@ -12,7 +12,8 @@ import "./Form.scss";
 
 function FormInvitados() {
   const [emailSend, setEmailSend] = useState(false);
-    let navigate = useNavigate();
+  const [emailSucess, setEmailSucess] = useState(false);
+  let navigate = useNavigate(); 
 
 
   const initialState = {
@@ -38,7 +39,9 @@ function FormInvitados() {
 
     setValues(initialState);
     setEmailSend(docRef.id);
-    navigate("/");
+    setEmailSucess(true);
+    setTimeout(() => navigate("/"), 4000);
+
   };
 
   return (
@@ -60,6 +63,7 @@ function FormInvitados() {
         >
           Submit
         </button>
+        {emailSucess && <p className="thank-you-message">Thank you. Good luck!</p>}
         <div className="privacy-checkbox">
           <input type="checkbox" />
           <label>Acepto los terminos y condiciones</label>
