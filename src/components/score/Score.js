@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 
 import { AppContext } from "../../context/AppContext";
 
-import RaicesBack3 from "../../assets/back3.jpeg";
-
 import ButtonsResult from "./ButtonsResult";
 
 import "./Score.scss";

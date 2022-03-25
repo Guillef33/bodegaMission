@@ -1,18 +1,10 @@
-import RaicesBack1 from "../../assets/back1.jpg";
-import RaicesBack2 from "../../assets/back2.jpg";
-import RaicesBack3 from "../../assets/back3.jpeg";
-import RaicesBack4 from "../../assets/back4.jpeg";
-import RaicesBack5 from "../../assets/back5.jpeg";
-import RaicesBack6 from "../../assets/back6.jpg";
-import RaicesBack7 from "../../assets/back7.jpg";
-import RaicesBack8 from "../../assets/back8.jpg";
 
 // Nuevas Imagenes
-import vinoCuna from "../../assets/vinoCuna.png";
-import fondoPizarras from "../../assets/fondoPizarras.png";
+import vinoCuna from "../../assets/vinoCuna.jpg";
+import fondoPizarras from "../../assets/fondoPizarras.jpg";
 import fondoSombras from "../../assets/fondoSombras.png";
-import fondoVinedo from "../../assets/fondoVinedo.png";
-import fondoPaisaje from "../../assets/fondoPaisaje.png";
+import fondoVinedo from "../../assets/fondoVinedo.jpg";
+import fondoPaisaje from "../../assets/fondoPaisaje.jpg";
 
 
 
@@ -44,11 +36,11 @@ const questions = [
       "Talking about Aragon, which of the following wine regions belong to the region?",
 
     answerOptions: [
-      // { answerText: "Calatayud", isCorrect: true },
-      // { answerText: "Utiel Requena", isCorrect: false },
-      // { answerText: "Campo de Borja", isCorrect: false },
-      // { answerText: "Yecla", isCorrect: false },
-      // { answerText: "Cariñena", isCorrect: true },
+      { answerText: "Calatayud", isCorrect: true },
+      { answerText: "Utiel Requena", isCorrect: false },
+      { answerText: "Campo de Borja", isCorrect: false },
+      { answerText: "Yecla", isCorrect: false },
+      { answerText: "Cariñena", isCorrect: true },
       { answerText: "Cigales", isCorrect: true },
       { answerText: "Somontano", isCorrect: false },
       { answerText: "Pla de bages", isCorrect: true },
@@ -59,14 +51,14 @@ const questions = [
     id: 3,
   },
   {
-    questionText: "Select 5 autochthonous varieties from Spain?",
+    questionText: "Select five autochthonous varieties from Spain?",
 
     answerOptions: [
-      // { answerText: "Cigales", isCorrect: false },
-      // { answerText: "Somontano", isCorrect: false },
-      // { answerText: "Pla de bages", isCorrect: false },
-      // { answerText: "Arlanza", isCorrect: false },
-      // { answerText: "Bierzo", isCorrect: false },
+      { answerText: "Cigales", isCorrect: false },
+      { answerText: "Somontano", isCorrect: false },
+      { answerText: "Pla de bages", isCorrect: false },
+      { answerText: "Arlanza", isCorrect: false },
+      { answerText: "Bierzo", isCorrect: false },
       { answerText: "Calatayud", isCorrect: true },
       { answerText: "Utiel Requena", isCorrect: false },
       { answerText: "Campo de Borja", isCorrect: false },
