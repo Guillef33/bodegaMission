@@ -3,12 +3,17 @@ import React, { useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { addDoc } from "@firebase/firestore";
 
+import { useNavigate } from "react-router-dom";
+
+
 import { db } from "../../data/config";
 
 import "./Form.scss";
 
 function FormInvitados() {
   const [emailSend, setEmailSend] = useState(false);
+    let navigate = useNavigate();
+
 
   const initialState = {
     nombre: "",
@@ -33,7 +38,7 @@ function FormInvitados() {
 
     setValues(initialState);
     setEmailSend(docRef.id);
-    // navigate
+    navigate("/");
   };
 
   return (

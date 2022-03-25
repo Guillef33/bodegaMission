@@ -13,6 +13,8 @@ import CircularProgressWithLabel from "./components/Counter/MaterialProgress";
 import Game from "./pages/Game";
 import Score from "./components/score/Score";
 import FormInvitados from "./components/Form/FormInvitados";
+import Formik from "./components/Form/Formik";
+
 import AboutUs from "./components/about/AboutUs";
 
 import PresentationalBox from './components/Welcome/PresentationBox'
@@ -43,6 +45,8 @@ export default function App() {
           <Route path="/outoftime" element={<OutOfTime />} />
           <Route path="/score" element={<Score />} />
           <Route path="/form" element={<FormInvitados />} />
+          <Route path="/formik" element={<Formik />} />
+
           <Route path="/about" element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
