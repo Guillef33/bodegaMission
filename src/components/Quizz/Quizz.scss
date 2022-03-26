@@ -24,8 +24,11 @@
   font-size: 18px;
 }
 
-.buttons-indicators button:active,
-button:focus {
+.buttons-indicators button:active {
+  background-color: transparent;
+}
+
+.buttons-indicators button:focus {
   background-color: transparent;
 }
 

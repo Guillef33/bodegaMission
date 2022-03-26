@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import Player from "../audio/Player";
 
+import './outOfTime.scss'
+
 const OutOfTime = () => {
   const { restartGame } = useContext(AppContext);
   return (
