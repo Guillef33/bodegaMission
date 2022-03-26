@@ -8,7 +8,7 @@ import Player from "../audio/Player";
 const OutOfTime = () => {
   const { restartGame } = useContext(AppContext);
   return (
-    <div className="outOfTime-background">
+    <>
       <Player url={undefined} />
       <div className="outOfTime-container">
         <h1 className="outOfTime-title"> Out of Time :( </h1>
@@ -21,7 +21,7 @@ const OutOfTime = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
