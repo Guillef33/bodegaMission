@@ -21,7 +21,7 @@ function ShareModal({ show, setShow, closeModal }) {
 
       <h2>Share this mission with a friend</h2>
 
-      <div style={{ display: "flex" }}>
+      <div className="modal-container-buttons">
         <input value="https://prowein.raicesibericas.com/guests"></input>
         <button
           className="tryAgainButton"

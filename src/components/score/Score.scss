@@ -110,8 +110,16 @@
   color: black;
 }
 
+.modal-container-buttons {
+  display: flex;
+}
+
 
 @media screen and (max-width: 760px) {
+
+  .modal-container-buttons {
+  flex-direction: column;
+}
 .share-modal-container {
   width: auto;
 flex-direction: column; 
@@ -124,6 +132,7 @@ flex-direction: column;
   margin: auto;
   padding: 30px;
   border: #050505 solid 1px;
+  max-width: 400px;
 }
 
 
