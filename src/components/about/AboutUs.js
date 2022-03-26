@@ -3,6 +3,8 @@ import fondoVinedo from "../../assets/fondoVinedo.png";
 // import vector from "../../assets/vidProv.png";
 import logo from "../../assets/logoConVid.jpg";
 
+import './About.scss';
+
 const AboutUs = () => {
   return (
     <>
