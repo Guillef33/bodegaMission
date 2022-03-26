@@ -13,7 +13,7 @@ const Yupform = () => {
       email: event.target[1].value,
     };
     const isValid = await userSchema.isValid(formData);
-    // console.log(formData, isValid);
+    console.log(formData, isValid);
     dataBase();
     setTimeout(() => navigate("/"), 4000);
   };
