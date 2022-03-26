@@ -18,6 +18,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Montserrat", sans-serif;
+  background-color: #050505;
 }
 
 .container video {
@@ -36,6 +37,7 @@ body {
   border-radius: 15px;
   // padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  background-color: #f5f5f5;
 }
 
 .button-wrapper {
@@ -199,6 +201,12 @@ button svg {
   margin: 20px 0px;
 }
 
+.outOfTime-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
 .outOfTime-container {
   color: blueviolet;
 }
@@ -206,14 +214,14 @@ button svg {
   font-size: 80px;
   color: rgb(27, 24, 24);
   text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .outOfTime-text {
   font-size: 40px;
   color: rgb(27, 24, 24);
   text-align: center;
   margin-top: 5%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .tryAgain-button-container {
   margin-top: 19%;
@@ -294,11 +302,22 @@ button svg {
 
   .question-content-wrapper {
   margin: 30px 0px;
-  justify-content: center;
+  // justify-content: center;
 }
 
   .playGameButton {
-    width: 300px;
+    width: 250px;
+    height: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    padding: 3px 0px;
   }
 
   .question-image {
@@ -307,8 +326,8 @@ button svg {
   .question-text {
     text-align: center;
     font-size: 20px;
-    padding: 0px 30px;
-  }
+padding: 40px 30px 0px 0px;  
+}
   .answer-section {
     grid-template-columns: 1fr;
     grid-gap: 10px;
@@ -333,4 +352,11 @@ button svg {
   .button-wrapper {
     width: 300px;
   }
+
+  .outOfTime-title {
+  font-size: 40px;
+}
+.outOfTime-text {
+  font-size: 20px;
+}
 }

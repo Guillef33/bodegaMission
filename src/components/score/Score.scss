@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 
-// .score-container {
-//   color: blueviolet;
-// }
-
 .text-result-wrapper {
   font-family: "Montserrat", sans-serif;
   width: 800px;
@@ -86,28 +82,63 @@
 }
 
 
-.share-modal-container {
-  width: 400px;
-  height: 200px;
-  background-color: white;
+.share-modal-container input {
+    border: 1px solid black;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  width: 600px;
+  padding: 10px;
+  color: black;
 }
 
-// .share-modal-container {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   padding: 50px;
-//   width: 800px;
-//   height: 400px;
-//   // height: 800px;
-//   background-color: #f5f5f5;
-// }
+
+.share-modal-container {
+  width: 700px;
+  height: 400px;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding: 30px;
+  border: #050505 solid 1px;
+}
 
 .share-modal-container h2 {
   color: black;
+}
+
+
+@media screen and (max-width: 760px) {
+.share-modal-container {
+  width: auto;
+flex-direction: column; 
+ background-color: #f5f5f5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding: 30px;
+  border: #050505 solid 1px;
+}
+
+
+.score-title {
+  font-size: 30px;
+}
+.score-result-title {
+  font-size: 20px;
+
+}
+
+.score-result-text {
+  font-size: 16px;
+  padding: 20px 40px;
+  margin: 0px;
+}
+
 }

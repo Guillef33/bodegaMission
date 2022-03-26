@@ -10,15 +10,8 @@ function ShareModal({ show, setShow, closeModal }) {
   //   return null;
   // }
 
-
-  console.log(show);
-
-  const shareUrl =
-    "https://api.whatsapp.com/send?phone=1167062068&text=Ven%20a%20jugar%20con%20Bodega%20Raices.%20Cuanto%20sabes%20de%20los%20vinos%20espanoles";
-
   return (
     <div className="share-modal-container">
-      <h2>Compate por WhatsApp con tus amigos</h2>
       <button
         style={{ fontSize: "50px", color: "black" }}
         onClick={() => setShow(false)}
@@ -26,12 +19,16 @@ function ShareModal({ show, setShow, closeModal }) {
         X
       </button>
 
+      <h2>Share this mission with a friend</h2>
+
       <div style={{ display: "flex" }}>
-        <input value="https://prowein.raicesibericas.com/"></input>
+        <input value="https://prowein.raicesibericas.com/guests"></input>
         <button
           className="tryAgainButton"
           onClick={() =>
-            navigator.clipboard.writeText("https://prowein.raicesibericas.com/")
+            navigator.clipboard.writeText(
+              "https://prowein.raicesibericas.com/guests"
+            )
           }
         >
           Copy
