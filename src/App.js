@@ -17,7 +17,8 @@ import Formik from "./components/Form/Formik";
 
 import AboutUs from "./components/about/AboutUs";
 
-import PresentationalBox from './components/Welcome/PresentationBox'
+import PresentationalBox from "./components/Welcome/PresentationBox";
+import Yupform from "./components/Form/Yupform";
 
 export default function App() {
   return (
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/score" element={<Score />} />
           <Route path="/form" element={<FormInvitados />} />
           <Route path="/formik" element={<Formik />} />
+          <Route path="/yup" element={<Yupform />} />
 
           <Route path="/about" element={<AboutUs />} />
         </Routes>
