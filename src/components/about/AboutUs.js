@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 import fondoVinedo from "../../assets/fondoVinedo.png";
 // import vector from "../../assets/vidProv.png";
 import logo from "../../assets/logoConVid.jpg";
+
+import logoPNG from "../../assets/LogosPNGOk.png";
+
+
 import "./About.scss";
 
 const AboutUs = () => {
@@ -42,7 +46,7 @@ const AboutUs = () => {
             <h2 className="aboutUs-title">About Us. </h2>
             {/* <div className="aboutUs-mid"></div>
             <img className="aboutUs-image-vid" src={vector} alt="logo" /> */}
-            <img className="aboutUs-image" src={logo} alt="logo" />
+            <img className="aboutUs-image" src={logoPNG} alt="logo" />
           </div>
           <div>
             <p className="aboutUs-text">
