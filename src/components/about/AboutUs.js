@@ -9,7 +9,7 @@ import "./About.scss";
 
 const AboutUs = () => {
   const [show, setShow] = useState(false);
-  const delay = 12;
+  const delay = 18;
   let navigate = useNavigate();
   useEffect(() => {
     Swal.fire(
