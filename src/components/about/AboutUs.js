@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+
 import fondoVinedo from "../../assets/fondoVinedo.png";
 // import vector from "../../assets/vidProv.png";
 import logo from "../../assets/logoConVid.jpg";
-
-import './About.scss';
+import "./About.scss";
 
 const AboutUs = () => {
+  const [show, setShow] = useState(false);
+  const delay = 12;
+  let navigate = useNavigate();
+  useEffect(() => {
+    Swal.fire(
+      "Thanks for playing.",
+      "Get to know us, while we calculate your results",
+      "info"
+    );
+    let timer1 = setTimeout(() => setShow(true), delay * 1000);
+
+    // this will clear Timeout
+    // when component unmount like in willComponentUnmount
+    // and show will not change to true
+    return () => {
+      clearTimeout(timer1);
+    };
+  }, []);
+
   return (
     <>
       <div
@@ -37,6 +58,21 @@ const AboutUs = () => {
               <strong>Mark Schiettekat.</strong>
               <br /> Owner.
             </p>
+            <div className="aboutUs-loader">
+              {!show ? (
+                <p>
+                  Calculating your results
+                  <br /> Please wait...
+                </p>
+              ) : (
+                <button
+                  className="getResultButton"
+                  onClick={() => navigate("/")}
+                >
+                  Get Results
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>

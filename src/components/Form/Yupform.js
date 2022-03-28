@@ -3,24 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
 import { userSchema } from "./userValidation";
 import "./Form.scss";
-
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { addDoc } from "@firebase/firestore";
-
 import { db } from "../../data/config";
 
 const Yupform = () => {
   let navigate = useNavigate();
-
   // const [emailSend, setEmailSend] = useState(false);
-
   const initialState = {
     name: "",
     email: "",
   };
 
   const [values, setValues] = useState(initialState);
-
   const [emailSend, setEmailSend] = useState(false);
 
   const createUser = async (event) => {
@@ -35,10 +30,8 @@ const Yupform = () => {
     const docRef = await addDoc(collection(db, "mails"), {
       values,
     });
-
     setValues(initialState);
     setEmailSend(docRef.id);
-
     setTimeout(() => navigate("/"), 4000);
   };
 
