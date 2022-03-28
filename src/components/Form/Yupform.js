@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
 import { userSchema } from "./userValidation";
 import "./Form.scss";
 
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { addDoc } from "@firebase/firestore";
+
+import { db } from "../../data/config";
+
 const Yupform = () => {
   let navigate = useNavigate();
+
+  // const [emailSend, setEmailSend] = useState(false);
+
+  const initialState = {
+    name: "",
+    email: "",
+  };
+
+  const [values, setValues] = useState(initialState);
+
+  const [emailSend, setEmailSend] = useState(false);
+
   const createUser = async (event) => {
     event.preventDefault();
     let formData = {
@@ -14,12 +31,28 @@ const Yupform = () => {
     };
     const isValid = await userSchema.isValid(formData);
     console.log(formData, isValid);
-    dataBase();
+
+    dataBase(event);
+
     setTimeout(() => navigate("/"), 4000);
   };
-  const dataBase = () => {
-    console.log("aca se puede integrar la funcion de la database");
+
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    console.log(e.target);
+    setValues({ ...values, [name]: value });
   };
+
+  const dataBase = async (e) => {
+    e.preventDefault();
+    const docRef = await addDoc(collection(db, "mails"), {
+      values,
+    });
+
+    setValues(initialState);
+    setEmailSend(docRef.id);
+  };
+
   return (
     <div className="form-container">
       <h2 className="form-title">Welcome</h2>
@@ -34,17 +67,35 @@ const Yupform = () => {
         {({ errors, touched }) => (
           <Form className="form-wrapper" onSubmit={createUser}>
             <label> Ingrese su nombre </label>
-            <Field name="name" type="text" placeholder="Ingrese su nombre" />
+            <Field
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              // onChange={handleChange}
+              // value={values.name}
+            />
             {errors.name && touched.name ? (
               <p className="validation-Error">{errors.name}</p>
             ) : null}
             {/* <ErrorMessage name="name" /> */}
             <label> Ingrese su email </label>
-            <Field name="email" type="email" placeholder="Ingrese su e-mail" />
+            <Field
+              name="email"
+              type="email"
+              placeholder="Enter your e-mail"
+              // onChange={handleChange}
+              // value={values.email}
+            />
             {errors.email && touched.email ? (
               <p className="validation-Error">{errors.email}</p>
             ) : null}
-            <button className="send-form-button" type="submit">
+            <button
+              className="send-form-button"
+              type="submit"
+              // onClick={(e) => {
+              //   onSubmit(e);
+              // }}
+            >
               Submit
             </button>
           </Form>
