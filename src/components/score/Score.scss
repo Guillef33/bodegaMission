@@ -81,9 +81,11 @@
   background-color: gray;
 }
 
-.shareButton:active {
+.shareButton:active, .tryAgainButton:active {
     transform: scale(0.98);
 }
+
+
   
 
 .share-modal-container input {
