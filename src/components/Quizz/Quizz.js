@@ -6,6 +6,8 @@ import { ImCross } from "react-icons/im";
 import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from "react-icons/io";
 
+import Buttons from "../Buttons/Button"
+
 import Score from "../score/Score";
 
 import "./Quizz.scss";
@@ -76,9 +78,9 @@ function Quizz() {
               </div>
             </div>
             <div className="answer-section">
-              {questions[currentQuestion].answerOptions.map((answerOption) => (
-                <>
-                  <button
+              {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                <Buttons
+                    key={index}
                     className="playGameButton"
                     onClick={(e) => {
                       handleOptionClick(e, {
@@ -89,8 +91,7 @@ function Quizz() {
                     }}
                   >
                     {answerOption.answerText}
-                  </button>
-                </>
+                </Buttons>
               ))}
             </div>
 
