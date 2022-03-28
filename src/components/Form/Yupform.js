@@ -32,7 +32,12 @@ const Yupform = () => {
     const isValid = await userSchema.isValid(formData);
     console.log(formData, isValid);
 
-    dataBase(event);
+    const docRef = await addDoc(collection(db, "mails"), {
+      values,
+    });
+
+    setValues(initialState);
+    setEmailSend(docRef.id);
 
     setTimeout(() => navigate("/"), 4000);
   };
@@ -43,15 +48,15 @@ const Yupform = () => {
     setValues({ ...values, [name]: value });
   };
 
-  const dataBase = async (e) => {
-    e.preventDefault();
-    const docRef = await addDoc(collection(db, "mails"), {
-      values,
-    });
+  // const dataBase = async (e) => {
+  //   e.preventDefault();
+  //   const docRef = await addDoc(collection(db, "mails"), {
+  //     values,
+  //   });
 
-    setValues(initialState);
-    setEmailSend(docRef.id);
-  };
+  //   setValues(initialState);
+  //   setEmailSend(docRef.id);
+  // };
 
   return (
     <div className="form-container">
@@ -62,7 +67,7 @@ const Yupform = () => {
       <Formik
         validationSchema={userSchema}
         initialValues={{ name: "", email: "" }}
-        onSubmit={dataBase}
+        // onSubmit={dataBase}
       >
         {({ errors, touched }) => (
           <Form className="form-wrapper" onSubmit={createUser}>
@@ -71,8 +76,8 @@ const Yupform = () => {
               name="name"
               type="text"
               placeholder="Enter your name"
-              // onChange={handleChange}
-              // value={values.name}
+              onChange={handleChange}
+              value={values.name}
             />
             {errors.name && touched.name ? (
               <p className="validation-Error">{errors.name}</p>
@@ -83,8 +88,8 @@ const Yupform = () => {
               name="email"
               type="email"
               placeholder="Enter your e-mail"
-              // onChange={handleChange}
-              // value={values.email}
+              onChange={handleChange}
+              value={values.email}
             />
             {errors.email && touched.email ? (
               <p className="validation-Error">{errors.email}</p>
