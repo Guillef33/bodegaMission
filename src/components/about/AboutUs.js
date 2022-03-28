@@ -67,7 +67,7 @@ const AboutUs = () => {
               ) : (
                 <button
                   className="getResultButton"
-                  onClick={() => navigate("/")}
+                  onClick={() => navigate("/score")}
                 >
                   Get Results
                 </button>
