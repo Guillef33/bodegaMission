@@ -23,7 +23,7 @@ function PresentationalText() {
             </h2>
             <Link to="/game">
               <button
-                className="playGameButton"
+                className="playGameButton playGameButtonMobile"
                 // onClick={(e) => StartGame(e)}
               >
                 Play

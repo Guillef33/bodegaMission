@@ -75,16 +75,6 @@
 .incorrect {
   background-color: #ff3333;
 }
-// Agregar clase para que no sea tan global
-// button:active,
-// button:focus {
-//   color: white;
-//   background-color: #6f2232;
-// }
-
-// button:focus {
-//   outline: none;
-// }
 
 button svg {
   margin-right: 5px;
@@ -143,6 +133,12 @@ button svg {
     background-color: #ffffff;
     margin-bottom: 5px;
     padding: 3px 0px;
+  }
+
+  .playGameButtonMobile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
   }
 
   .answer-section {

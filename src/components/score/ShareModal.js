@@ -4,11 +4,10 @@ import { WhatsappShareButton, WhatsappIcon } from "react-share";
 
 import "./Score.scss";
 
-function ShareModal({ show, setShow, closeModal }) {
-
+function ShareModal({ show, setShow }) {
   return (
     <div className="share-modal-container">
-      <button className="close-modal" onClick={() => setShow(false)}>
+      <button className="close-modal" onClick={ () => setShow(false)}>
         X
       </button>
 
@@ -33,11 +32,8 @@ function ShareModal({ show, setShow, closeModal }) {
 
 export default ShareModal;
 
-
-
-      {
-        /* <WhatsappShareButton url={shareUrl}>
+{
+  /* <WhatsappShareButton url={shareUrl}>
         <WhatsappIcon size={32} round={true} />
       </WhatsappShareButton> */
-      }
-
+}

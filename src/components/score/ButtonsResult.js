@@ -9,12 +9,12 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 function ButtonsResult() {
   const [show, setShow] = useState(false);
   console.log(show);
-  const closeModal = () => {
-    setShow(false);
-  };
+  // const closeModal = () => {
+  //   setShow(false);
+  // };
   const { restartGame } = useContext(AppContext);
-  console.log(window.location.href);
-  console.log(show);
+  // console.log(window.location.href);
+  // console.log(show);
 
   return (
     <div className="buttons-results">
@@ -26,10 +26,8 @@ function ButtonsResult() {
       <button className="shareButton" onClick={() => setShow(true)}>
         Share the mission
         <BiShareAlt />
-        {show && (
-          <ShareModal show={show} setShow={setShow} closeModal={closeModal} />
-        )}
       </button>
+      {show ? <ShareModal show={show} setShow={setShow} /> : " "}
     </div>
   );
 }
