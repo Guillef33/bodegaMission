@@ -30,6 +30,13 @@
   color: #f5f5f5;
 }
 
+ .initial-text-container h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+        width: 1000px;
+  }
+
+
  
 .initial-text-container {
   width: 100vw;
@@ -49,13 +56,13 @@
   padding: 40px 0px;
 }
 
-.initial-text-container p {
-  font-weight: 200;
-  font-family: "Conduit ITC Medium", sans-serif;
-  font-size: 2em;
-  width: 400px;
-  margin: 20px 0px;
-}
+  .initial-text-container p {
+    font-size: 40px;
+    width: 800px;
+    margin: 20px 0px;
+    font-weight: 200;
+  }
+
 
 .bold-text {
   font-weight: 700;
@@ -145,7 +152,6 @@
   }
 
 
-
   .initial-text-container h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 30px;
@@ -157,6 +163,8 @@
 
   .initial-text-container p {
     padding: 40px;
+        font-size: 26px;
+        width: auto;
   }
 
   .grid-section {
