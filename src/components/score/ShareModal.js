@@ -6,16 +6,9 @@ import "./Score.scss";
 
 function ShareModal({ show, setShow, closeModal }) {
 
-  // if (!show) {
-  //   return null;
-  // }
-
   return (
     <div className="share-modal-container">
-      <button
-        style={{ fontSize: "50px", color: "black" }}
-        onClick={() => setShow(false)}
-      >
+      <button className="close-modal" onClick={() => setShow(false)}>
         X
       </button>
 
