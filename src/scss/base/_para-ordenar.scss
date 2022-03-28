@@ -56,6 +56,12 @@
   border: none;
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
+  outline: none;
+  transition: 0.2s all;
+}
+
+.playGameButton:active {
+  transform: scale(0.98);
 }
 
 .playGameButton:focus {
@@ -126,7 +132,6 @@ button svg {
     margin-bottom: 5px;
     padding: 3px 0px;
   }
-
 
   .answer-section {
     grid-template-columns: 1fr;

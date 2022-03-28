@@ -81,6 +81,11 @@
   background-color: gray;
 }
 
+.shareButton:active {
+    transform: scale(0.98);
+}
+  
+
 .share-modal-container input {
   border: none;
   border-radius: 10px;

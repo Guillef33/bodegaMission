@@ -50,7 +50,6 @@
   margin-bottom: 1rem;
   font-weight: 900;
   min-height: 100px;
-  
 }
 
 .arrow-back {
@@ -75,6 +74,11 @@
   font-size: 100px;
 }
 
+.arrow-back:active,
+.arrow-forward:active {
+  transform: scale(0.98);
+}
+
 .buttons-indicators button {
   background: transparent;
   border: none;
@@ -93,12 +97,11 @@
 }
 
 @media screen and (max-width: 760px) {
-
   .question-section {
     width: auto;
   }
 
-  .question-content-wrapper  {
+  .question-content-wrapper {
     margin: 30px;
   }
 
@@ -116,8 +119,8 @@
   .arrow-back svg {
     font-size: 40px;
   }
-  
-    .question-image {
+
+  .question-image {
     width: 100%;
   }
   .question-text {
@@ -125,11 +128,10 @@
     font-size: 20px;
     padding: 40px 0px 0px 0px;
     margin-top: 0px;
-margin-bottom: 0px;
+    margin-bottom: 0px;
   }
 
-  
-.buttons-indicators p {
-  display: none;
-}
+  .buttons-indicators p {
+    display: none;
+  }
 }
