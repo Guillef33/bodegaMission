@@ -84,6 +84,8 @@
 .bottom-section {
   display: flex;
   align-items: center;
+  border-top: 2px solid white;
+  padding: 30px;
 }
 
 .bottom-section p {
@@ -145,8 +147,8 @@
   }
 
   .before-start-col a {
-    position: absolute;
-    top: 90%;
+    position: relative;
+    padding: 5px;
   }
 
   .initial-text-container h2 {
@@ -170,7 +172,8 @@
 
   .presentation-container {
     display: block;
-    padding: 20px;
+    text-align: center;
+    padding: 50px 50px;
   }
 
   .presentation-container h1 {
@@ -179,9 +182,9 @@
 
   .presentation-container h2 {
     width: auto;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
-    padding: 20px 0px;
+    padding: 10px 0px;
     margin-bottom: 0px;
   }
 
@@ -191,7 +194,13 @@
   }
 
   .bottom-section {
-    padding: 20px 0px;
+    display: block;
+    padding: 30px;
+    border-top: none;
+  }
+
+  .bottom-section p {
+    font-size: 12px;
   }
 
   .text-result-wrapper {
