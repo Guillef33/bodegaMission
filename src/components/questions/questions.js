@@ -6,6 +6,14 @@ import fondoSombras from "../../assets/fondoSombras.png";
 import fondoVinedo from "../../assets/fondoVinedo.jpg";
 import fondoPaisaje from "../../assets/fondoPaisaje.jpg";
 
+import Paisaje from '../../assets/Paisaje.png';
+import Raices1 from '../../assets/Raices1.png';
+import RaicesMalvar from '../../assets/RaicesMalvar.png';
+import RaicesMalvar1 from '../../assets/RaicesMalvar1.png'
+import CRPunto from "../../assets/CRPunto.png";
+import Cepa from "../../assets/Cepa.png";
+
+
 
 
 const questions = [
@@ -65,7 +73,7 @@ const questions = [
       { answerText: "Yecla", isCorrect: false },
       { answerText: "Cariñena", isCorrect: true },
     ],
-    image: fondoPaisaje,
+    image: Raices1,
     id: 4,
   },
   {
@@ -75,7 +83,7 @@ const questions = [
       { answerText: "Red", isCorrect: false },
       { answerText: "Both", isCorrect: false },
     ],
-    image: fondoPaisaje,
+    image: RaicesMalvar,
     id: 5,
   },
   {
@@ -84,7 +92,7 @@ const questions = [
       { answerText: "Yes", isCorrect: true },
       { answerText: "No", isCorrect: false },
     ],
-    image: fondoPaisaje,
+    image: RaicesMalvar1,
     id: 6,
   },
   {
@@ -94,7 +102,7 @@ const questions = [
       { answerText: "Jerez", isCorrect: false },
       { answerText: "Galicia", isCorrect: false },
     ],
-    image: fondoPaisaje,
+    image: CRPunto,
     id: 7,
   },
   {
@@ -105,7 +113,7 @@ const questions = [
       { answerText: "Priorat", isCorrect: false },
       { answerText: "All", isCorrect: true },
     ],
-    image: fondoPaisaje,
+    image: Cepa,
     id: 8,
   },
 ];
