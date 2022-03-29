@@ -8,20 +8,27 @@ import logo from "../../assets/logoConVid.jpg";
 
 import logoPNG from "../../assets/LogosPNGOk.png";
 
-
 import "./About.scss";
 
 const AboutUs = () => {
   const [show, setShow] = useState(false);
-  //TODO: Soy Josué, hace falta este delay? 
+  //TODO: Soy Josué, hace falta este delay?
   const delay = 18;
   let navigate = useNavigate();
   useEffect(() => {
-    Swal.fire(
-      "Thanks for playing.",
-      "Get to know us, while we calculate your results",
-      "info"
-    );
+    Swal.fire({
+      // "Thanks for playing.",
+      // "Get to know us, while we calculate your results",
+      // "info"
+      title: "Thanks for playing.",
+      icon: "success",
+      text: "Get to know us, while we calculate your results",
+      customClass: "button-about",
+      closeModal: true,
+      button: {
+        text: "Hey ho!",
+      },
+    });
     let timer1 = setTimeout(() => setShow(true), delay * 1000);
 
     // this will clear Timeout
