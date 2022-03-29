@@ -13,6 +13,7 @@ import "./About.scss";
 
 const AboutUs = () => {
   const [show, setShow] = useState(false);
+  //TODO: Soy Josué, hace falta este delay? 
   const delay = 18;
   let navigate = useNavigate();
   useEffect(() => {
