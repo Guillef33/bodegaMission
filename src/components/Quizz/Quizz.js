@@ -18,7 +18,9 @@ import "./Quizz.scss";
 
 function Quizz() {
   const {
+    resp,
     addResp,
+    removeResp,
     showScore,
     questions,
     currentQuestion,
@@ -33,6 +35,7 @@ function Quizz() {
 
   //TODO: Este hangleOptionClick va a decidir si tenemos que agregar la respuesta o eliminarla
   const handleOptionClick = (e,newResp) => {
+    console.log('hiceclick');
     addResp(newResp);
   };
 
@@ -84,36 +87,16 @@ function Quizz() {
                 (answerOption, index) => (
                   <Buttons
                     key={index}
-                    className="playGameButton"
-                    onClick={(e) => {
-                      handleOptionClick(e, {
-                        id: questions[currentQuestion].id,
-                        questionText: questions[currentQuestion].questionText,
-                        answerOption: [answerOption],
-                      });
-                    }}
-                  >
-                    {answerOption.answerText}
-                  </Buttons>
+                    resp={resp}
+                    addResp={addResp}
+                    removeResp={removeResp}
+                    id={questions[currentQuestion].id}
+                    questionText={questions[currentQuestion].questionText}
+                    answerOption={answerOption}
+                  />
                 )
               )}
             </div>
-
-            {/* 
-            <div className="button-wrapper">
-              {/* <button
-                className="navigationButtons"
-                onClick={() => omitirPregunta()}
-              >
-                Omitir
-              </button> 
-              <button
-                className="playGameButton"
-                onClick={() => pasarPregunta()}
-              >
-                Next
-              </button>
-            </div> */}
           </div>
         </div>
       )}

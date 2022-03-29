@@ -17,9 +17,9 @@ function AppProvider(props) {
   const [resp, setResp] = useState([]);
   // let navigate = useNavigate();
   const [timeIsUp, setTimeIsUp] = useState(false);
-  //TODO:
+  
+
   const addResp = (newResp) => {
-    // const {  }
     //inCollection verifica si el id de la pregunta ya existe en la coleción
     if (inCollection(newResp.id, resp)) {
       console.log("entré", resp);
@@ -39,6 +39,47 @@ function AppProvider(props) {
     }
   };
 
+  const removeResp = (id, answerText) => {
+    console.table({id, answerText});
+    let newResp = [...resp];
+    newResp = newResp.map(el => {
+      if(el.id === id ){
+        console.log('entre acaehfuehf0');
+        let newAnswerOption = el.answerOption.filter( answer => answer.answerText !== answerText)
+        console.log(newAnswerOption, answerText);
+        return({
+          id: el.id,
+          questionText: el.questionText,
+          answerOption: newAnswerOption
+        })
+      }else{
+        return el;
+      }
+    });
+    setResp(newResp);
+  }
+
+  const scoreCalculator = () => {
+
+    const arrayPoints = resp.map( el => {
+      if(el.answerOption.length){
+        let respValue = true;
+        el.answerOption.forEach( answer => {
+          respValue = respValue*answer.isCorrect
+        })
+        return respValue;
+      
+      }else{
+        return false;
+      }
+    });
+    const result = arrayPoints.reduce( (acumulator,currentValue)=>acumulator+currentValue);
+    console.log('result: ',arrayPoints.length);
+    setScore(result);
+  }
+
+
+
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
@@ -50,6 +91,7 @@ function AppProvider(props) {
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
+      scoreCalculator();
       setShowScore(true);
     }
   };
@@ -122,6 +164,8 @@ function AppProvider(props) {
       value={{
         resp,
         addResp,
+        removeResp,
+        scoreCalculator,
         showScore,
         showQuizz,
         showGame,
@@ -160,19 +204,3 @@ function AppProvider(props) {
 }
 
 export default AppProvider;
-
-// const STATUS = {
-//   STARTED: "Started",
-//   STOPPED: "Stopped",
-// };
-
-// LIMPIAR CONTADOR
-// Parte del contador
-// const INITIAL_COUNT = 90;
-
-// const [secondsRemaining, setSecondsRemaining] = useState(INITIAL_COUNT);
-// const [status, setStatus] = useState(STATUS.STOPPED);
-
-// const [losing, SetLosing] = useState(false);
-
-// const secondsToDisplay = secondsRemaini
