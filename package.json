@@ -54,8 +54,6 @@
     ]
   },
   "devDependencies": {
-    "react-snap": "^1.23.0" {  
-      "inlineCss": true
-    }
+    "react-snap": "^1.23.0" 
   }
 }
