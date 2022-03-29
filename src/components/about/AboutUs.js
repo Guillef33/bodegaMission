@@ -17,9 +17,6 @@ const AboutUs = () => {
   let navigate = useNavigate();
   useEffect(() => {
     Swal.fire({
-      // "Thanks for playing.",
-      // "Get to know us, while we calculate your results",
-      // "info"
       title: "Thanks for playing.",
       icon: "success",
       text: "Get to know us, while we calculate your results",
@@ -32,8 +29,6 @@ const AboutUs = () => {
     let timer1 = setTimeout(() => setShow(true), delay * 1000);
 
     // this will clear Timeout
-    // when component unmount like in willComponentUnmount
-    // and show will not change to true
     return () => {
       clearTimeout(timer1);
     };
@@ -49,14 +44,14 @@ const AboutUs = () => {
           backgroundImage: `url(${fondoVinedo})`,
         }}
       >
-        <div className="aboutUs-div">
+        <div className="aboutUs-wrapper">
           <div className="aboutUs-title-container">
             <h2 className="aboutUs-title">About Us. </h2>
             {/* <div className="aboutUs-mid"></div>
             <img className="aboutUs-image-vid" src={vector} alt="logo" /> */}
             <img className="aboutUs-image" src={logoPNG} alt="logo" />
           </div>
-          <div>
+          <div className="aboutUs-text-container">
             <p className="aboutUs-text">
               We started during a time of crisis… everything that could have
               gone wrong, did! <br />
@@ -70,22 +65,22 @@ const AboutUs = () => {
               <strong>Mark Schiettekat.</strong>
               <br /> Owner.
             </p>
-            <div className="aboutUs-loader">
-              {!show ? (
-                <p>
-                  Calculating your results
-                  <br /> Please wait...
-                </p>
-              ) : (
-                <button
-                  className="getResultButton"
-                  onClick={() => navigate("/score")}
-                >
-                  Get Results
-                </button>
-              )}
-            </div>
           </div>
+        </div>
+        <div className="aboutUs-loader">
+          {!show ? (
+            <p>
+              Calculating your results
+              <br /> Please wait...
+            </p>
+          ) : (
+            <button
+              className="getResultButton"
+              onClick={() => navigate("/score")}
+            >
+              Get Results
+            </button>
+          )}
         </div>
       </div>
     </>
