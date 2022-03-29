@@ -6,6 +6,7 @@ import "./Form.scss";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { addDoc } from "@firebase/firestore";
 import { db } from "../../data/config";
+import Swal from "sweetalert2";
 
 const Yupform = () => {
   let navigate = useNavigate();
@@ -31,6 +32,7 @@ const Yupform = () => {
       values,
     });
     setValues(initialState);
+    Swal.fire("Data loaded", "Now let`s start the mission", "success");
     setEmailSend(docRef.id);
     setTimeout(() => navigate("/"), 4000);
   };
