@@ -6,7 +6,11 @@ import { ImCross } from "react-icons/im";
 import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from "react-icons/io";
 
+import Buttons from "../Buttons/Button"
+
 import Score from "../score/Score";
+import About from "../about/AboutUs";
+
 
 import "./Quizz.scss";
 
@@ -14,7 +18,9 @@ import "./Quizz.scss";
 
 function Quizz() {
   const {
+    resp,
     addResp,
+    removeResp,
     showScore,
     questions,
     currentQuestion,
@@ -29,13 +35,14 @@ function Quizz() {
 
   //TODO: Este hangleOptionClick va a decidir si tenemos que agregar la respuesta o eliminarla
   const handleOptionClick = (e,newResp) => {
+    console.log('hiceclick');
     addResp(newResp);
   };
 
   return (
     <>
       {showScore ? (
-        <Score />
+        <About />
       ) : (
         <div
           className="question-container"
@@ -64,7 +71,7 @@ function Quizz() {
             </button>
             <h2 className="question-number">
               Question{" "}
-              <span style={{ fontWeight: "bold" } }>
+              <span style={{ fontWeight: "bold" }}>
                 {questions[currentQuestion].id}
               </span>{" "}
               of 8
@@ -76,39 +83,20 @@ function Quizz() {
               </div>
             </div>
             <div className="answer-section">
-              {questions[currentQuestion].answerOptions.map((answerOption) => (
-                <>
-                  <button
-                    className="playGameButton"
-                    onClick={(e) => {
-                      handleOptionClick(e, {
-                        id: questions[currentQuestion].id,
-                        questionText: questions[currentQuestion].questionText,
-                        answerOption: [answerOption],
-                      });
-                    }}
-                  >
-                    {answerOption.answerText}
-                  </button>
-                </>
-              ))}
+              {questions[currentQuestion].answerOptions.map(
+                (answerOption, index) => (
+                  <Buttons
+                    key={index}
+                    resp={resp}
+                    addResp={addResp}
+                    removeResp={removeResp}
+                    id={questions[currentQuestion].id}
+                    questionText={questions[currentQuestion].questionText}
+                    answerOption={answerOption}
+                  />
+                )
+              )}
             </div>
-
-            {/* 
-            <div className="button-wrapper">
-              {/* <button
-                className="navigationButtons"
-                onClick={() => omitirPregunta()}
-              >
-                Omitir
-              </button> 
-              <button
-                className="playGameButton"
-                onClick={() => pasarPregunta()}
-              >
-                Next
-              </button>
-            </div> */}
           </div>
         </div>
       )}

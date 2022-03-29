@@ -12,6 +12,12 @@
   width: 20%;
 } */
 
+.Counter {
+  position: absolute;
+top: 20px;
+right: 20px;
+}
+
 
 .CircularProgressbar .CircularProgressbar-text {
     font-size: 40px !important;

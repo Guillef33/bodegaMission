@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+
 import fondoVinedo from "../../assets/fondoVinedo.png";
 // import vector from "../../assets/vidProv.png";
 import logo from "../../assets/logoConVid.jpg";
 
+import logoPNG from "../../assets/LogosPNGOk.png";
+
+import "./About.scss";
+
 const AboutUs = () => {
+  const [show, setShow] = useState(false);
+  //TODO: Soy Josué, hace falta este delay?
+  const delay = 18;
+  let navigate = useNavigate();
+  useEffect(() => {
+    Swal.fire({
+      // "Thanks for playing.",
+      // "Get to know us, while we calculate your results",
+      // "info"
+      title: "Thanks for playing.",
+      icon: "success",
+      text: "Get to know us, while we calculate your results",
+      customClass: "button-about",
+      closeModal: true,
+      button: {
+        text: "Hey ho!",
+      },
+    });
+    let timer1 = setTimeout(() => setShow(true), delay * 1000);
+
+    // this will clear Timeout
+    // when component unmount like in willComponentUnmount
+    // and show will not change to true
+    return () => {
+      clearTimeout(timer1);
+    };
+  }, []);
+
   return (
     <>
       <div
@@ -19,7 +54,7 @@ const AboutUs = () => {
             <h2 className="aboutUs-title">About Us. </h2>
             {/* <div className="aboutUs-mid"></div>
             <img className="aboutUs-image-vid" src={vector} alt="logo" /> */}
-            <img className="aboutUs-image" src={logo} alt="logo" />
+            <img className="aboutUs-image" src={logoPNG} alt="logo" />
           </div>
           <div>
             <p className="aboutUs-text">
@@ -35,6 +70,21 @@ const AboutUs = () => {
               <strong>Mark Schiettekat.</strong>
               <br /> Owner.
             </p>
+            <div className="aboutUs-loader">
+              {!show ? (
+                <p>
+                  Calculating your results
+                  <br /> Please wait...
+                </p>
+              ) : (
+                <button
+                  className="getResultButton"
+                  onClick={() => navigate("/score")}
+                >
+                  Get Results
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
