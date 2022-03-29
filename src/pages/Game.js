@@ -10,10 +10,9 @@ import questions from "../components/questions/questions";
 import Play from "../components/audio/Play";
 import Player from "../components/audio/Player";
 
-import Welcome from "../components/InitialText/Welcome";
+import Welcome from "../components/Welcome/Welcome";
 
 import OutOfTime from "../components/outOfTime/OutOfTime";
-
 
 const Game = () => {
   const {
@@ -27,32 +26,30 @@ const Game = () => {
     showGame,
     setShowQuizz,
     StartGame,
+    timeIsUp,
+    setTimeIsUp,
   } = useContext(AppContext);
-  const [timeIsUp, setTimeIsUp] = useState(false);
+
   return (
     <>
       {timeIsUp ? (
         <OutOfTime />
       ) : (
-          <div className="game-container">
-            <Quizz
-              currentQuestion={currentQuestion}
-              showScore={showScore}
-              score={score}
-              questions={questions}
-              restartGame={restartGame}
-              handleAnswerOptionClick={handleAnswerOptionClick}
-              setShowQuizz={setShowQuizz}
-            />
-
-            <Player />
-            <div className="Counter">
-              <CircularProgressWithLabel
-                timeIsUp={timeIsUp}
-                setTimeIsUp={setTimeIsUp}
-              />
-            </div>
+        <div className="game-container">
+          <Quizz
+            currentQuestion={currentQuestion}
+            showScore={showScore}
+            score={score}
+            questions={questions}
+            restartGame={restartGame}
+            handleAnswerOptionClick={handleAnswerOptionClick}
+            setShowQuizz={setShowQuizz}
+          />
+          <Player />
+          <div className="Counter">
+            <CircularProgressWithLabel />
           </div>
+        </div>
       )}
     </>
   );

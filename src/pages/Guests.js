@@ -1,25 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useParam } from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
-import Quizz from "../components/Quizz/Quizz";
-// import Audio from './components/audio/Audio';
-import questions from "../components/questions/questions";
+import { useParams } from "react-router-dom";
 
-import Play from "../components/audio/Play";
-import Player from "../components/audio/Player";
-import Counter from "../components/Counter/Counter";
-
-import Welcome from "../components/InitialText/Welcome";
-
-import CircularProgressBar from "../components/Counter/CircularProgressBar";
-import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
-
-import { useState } from "react";
-import OutOfTime from "../components/outOfTime/OutOfTime";
-
-// import { collection, getDocs } from "firebase/firestore";
-// import { db } from "../data/config.js";
+import Yupform from "../components/Form/Yupform";
 
 function Guests() {
   const {
@@ -37,50 +22,14 @@ function Guests() {
     StartGame,
   } = useContext(AppContext);
   const [timeIsUp, setTimeIsUp] = useState(false);
-  // useEffect (() => {
 
-  //     const obtenerDatos = async () => {
-  //     const datos = await getDocs(collection(db, "test"));
-  //     datos.forEach((dato) => {
-  //       return console.log(dato.data());
-  //     })
 
-  //     }
-  //     obtenerDatos();
+  const { guesRoute } = useParams();
 
-  // }, [])
-
+  //TODO: ver si se tiene que ir eligiendo las pantallas o las rutas
   return (
     <div className="container">
-      {timeIsUp ? (
-        <OutOfTime />
-      ) : showQuizz ? (
-        <div className="game-container">
-          <Quizz
-            currentQuestion={currentQuestion}
-            showScore={showScore}
-            score={score}
-            questions={questions}
-            restartGame={restartGame}
-            handleAnswerOptionClick={handleAnswerOptionClick}
-            setShowQuizz={setShowQuizz}
-          />
-
-          <Player />
-          {/* <CircularProgressBar /> */}
-          <div className="Counter">
-            <CircularProgressWithLabel
-              timeIsUp={timeIsUp}
-              setTimeIsUp={setTimeIsUp}
-            />
-          </div>
-        </div>
-      ) : (
-        <>
-          <Welcome />
-        </>
-      )}
-
+      <Yupform />
     </div>
   );
 }

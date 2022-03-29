@@ -1,19 +1,16 @@
 import * as React from "react";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 import PropTypes from "prop-types";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 // import "./progressBar.css";
 
-function CircularProgressWithLabel(props, { timeIsUp, setTimeIsUp }) {
+function CircularProgressWithLabel(props) {
   return (
     <Box sx={{ position: "relative", display: "inline-flex" }}>
-      <CircularProgress
-        timeIsUp={timeIsUp}
-        setTimeIsUp={setTimeIsUp}
-        variant="determinate"
-        {...props}
-      />
+      <CircularProgress variant="determinate" {...props} />
       <Box
         sx={{
           top: 0,
@@ -51,9 +48,9 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularStatic({ timeIsUp, setTimeIsUp }) {
+export default function CircularStatic() {
   const [progress, setProgress] = React.useState(99);
-
+  const { timeIsUp, setTimeIsUp } = useContext(AppContext);
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) => (prevProgress <= 0 ? 0 : prevProgress - 1));
