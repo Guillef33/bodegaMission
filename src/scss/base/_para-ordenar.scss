@@ -72,6 +72,10 @@
   transform: scale(0.98);
 }
 
+.playGameButton:hover {
+  background-color: whitesmoke;
+}
+
 .playGameButton:focus {
   border: 3px solid #6f2232;
 }
@@ -118,7 +122,7 @@ button svg {
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 800px) {
   .question-container {
     padding: 40px;
   }
@@ -173,4 +177,12 @@ button svg {
   .button-wrapper {
     width: 300px;
   }
+
+  .option-button {
+	grid-column: 1
+}
+
+.option-button:nth-last-child(1):nth-child(odd) {
+	grid-column: 1;
+}
 }
