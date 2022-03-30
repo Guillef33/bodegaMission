@@ -37,12 +37,20 @@
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat( 4, 1fr );  
   grid-gap: 30px;
-  // column-gap: 15%;
   margin-top: 3%;
   font-family: "Montserrat", sans-serif;
 }
+
+.option-button {
+	grid-column: span 2;
+}
+
+.option-button:nth-last-child(1):nth-child(odd) {
+	grid-column: 2 / span 2;
+}
+
 
 .playGameButton {
   width: 400px;
@@ -62,6 +70,10 @@
 
 .playGameButton:active {
   transform: scale(0.98);
+}
+
+.playGameButton:hover {
+  background-color: whitesmoke;
 }
 
 .playGameButton:focus {
@@ -110,7 +122,7 @@ button svg {
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 800px) {
   .question-container {
     padding: 40px;
   }
@@ -165,4 +177,12 @@ button svg {
   .button-wrapper {
     width: 300px;
   }
+
+  .option-button {
+	grid-column: 1
+}
+
+.option-button:nth-last-child(1):nth-child(odd) {
+	grid-column: 1;
+}
 }

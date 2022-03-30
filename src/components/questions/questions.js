@@ -79,7 +79,7 @@ const questions = [
     id: 5,
   },
   {
-    questionText: "Is Albarin related to Alrariño?",
+    questionText: "Is Albarin related to Albariño?",
     answerOptions: [
       { answerText: "Yes", isCorrect: true },
       { answerText: "No", isCorrect: false },
