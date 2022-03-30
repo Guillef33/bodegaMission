@@ -13,7 +13,7 @@ const questions = [
     questionText: "Which is the variety in Spain most planted?",
     answerOptions: [
       { answerText: "Garnacha", isCorrect: false },
-      { answerText: "Airen", isCorrect: false },
+      { answerText: "Airén", isCorrect: false },
       { answerText: "Bobal", isCorrect: true },
       { answerText: "Tempranillo ", isCorrect: false },
       { answerText: "Albariño ", isCorrect: false },
@@ -33,17 +33,17 @@ const questions = [
   },
   {
     questionText:
-      "Talking about Aragon, which of the following wine regions belong to the region?",
+      "Talking about Aragon, which of the following wine regions belong to it?",
 
     answerOptions: [
       { answerText: "Calatayud", isCorrect: true },
-      { answerText: "Utiel Requena", isCorrect: false },
+      { answerText: "Utiel-Requena", isCorrect: false },
       { answerText: "Campo de Borja", isCorrect: false },
       { answerText: "Yecla", isCorrect: false },
       { answerText: "Cariñena", isCorrect: true },
       { answerText: "Cigales", isCorrect: true },
       { answerText: "Somontano", isCorrect: false },
-      { answerText: "Pla de bages", isCorrect: true },
+      { answerText: "Pla de Bages", isCorrect: true },
       { answerText: "Arlanza", isCorrect: false },
       { answerText: "Bierzo", isCorrect: true },
     ],
@@ -56,11 +56,11 @@ const questions = [
     answerOptions: [
       { answerText: "Cigales", isCorrect: false },
       { answerText: "Somontano", isCorrect: false },
-      { answerText: "Pla de bages", isCorrect: false },
+      { answerText: "Pla de Bages", isCorrect: false },
       { answerText: "Arlanza", isCorrect: false },
       { answerText: "Bierzo", isCorrect: false },
       { answerText: "Calatayud", isCorrect: true },
-      { answerText: "Utiel Requena", isCorrect: false },
+      { answerText: "Utiel-Requena", isCorrect: false },
       { answerText: "Campo de Borja", isCorrect: false },
       { answerText: "Yecla", isCorrect: false },
       { answerText: "Cariñena", isCorrect: true },

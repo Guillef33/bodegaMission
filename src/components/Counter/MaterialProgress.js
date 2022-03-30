@@ -29,7 +29,7 @@ function CircularProgressWithLabel(props) {
           component="h2"
           fontSize={18}
           fontWeight={600}
-          // className="counter-text"
+          className="counter-text"
           // color="text.secondary"
         >
           {`${Math.round(props.value)}`}
@@ -49,7 +49,7 @@ CircularProgressWithLabel.propTypes = {
 };
 
 export default function CircularStatic() {
-  const [progress, setProgress] = React.useState(99);
+  const [progress, setProgress] = React.useState(120);
   const { timeIsUp, setTimeIsUp } = useContext(AppContext);
   React.useEffect(() => {
     const timer = setInterval(() => {

@@ -14,6 +14,8 @@ import Game from "./pages/Game";
 import Score from "./components/score/Score";
 
 import AboutUs from "./components/about/AboutUs";
+import ReadyToStart from "./components/Welcome/ReadyToStart";
+
 
 import PresentationalBox from "./components/Welcome/PresentationBox";
 import Yupform from "./components/Form/Yupform";
@@ -31,7 +33,8 @@ export default function App() {
           {/*Rutas propuestas*/}
           <Route path="/game" element={<Game />} />
 
-          {/*Pruebas*/}
+          {/*Pantalla 2*/}
+          <Route path="/ready" element={<ReadyToStart />} />
 
           <Route path="/progress" element={<CircularProgressBar />} />
           <Route path="/material" element={<CircularProgressWithLabel />} />
