@@ -27,7 +27,7 @@ function CircularProgressWithLabel(props) {
           variant="caption"
           color={props.value < 11 ? "red" : "white"}
           component="h2"
-          fontSize={18}
+          fontSize={16}
           fontWeight={600}
           className="counter-text"
           // color="text.secondary"

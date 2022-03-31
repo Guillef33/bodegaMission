@@ -13,8 +13,8 @@ const questions = [
     questionText: "Which is the variety in Spain most planted?",
     answerOptions: [
       { answerText: "Garnacha", isCorrect: false },
-      { answerText: "Airén", isCorrect: false },
-      { answerText: "Bobal", isCorrect: true },
+      { answerText: "Airén", isCorrect: true },
+      { answerText: "Bobal", isCorrect: false },
       { answerText: "Tempranillo ", isCorrect: false },
       { answerText: "Albariño ", isCorrect: false },
     ],
@@ -24,8 +24,8 @@ const questions = [
   {
     questionText: "Which is the region where the Garnacha was born?",
     answerOptions: [
-      { answerText: "Aragón", isCorrect: false },
-      { answerText: "Cataluña", isCorrect: true },
+      { answerText: "Aragón", isCorrect: true },
+      { answerText: "Cataluña", isCorrect: false },
       { answerText: "Rioja", isCorrect: false },
     ],
     image: fondoPizarras,
@@ -38,11 +38,11 @@ const questions = [
     answerOptions: [
       { answerText: "Calatayud", isCorrect: true },
       { answerText: "Utiel-Requena", isCorrect: false },
-      { answerText: "Campo de Borja", isCorrect: false },
+      { answerText: "Campo de Borja", isCorrect: true },
       { answerText: "Yecla", isCorrect: false },
       { answerText: "Cariñena", isCorrect: true },
-      { answerText: "Cigales", isCorrect: true },
-      { answerText: "Somontano", isCorrect: false },
+      { answerText: "Cigales", isCorrect: false },
+      { answerText: "Somontano", isCorrect: true },
       { answerText: "Pla de Bages", isCorrect: true },
       { answerText: "Arlanza", isCorrect: false },
       { answerText: "Bierzo", isCorrect: true },
@@ -71,9 +71,9 @@ const questions = [
   {
     questionText: "Is it Rufete red, white or both?",
     answerOptions: [
-      { answerText: "White", isCorrect: true },
+      { answerText: "White", isCorrect: false },
       { answerText: "Red", isCorrect: false },
-      { answerText: "Both", isCorrect: false },
+      { answerText: "Both", isCorrect: true },
     ],
     image: fondoPaisaje,
     id: 5,
@@ -81,8 +81,8 @@ const questions = [
   {
     questionText: "Is Albarin related to Albariño?",
     answerOptions: [
-      { answerText: "Yes", isCorrect: true },
-      { answerText: "No", isCorrect: false },
+      { answerText: "Yes", isCorrect: false },
+      { answerText: "No", isCorrect: true },
     ],
     image: fondoPaisaje,
     id: 6,
@@ -101,7 +101,7 @@ const questions = [
     questionText: "Mazuela is from?",
     answerOptions: [
       { answerText: "Rioja", isCorrect: false },
-      { answerText: "Cariñena", isCorrect: true },
+      { answerText: "Cariñena", isCorrect: false },
       { answerText: "Priorat", isCorrect: false },
       { answerText: "All", isCorrect: true },
     ],
