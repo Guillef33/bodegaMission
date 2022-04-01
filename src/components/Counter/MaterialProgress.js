@@ -27,10 +27,8 @@ function CircularProgressWithLabel(props) {
           variant="caption"
           color={props.value < 11 ? "red" : "white"}
           component="h2"
-          fontSize={18}
-          fontWeight={600}
-          // className="counter-text"
-          // color="text.secondary"
+          fontSize={15}
+          fontWeight={300}
         >
           {`${Math.round(props.value)}`}
         </Typography>
@@ -49,7 +47,7 @@ CircularProgressWithLabel.propTypes = {
 };
 
 export default function CircularStatic() {
-  const [progress, setProgress] = React.useState(99);
+  const [progress, setProgress] = React.useState(120);
   const { timeIsUp, setTimeIsUp } = useContext(AppContext);
   React.useEffect(() => {
     const timer = setInterval(() => {
