@@ -17,6 +17,19 @@ function AppProvider(props) {
   const [resp, setResp] = useState([]);
   // let navigate = useNavigate();
   const [timeIsUp, setTimeIsUp] = useState(false);
+
+
+  // hola {
+  //   id,
+  //   nombre,
+  //   email,
+  //   cuestionario {
+  //     [olfato, aroma, feedback]
+  //   }
+  //   // juego {
+
+  //   // }
+  // }
   
 
   const addResp = (newResp) => {
@@ -80,11 +93,11 @@ function AppProvider(props) {
 
 
 
-  const handleAnswerOptionClick = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-  };
+  // const handleAnswerOptionClick = (isCorrect) => {
+  //   if (isCorrect) {
+  //     setScore(score + 1);
+  //   }
+  // };
 
   const pasarPregunta = () => {
     const nextQuestion = currentQuestion + 1;
@@ -107,9 +120,9 @@ function AppProvider(props) {
     }
   };
 
-  const omitirPregunta = () => {
-    pasarPregunta();
-  };
+  // const omitirPregunta = () => {
+  //   pasarPregunta();
+  // };
 
   const restartGame = (e) => {
     setTimeIsUp(false);
@@ -144,20 +157,20 @@ function AppProvider(props) {
     setShowQuizz(false);
     // setStatus(STATUS.STOPPED);
   }
-  function localStorageSet(key, item) {
-    try {
-      localStorage.setItem(key, JSON.stringify(item));
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  function localStorageGet(key) {
-    try {
-      let result = JSON.parse(localStorage.getItem(key));
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // function localStorageSet(key, item) {
+  //   try {
+  //     localStorage.setItem(key, JSON.stringify(item));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  // function localStorageGet(key) {
+  //   try {
+  //     let result = JSON.parse(localStorage.getItem(key));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   return (
     <AppContext.Provider
@@ -173,7 +186,7 @@ function AppProvider(props) {
         currentQuestion,
         score,
         restartGame,
-        handleAnswerOptionClick,
+        // handleAnswerOptionClick,
         // setStatus,
         // STATUS,
         // secondsRemaining,
@@ -186,7 +199,7 @@ function AppProvider(props) {
         setShowQuizz,
         StartGame,
         pasarPregunta,
-        omitirPregunta,
+        // omitirPregunta,
         volverPregunta,
         showStartMission,
         setShowStartMission,

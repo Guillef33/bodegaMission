@@ -39,6 +39,12 @@ function Survey() {
     addResp(newResp);
   };
 
+  // Conexion a Firebase
+  // Nueva coleccion
+
+  // Crear un formulario con las preguntas
+  // usar material UI para el formulario
+
   return (
     <>
       {showScore ? (
