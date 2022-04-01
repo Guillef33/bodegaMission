@@ -19,6 +19,7 @@ import ReadyToStart from "./components/Welcome/ReadyToStart";
 
 import PresentationalBox from "./components/Welcome/PresentationBox";
 import Yupform from "./components/Form/Yupform";
+import Survey from "./components/surveyBox/survey";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
 
           {/*Pantalla 2*/}
           <Route path="/ready" element={<ReadyToStart />} />
+          <Route path="/survey" element={<Survey />} />
 
           <Route path="/progress" element={<CircularProgressBar />} />
           <Route path="/material" element={<CircularProgressWithLabel />} />
