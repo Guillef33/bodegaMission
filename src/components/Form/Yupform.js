@@ -32,9 +32,10 @@ const Yupform = () => {
       values,
     });
     setValues(initialState);
-    Swal.fire("Data loaded", "Now let`s start the mission", "success");
+    isValid &&
+      Swal.fire("Data loaded", "Now let`s start the mission", "success");
     setEmailSend(docRef.id);
-    setTimeout(() => navigate("/"), 4000);
+    isValid && setTimeout(() => navigate("/"), 4000);
   };
 
   const handleChange = (e) => {
