@@ -12,11 +12,11 @@ import Score from "../score/Score";
 import About from "../about/AboutUs";
 
 
-import "./Quizz.scss";
+import "./Quiz.scss";
 
 
 
-function Quizz() {
+function Quiz() {
   const {
     resp,
     addResp,
@@ -104,4 +104,4 @@ function Quizz() {
   );
 }
 
-export default Quizz;
+export default Quiz;

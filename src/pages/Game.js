@@ -4,13 +4,11 @@ import AppProvider, { AppContext } from "../context/AppContext";
 
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
-import Quizz from "../components/Quizz/Quizz";
+import Quizz from "../components/Quiz/Quiz";
 import questions from "../components/questions/questions";
 
 import Play from "../components/audio/Play";
 import Player from "../components/audio/Player";
-
-import Welcome from "../components/Welcome/Welcome";
 
 import OutOfTime from "../components/outOfTime/OutOfTime";
 

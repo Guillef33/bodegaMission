@@ -11,9 +11,9 @@ import Buttons from "../Buttons/Button";
 import Score from "../score/Score";
 import About from "../about/AboutUs";
 
-import "./Quizz.scss";
+import "../Quiz/Quiz.scss";
 
-import data from "../components/surveyBox/data";
+import data from "./data";
 
 
 function Survey() {
