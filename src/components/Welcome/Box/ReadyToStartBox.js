@@ -2,14 +2,14 @@ import React from "react";
 
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
-import "./welcome.scss";
+import "../welcome.scss";
 
 function ReadyToStart() {
   return (
     <div className="initial-text-container">
       <h2>YOU ARE ABOUT TO START THE MISSION</h2>
       <p>Are you ready?</p>
-      <Link to="/game">
+      <Link to="/survey">
         <button className="playGameButton">Play</button>
       </Link>
     </div>

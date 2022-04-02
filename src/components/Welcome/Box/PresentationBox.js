@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 
-import AppProvider, { AppContext } from "../../context/AppContext";
+import AppProvider, { AppContext } from "../../../context/AppContext";
 
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
-import alert from "../../assets/Vector.png";
+import alert from "../../../assets/Vector.png";
 
-import "./welcome.scss";
+import "../welcome.scss";
 
 function PresentationalText() {
   const { showBeforeComponent, StartGame } = useContext(AppContext);
@@ -24,17 +24,13 @@ function PresentationalText() {
         </div>
         <div className="content-start-col">
           <p>
-            We believe that Spain is the country with the greatest wealth of
-            terroirs for making wine, the strongest identity and, paradoxically,
-            the most undervalued production. <br />
+            So our path started to be traced: uncover the hidden value of
+            Spanish wine. And this is the mission you just signed for: uncover
+            what Spain has to offer. Follow the instructions and good luck!
           </p>
         </div>
-        <Link to="/ready">
-          <button
-            className="playGameButton playGameButtonMobile"
-          >
-            Next
-          </button>
+        <Link to="/survey">
+          <button className="playGameButton playGameButtonMobile">Next</button>
         </Link>
       </div>
       <div className="bottom-section">

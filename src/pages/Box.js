@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, useParam } from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
-import WelcomeBox from "../components/Welcome/WelcomeBox";
+import WelcomeBox from "../components/Welcome/Box/WelcomeBox";
 
 import { useParams } from "react-router-dom";
 

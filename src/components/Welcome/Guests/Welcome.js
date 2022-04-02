@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 
-import AppProvider, { AppContext } from "../../context/AppContext";
+import AppProvider, { AppContext } from "../../../context/AppContext";
 
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
-import fondoVinedo from "../../assets/fondoVinedo.png";
+import fondoVinedo from "../../../assets/fondoVinedo.png";
 
-import "./welcome.scss";
+import "../welcome.scss";
 
-import logo from "../../assets/LOGO3.png";
 import PresentationalText from "./PresentationalText";
 
 function Welcome({ type }) {

@@ -5,7 +5,7 @@ import AppProvider, { AppContext } from "./context/AppContext";
 import Home from "./pages/Home";
 import Box from "./pages/Box";
 import Invitados from "./pages/Guests";
-import PresentationalText from "./components/Welcome/PresentationalText";
+import PresentationalText from "./components/Welcome/Guests/PresentationalText";
 import OutOfTime from "./components/outOfTime/OutOfTime";
 import NotFound from "./pages/NotFound";
 import CircularProgressBar from "./components/Counter/CircularProgressBar";
@@ -14,10 +14,10 @@ import Game from "./pages/Game";
 import Score from "./components/score/Score";
 
 import AboutUs from "./components/about/AboutUs";
-import ReadyToStart from "./components/Welcome/ReadyToStart";
+import ReadyToStart from "./components/Welcome/Guests/ReadyToStart";
 
 
-import PresentationalBox from "./components/Welcome/PresentationBox";
+import PresentationalBox from "./components/Welcome/Box/PresentationBox";
 import Yupform from "./components/Form/Yupform";
 import Survey from "./components/surveyBox/survey";
 
