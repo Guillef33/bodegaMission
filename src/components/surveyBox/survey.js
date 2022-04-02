@@ -18,7 +18,7 @@ import Screen4 from "./Screen4";
 import Screen5 from "./Screen5";
 import Screen6 from "./Screen6";
 
-import Results from './Results'
+import Results from "./Results";
 
 import { Paper, CssBaseline } from "@material-ui/core";
 import {
@@ -34,6 +34,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import "../Quiz/Quiz.scss";
 
 import data from "./data";
+import Yupform from "../Form/Yupform";
 
 function Survey() {
   const { currentStep, pasarStep, volverStep } = useContext(AppContext);
@@ -41,9 +42,7 @@ function Survey() {
   console.log(data.lenght);
   console.log(currentStep);
 
-  function renderStep(step) {
-  
-  }
+  function renderStep(step) {}
 
   // setup useState
   const [survey, setSurvey] = useState("screen1");
@@ -62,27 +61,37 @@ function Survey() {
           backgroundSize: "cover",
         }}
       >
-         {(() => {
-        switch (survey) {
-          case "screen1":
-            return <Screen1 handleClick={handleClick} />;
-          case "screen2":
-            return <Screen2 handleClick={handleClick} />;
-          case "screen3":
-            return <Screen3 handleClick={handleClick} />;
-          case "screen4":
-            return <Screen4 handleClick={handleClick} />;
-          case "screen5":
-            return <Screen5 handleClick={handleClick} />;
-          case "screen6":
-            return <Screen6 handleClick={handleClick} />;
-          case "results":
-            return <Results />;
-          default:
-            return null;
-        }
-      })()}
-          
+        <Formik
+          validationSchema={userSchema}
+          initialValues={{ name: "", email: "", survey: { 
+            // [screen1: "", screen2: "", screen3:"", screen4: "", screen5: "", screen6: ""]
+           } 
+          } }
+          // onSubmit={handleSubmit}
+        >
+          {(() => {
+            switch (survey) {
+              case "screen1":
+                return <Screen1 handleClick={handleClick} />;
+              case "screen2":
+                return <Screen2 handleClick={handleClick} />;
+              case "screen3":
+                return <Screen3 handleClick={handleClick} />;
+              case "screen4":
+                return <Screen4 handleClick={handleClick} />;
+              case "screen5":
+                return <Screen5 handleClick={handleClick} />;
+              case "screen6":
+                return <Screen6 handleClick={handleClick} />;
+              case "results":
+                return <Results handleClick={handleClick} />;
+              case "form":
+                return <Yupform />;
+              default:
+                return null;
+            }
+          })()}
+        </Formik>
       </div>
     </>
   );
@@ -90,11 +99,3 @@ function Survey() {
 
 export default Survey;
 
-
-          // <Formik
-          //   validationSchema={userSchema}
-          //   initialValues={{ name: "", email: "" }}
-          //   // onSubmit={handleSubmit}
-          // >
-          //   {renderStep(currentStep)}
-          // </Formik> 
