@@ -1,0 +1,16 @@
+.form-container-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* .MuiFilledInput-root {
+    background: white;
+} */
+
+.others-input {
+    width: 300px;
+    background-color: transparent;
+        border: none;
+    border-bottom: 1px solid white;
+
+}

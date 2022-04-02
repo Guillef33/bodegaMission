@@ -1,6 +1,8 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
 // import { useNavigate } from "react-router-dom";
 import questions from "../components/questions/questions";
+import data from "../components/surveyBox/data";
+
 import { inCollection } from "../helpers/validationsContext";
 
 export const AppContext = createContext(null);
@@ -18,19 +20,7 @@ function AppProvider(props) {
   // let navigate = useNavigate();
   const [timeIsUp, setTimeIsUp] = useState(false);
 
-
-  // hola {
-  //   id,
-  //   nombre,
-  //   email,
-  //   cuestionario {
-  //     [olfato, aroma, feedback]
-  //   }
-  //   // juego {
-
-  //   // }
-  // }
-  
+  const [currentStep, setCurrentStep] = useState(0);
 
   const addResp = (newResp) => {
     //inCollection verifica si el id de la pregunta ya existe en la coleción
@@ -91,14 +81,6 @@ function AppProvider(props) {
     setScore(result);
   }
 
-
-
-  // const handleAnswerOptionClick = (isCorrect) => {
-  //   if (isCorrect) {
-  //     setScore(score + 1);
-  //   }
-  // };
-
   const pasarPregunta = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
@@ -120,9 +102,25 @@ function AppProvider(props) {
     }
   };
 
-  // const omitirPregunta = () => {
-  //   pasarPregunta();
-  // };
+    const pasarStep = () => {
+      const nextStep = currentStep + 1;
+      if (nextStep < data.length) {
+        setCurrentStep(nextStep);
+      } else {
+        console.log("pasarStepElse");
+      }
+    };
+
+    const volverStep = () => {
+      if (currentStep !== 0) {
+        const beforeStep = currentStep - 1;
+        if (beforeStep < data.length) {
+          setCurrentStep(beforeStep);
+        } else {
+        console.log("volverStepElse");
+        }
+      }
+    };
 
   const restartGame = (e) => {
     setTimeIsUp(false);
@@ -157,20 +155,6 @@ function AppProvider(props) {
     setShowQuizz(false);
     // setStatus(STATUS.STOPPED);
   }
-  // function localStorageSet(key, item) {
-  //   try {
-  //     localStorage.setItem(key, JSON.stringify(item));
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-  // function localStorageGet(key) {
-  //   try {
-  //     let result = JSON.parse(localStorage.getItem(key));
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
 
   return (
     <AppContext.Provider
@@ -186,13 +170,6 @@ function AppProvider(props) {
         currentQuestion,
         score,
         restartGame,
-        // handleAnswerOptionClick,
-        // setStatus,
-        // STATUS,
-        // secondsRemaining,
-        // secondsToDisplay,
-        // twoDigits,
-        // useInterval,
         handleStart,
         // losing,
         handleClose,
@@ -209,6 +186,8 @@ function AppProvider(props) {
         showBeforeComponent,
         timeIsUp,
         setTimeIsUp,
+        pasarStep,
+        volverStep,
       }}
     >
       {props.children}
