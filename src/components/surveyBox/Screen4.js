@@ -1,4 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { AppContext } from "../../context/AppContext";
+
+import Buttons from "../Buttons/Button";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+
+
 
 import {
   FormControl,
@@ -11,12 +19,40 @@ import {
 import "./survey.css";
 
 function Screen4(props) {
+  const {
+    resp,
+    addResp,
+    removeResp,
+    showScore,
+    data,
+    questions,
+    currentQuestion,
+    handleClose,
+    pasarPregunta,
+    volverPregunta,
+    currentScreen,
+    setCurrentScreen,
+  } = useContext(AppContext);
   return (
     <div>
       <div className="survey-content-wrapper">
-        <h2>If you would need to guess the vintage:</h2>
+        <div className="question-text">
+          If you would need to guess the vintage:
+        </div>
+        <div className="buttons-indicators">
+          <button className="arrow-forward" onClick={() => volverPregunta()}>
+            {" "}
+            <IoIosArrowBack />
+            <p>Back</p>
+          </button>
+          <button className="arrow-back" onClick={() => pasarPregunta()}>
+            {" "}
+            <IoIosArrowForward />
+            <p>Next</p>
+          </button>
+        </div>
         <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel>
+          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> */}
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"
@@ -29,6 +65,19 @@ function Screen4(props) {
             <FormControlLabel value="2022" control={<Radio />} label="2022" />
           </RadioGroup>
         </FormControl>
+        <div className="answer-section">
+          {data[currentScreen].answerOptions.map((answerOption, index) => (
+            <Buttons
+              key={index}
+              resp={resp}
+              addResp={addResp}
+              removeResp={removeResp}
+              id={questions[currentScreen].id}
+              questionText={questions[currentScreen].questionText}
+              answerOption={answerOption}
+            />
+          ))}
+        </div>
         <div className="survey-buttons-wrapper">
           <button
             onClick={() => props.handleClick("screen3")}

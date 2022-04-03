@@ -10,19 +10,15 @@ import "./About.scss";
 
 const AboutUs = () => {
   const [show, setShow] = useState(false);
-  const delay = 2;
+  const delay = 4;
   let navigate = useNavigate();
   useEffect(() => {
     Swal.fire({
+      // position: "top-end",
       title: "Thanks for playing.",
-      icon: "success",
+      // icon: "success",
       text: "Get to know us, while we calculate your results",
       customClass: "button-about",
-      closeModal: true,
-      confirmButtonClass: "tryAgainButton",
-      button: {
-        text: "Hey ho!",
-      },
     });
     let timer1 = setTimeout(() => setShow(true), delay * 1000);
 
@@ -44,7 +40,7 @@ const AboutUs = () => {
       >
         <div className="aboutUs-wrapper">
           <div className="aboutUs-title-container">
-            <h2 className="aboutUs-title">About Us. </h2>
+            <h2 className="aboutUs-title">About Us</h2>
             {/* <div className="aboutUs-mid"></div>
             <img className="aboutUs-image-vid" src={vector} alt="logo" /> */}
             <img className="aboutUs-image" src={logoPNG} alt="logo" />

@@ -14,9 +14,12 @@ function Screen5(props) {
   return (
     <div>
       <div className="survey-content-wrapper">
-        <h2>NOW YOU HAVE TASTE IT, SELECT WHICH 3 VARIETIES COULD BE</h2>
+        <div className="question-text">
+          Now you have taste it, select which three varieties could be
+        </div>
+
         <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel>
+          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> */}
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"

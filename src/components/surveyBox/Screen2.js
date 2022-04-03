@@ -15,9 +15,11 @@ function Screen2(props) {
   return (
     <div>
       <div className="survey-content-wrapper">
-        <h2>NOSE & PALATE IMPRESSION | EVALUATION</h2>
+        <div className="question-text">
+          Nose & Palate Impression | Evaluation
+        </div>
         <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel>
+          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> */}
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"

@@ -9,15 +9,32 @@ import {
   Rating,
 } from "@mui/material";
 
+import { styled } from "@mui/material/styles";
+
+// import FavoriteIcon from "@mui/icons-material/Favorite";
+// import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+// import CircleIcon from "@mui/icons-material/Circle";
+
 import "./survey.css";
 
 function Screen3(props) {
+
+  const StyledRating = styled(Rating)({
+    "& .MuiRating-iconFilled": {
+      color: "#ff6d75",
+    },
+    "& .MuiRating-iconHover": {
+      color: "#ff3d47",
+    },
+  });
+
+
   return (
     <div>
       <div className="survey-content-wrapper">
-        <h2>NOSE & PALATE IMPRESSION | EVALUATION</h2>
+        <div className="question-text">Nose & Palate Impression | Evaluation</div>
         <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel>
+          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> */}
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"
@@ -32,6 +49,16 @@ function Screen3(props) {
                 // onChange={(event, newValue) => {
                 //   setValue(newValue);
                 // }}
+              />
+              <StyledRating
+                name="customized-color"
+                defaultValue={2}
+                // getLabelText={(value: number) =>
+                //   `${value} Heart${value !== 1 ? "s" : ""}`
+                // }
+                // precision={0.5}
+                // icon={<CircleIcon fontSize="inherit" />}
+                // emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
               />
               <div>
                 <label style={{ color: "white" }}>Alcohol</label>

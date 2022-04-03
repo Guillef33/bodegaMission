@@ -21,11 +21,12 @@ function ButtonsResult() {
 
   function showSwal() {
     Swal.fire({
+      position: "top-end",
       title: "Share with a friend",
       input: "text",
       inputValue: siteUrl,
       html: `
-      <button class="tryAgainButton" onClick={copyLink}>Copy</button>`,
+      <button class="tryAgainButton" onclick={copyLink}>Copy</button>`,
     });
   }
 

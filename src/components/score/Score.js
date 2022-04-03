@@ -4,6 +4,8 @@ import { AppContext } from "../../context/AppContext";
 
 import ButtonsResult from "./ButtonsResult";
 
+import raicesLogo from "../../assets/raices-ibericas.png";
+
 import "./Score.scss";
 
 function Score() {
@@ -13,6 +15,11 @@ function Score() {
     <>
       {score >= 7 ? (
         <div className="score-section">
+          <img
+            src={raicesLogo}
+            alt="logo-raices-ibericas"
+            className="score-raices-logo"
+          />
           <h2 className="score-title">You scored</h2>
           <h3 className="score-numbers">
             {score}/ {questions.length}
@@ -33,6 +40,12 @@ function Score() {
         </div>
       ) : (
         <div className="score-section">
+          <img
+            src={raicesLogo}
+            alt="logo-raices-ibericas"
+            className="score-raices-logo"
+          />
+
           <h2 className="score-title">You scored</h2>
           <h3 className="score-numbers">
             {score}/{questions.length}
@@ -40,8 +53,8 @@ function Score() {
           <div className="text-result-wrapper">
             <p className="score-result-title">There is still much to learn!</p>
             <p className="score-result-text">
-              90% of the wine connoisseurs confess that they <br /> have never heard of
-              some of the Spanish varieties mentioned.
+              90% of the wine connoisseurs confess that they <br /> have never
+              heard of some of the Spanish varieties mentioned.
             </p>
             <p className="score-result-text">
               Come & join us in the Prowein stand number XX

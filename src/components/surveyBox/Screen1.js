@@ -19,7 +19,7 @@ function Screen1(props) {
   return (
     <div>
       <div className="survey-content-wrapper">
-        <h2>NOSE & PALATE IMPRESSION | AROMAS</h2>
+        <div className="question-text">Nose & Palate Impression | Aromas</div>
 
         <FormControl>
           {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> */}
@@ -96,11 +96,6 @@ function Screen1(props) {
               value="Jasmine"
               control={<Radio />}
               label="Jasmine"
-            />
-            <FormControlLabel
-              value="White peach"
-              control={<Radio />}
-              label="White peach"
             />
             <FormControlLabel
               value="Honeysuckle"

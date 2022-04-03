@@ -15,9 +15,12 @@ function PresentationalText() {
       <h1>Before you start</h1>
       <div className="grid-section">
         <div className="before-start-col">
-          <h2>
-            ​​Did you know that Spain has the largest vineyard surface in the
-            world with more than 70 autochthonous varieties?
+          <h2 
+          // style={ { whiteSpace: 'pre'}}
+          >
+            ​​Did you know that Spain has 
+            the largest vineyard surface in the world 
+            with more than 70 autochthonous varieties?
           </h2>
         </div>
         <div className="content-start-col">

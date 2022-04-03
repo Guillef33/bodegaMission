@@ -14,9 +14,11 @@ function Screen6(props) {
   return (
     <div>
       <div className="survey-content-wrapper">
-        <h2>FROM THE REGIONS LISTED BELOW, PICK THE ONES THAT COULD BE</h2>
+        <div className="question-text">
+          From the regions listen below, picj the ones that could be
+        </div>
         <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel>
+          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> */}
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"

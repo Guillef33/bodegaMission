@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
 // import { useNavigate } from "react-router-dom";
 import questions from "../components/questions/questions";
+import data from "../components/surveyBox/data";
 
 import { inCollection } from "../helpers/validationsContext";
 
@@ -12,6 +13,8 @@ function AppProvider(props) {
   const [showBeforeComponent, setShowBeforeComponent] = useState(false);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [currentScreen, setCurrentScreen] = useState(0);
+
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
   // Modelo para guardar los datos y las respuestas del usuario
@@ -40,45 +43,47 @@ function AppProvider(props) {
   };
 
   const removeResp = (id, answerText) => {
-    console.table({id, answerText});
+    console.table({ id, answerText });
     let newResp = [...resp];
-    newResp = newResp.map(el => {
-      if(el.id === id ){
-        console.log('entre acaehfuehf0');
-        let newAnswerOption = el.answerOption.filter( answer => answer.answerText !== answerText)
+    newResp = newResp.map((el) => {
+      if (el.id === id) {
+        console.log("entre acaehfuehf0");
+        let newAnswerOption = el.answerOption.filter(
+          (answer) => answer.answerText !== answerText
+        );
         console.log(newAnswerOption, answerText);
-        return({
+        return {
           id: el.id,
           questionText: el.questionText,
-          answerOption: newAnswerOption
-        })
-      }else{
+          answerOption: newAnswerOption,
+        };
+      } else {
         return el;
       }
     });
     setResp(newResp);
-  }
+  };
 
   const scoreCalculator = () => {
-
-    const arrayPoints = resp.map( el => {
-      if(el.answerOption.length){
+    const arrayPoints = resp.map((el) => {
+      if (el.answerOption.length) {
         let respValue = true;
-        el.answerOption.forEach( answer => {
-          respValue = respValue*answer.isCorrect
-        })
+        el.answerOption.forEach((answer) => {
+          respValue = respValue * answer.isCorrect;
+        });
         return respValue;
-      
-      }else{
+      } else {
         return false;
       }
     });
-    const result = arrayPoints.reduce( (acumulator,currentValue)=>acumulator+currentValue);
-    console.log('result: ',arrayPoints.length);
+    const result = arrayPoints.reduce(
+      (acumulator, currentValue) => acumulator + currentValue
+    );
+    console.log("result: ", arrayPoints.length);
     setScore(result);
-  }
+  };
 
-  const pasarPregunta = () => {
+    const pasarPregunta = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
@@ -101,7 +106,7 @@ function AppProvider(props) {
   const restartGame = (e) => {
     setTimeIsUp(false);
     setShowScore(false);
-    setResp( [] );
+    setResp([]);
     setCurrentQuestion(0);
   };
 
@@ -121,7 +126,6 @@ function AppProvider(props) {
   function showBefore(e) {
     setShowBeforeComponent(true);
   }
-
 
   function handleClose() {
     console.log(showQuizz);
@@ -155,7 +159,10 @@ function AppProvider(props) {
         setShowBeforeComponent,
         showBeforeComponent,
         timeIsUp,
-        setTimeIsUp
+        setTimeIsUp,
+        data,
+        currentScreen,
+        setCurrentScreen,
       }}
     >
       {props.children}
