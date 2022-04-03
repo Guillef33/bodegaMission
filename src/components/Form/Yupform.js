@@ -56,7 +56,7 @@ const Yupform = () => {
       >
         {({ errors, touched }) => (
           <Form className="form-wrapper" onSubmit={createUser}>
-            <label> Ingrese su nombre </label>
+            <label> Your name </label>
             <Field
               name="name"
               type="text"
@@ -68,7 +68,7 @@ const Yupform = () => {
               <p className="validation-Error">{errors.name}</p>
             ) : null}
             {/* <ErrorMessage name="name" /> */}
-            <label> Ingrese su email </label>
+            <label> Your email </label>
             <Field
               name="email"
               type="email"

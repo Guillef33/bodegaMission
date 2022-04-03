@@ -6,6 +6,7 @@ import {
   RadioGroup,
   FormControlLabel,
   Radio,
+  Rating,
 } from "@mui/material";
 
 import "./survey.css";
@@ -23,21 +24,36 @@ function Screen2(props) {
             name="radio-buttons-group"
             className="form-container-steps"
           >
-            <FormControlLabel
-              value="Nose & Palate Impression"
-              control={<Radio />}
-              label="Nose & Palate Impression"
-            />
-            <FormControlLabel
-              value="Swetness"
-              control={<Radio />}
-              label="Swetness"
-            />
-            <FormControlLabel
-              value="Intensity"
-              control={<Radio />}
-              label="Intensity"
-            />
+            <div>
+              <label style={{ color: "white" }}>Nose & Palate Impression</label>
+              <Rating
+                name="simple-controlled"
+                // value={value}
+                // onChange={(event, newValue) => {
+                //   setValue(newValue);
+                // }}
+              />
+              <div>
+                <label style={{ color: "white" }}>Swetness</label>
+                <Rating
+                  name="simple-controlled"
+                  // value={value}
+                  // onChange={(event, newValue) => {
+                  //   setValue(newValue);
+                  // }}
+                />
+              </div>
+              <div>
+                <label style={{ color: "white" }}>Intensity</label>
+                <Rating
+                  name="simple-controlled"
+                  // value={value}
+                  // onChange={(event, newValue) => {
+                  //   setValue(newValue);
+                  // }}
+                />
+              </div>
+            </div>
           </RadioGroup>
         </FormControl>
         <div className="survey-buttons-wrapper">

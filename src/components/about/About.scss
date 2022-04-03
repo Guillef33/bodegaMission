@@ -55,3 +55,32 @@
   text-align: center;
   color: #f5f5f5;
 }
+
+@media screen and (max-width: 768px) {
+
+  .aboutUs-wrapper {
+
+    flex-direction: column;
+    padding: 30px;
+
+  }
+
+  .aboutUs-container {
+    display: block;
+    height: auto;
+    padding: 30px;
+  }
+
+  .aboutUs-title {
+    font-size: 40px;
+  }
+
+  .aboutUs-image {
+    width: 250px;
+  }
+
+  .getResultButton {
+    width: 250px;
+  }
+  
+}
