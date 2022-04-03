@@ -28,6 +28,7 @@ function Screen6(props) {
             defaultValue="female"
             name="radio-buttons-group"
             className="form-container-steps"
+            style={{ display: "grid" }}
           >
             <FormControlLabel
               value="TERRA ALTA"

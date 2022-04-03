@@ -28,6 +28,7 @@ function Screen4(props) {
             defaultValue="female"
             name="radio-buttons-group"
             className="form-container-steps"
+            style={{ display: "grid" }}
           >
             <FormControlLabel value="2018" control={<Radio />} label="2018" />
             <FormControlLabel value="2020" control={<Radio />} label="2020" />

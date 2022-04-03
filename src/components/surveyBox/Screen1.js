@@ -14,7 +14,7 @@ import {
 import "./survey.css";
 
 function Screen1(props) {
-  const [otros, setOtros] = useState("");
+  const [others, setOthers] = useState("");
 
   return (
     <div
@@ -28,7 +28,7 @@ function Screen1(props) {
         <h2>NOSE & PALATE IMPRESSION | AROMAS</h2>
 
         <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel>
+          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> */}
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"
@@ -37,9 +37,19 @@ function Screen1(props) {
             style={{ display: "grid" }}
           >
             <FormControlLabel
-              value="Pear/ apple"
               control={<Radio />}
               label="Pear/ apple"
+              id="Pear/ apple"
+              name="Pear/ apple"
+              value={props.values.name}
+              // value={props.formik.values.email}
+              // onChange={props.formik.handleChange}
+              // error={
+              //   props.formik.touched.email && Boolean(props.formik.errors.email)
+              // }
+              // helperText={
+              //   props.formik.touched.email && props.formik.errors.email
+              // }
             />
             <FormControlLabel
               value="Lychee"
@@ -110,7 +120,7 @@ function Screen1(props) {
             />
             <input
               type="text"
-              value={otros}
+              value={others}
               placeholder="Others"
               className="others-input"
             ></input>

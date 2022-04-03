@@ -28,6 +28,7 @@ function Screen5(props) {
             defaultValue="female"
             name="radio-buttons-group"
             className="form-container-steps"
+            style={{ display: "grid" }}
           >
             <FormControlLabel
               value="GARNACHA BLANCA"
