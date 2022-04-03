@@ -10,7 +10,16 @@
 .others-input {
     width: 300px;
     background-color: transparent;
-        border: none;
+    border: none;
     border-bottom: 1px solid white;
 
+}
+
+.survey-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0px;
+    margin: 120px;
 }

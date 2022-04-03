@@ -43,16 +43,6 @@ const Yupform = () => {
     setValues({ ...values, [name]: value });
   };
 
-  // const dataBase = async (e) => {
-  //   e.preventDefault();
-  //   const docRef = await addDoc(collection(db, "mails"), {
-  //     values,
-  //   });
-
-  //   setValues(initialState);
-  //   setEmailSend(docRef.id);
-  // };
-
   return (
     <div className="form-container">
       <h2 className="form-title">Welcome</h2>
