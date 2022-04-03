@@ -6,8 +6,6 @@ import Buttons from "../Buttons/Button";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
-
-
 import {
   FormControl,
   FormLabel,
@@ -32,6 +30,8 @@ function Screen4(props) {
     volverPregunta,
     currentScreen,
     setCurrentScreen,
+    pasarScreen,
+    volverScreen
   } = useContext(AppContext);
   return (
     <div>
@@ -40,12 +40,12 @@ function Screen4(props) {
           If you would need to guess the vintage:
         </div>
         <div className="buttons-indicators">
-          <button className="arrow-forward" onClick={() => volverPregunta()}>
+          <button className="arrow-forward" onClick={() => volverScreen()}>
             {" "}
             <IoIosArrowBack />
             <p>Back</p>
           </button>
-          <button className="arrow-back" onClick={() => pasarPregunta()}>
+          <button className="arrow-back" onClick={() => pasarScreen()}>
             {" "}
             <IoIosArrowForward />
             <p>Next</p>

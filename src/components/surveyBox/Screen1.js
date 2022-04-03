@@ -1,4 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+
+import { AppContext } from "../../context/AppContext";
+
+import Buttons from "../Buttons/Button";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 import {
   FormControl,
@@ -16,13 +22,42 @@ import "./survey.css";
 function Screen1(props) {
   const [others, setOthers] = useState("");
 
+  const {
+    resp,
+    addResp,
+    removeResp,
+    showScore,
+    data,
+    questions,
+    currentQuestion,
+    handleClose,
+    pasarPregunta,
+    volverPregunta,
+    currentScreen,
+    setCurrentScreen,
+    pasarScreen,
+    volverScreen,
+  } = useContext(AppContext);
+
   return (
     <div>
       <div className="survey-content-wrapper">
         <div className="question-text">Nose & Palate Impression | Aromas</div>
+        <div className="buttons-indicators">
+          <button className="arrow-forward" onClick={() => volverScreen()}>
+            {" "}
+            <IoIosArrowBack />
+            <p>Back</p>
+          </button>
+          <button className="arrow-back" onClick={() => pasarScreen()}>
+            {" "}
+            <IoIosArrowForward />
+            <p>Next</p>
+          </button>
+        </div>
 
-        <FormControl>
-          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> */}
+        {/* <FormControl>
+          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> 
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"
@@ -114,13 +149,26 @@ function Screen1(props) {
               className="others-input"
             ></input>
           </RadioGroup>
-        </FormControl>
-        <button
+        </FormControl> */}
+        <div className="answer-section">
+          {data[currentScreen].answerOptions.map((answerOption, index) => (
+            <Buttons
+              key={index}
+              resp={resp}
+              addResp={addResp}
+              removeResp={removeResp}
+              id={questions[currentScreen].id}
+              questionText={questions[currentScreen].questionText}
+              answerOption={answerOption}
+            />
+          ))}
+        </div>
+        {/* <button
           onClick={() => props.handleClick("screen2")}
           className="playGameButton"
         >
           Next
-        </button>
+        </button> */}
       </div>
     </div>
   );

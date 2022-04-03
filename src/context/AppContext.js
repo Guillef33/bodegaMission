@@ -103,6 +103,28 @@ function AppProvider(props) {
       }
     }
   };
+
+  
+    const pasarScreen = () => {
+      const nextScreen = currentScreen + 1;
+      if (nextScreen < data.length) {
+        setCurrentScreen(nextScreen);
+      } else {
+        scoreCalculator();
+        setShowScore(true);
+      }
+    };
+
+    const volverScreen = () => {
+      if (currentQuestion !== 0) {
+        const beforeScreen = currentScreen - 1;
+        if (beforeScreen < data.length) {
+          setCurrentScreen(beforeScreen);
+        } else {
+          setShowScore(true);
+        }
+      }
+    };
   const restartGame = (e) => {
     setTimeIsUp(false);
     setShowScore(false);
@@ -163,6 +185,8 @@ function AppProvider(props) {
         data,
         currentScreen,
         setCurrentScreen,
+        pasarScreen,
+        volverScreen,
       }}
     >
       {props.children}

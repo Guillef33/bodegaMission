@@ -53,8 +53,8 @@ function Score() {
           <div className="text-result-wrapper">
             <p className="score-result-title">There is still much to learn!</p>
             <p className="score-result-text">
-              90% of the wine connoisseurs confess that they <br /> have never
-              heard of some of the Spanish varieties mentioned.
+              90% of the wine connoisseurs confess that they have never heard{" "}
+              <br />  of some of the Spanish varieties mentioned.
             </p>
             <p className="score-result-text">
               Come & join us in the Prowein stand number XX
