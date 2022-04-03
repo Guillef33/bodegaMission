@@ -19,6 +19,7 @@ const AboutUs = () => {
       text: "Get to know us, while we calculate your results",
       customClass: "button-about",
       closeModal: true,
+      confirmButtonClass: "tryAgainButton",
       button: {
         text: "Hey ho!",
       },

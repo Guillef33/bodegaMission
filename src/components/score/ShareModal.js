@@ -1,30 +1,32 @@
-import React from "react";
+// import React, { useEffect } from "react";
 
-import "./Score.scss";
+// import "./Score.scss";
 
-function ShareModal({ show, setShow }) {
-  return (
-    <div className="share-modal-container">
-      <button className="close-modal" onClick={() => setShow(false)}>
-        X
-      </button>
-      <h2>Share this mission with a friend</h2>
+// import Swal from "sweetalert2";
 
-      <div className="modal-container-buttons">
-        <input value="https://prowein.raicesibericas.com/guests"></input>
-        <button
-          className="tryAgainButton"
-          onClick={() =>
-            navigator.clipboard.writeText(
-              "https://prowein.raicesibericas.com/guests"
-            )
-          }
-        >
-          Copy
-        </button>
-      </div>
-    </div>
-  );
-}
+// function ShareModal({ show, setShow }) {
+//   return (
+//     <div className="share-modal-container">
+//       <button className="close-modal" onClick={() => setShow(false)}>
+//         X
+//       </button>
+//       <h2>Share this mission with a friend</h2>
 
-export default ShareModal;
+//       <div className="modal-container-buttons">
+//         <input value="https://prowein.raicesibericas.com/guests"></input>
+//         <button
+//           className="tryAgainButton"
+//           onClick={() =>
+//             navigator.clipboard.writeText(
+//               "https://prowein.raicesibericas.com/guests"
+//             )
+//           }
+//         >
+//           Copy
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default ShareModal;

@@ -6,10 +6,28 @@ import ShareModal from "./ShareModal";
 import { BiShareAlt } from "react-icons/bi";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
+import Swal from "sweetalert2";
+
 function ButtonsResult() {
   const [show, setShow] = useState(false);
 
   const { restartGame } = useContext(AppContext);
+
+  const siteUrl = "https://prowein.raicesibericas.com/guests";
+
+  function copyLink() {
+   return navigator.clipboard.writeText(siteUrl);
+  }
+
+  function showSwal() {
+    Swal.fire({
+      title: "Share with a friend",
+      input: "text",
+      inputValue: siteUrl,
+      html: `
+      <button class="tryAgainButton" onClick={copyLink}>Copy</button>`,
+    });
+  }
 
   return (
     <div className="buttons-results">
@@ -22,7 +40,10 @@ function ButtonsResult() {
         Share the mission
         <BiShareAlt />
       </button>
-      {show ? <ShareModal show={show} setShow={setShow} /> : " "}
+      {show
+        ? showSwal()
+        : //  <ShareModal show={show} setShow={setShow} />
+          " "}
     </div>
   );
 }

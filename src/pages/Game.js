@@ -2,10 +2,11 @@ import React, { useState, useContext } from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
-import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
 import Quizz from "../components/Quiz/Quiz";
 import Player from "../components/audio/Player";
+import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
+
 
 import OutOfTime from "../components/outOfTime/OutOfTime";
 
@@ -36,10 +37,7 @@ const Game = () => {
             handleAnswerOptionClick={handleAnswerOptionClick}
             setShowQuizz={setShowQuizz}
           />
-          <Player />
-          <div className="Counter">
-            <CircularProgressWithLabel />
-          </div>
+
         </div>
       )}
     </>
