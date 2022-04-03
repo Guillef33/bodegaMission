@@ -11,10 +11,7 @@ import Buttons from "../Buttons/Button"
 import Score from "../score/Score";
 import About from "../about/AboutUs";
 
-
 import "./Quiz.scss";
-
-
 
 function Quiz() {
   const {
@@ -28,10 +25,6 @@ function Quiz() {
     pasarPregunta,
     volverPregunta,
   } = useContext(AppContext);
-
-  const [answers, setAnswers] = useState([]);
-
-  console.log(currentQuestion);
 
   //TODO: Este hangleOptionClick va a decidir si tenemos que agregar la respuesta o eliminarla
   const handleOptionClick = (e,newResp) => {
@@ -67,7 +60,6 @@ function Quiz() {
 
           <div className="question-content-wrapper">
             <button className="closeBtn" onClick={handleClose}>
-              {/* <ImCross /> */}
             </button>
             <h2 className="question-number">
               Question{" "}

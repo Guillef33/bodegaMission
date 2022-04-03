@@ -1,8 +1,4 @@
-import React, { useContext } from "react";
-
-import AppProvider, { AppContext } from "../../../context/AppContext";
-
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import React from "react";
 
 import fondoVinedo from "../../../assets/fondoVinedo.png";
 
@@ -10,10 +6,7 @@ import "../welcome.scss";
 
 import PresentationBox from "./PresentationBox";
 
-
 function Welcome({ type }) {
-  const { showStartMission, showMission, showBefore, StartGame } =
-    useContext(AppContext);
   return (
     <>
       <div

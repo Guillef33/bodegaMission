@@ -86,7 +86,7 @@ function Survey() {
   return (
     <>
       <div
-        className="question-container"
+        className="survey-container"
         style={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

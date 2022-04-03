@@ -1,18 +1,23 @@
+.survey-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
 .form-container-steps {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
-/* .MuiFilledInput-root {
-    background: white;
-} */
 
 .others-input {
     width: 300px;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid white;
-
 }
 
 .survey-content-wrapper {
@@ -22,4 +27,19 @@
     height: 100vh;
     margin-top: 0px;
     margin: 120px;
+}
+
+@media screen and (max-width: 760px) {
+    .form-container-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .survey-content-wrapper {
+        height: auto;
+    }
+
+    .survey-container {
+        height: auto;
+    }
+
 }

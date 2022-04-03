@@ -12,13 +12,7 @@ import "./survey.css";
 
 function Screen2(props) {
   return (
-    <div
-      className="question-container"
-      style={{
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <div>
       <div className="survey-content-wrapper">
         <h2>NOSE & PALATE IMPRESSION | EVALUATION</h2>
         <FormControl>

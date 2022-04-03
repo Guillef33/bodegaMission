@@ -17,13 +17,7 @@ function Screen1(props) {
   const [others, setOthers] = useState("");
 
   return (
-    <div
-      className="question-container"
-      style={{
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <div>
       <div className="survey-content-wrapper">
         <h2>NOSE & PALATE IMPRESSION | AROMAS</h2>
 

@@ -1,19 +1,15 @@
 import React, { useContext } from "react";
 
-import AppProvider, { AppContext } from "../../../context/AppContext";
-
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import alert from "../../../assets/Vector.png";
 
 import "../welcome.scss";
 
 function PresentationalText() {
-  const { showBeforeComponent, StartGame } = useContext(AppContext);
 
   return (
     <div className="presentation-container">
-      {/* <div className="content-section"> */}
       <h1>Before you start</h1>
       <div className="grid-section">
         <div className="before-start-col">
@@ -37,7 +33,6 @@ function PresentationalText() {
         <img src={alert} alt="alert" className="alert-image" />
         <p>BE CAREFUL: YOU HAVE 2 MINUTES TO COMPLETE THE MISSION.</p>
       </div>
-      {/* </div> */}
     </div>
   );
 }

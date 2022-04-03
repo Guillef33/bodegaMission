@@ -7,7 +7,7 @@ import ButtonsResult from "./ButtonsResult";
 import "./Score.scss";
 
 function Score() {
-  const { questions, score, restartGame } = useContext(AppContext);
+  const { questions, score } = useContext(AppContext);
 
   return (
     <>

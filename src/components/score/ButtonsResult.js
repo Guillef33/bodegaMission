@@ -8,13 +8,8 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 function ButtonsResult() {
   const [show, setShow] = useState(false);
-  console.log(show);
-  // const closeModal = () => {
-  //   setShow(false);
-  // };
+
   const { restartGame } = useContext(AppContext);
-  // console.log(window.location.href);
-  // console.log(show);
 
   return (
     <div className="buttons-results">

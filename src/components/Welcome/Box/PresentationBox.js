@@ -9,11 +9,9 @@ import alert from "../../../assets/Vector.png";
 import "../welcome.scss";
 
 function PresentationalText() {
-  const { showBeforeComponent, StartGame } = useContext(AppContext);
 
   return (
     <div className="presentation-container">
-      {/* <div className="content-section"> */}
       <h1>Before you start</h1>
       <div className="grid-section">
         <div className="before-start-col">
@@ -24,13 +22,13 @@ function PresentationalText() {
         </div>
         <div className="content-start-col">
           <p>
-            So our path started to be traced: uncover the hidden value of
+            Our path started to be traced: uncover the hidden value of
             Spanish wine. And this is the mission you just signed for: uncover
             what Spain has to offer. Follow the instructions and good luck!
           </p>
         </div>
         <Link to="/ready-box">
-          <button className="playGameButton playGameButtonMobile">Next</button>
+          <button className="playGameButton">Next</button>
         </Link>
       </div>
       <div className="bottom-section">

@@ -1,11 +1,8 @@
 // Nuevas Imagenes
 import vinoCuna from "../../assets/vinoCuna.jpg";
 import fondoPizarras from "../../assets/fondoPizarras.jpg";
-import fondoSombras from "../../assets/fondoSombras.png";
-import fondoVinedo from "../../assets/fondoVinedo.jpg";
 import fondoPaisaje from "../../assets/fondoPaisaje.jpg";
 
-import Paisaje from '../../assets/Paisaje.png';
 import Raices1 from '../../assets/Raices1.png';
 import RaicesMalvar from '../../assets/RaicesMalvar.png';
 import RaicesMalvar1 from '../../assets/RaicesMalvar1.png'

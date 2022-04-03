@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
 // import { useNavigate } from "react-router-dom";
 import questions from "../components/questions/questions";
-import data from "../components/surveyBox/data";
 
 import { inCollection } from "../helpers/validationsContext";
 
@@ -19,8 +18,6 @@ function AppProvider(props) {
   const [resp, setResp] = useState([]);
   // let navigate = useNavigate();
   const [timeIsUp, setTimeIsUp] = useState(false);
-
-  const [currentStep, setCurrentStep] = useState(0);
 
   const addResp = (newResp) => {
     //inCollection verifica si el id de la pregunta ya existe en la coleción
@@ -101,27 +98,6 @@ function AppProvider(props) {
       }
     }
   };
-
-    const pasarStep = () => {
-      const nextStep = currentStep + 1;
-      if (nextStep < data.length) {
-        setCurrentStep(nextStep);
-      } else {
-        console.log("pasarStepElse");
-      }
-    };
-
-    const volverStep = () => {
-      if (currentStep !== 0) {
-        const beforeStep = currentStep - 1;
-        if (beforeStep < data.length) {
-          setCurrentStep(beforeStep);
-        } else {
-        console.log("volverStepElse");
-        }
-      }
-    };
-
   const restartGame = (e) => {
     setTimeIsUp(false);
     setShowScore(false);
@@ -146,14 +122,10 @@ function AppProvider(props) {
     setShowBeforeComponent(true);
   }
 
-  const handleStart = () => {
-    // setStatus(STATUS.STARTED);
-  };
 
   function handleClose() {
     console.log(showQuizz);
     setShowQuizz(false);
-    // setStatus(STATUS.STOPPED);
   }
 
   return (
@@ -170,8 +142,6 @@ function AppProvider(props) {
         currentQuestion,
         score,
         restartGame,
-        handleStart,
-        // losing,
         handleClose,
         setShowQuizz,
         StartGame,
@@ -185,9 +155,7 @@ function AppProvider(props) {
         setShowBeforeComponent,
         showBeforeComponent,
         timeIsUp,
-        setTimeIsUp,
-        pasarStep,
-        volverStep,
+        setTimeIsUp
       }}
     >
       {props.children}

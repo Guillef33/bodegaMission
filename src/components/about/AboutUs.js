@@ -3,8 +3,6 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 import fondoVinedo from "../../assets/fondoVinedo.png";
-// import vector from "../../assets/vidProv.png";
-import logo from "../../assets/logoConVid.jpg";
 
 import logoPNG from "../../assets/LogosPNGOk.png";
 
@@ -12,8 +10,7 @@ import "./About.scss";
 
 const AboutUs = () => {
   const [show, setShow] = useState(false);
-  //TODO: Soy Josué, hace falta este delay?
-  const delay = 4;
+  const delay = 2;
   let navigate = useNavigate();
   useEffect(() => {
     Swal.fire({

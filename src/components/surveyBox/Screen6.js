@@ -12,13 +12,7 @@ import "./survey.css";
 
 function Screen6(props) {
   return (
-    <div
-      className="question-container"
-      style={{
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <div>
       <div className="survey-content-wrapper">
         <h2>FROM THE REGIONS LISTED BELOW, PICK THE ONES THAT COULD BE</h2>
         <FormControl>

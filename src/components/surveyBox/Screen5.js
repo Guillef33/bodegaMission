@@ -12,13 +12,7 @@ import "./survey.css";
 
 function Screen5(props) {
   return (
-    <div
-      className="question-container"
-      style={{
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <div>
       <div className="survey-content-wrapper">
         <h2>NOW YOU HAVE TASTE IT, SELECT WHICH 3 VARIETIES COULD BE</h2>
         <FormControl>
