@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
 import AppProvider, { AppContext } from "./context/AppContext";
 import Home from "./pages/Home";
 import Box from "./pages/Box";
@@ -15,15 +14,12 @@ import Score from "./components/score/Score";
 
 import AboutUs from "./components/about/AboutUs";
 import ReadyToStart from "./components/Welcome/Guests/ReadyToStart";
+import ReadyToStartBox from "./components/Welcome/Box/ReadyToStartBox";
 
 import PresentationalBox from "./components/Welcome/Box/PresentationBox";
 import Yupform from "./components/Form/Yupform";
 import Survey from "./components/surveyBox/survey";
-// Screens
-import Screen1 from "./components/surveyBox/Screen1";
-import Screen2 from "./components/surveyBox/Screen2";
-import Screen3 from "./components/surveyBox/Screen3";
-import Screen4 from "./components/surveyBox/Screen4";
+
 
 export default function App() {
   return (
@@ -40,6 +36,8 @@ export default function App() {
 
           {/*Pantalla 2*/}
           <Route path="/ready" element={<ReadyToStart />} />
+          <Route path="/ready-box" element={<ReadyToStartBox />} />
+
           <Route path="/survey" element={<Survey />} />
 
           <Route path="/progress" element={<CircularProgressBar />} />
@@ -54,10 +52,6 @@ export default function App() {
 
           <Route path="/about" element={<AboutUs />} />
 
-          <Route path="/screen1" element={<Screen1 />} />
-          <Route path="/screen2" element={<Screen2 />} />
-          <Route path="/screen3" element={<Screen3 />} />
-          <Route path="/screen4" element={<Screen4 />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

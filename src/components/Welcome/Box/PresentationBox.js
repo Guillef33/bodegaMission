@@ -29,13 +29,17 @@ function PresentationalText() {
             what Spain has to offer. Follow the instructions and good luck!
           </p>
         </div>
-        <Link to="/survey">
+        <Link to="/ready-box">
           <button className="playGameButton playGameButtonMobile">Next</button>
         </Link>
       </div>
       <div className="bottom-section">
         <img src={alert} alt="alert" className="alert-image" />
-        <p>BE CAREFUL: YOU HAVE 2 MINUTES TO COMPLETE THE MISSION.</p>
+        <p>
+          Please open the bottle you have received & serve yourself a glass,
+          it's going to be amazing, we know but we recommend to drink in
+          moderation.
+        </p>
       </div>
       {/* </div> */}
     </div>
