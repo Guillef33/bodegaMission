@@ -57,7 +57,7 @@ function Screen1(props) {
         </div>
 
         {/* <FormControl>
-          {/* <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> 
+           <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> 
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="female"
@@ -150,25 +150,41 @@ function Screen1(props) {
             ></input>
           </RadioGroup>
         </FormControl> */}
-        <div className="answer-section">
-          {data[currentScreen].answerOptions.map((answerOption, index) => (
-            <Buttons
-              key={index}
-              resp={resp}
-              addResp={addResp}
-              removeResp={removeResp}
-              id={questions[currentScreen].id}
-              questionText={questions[currentScreen].questionText}
-              answerOption={answerOption}
-            />
-          ))}
-        </div>
-        {/* <button
+        <div className="question-content-wrapper">
+          <button className="closeBtn" onClick={handleClose}></button>
+          <h2 className="question-number">
+            Question{" "}
+            <span style={{ fontWeight: "bold" }}>
+              {data[currentQuestion].id}
+            </span>{" "}
+            of 8
+          </h2>
+          <div className="question-section">
+            <div className="question-count"></div>
+            <div className="question-text">
+              {data[currentQuestion].questionText}
+            </div>
+          </div>
+          <div className="answer-section">
+            {data[currentScreen].answerOptions.map((answerOption, index) => (
+              <Buttons
+                key={index}
+                resp={resp}
+                addResp={addResp}
+                removeResp={removeResp}
+                id={questions[currentScreen].id}
+                questionText={questions[currentScreen].questionText}
+                answerOption={answerOption}
+              />
+            ))}
+          </div>
+          {/* <button
           onClick={() => props.handleClick("screen2")}
           className="playGameButton"
         >
           Next
         </button> */}
+        </div>
       </div>
     </div>
   );

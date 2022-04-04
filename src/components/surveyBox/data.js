@@ -7,7 +7,7 @@ import RaicesMalvar1 from "../../assets/RaicesMalvar1.png";
 
 const data = [
   {
-    questionText: "NOSE & PALATE IMPRESSION | AROMAS",
+    questionText: " Nose & Palate Impression | Aromas",
     answerOptions: [
       { answerText: "Pear/ apple", isCorrect: false },
       { answerText: "Lychee", isCorrect: false },
@@ -30,7 +30,7 @@ const data = [
     id: 1,
   },
   {
-    questionText: "NOSE & PALATE IMPRESSION | EVALUATION",
+    questionText: "Nose & Palate Impression | Evaluation",
     answerOptions: [
       { answerText: "Intensity", isCorrect: false },
       { answerText: "Swetness", isCorrect: true },
@@ -40,7 +40,7 @@ const data = [
     id: 2,
   },
   {
-    questionText: "NOSE & PALATE IMPRESSION | EVALUATION",
+    questionText: "Nose & Palate Impression | Evaluation",
 
     answerOptions: [
       { answerText: "Acidity", isCorrect: true },
@@ -63,7 +63,8 @@ const data = [
   },
 
   {
-    questionText: "NOW YOU HAVE TASTE IT, SELECT WHICH 3 VARIETIES COULD BE ",
+    questionText:
+      "Now you have taste it, select which three varieties could be",
     answerOptions: [
       { answerText: "GARNACHA BLANCA", isCorrect: true },
       { answerText: "ALBARIÑO", isCorrect: false },
@@ -80,7 +81,7 @@ const data = [
     id: 5,
   },
   {
-    questionText: "FROM THE REGIONS LISTED BELOW, PICK THE ONES THAT COULD BE",
+    questionText: "From the regions listen below, picj the ones that could be",
     answerOptions: [
       { answerText: "TERRA ALTA", isCorrect: true },
       { answerText: "RIAS BAIXAS", isCorrect: false },

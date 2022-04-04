@@ -15,6 +15,10 @@ import { addDoc } from "@firebase/firestore";
 import { db } from "../../data/config";
 import Swal from "sweetalert2";
 
+// Consolidados
+import Consolidado from "./Consolidado";
+
+
 // Screen Steps
 import Screen1 from "./Screen1";
 import Screen2 from "./Screen2";
@@ -102,7 +106,8 @@ function Survey() {
             },
           }}
         >
-          {({ errors, touched }) => (
+          <Consolidado />
+  {/* {({ errors, touched }) => (
             <Form className="form-wrapper" onSubmit={handleSubmit}>
               {(() => {
                 switch (survey) {
@@ -141,7 +146,7 @@ function Survey() {
                 }
               })()}
             </Form>
-          )}
+          )}  */}
         </Formik>
       </div>
     </>

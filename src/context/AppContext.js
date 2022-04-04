@@ -116,7 +116,7 @@ function AppProvider(props) {
     };
 
     const volverScreen = () => {
-      if (currentQuestion !== 0) {
+      if (currentScreen !== 0) {
         const beforeScreen = currentScreen - 1;
         if (beforeScreen < data.length) {
           setCurrentScreen(beforeScreen);

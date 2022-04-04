@@ -43,13 +43,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.option-button {
-	grid-column: span 2;
-}
 
-.option-button:nth-last-child(1):nth-child(odd) {
-	grid-column: 2 / span 2;
-}
 
 
 .playGameButton {
