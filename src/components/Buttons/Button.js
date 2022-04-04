@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
+import "./Button.scss";
 
-import './Button.scss';
-
-const Button = ({ answerOption, resp, addResp, removeResp, id, questionText }) => {
-
+const Button = ({
+  answerOption,
+  resp,
+  addResp,
+  removeResp,
+  id,
+  questionText,
+}) => {
   const [active, setActive] = useState(false);
 
   const handleOptionClick = (newResp) => {
-    if(!active){
-      console.log('se añade respuesta');
+    if (!active) {
+      console.log("se añade respuesta");
       addResp(newResp);
       setActive(!active);
-    }else{
+    } else {
       removeResp(id, answerOption.answerText);
       setActive(!active);
     }
@@ -20,34 +25,39 @@ const Button = ({ answerOption, resp, addResp, removeResp, id, questionText }) =
 
   useEffect(() => {
     //TODO: Probar que ande bien
-    const currentAswenr = resp.find(el=>el.id ===id);
-    console.log('currentAswenr', currentAswenr);
-    if(currentAswenr){
-      if(currentAswenr.answerOption.some(el=> el.answerText === answerOption.answerText)){
+    const currentAswenr = resp.find((el) => el.id === id);
+    console.log("currentAswenr", currentAswenr);
+    if (currentAswenr) {
+      if (
+        currentAswenr.answerOption.some(
+          (el) => el.answerText === answerOption.answerText
+        )
+      ) {
         setActive(true);
-      }else{
+      } else {
         setActive(false);
       }
-    }else{
+    } else {
       setActive(false);
     }
   }, [answerOption]);
-  
 
   return (
-      <button
-          className={active ? 'option-button option-button--active':'option-button'}
-          onClick={() => {
-                      handleOptionClick({
-                        id,
-                        questionText,
-                        answerOption: [answerOption],
-                      });
-          }}
-      >
-          {answerOption.answerText}                 
-      </button>
-  )
-}
+    <button
+      className={
+        active ? "option-button option-button--active" : "option-button"
+      }
+      onClick={() => {
+        handleOptionClick({
+          id,
+          questionText,
+          answerOption: [answerOption],
+        });
+      }}
+    >
+      {answerOption.answerText}
+    </button>
+  );
+};
 
-export default Button
+export default Button;

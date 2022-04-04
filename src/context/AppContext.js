@@ -13,9 +13,13 @@ function AppProvider(props) {
   const [showBeforeComponent, setShowBeforeComponent] = useState(false);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [currentScreen, setCurrentScreen] = useState(0);
 
+  // Survey
+  const [currentScreen, setCurrentScreen] = useState(0);
   const [results, setResults] = useState(false);
+  const [rating, setRating] = useState(false);
+  const [esRadio, setEsRadio] = useState(false);
+
 
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
@@ -190,6 +194,8 @@ function AppProvider(props) {
         volverScreen,
         results,
         setResults,
+        rating,
+        setRating,
       }}
     >
       {props.children}

@@ -75,8 +75,24 @@ function Quiz() {
               </h2>
               <div className="question-section">
                 <div className="question-count"></div>
-                <div className="question-text">
-                  {questions[currentQuestion].questionText}
+                <div className="question-fila-mobile">
+                  <button
+                    className="arrow-forward arrow-mobile"
+                    onClick={() => volverPregunta()}
+                  >
+                    {" "}
+                    <IoIosArrowBack />
+                  </button>
+                  <div className="question-text">
+                    {questions[currentQuestion].questionText}
+                  </div>
+                  <button
+                    className="arrow-back arrow-mobile"
+                    onClick={() => pasarPregunta()}
+                  >
+                    {" "}
+                    <IoIosArrowForward />
+                  </button>
                 </div>
               </div>
               <div className="answer-section">
@@ -91,6 +107,7 @@ function Quiz() {
                       questionText={questions[currentQuestion].questionText}
                       answerOption={answerOption}
                     />
+                    // {siTieneValue ? <Input />}
                   )
                 )}
               </div>

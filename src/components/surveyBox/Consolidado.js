@@ -16,6 +16,8 @@ import {
   Button,
   TextField,
   Paper,
+  esRadio,
+  setEsRadio,
 } from "@mui/material";
 
 import "./survey.css";
@@ -76,6 +78,8 @@ function Consolidado(props) {
           </div>
           <div className="grid-of-three">
             {data[currentScreen].answerOptions.map((answerOption, index) => (
+              
+
               <Buttons
                 key={index}
                 resp={resp}

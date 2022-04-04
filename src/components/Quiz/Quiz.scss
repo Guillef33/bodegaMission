@@ -52,6 +52,15 @@
   min-height: 100px;
 }
 
+.question-fila-mobile {
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+}
+
+.arrow-mobile {
+  display: none;
+}
+
 .arrow-back {
   position: absolute;
   top: 50%;
@@ -103,6 +112,12 @@
 
   .question-content-wrapper {
     margin: 30px;
+  }
+
+  .arrow-mobile {
+    display: block;
+    background: transparent;
+    border: none;
   }
 
   .arrow-back {

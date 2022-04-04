@@ -56,7 +56,7 @@ function Screen1(props) {
           </button>
         </div>
 
-        {/* <FormControl>
+         <FormControl>
            <FormLabel id="demo-radio-buttons-group-label">Aromas</FormLabel> 
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
@@ -149,8 +149,8 @@ function Screen1(props) {
               className="others-input"
             ></input>
           </RadioGroup>
-        </FormControl> */}
-        <div className="question-content-wrapper">
+        </FormControl> 
+        {/* <div className="question-content-wrapper">
           <button className="closeBtn" onClick={handleClose}></button>
           <h2 className="question-number">
             Question{" "}
@@ -177,16 +177,16 @@ function Screen1(props) {
                 answerOption={answerOption}
               />
             ))}
-          </div>
-          {/* <button
+          </div> */}
+         <button
           onClick={() => props.handleClick("screen2")}
           className="playGameButton"
         >
           Next
-        </button> */}
+        </button>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
 
