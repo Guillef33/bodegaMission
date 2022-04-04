@@ -25,30 +25,24 @@ const Yupform = () => {
     setValues({ ...values, [name]: value });
   };
 
-    const createUser = async (event) => {
-      event.preventDefault();
-      let formData = {
-        name: event.target[0].value,
-        email: event.target[1].value,
-      };
-      const isValid = await userSchema.isValid(formData);
-      console.log(formData, isValid);
-
-      const docRef = await addDoc(collection(db, "mails"), {
-        values,
-      });
-      if (!values) {
-        setValues(initialState);
-        Swal.fire(
-          // Esto estasria bueno agregarlo
-          // "Thanks, `${name}`",
-          "Now let`s start the mission",
-          "success"
-        );
-        setEmailSend(docRef.id);
-        setTimeout(() => navigate("/"), 4000);
-      }
+  const createUser = async (event) => {
+    event.preventDefault();
+    let formData = {
+      name: event.target[0].value,
+      email: event.target[1].value,
     };
+    const isValid = await userSchema.isValid(formData);
+    console.log(formData, isValid);
+
+    const docRef = await addDoc(collection(db, "mails"), {
+      values,
+    });
+    setValues(initialState);
+    isValid &&
+      Swal.fire("Data loaded", "Now let`s start the mission", "success");
+    isValid && setEmailSend(docRef.id);
+    isValid && setTimeout(() => navigate("/"), 4000);
+  };
 
   return (
     <div className="form-container">
