@@ -28,6 +28,16 @@
     text-align: center;
 }
 
+.result-text {
+        font-weight: 200;
+        font-family: "Montserrat",
+        sans-serif;
+        font-size: 18px;
+        line-height: 25px;
+        width: 500px;
+        padding: 30px;
+}
+
 @media screen and (max-width: 760px) {
     .form-container-steps {
         grid-template-columns: 1fr 1fr;

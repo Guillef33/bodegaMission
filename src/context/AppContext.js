@@ -13,7 +13,9 @@ function AppProvider(props) {
   const [showBeforeComponent, setShowBeforeComponent] = useState(false);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [currentScreen, setCurrentScreen] = useState(0);
+  const [currentScreen, setCurrentScreen] = useState(0);
+
+  const [results, setResults] = useState(false);
 
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
@@ -83,7 +85,7 @@ function AppProvider(props) {
     setScore(result);
   };
 
-    const pasarPregunta = () => {
+  const pasarPregunta = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
@@ -104,27 +106,26 @@ function AppProvider(props) {
     }
   };
 
-  
-    const pasarScreen = () => {
-      const nextScreen = currentScreen + 1;
-      if (nextScreen < data.length) {
-        setCurrentScreen(nextScreen);
-      } else {
-        scoreCalculator();
-        setShowScore(true);
-      }
-    };
+  const pasarScreen = () => {
+    const nextScreen = currentScreen + 1;
+    if (nextScreen < data.length) {
+      setCurrentScreen(nextScreen);
+    } else {
+      scoreCalculator();
+      setResults(true);
+    }
+  };
 
-    const volverScreen = () => {
-      if (currentScreen !== 0) {
-        const beforeScreen = currentScreen - 1;
-        if (beforeScreen < data.length) {
-          setCurrentScreen(beforeScreen);
-        } else {
-          setShowScore(true);
-        }
+  const volverScreen = () => {
+    if (currentScreen !== 0) {
+      const beforeScreen = currentScreen - 1;
+      if (beforeScreen < data.length) {
+        setCurrentScreen(beforeScreen);
+      } else {
+        setResults(true);
       }
-    };
+    }
+  };
   const restartGame = (e) => {
     setTimeIsUp(false);
     setShowScore(false);
@@ -187,6 +188,8 @@ function AppProvider(props) {
         setCurrentScreen,
         pasarScreen,
         volverScreen,
+        results,
+        setResults,
       }}
     >
       {props.children}
