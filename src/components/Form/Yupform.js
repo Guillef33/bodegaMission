@@ -68,7 +68,7 @@ const Yupform = () => {
               name="name"
               type="text"
               placeholder="Enter your name"
-              onChange={handleChange}
+              onInput={handleChange}
               value={values.name}
             />
             {errors.name && touched.name ? (
@@ -80,7 +80,7 @@ const Yupform = () => {
               name="email"
               type="email"
               placeholder="Enter your e-mail"
-              onChange={handleChange}
+              onInput={handleChange}
               value={values.email}
             />
             {errors.email && touched.email ? (
