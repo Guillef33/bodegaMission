@@ -16,17 +16,31 @@ function ButtonsResult() {
   const siteUrl = "https://prowein.raicesibericas.com/guests";
 
   function copyLink() {
-   return navigator.clipboard.writeText(siteUrl);
+    return navigator.clipboard.writeText(siteUrl);
   }
 
   function showSwal() {
+    // Swal.fire({
+    //   position: "top-end",
+    //   title: "Share with a friend",
+    //   input: "text",
+    //   inputValue: siteUrl,
+    //   html: `
+    //   <button class="tryAgainButton" onclick={copyLink}>Copy</button>`,
+
+    // });
     Swal.fire({
-      position: "top-end",
       title: "Share with a friend",
-      input: "text",
-      inputValue: siteUrl,
-      html: `
-      <button class="tryAgainButton" onclick={copyLink}>Copy</button>`,
+      text: "https://prowein.raicesibericas.com/guests",
+      icon: "info",
+      confirmButtonText: "Copy URL",
+      // denyButtonText: "Cancel",
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire("Copied!", "", "success");
+        return navigator.clipboard.writeText(siteUrl);
+      }
     });
   }
 
