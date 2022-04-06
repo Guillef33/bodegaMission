@@ -11,6 +11,7 @@ function CircularProgressWithLabel(props) {
   return (
     <Box sx={{ position: "relative" }}>
       <CircularProgress
+        className="circular-progress"
         variant="determinate"
         value={normalise(props.value)}
         sx={{
@@ -25,13 +26,14 @@ function CircularProgressWithLabel(props) {
         }}
         size={65}
         thickness={3.5}
+        color={props.value < 21 ? "error" : "inherit"}
       />
 
       <Typography
         // variant="caption"
-        color={props.value < 21 ? "red" : "white"}
+        color={props.value < 21 ? "#d32f2f" : "white"}
         fontSize={18}
-        fontWeight={300}
+        fontWeight={600}
         className="counter-text"
         position="relative"
       >
