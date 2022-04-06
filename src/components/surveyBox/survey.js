@@ -106,10 +106,10 @@ function Survey() {
             },
           }}
         >
-          {/* <Consolidado /> */}
+          <Consolidado />
           {/* <Screen2 /> */}
 
-          {({ errors, touched }) => (
+          {/* {({ errors, touched }) => (
             <Form className="form-wrapper" onSubmit={handleSubmit}>
               {(() => {
                 switch (survey) {
@@ -148,7 +148,7 @@ function Survey() {
                 }
               })()}
             </Form>
-          )} 
+          )}  */}
         </Formik>
       </div>
     </>
