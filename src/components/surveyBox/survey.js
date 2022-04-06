@@ -96,6 +96,9 @@ function Survey() {
           backgroundSize: "cover",
         }}
       >
+
+        {/* Aca esta Formik no se si es necesario y el modelo de datos, que tenga nombre, email y survey */}
+
         <Formik
           validationSchema={userSchema}
           initialValues={{

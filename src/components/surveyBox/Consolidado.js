@@ -78,8 +78,9 @@ function Consolidado(props) {
           </div>
           <div className="grid-of-three">
             {data[currentScreen].answerOptions.map((answerOption, index) => (
-              
 
+              // Aca entiendo que deberiamos variar entre Buttons e Inputs, segun el tipo de pregunta
+            
               <Buttons
                 key={index}
                 resp={resp}

@@ -5,6 +5,11 @@ import './survey.css'
 function Results(props) {
   return (
     <div className="question-content-wrapper">
+
+      {/* Aquí se aplicaría lo de las dependencias: es decir si el usuario eligió:
+      GARNACHA BLANCA, ALBARIÑO y GODELLO como las 3 opciones de variedad, la
+      pantalla debería mostrarle esas 3 y que elija UNA de esas 3. */}
+      
       <h2>And the Answer Is:</h2>
       <h3>ALBARÍN</h3>
       <p className="result-text">
