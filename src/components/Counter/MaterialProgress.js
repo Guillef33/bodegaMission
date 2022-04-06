@@ -6,35 +6,37 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 // import "./progressBar.css";
-
+const normalise = (value) => ((value - 1) * 100) / (120 - 1);
 function CircularProgressWithLabel(props) {
   return (
-    <Box sx={{ position: "relative", display: "inline-flex" }}>
-      <CircularProgress variant="determinate" {...props} />
-      <Box
+    <Box sx={{ position: "relative" }}>
+      <CircularProgress
+        variant="determinate"
+        value={normalise(props.value)}
         sx={{
           top: 0,
-          left: 0,
-          bottom: 0,
           right: 0,
+          bottom: 0,
+          left: 3,
           position: "absolute",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          // display: "flex",
+          // alignItems: "center",
+          // justifyContent: "center",
         }}
+        size={65}
+        thickness={3.5}
+      />
+
+      <Typography
+        // variant="caption"
+        color={props.value < 21 ? "red" : "white"}
+        fontSize={18}
+        fontWeight={300}
+        className="counter-text"
+        position="relative"
       >
-        <Typography
-          variant="caption"
-          color={props.value < 11 ? "red" : "white"}
-          component="h2"
-          fontSize={16}
-          fontWeight={600}
-          className="counter-text"
-          // color="text.secondary"
-        >
-          {`${Math.round(props.value)}`}
-        </Typography>
-      </Box>
+        {`${Math.round(props.value)}`}
+      </Typography>
     </Box>
   );
 }
