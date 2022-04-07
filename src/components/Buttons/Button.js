@@ -26,7 +26,7 @@ const Button = ({
   useEffect(() => {
     //TODO: Probar que ande bien
     const currentAswenr = resp.find((el) => el.id === id);
-    console.log("currentAswenr", currentAswenr);
+    // console.log("currentAswenr", currentAswenr);
     if (currentAswenr) {
       if (
         currentAswenr.answerOption.some(

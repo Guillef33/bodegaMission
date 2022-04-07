@@ -19,6 +19,8 @@ import ReadyToStartBox from "./components/Welcome/Box/ReadyToStartBox";
 import PresentationalBox from "./components/Welcome/Box/PresentationBox";
 import Yupform from "./components/Form/Yupform";
 import Survey from "./components/surveyBox/survey";
+import SurveyJs from "./components/surveyBox/surveyJs";
+
 import Input from './components/Rating/Input'
 
 
@@ -40,7 +42,7 @@ export default function App() {
           <Route path="/ready-box" element={<ReadyToStartBox />} />
 
           <Route path="/survey" element={<Survey />} />
-          <Route path="/input" element={<Input />} />
+          {/* <Route path="/input" element={<Input />} /> */}
 
           <Route path="/progress" element={<CircularProgressBar />} />
           <Route path="/material" element={<CircularProgressWithLabel />} />
@@ -53,6 +55,7 @@ export default function App() {
           <Route path="/yup" element={<Yupform />} />
 
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/surveyjs" element={<SurveyJs />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

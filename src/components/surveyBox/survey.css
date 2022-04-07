@@ -1,4 +1,4 @@
-.survey-container {
+ .survey-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -26,6 +26,7 @@
     align-items: center;
     margin: 30px;
     text-align: center;
+    background-color: black;
 }
 
 .result-text {
@@ -100,4 +101,4 @@
         height: auto;
     }
 
-}
+} 

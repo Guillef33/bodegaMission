@@ -18,7 +18,6 @@ import Swal from "sweetalert2";
 // Consolidados
 import Consolidado from "./Consolidado";
 
-
 // Screen Steps
 import Screen1 from "./Screen1";
 import Screen2 from "./Screen2";
@@ -96,10 +95,9 @@ function Survey() {
           backgroundSize: "cover",
         }}
       >
-
         {/* Aca esta Formik no se si es necesario y el modelo de datos, que tenga nombre, email y survey */}
 
-        <Formik
+        {/* <Formik
           validationSchema={userSchema}
           initialValues={{
             nombre: "",
@@ -108,11 +106,11 @@ function Survey() {
               // [screen1: "", screen2: "", screen3:"", screen4: "", screen5: "", screen6: ""]
             },
           }}
-        >
-          <Consolidado />
-          {/* <Screen2 /> */}
+        > */}
+        <Consolidado />
+        {/* <Screen2 /> */}
 
-          {/* {({ errors, touched }) => (
+        {/* {({ errors, touched }) => (
             <Form className="form-wrapper" onSubmit={handleSubmit}>
               {(() => {
                 switch (survey) {
@@ -152,7 +150,7 @@ function Survey() {
               })()}
             </Form>
           )}  */}
-        </Formik>
+        {/* </Formik> */}
       </div>
     </>
   );

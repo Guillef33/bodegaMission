@@ -33,16 +33,20 @@ function Consolidado(props) {
     questions,
     handleClose,
     currentScreen,
+    currentQuestion,
     setCurrentScreen,
     pasarScreen,
     volverScreen,
+    pasarPregunta,
+    volverPregunta,
     results,
-    setResults
+    setResults,
+    showScore,
   } = useContext(AppContext);
 
   return (
     <>
-      {results ? (
+      {showScore ? (
         <Results />
       ) : (
         <div className="survey-content-wrapper">
@@ -76,17 +80,16 @@ function Consolidado(props) {
               </div>
             </div>
           </div>
-          <div className="grid-of-three">
+          <div className="answer-section">
             {data[currentScreen].answerOptions.map((answerOption, index) => (
-
               // Aca entiendo que deberiamos variar entre Buttons e Inputs, segun el tipo de pregunta
-            
+
               <Buttons
                 key={index}
                 resp={resp}
                 addResp={addResp}
                 removeResp={removeResp}
-                id={questions[currentScreen].id}
+                id={questions[currentQuestion].id}
                 questionText={questions[currentScreen].questionText}
                 answerOption={answerOption}
               />
