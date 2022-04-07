@@ -11,7 +11,7 @@ const OutOfTime = () => {
   const { restartGame } = useContext(AppContext);
   return (
     <>
-      <Player url={undefined} />
+      {/* <Player url={undefined} /> */}
       <div className="outOfTime-container">
         <h1 className="outOfTime-title"> Out of Time :( </h1>
         <h3 className="outOfTime-text"> No problem, you can try again!</h3>
