@@ -65,34 +65,34 @@ function Quiz() {
             </div>
 
             <div className="question-content-wrapper">
-              <button className="closeBtn" onClick={handleClose}></button>
-              <h2 className="question-number">
-                Question{" "}
-                <span style={{ fontWeight: "bold" }}>
-                  {questions[currentQuestion].id}
-                </span>{" "}
-                of 8
-              </h2>
+              <div className="question-fila-mobile">
+                <button
+                  className="arrow-forward arrow-mobile"
+                  onClick={() => volverPregunta()}
+                >
+                  {" "}
+                  <IoIosArrowBack />
+                </button>
+                <h2 className="question-number">
+                  Question{" "}
+                  <span style={{ fontWeight: "bold" }}>
+                    {questions[currentQuestion].id}
+                  </span>{" "}
+                  of 8
+                </h2>
+                <button
+                  className="arrow-back arrow-mobile"
+                  onClick={() => pasarPregunta()}
+                >
+                  {" "}
+                  <IoIosArrowForward />
+                </button>
+              </div>
               <div className="question-section">
                 <div className="question-count"></div>
-                <div className="question-fila-mobile">
-                  <button
-                    className="arrow-forward arrow-mobile"
-                    onClick={() => volverPregunta()}
-                  >
-                    {" "}
-                    <IoIosArrowBack />
-                  </button>
-                  <div className="question-text">
-                    {questions[currentQuestion].questionText}
-                  </div>
-                  <button
-                    className="arrow-back arrow-mobile"
-                    onClick={() => pasarPregunta()}
-                  >
-                    {" "}
-                    <IoIosArrowForward />
-                  </button>
+
+                <div className="question-text">
+                  {questions[currentQuestion].questionText}
                 </div>
               </div>
               <div className="answer-section">
