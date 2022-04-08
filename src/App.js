@@ -22,6 +22,7 @@ import Survey from "./components/surveyBox/survey";
 import SurveyJs from "./components/surveyBox/surveyJs";
 
 import Input from './components/Rating/Input'
+import FormContainer from "./components/surveyBox/FormContainer";
 
 
 export default function App() {
@@ -56,6 +57,7 @@ export default function App() {
 
           <Route path="/about" element={<AboutUs />} />
           <Route path="/surveyjs" element={<SurveyJs />} />
+          <Route path="/newform" element={<FormContainer />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

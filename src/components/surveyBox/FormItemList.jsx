@@ -1,22 +1,28 @@
 import React from 'react'
+import FormItem from './FormItem';
+import data from './data';
 
-const FormItemList = ({option, formik }) => {
+import './scss/FormItem.scss';
+
+const FormItemList = ({currentScreen, formik, }) => {
 
 
-    switch (option){
+    switch (currentScreen + 1){
         case 1:
-            <FormItem key={1}>
+            return(
+                <FormItem key={1} question={data[currentScreen]} >
 
-                /*Acá colocamos los componentes de MUI*/
+                {/*Acá colocamos los componentes de MUI*/}
 
-            </FormItem>
-            break;
+                </FormItem>
+            )
         case 2:
-            <FormItem key={2} />
-            break;
+            return(<p>El 2</p>)
         case 3:
             <FormItem key={2} />
             break;
+        default:
+            return(<p style={{color:"white"}}>La opción de pantalla no existe</p>)
     }
 
 }
