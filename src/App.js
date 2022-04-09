@@ -44,6 +44,7 @@ export default function App() {
 
           <Route path="/survey" element={<Survey />} />
           {/* <Route path="/input" element={<Input />} /> */}
+          <Route path="/formcontainer" element={<FormContainer />} />
 
           <Route path="/progress" element={<CircularProgressBar />} />
           <Route path="/material" element={<CircularProgressWithLabel />} />
