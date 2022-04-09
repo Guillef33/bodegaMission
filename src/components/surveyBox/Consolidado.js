@@ -46,7 +46,7 @@ function Consolidado(props) {
 
   return (
     <>
-      {showScore ? (
+      {results ? (
         <Results />
       ) : (
         <div className="survey-content-wrapper">
