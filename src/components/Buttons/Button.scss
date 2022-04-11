@@ -2,8 +2,8 @@
     width:100%;
     max-width: 400px;
     min-width: 300px;
-    height: 2.5rem;
-    font-size: 1.5rem;
+    height: 2rem;
+    font-size: 1.2rem;
     // font-weight: 700;
     color: black;
     border-radius: 20px;
@@ -36,4 +36,10 @@
   .option-button:nth-last-child(1):nth-child(odd) {
     grid-column: auto;
   }
+
+    .option-button {
+      height: 2rem;
+      font-size: 1rem;
+    
+    }
 }

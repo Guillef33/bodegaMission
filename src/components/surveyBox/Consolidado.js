@@ -75,7 +75,7 @@ function Consolidado(props) {
               <span style={{ fontWeight: "bold" }}>
                 {data[currentScreen].id}
               </span>{" "}
-              of 8
+             of  {data.length}
             </h2>
             <button className="arrow-back" onClick={() => pasarScreen()}>
               {" "}

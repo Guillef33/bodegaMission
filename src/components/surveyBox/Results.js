@@ -56,6 +56,10 @@ const AboutUs = () => {
               are over 100 years old. It is sometimes confused with albariño
               gallego or albillo but is not actually related to them.
             </p>
+
+            <p className="results-text">
+              <strong>Come & join us at Prowein: HALL 14 STAND A10 </strong>
+            </p>
           </div>
         </div>
       </div>

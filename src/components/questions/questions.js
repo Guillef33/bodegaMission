@@ -41,8 +41,8 @@ const questions = [
       { answerText: "Utiel-Requena", isCorrect: false },
       { answerText: "Yecla", isCorrect: false },
       { answerText: "Cariñena", isCorrect: true },
-      { answerText: "Cigales", isCorrect: true },
-      { answerText: "Somontano", isCorrect: false },
+      { answerText: "Cigales", isCorrect: false },
+      { answerText: "Somontano", isCorrect: true },
       { answerText: "Pla de Bages", isCorrect: false },
       { answerText: "Campo de Borja", isCorrect: true },
       { answerText: "Arlanza", isCorrect: false },
@@ -82,8 +82,8 @@ const questions = [
   {
     questionText: "Is Albarin related to Albariño?",
     answerOptions: [
-      { answerText: "Yes", isCorrect: true },
-      { answerText: "No", isCorrect: false },
+      { answerText: "Yes", isCorrect: false },
+      { answerText: "No", isCorrect: true },
     ],
     image: RaicesMalvar1,
     id: 6,
