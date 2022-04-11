@@ -1,29 +1,67 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
-import "./survey.css";
+import fondoVinedo from "../../assets/fondoVinedo.png";
 
-function Results(props) {
+import logoPNG from "../../assets/LogosPNGOk.png";
+
+import "../about/AboutUs";
+import "./results.scss";
+
+const AboutUs = () => {
+  const [show, setShow] = useState(false);
+  const delay = 4;
+  let navigate = useNavigate();
+  useEffect(() => {
+    Swal.fire({
+      // position: "top-end",
+      title: "Thanks for your feedback.",
+      // icon: "success",
+      text: "Now you can see the correct answer",
+      customClass: "button-about",
+    });
+    let timer1 = setTimeout(() => setShow(true), delay * 1000);
+
+    // this will clear Timeout
+    return () => {
+      clearTimeout(timer1);
+    };
+  }, []);
+
   return (
-    <div className="question-content-wrapper">
-      {/* Aquí se aplicaría lo de las dependencias: es decir si el usuario eligió:
-      GARNACHA BLANCA, ALBARIÑO y GODELLO como las 3 opciones de variedad, la
-      pantalla debería mostrarle esas 3 y que elija UNA de esas 3. */}
+    <>
+      <div
+        className="aboutUs-container"
+        style={{
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundImage: `url(${fondoVinedo})`,
+        }}
+      >
+        <div className="aboutUs-wrapper">
+          <div className="aboutUs-title-container">
+            <h2 className="results-subtitle">And the answer is:</h2>
+            {/* <div className="aboutUs-mid"></div>
+            <img className="aboutUs-image-vid" src={vector} alt="logo" /> */}
+            <img className="aboutUs-image" src={logoPNG} alt="logo" />
+          </div>
+          <div className="results-text-container">
+            <h2 className="results-title">Albarin</h2>
 
-      <h2 className="results-title">And the Answer Is:</h2>
-      <h3 className="results-grape">ALBARÍN</h3>
-      <p className="result-text">
-        This grape variety is originally from Asturias, then expanded in
-        Cantabria & Castilla y León. It almost disappeared until 10 years ago
-        winegrowers began to replant it. You can still find vines that are over
-        100 years old. It is sometimes confused with albariño gallego or albillo
-        but is not actually related to them.{" "}
-      </p>
-      <p className="results-text">
-        {" "}
-        Come & join us in Prowein: HALL 14 STAND A10
-      </p>
-    </div>
+            <p className="results-text">
+              This grape variety is originally from Asturias, then expanded in
+              Cantabria & Castilla y León. It almost disappeared until 10 years
+              ago winegrowers began to replant it. You can still find vines that
+              are over 100 years old. It is sometimes confused with albariño
+              gallego or albillo but is not actually related to them.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </>
   );
-}
+};
 
-export default Results;
+export default AboutUs;
