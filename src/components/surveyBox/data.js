@@ -130,6 +130,7 @@ const data = [
     questionText: "If you would need to guess the vintage:",
     answerOptions: [
       { answerText: "2018", isCorrect: false },
+      { answerText: "2019", isCorrect: false },
       { answerText: "2020", isCorrect: false },
       { answerText: "2021", isCorrect: false },
     ],

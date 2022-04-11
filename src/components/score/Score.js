@@ -33,7 +33,7 @@ function Score() {
               will be uncovering a new autochthonous variety or an unknown DO.
             </p>
             <p className="score-result-text">
-              Come & join us in the Prowein stand number XX
+              Come & join us in Prowein: HALL 14 STAND A10
             </p>
           </div>
           <ButtonsResult />
@@ -54,10 +54,10 @@ function Score() {
             <p className="score-result-title">There is still much to learn!</p>
             <p className="score-result-text">
               90% of the wine connoisseurs confess that they have never heard{" "}
-              <br />  of some of the Spanish varieties mentioned.
+              <br /> of some of the Spanish varieties mentioned.
             </p>
             <p className="score-result-text">
-              Come & join us in the Prowein stand number XX
+              Come & join us in Prowein: HALL 14 STAND A10
             </p>
           </div>
           <ButtonsResult />
