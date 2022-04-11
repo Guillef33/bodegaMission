@@ -67,7 +67,14 @@ function Quiz() {
             <div className="question-content-wrapper">
               <div className="question-fila-mobile">
                 <button
-                  className="arrow-forward arrow-mobile"
+                  className="arrow-forward"
+                  onClick={() => volverPregunta()}
+                >
+                  {" "}
+                  <IoIosArrowBack />
+                </button>
+                <button
+                  className="arrow-mobile-forward"
                   onClick={() => volverPregunta()}
                 >
                   {" "}
@@ -80,8 +87,12 @@ function Quiz() {
                   </span>{" "}
                   of 8
                 </h2>
+                <button className="arrow-back" onClick={() => pasarPregunta()}>
+                  {" "}
+                  <IoIosArrowForward />
+                </button>
                 <button
-                  className="arrow-back arrow-mobile"
+                  className="arrow-mobile-back"
                   onClick={() => pasarPregunta()}
                 >
                   {" "}
