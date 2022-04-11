@@ -5,9 +5,8 @@ import { AppContext } from "../../context/AppContext";
 import Buttons from "../Buttons/Button";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import Results from './Results';
+import Results from "./Results";
 import ResultsAbout from "../about/ResultsAbout";
-
 
 import {
   FormControl,
@@ -51,7 +50,42 @@ function Consolidado(props) {
       {results ? (
         <Results />
       ) : (
-        <div className="survey-content-wrapper">
+        <div
+          className="survey-content-wrapper"
+          style={{
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundImage: `url(${questions[currentQuestion].image})`,
+          }}
+        >
+          <div className="question-fila-mobile">
+            <button className="arrow-forward" onClick={() => volverScreen()}>
+              {" "}
+              <IoIosArrowBack />
+            </button>
+            <button
+              className="arrow-mobile-forward"
+              onClick={() => volverScreen()}
+            >
+              {" "}
+              <IoIosArrowBack />
+            </button>
+            <h2 className="question-number">
+              Step{" "}
+              <span style={{ fontWeight: "bold" }}>
+                {data[currentScreen].id}
+              </span>{" "}
+              of 8
+            </h2>
+            <button className="arrow-back" onClick={() => pasarScreen()}>
+              {" "}
+              <IoIosArrowForward />
+            </button>
+            <button className="arrow-mobile-back" onClick={() => pasarScreen()}>
+              {" "}
+              <IoIosArrowForward />
+            </button>
+          </div>
           {/* <div className="question-text">Nose & Palate Impression | Aromas</div> */}
           <div className="buttons-indicators">
             <button className="arrow-forward" onClick={() => volverScreen()}>
@@ -66,8 +100,8 @@ function Consolidado(props) {
             </button>
           </div>
 
-          <div>
-            <button className="closeBtn" onClick={handleClose}></button>
+          <div className="question-desktop">
+            {/* <button className="closeBtn" onClick={handleClose}></button> */}
             <h2 className="question-number">
               Step{" "}
               <span style={{ fontWeight: "bold" }}>
@@ -82,7 +116,7 @@ function Consolidado(props) {
               </div>
             </div>
           </div>
-          <div className="answer-section">
+          <div className="answer-section-survey">
             {data[currentScreen].answerOptions.map((answerOption, index) => (
               // Aca entiendo que deberiamos variar entre Buttons e Inputs, segun el tipo de pregunta
               <Buttons

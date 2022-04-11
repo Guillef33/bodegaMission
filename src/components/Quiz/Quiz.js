@@ -100,7 +100,15 @@ function Quiz() {
                 </button>
               </div>
               <div className="question-section">
-                <div className="question-count"></div>
+                <div className="question-count">
+                  <h2 className="question-number">
+                    Question{" "}
+                    <span style={{ fontWeight: "bold" }}>
+                      {questions[currentQuestion].id}
+                    </span>{" "}
+                    of 8
+                  </h2>
+                </div>
 
                 <div className="question-text">
                   {questions[currentQuestion].questionText}

@@ -47,7 +47,7 @@ const AboutUs = () => {
             <img className="aboutUs-image" src={logoPNG} alt="logo" />
           </div>
           <div className="results-text-container">
-            <h2 className="results-title">Albarin</h2>
+            <h2 className="results-title">Albarín</h2>
 
             <p className="results-text">
               This grape variety is originally from Asturias, then expanded in
@@ -58,7 +58,6 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-
       </div>
     </>
   );
