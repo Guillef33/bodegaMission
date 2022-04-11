@@ -85,14 +85,13 @@ function Consolidado(props) {
           <div className="answer-section">
             {data[currentScreen].answerOptions.map((answerOption, index) => (
               // Aca entiendo que deberiamos variar entre Buttons e Inputs, segun el tipo de pregunta
-
               <Buttons
                 key={index}
                 resp={resp}
                 addResp={addResp}
                 removeResp={removeResp}
-                id={questions[currentQuestion].id}
-                questionText={questions[currentScreen].questionText}
+                id={data[currentScreen].id}
+                questionText={data[currentScreen].questionText}
                 answerOption={answerOption}
               />
             ))}
