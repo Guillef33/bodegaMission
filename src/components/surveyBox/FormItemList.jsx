@@ -76,7 +76,7 @@ const FormItemList = ({currentScreen, formik, }) => {
                 </>
                 
             );
-            case 6:
+            case 7:
                 return(
                     <>  
                         <h2>{data[8].questionText}</h2>
