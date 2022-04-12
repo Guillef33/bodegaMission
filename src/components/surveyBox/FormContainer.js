@@ -35,18 +35,34 @@ const FormContainer = () => {
 
   const [currentScreen, setCurrentScreen] = useState(0);
   const [questions, setQuestions] = useState(data);
+  const [finish, setFinish] = useState(false)
 
   return (
     <section className="box-form-container">
-      <h2>Step {currentScreen + 1 } of 6</h2>
-      <ControlButton type={"back"} initial={0} limit={6} currentScreen={currentScreen} setCurrentScreen={setCurrentScreen} />
+      {finish ? "" : <h2>Step {currentScreen + 1} of 6</h2>}
+      <ControlButton
+        type={"back"}
+        initial={0}
+        limit={6}
+        currentScreen={currentScreen}
+        setCurrentScreen={setCurrentScreen}
+      />
       <form onSubmit={formik.handleSubmit}>
-        <FormItemList  
-            currentScreen={currentScreen} 
-            setQuestions={setQuestions}
-            formik={formik} />
+        <FormItemList
+          currentScreen={currentScreen}
+          setQuestions={setQuestions}
+          formik={formik}
+          finish={finish}
+          setFinish={setFinish}
+        />
       </form>
-      <ControlButton type={"next"} initial={0} limit={6} currentScreen={currentScreen} setCurrentScreen={setCurrentScreen}/>
+      <ControlButton
+        type={"next"}
+        initial={0}
+        limit={6}
+        currentScreen={currentScreen}
+        setCurrentScreen={setCurrentScreen}
+      />
     </section>
   );
 };
