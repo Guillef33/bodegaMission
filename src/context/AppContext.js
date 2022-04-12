@@ -115,7 +115,7 @@ function AppProvider(props) {
     if (nextScreen < data.length) {
       setCurrentScreen(nextScreen);
     } else {
-      scoreCalculator();
+      // scoreCalculator();
       setResults(true);
     }
   };
