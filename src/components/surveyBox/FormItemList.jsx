@@ -6,10 +6,10 @@ import './scss/FormItem.scss';
 
 const FormItemList = ({currentScreen, formik, }) => {
 
-    const [questions, setQuestions] = useState(null)
+    const [newQuestion, setNewQuestion] = useState(null)
 
     useEffect(() => {
-        setQuestions(data)
+        
     }, [])
     
 
@@ -17,8 +17,8 @@ const FormItemList = ({currentScreen, formik, }) => {
         case 1:
             return(
                 <>
-                    <h2>{questions[0].questionText}</h2>
-                    <FormItem key={0} question={questions[0]} />
+                    <h2>{data[0].questionText}</h2>
+                    <FormItem key={0} question={data[0]} />
                 </>
                 
             )
@@ -27,8 +27,8 @@ const FormItemList = ({currentScreen, formik, }) => {
                 <>  
                     <h2>Nose & Palate Impression</h2>
 
-                    <h3>{questions[1].questionText}</h3>
-                    <FormItem key={1} question={questions[1]} shape={'circle'} column="5" />
+                    <h3>{data[1].questionText}</h3>
+                    <FormItem key={1} question={data[1]} shape={'circle'} column="5" />
 
                     <h3>{data[2].questionText}</h3>
                     <FormItem key={2} question={data[2]} shape={'circle'} column="5" />
