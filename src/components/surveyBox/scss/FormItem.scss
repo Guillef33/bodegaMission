@@ -5,3 +5,7 @@
     gap:20px;
     width: 100%;
 }
+
+.grid-colums-5{
+    grid-template-columns: repeat(auto-fill, 25px);
+}

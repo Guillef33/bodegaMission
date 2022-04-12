@@ -15,7 +15,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
 
     switch (type) {
         case 'next':
-            return (<div className="box-form-control">
+            return (<div className="box-form-control box-form-control--rigth">
                 <button className="button-icon" 
                     disabled={ currentScreen >= limit ? true : false  }
                     onClick={ ()=>{ handleClick(1) }}
@@ -25,7 +25,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 <span>Next</span>
             </div>);
         case 'back':
-            return (<div className="box-form-control">
+            return (<div className="box-form-control box-form-control--left">
                 <button className="button-icon" 
                         disabled={ currentScreen <= initial ? true : false  }
                         onClick={ ()=>{ handleClick(-1) }}

@@ -6,7 +6,10 @@
     width:60px;
     cursor:pointer;
     color: var(--just-white);
+    position:fixed;
+    bottom: 20px;
     
+   
     .button-icon{
         font-size:60px;
         height:60px;
@@ -17,4 +20,12 @@
     span{
         font-size:18px;
     }
+}
+
+.box-form-control--rigth{
+    right:15px;
+}
+
+.box-form-control--left{
+    left:15px;
 }

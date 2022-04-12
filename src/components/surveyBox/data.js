@@ -21,111 +21,76 @@ const data = [
       { answerText: "Banana ", isCorrect: false },
       { answerText: "Vanilla ", isCorrect: false },
       { answerText: "Apple Blossom", isCorrect: false },
-      { answerText: "Jasmine", isCorrect: false },
-      { answerText: "White peach", isCorrect: true },
-      { answerText: "Honeysuckle ", isCorrect: false },
-      { answerText: "Orange Blossom", isCorrect: false },
+
+      // { answerText: "White peach", isCorrect: true },
+      // { answerText: "Honeysuckle ", isCorrect: false },
+      // { answerText: "Orange Blossom", isCorrect: false },
     ],
     input: "Others...",
     image: vinoCuna,
     id: 1,
   },
-  // {
-  //   questionText: "Nose & Palate Impression | Intensity",
-  //   answerOptions: [
-  //     { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //   ],
-  //   image: fondoPizarras,
-  //   id: 2,
-  // },
+  
   {
-    questionText: "Nose & Palate Impression | Evaluation",
-
+    questionText: "| Swetness",
     answerOptions: [
-      { answerText: "Intensity", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "Swetness", isCorrect: false, value: [1, 2, 3, 4, 5] },
-      { answerText: "Body", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
     ],
-    esRadio: true,
-    image: fondoPaisaje,
+    image: fondoPizarras,
     id: 2,
   },
   {
-    questionText: "Nose & Palate Impression | Evaluation",
-
+    questionText: "| Body",
     answerOptions: [
-      { answerText: "Acidity", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "Alcohol", isCorrect: false, value: [1, 2, 3, 4, 5] },
-      { answerText: "Lenght", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
     ],
-    esRadio: true,
-    image: fondoPaisaje,
+    image: fondoPizarras,
     id: 3,
   },
-  // {
-  //   questionText: "Nose & Palate Impression | Swetness",
-  //   answerOptions: [
-  //     { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //   ],
-  //   image: fondoPizarras,
-  //   id: 3,
-  // },
-  // {
-  //   questionText: "Nose & Palate Impression | Body",
-  //   answerOptions: [
-  //     { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //   ],
-  //   image: fondoPizarras,
-  //   id: 4,
-  // },
-  // {
-  //   questionText: "Nose & Palate Evaluation | Acidity",
-  //   answerOptions: [
-  //     { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //   ],
-  //   image: fondoPizarras,
-  //   id: 5,
-  // },
-  // {
-  //   questionText: "Nose & Palate Impression | Alcohol",
-  //   answerOptions: [
-  //     { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //   ],
-  //   image: fondoPizarras,
-  //   id: 6,
-  // },
-  // {
-  //   questionText: "Nose & Palate Impression | Length",
-  //   answerOptions: [
-  //     { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //   ],
-  //   image: fondoPizarras,
-  //   id: 7,
-  // },
+  {
+    questionText: "| Acidity",
+    answerOptions: [
+      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
+    ],
+    image: fondoPizarras,
+    id: 4,
+  },
+  {
+    questionText: "| Alcohol",
+    answerOptions: [
+      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
+    ],
+    image: fondoPizarras,
+    id: 5,
+  },
+  {
+    questionText: "| Length",
+    answerOptions: [
+      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
+    ],
+    image: fondoPizarras,
+    id: 6,
+  },
   {
     questionText: "If you would need to guess the vintage:",
     answerOptions: [
@@ -136,7 +101,7 @@ const data = [
     ],
     esRadio: true,
     image: Raices1,
-    id: 4,
+    id: 7,
   },
   {
     questionText:
@@ -154,7 +119,7 @@ const data = [
       { answerText: "Verdejo", isCorrect: false },
     ],
     image: RaicesMalvar,
-    id: 5,
+    id: 8,
   },
   {
     questionText: "From the regions listen below, pick the ones that could be:",
@@ -171,22 +136,8 @@ const data = [
       { answerText: "Rueda", isCorrect: false },
     ],
     image: RaicesMalvar1,
-    id: 6,
+    id: 9,
   },
 ];
 
 export default data;
-
-
-  // {
-  //   questionText: "Nose & Palate Impression | Evaluation",
-
-  //   answerOptions: [
-  //     { answerText: "Acidity", isCorrect: true, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "Alcohol", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //     { answerText: "Lenght", isCorrect: false, value: [1, 2, 3, 4, 5] },
-  //   ],
-  //   esRadio: true,
-  //   image: fondoPaisaje,
-  //   id: 3,
-  // },

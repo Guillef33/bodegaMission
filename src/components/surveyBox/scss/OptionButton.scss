@@ -1,17 +1,25 @@
 .form-option-button {
-    width:100%;
     padding: 12px 0;
     font-size: 1rem;
     font-weight:600;
     color: black;
-    border-radius: 20px;
     cursor: pointer;
     border: none;
     font-family: "Montserrat", sans-serif;
     background: #ffffff;
     transition: all 50ms ease-in-out;
 }
+
+.form-option-button--circle{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+}
   
+.form-option-button--rectangle{
+  width:100%;
+  border-radius: 20px;
+}
 .option-button--active {
   background-color: #6f2232;
   color: #ffffff;
