@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import FormItem from './FormItem';
+import RaicesMalvar from "../../assets/RaicesMalvar.png";
 import data from './data';
 
 import './scss/FormItem.scss';
 
 const FormItemList = ({currentScreen, formik, }) => {
 
-    const [newQuestion, setNewQuestion] = useState(null)
+    const [newQuestion, setNewQuestion] = useState({
+        questionText:
+          "Now you have taste it, select which three varieties could be:",
+        answerOptions: [],
+        image: RaicesMalvar,
+        id: 9,
+      });
 
     useEffect(() => {
         
@@ -64,7 +71,7 @@ const FormItemList = ({currentScreen, formik, }) => {
             return(
                 <>  
                     <h2>{data[7].questionText}</h2>
-                    <FormItem key={7} question={data[7]} />
+                    <FormItem key={7} question={data[7]} setNewQuestion={ setNewQuestion } newQuestion={newQuestion} />
                 </>
                 
             );
@@ -76,14 +83,14 @@ const FormItemList = ({currentScreen, formik, }) => {
                 </>
                 
             );
-            case 6:
-                return(
-                    <>  
-                        <h2>{data[8].questionText}</h2>
-                        <FormItem key={8} question={data[8]} />
-                    </>
+        case 7:
+            return(
+                <>  
+                    <h2>{data[8].questionText}</h2>
+                    <FormItem key={8} question={data[8]} />
+                </>
                     
-                );
+            );
         default:
             return(<p style={{color:"white"}}>La opción de pantalla no existe</p>)
     }
