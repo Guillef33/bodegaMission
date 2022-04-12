@@ -56,8 +56,9 @@ function Score() {
               90% of the wine connoisseurs confess that they have never heard{" "}
               <br /> of some of the Spanish varieties mentioned.
             </p>
-            <p className="score-result-text">
-              Come & join us in Prowein: HALL 14 STAND A10
+            <p className="score-result-invite">
+              Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May Book
+              your meeting with us at a.draper@raices.wine - Andrea Draper
             </p>
           </div>
           <ButtonsResult />

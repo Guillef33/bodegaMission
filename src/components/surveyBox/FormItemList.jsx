@@ -4,6 +4,9 @@ import data from './data';
 
 import './scss/FormItem.scss';
 
+import Results from './Results';
+import logoPNG from "../../assets/LogosPNGOk.png";
+
 const FormItemList = ({currentScreen, formik, }) => {
 
     const [newQuestion, setNewQuestion] = useState(null)
@@ -18,7 +21,7 @@ const FormItemList = ({currentScreen, formik, }) => {
             return(
                 <>
                     <h2>{data[0].questionText}</h2>
-                    <FormItem key={0} question={data[0]} />
+                    <FormItem key={0} question={data[0]}  column="3"  />
                 </>
                 
             )
@@ -43,11 +46,14 @@ const FormItemList = ({currentScreen, formik, }) => {
                     <h2>Nose & Palate Impression</h2>
 
                     <h3>{data[4].questionText}</h3>
-                    <FormItem key={4} question={data[4]} shape={'circle'} column="5">
-                    </FormItem>
+                    <FormItem key={4} question={data[4]} shape={'circle'} column="5" />
+      
                     <h3>{data[5].questionText}</h3>
-                    <FormItem key={5} question={data[5]} shape={'circle'} column="5">
-                    </FormItem>
+                    <FormItem key={5} question={data[5]} shape={'circle'} column="5" />
+
+                     <h3>{data[6].questionText}</h3>
+                    <FormItem key={6} question={data[6]} shape={'circle'} column="5" />
+
                 </>
                 
             );
@@ -55,20 +61,12 @@ const FormItemList = ({currentScreen, formik, }) => {
         case 4:
             return(
                 <>  
-                    <h2>{data[6].questionText}</h2>
-                    <FormItem key={6} question={data[6]} />
-                </>
-                
-            );
-        case 5:
-            return(
-                <>  
                     <h2>{data[7].questionText}</h2>
                     <FormItem key={7} question={data[7]} />
                 </>
                 
             );
-        case 6:
+        case 5:
             return(
                 <>  
                     <h2>{data[8].questionText}</h2>
@@ -76,14 +74,42 @@ const FormItemList = ({currentScreen, formik, }) => {
                 </>
                 
             );
-            case 7:
-                return(
-                    <>  
-                        <h2>{data[8].questionText}</h2>
-                        <FormItem key={8} question={data[8]} />
-                    </>
-                    
-                );
+        case 6:
+            return(
+                <>  
+                    <h2>{data[9].questionText}</h2>
+                    <FormItem key={9} question={data[9]} />
+                </>
+                
+            );
+       case 7:
+            return(
+            <div className="aboutUs-wrapper">
+          <div className="aboutUs-title-container">
+            <h2 className="results-subtitle">And the answer is:</h2>
+
+            <img className="aboutUs-image" 
+            src={logoPNG} 
+            alt="logo" />
+          </div>
+          <div className="results-text-container">
+            <h2 className="results-title">Albarin</h2>
+
+            <p className="results-text">
+              This grape variety is originally from Asturias, then expanded in
+              Cantabria & Castilla y León. It almost disappeared until 10 years
+              ago winegrowers began to replant it. You can still find vines that
+              are over 100 years old. It is sometimes confused with albariño
+              gallego or albillo but is not actually related to them.
+            </p>
+           <p className="results-invite"> 
+              Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May
+             Book your meeting with us at a.draper@raices.wine - Andrea Draper
+            </p>
+          </div>
+        </div>
+                
+            );
         default:
             return(<p style={{color:"white"}}>La opción de pantalla no existe</p>)
     }

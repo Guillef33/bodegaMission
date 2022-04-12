@@ -29,7 +29,7 @@ const FormContainer = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       //Acá va el envío a firebase
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
     },
   });
 
@@ -38,15 +38,15 @@ const FormContainer = () => {
 
   return (
     <section className="box-form-container">
-      <h2>Step {currentScreen + 1 } of 10</h2>
-      <ControlButton type={"back"} initial={0} limit={10} currentScreen={currentScreen} setCurrentScreen={setCurrentScreen} />
+      <h2>Step {currentScreen + 1 } of 6</h2>
+      <ControlButton type={"back"} initial={0} limit={6} currentScreen={currentScreen} setCurrentScreen={setCurrentScreen} />
       <form onSubmit={formik.handleSubmit}>
         <FormItemList  
             currentScreen={currentScreen} 
             setQuestions={setQuestions}
             formik={formik} />
       </form>
-      <ControlButton type={"next"} initial={0} limit={10} currentScreen={currentScreen} setCurrentScreen={setCurrentScreen}/>
+      <ControlButton type={"next"} initial={0} limit={6} currentScreen={currentScreen} setCurrentScreen={setCurrentScreen}/>
     </section>
   );
 };
