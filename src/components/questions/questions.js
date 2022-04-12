@@ -3,9 +3,9 @@ import vinoCuna from "../../assets/vinoCuna.jpg";
 import fondoPizarras from "../../assets/fondoPizarras.jpg";
 import fondoPaisaje from "../../assets/fondoPaisaje.jpg";
 
-import Raices1 from '../../assets/Raices1.png';
-import RaicesMalvar from '../../assets/RaicesMalvar.png';
-import RaicesMalvar1 from '../../assets/RaicesMalvar1.png'
+import Raices1 from "../../assets/Raices1.png";
+import RaicesMalvar from "../../assets/RaicesMalvar.png";
+import RaicesMalvar1 from "../../assets/RaicesMalvar1.png";
 import CRPunto from "../../assets/CRPunto.png";
 import Cepa from "../../assets/Cepa.png";
 
@@ -41,8 +41,8 @@ const questions = [
       { answerText: "Utiel-Requena", isCorrect: false },
       { answerText: "Yecla", isCorrect: false },
       { answerText: "Cariñena", isCorrect: true },
-      { answerText: "Cigales", isCorrect: true },
-      { answerText: "Somontano", isCorrect: false },
+      { answerText: "Cigales", isCorrect: false },
+      { answerText: "Somontano", isCorrect: true },
       { answerText: "Pla de Bages", isCorrect: false },
       { answerText: "Campo de Borja", isCorrect: true },
       { answerText: "Arlanza", isCorrect: false },
@@ -82,8 +82,8 @@ const questions = [
   {
     questionText: "Is Albarin related to Albariño?",
     answerOptions: [
-      { answerText: "Yes", isCorrect: true },
-      { answerText: "No", isCorrect: false },
+      { answerText: "Yes", isCorrect: false },
+      { answerText: "No", isCorrect: true },
     ],
     image: RaicesMalvar1,
     id: 6,
