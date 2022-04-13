@@ -25,7 +25,7 @@ function PresentationalText() {
             what Spain has to offer. Follow the instructions and good luck!
           </p>
         </div>
-        <Link to="/ready">
+        <Link to="/game">
           <button className="playGameButton playGameButtonMobile">Next</button>
         </Link>
       </div>

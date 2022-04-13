@@ -30,7 +30,7 @@ function PresentationalText() {
             what Spain has to offer. Follow the instructions and good luck!
           </p>
         </div>
-        <Link to="/ready-box">
+        <Link to="/survey">
           <button className="playGameButton">Next</button>
         </Link>
       </div>

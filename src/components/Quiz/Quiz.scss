@@ -55,8 +55,7 @@
 }
 
 .question-fila-mobile {
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+display: none;
 }
 
 .arrow-mobile-forward, .arrow-mobile-back {
@@ -118,6 +117,10 @@ color: #ffffff;
     width: auto;
   }
 
+  .question-container {
+min-height: 100vh;
+  }
+
   .question-content-wrapper {
     margin: 30px;
   }
@@ -132,6 +135,10 @@ color: #ffffff;
 
   .question-number {
     text-align: center;
+  }
+
+  .question-fila-mobile {
+    display: block;
   }
 
   .arrow-mobile-back {

@@ -64,7 +64,7 @@ export default function App() {
           <Route path="/yup" element={<Yupform />} />
 
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/surveyjs" element={<SurveyJs />} />
+
           {/* <Route path="/newform" element={<FormContainer />} /> */}
         </Routes>
       </BrowserRouter>

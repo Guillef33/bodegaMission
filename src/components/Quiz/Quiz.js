@@ -9,6 +9,7 @@ import Buttons from "../Buttons/Button";
 
 import Score from "../score/Score";
 import About from "../about/AboutUs";
+import ControlButtonsGame from "./ControlButtonsGame";
 
 import Player from "../audio/Player";
 import CircularProgressWithLabel from "../Counter/MaterialProgress";
@@ -65,40 +66,14 @@ function Quiz() {
             </div>
 
             <div className="question-content-wrapper">
-              <div className="question-fila-mobile">
-                <button
-                  className="arrow-forward"
-                  onClick={() => volverPregunta()}
-                >
-                  {" "}
-                  <IoIosArrowBack />
-                </button>
-                <button
-                  className="arrow-mobile-forward"
-                  onClick={() => volverPregunta()}
-                >
-                  {" "}
-                  <IoIosArrowBack />
-                </button>
-                <h2 className="question-number">
-                  Question{" "}
-                  <span style={{ fontWeight: "bold" }}>
-                    {questions[currentQuestion].id}
-                  </span>{" "}
-                  of 8
-                </h2>
-                <button className="arrow-back" onClick={() => pasarPregunta()}>
-                  {" "}
-                  <IoIosArrowForward />
-                </button>
-                <button
-                  className="arrow-mobile-back"
-                  onClick={() => pasarPregunta()}
-                >
-                  {" "}
-                  <IoIosArrowForward />
-                </button>
-              </div>
+              <h2 className="question-number">
+                <span style={{ fontWeight: "bold" }}>
+                  {questions[currentQuestion].id}
+                </span>{" "}
+                of 8
+              </h2>
+              <ControlButtonsGame />
+
               <div className="question-section">
                 <div className="question-count"></div>
 
