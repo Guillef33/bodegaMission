@@ -7,6 +7,7 @@ import './scss/FormItem.scss';
 
 import Results from './Results';
 import ResultSurvey from './ResultSurvey';
+import SurveyForm from '../Form/SurveyForm'
 
 const FormItemList = ({currentScreen, formik, finish, setFinish }) => {
 
@@ -27,6 +28,14 @@ const FormItemList = ({currentScreen, formik, finish, setFinish }) => {
     
 
     switch (currentScreen + 1){
+        case 8:
+
+            return(
+            <>  
+                {/* <h2>Send your feedback to us</h2> */}
+                <SurveyForm />
+            </> 
+        );
         case 1:
             return(
                 <>
@@ -94,8 +103,6 @@ const FormItemList = ({currentScreen, formik, finish, setFinish }) => {
             );
        case 7:
 
-                
-           
             return(
                 <>  
                     <h2>{newQuestion.questionText}</h2>
@@ -103,6 +110,8 @@ const FormItemList = ({currentScreen, formik, finish, setFinish }) => {
 
                 </> 
             );
+
+        
         default:
             return(<p style={{color:"white"}}>La opción de pantalla no existe</p>)
 

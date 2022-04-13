@@ -7,16 +7,7 @@ import './scss/OptionButton.scss';
 
 const OptionButton = ({shape='rectangle', option, addQuestion, qId, qText}) => {
 
-  let navigate = useNavigate();
   const [state, setState] = useState(false);
-
-  const showResultsModal = () => {
-    Swal.fire({
-      title: "Thank you",
-      icon: "info",
-      text: "Now you can see the correct answer",
-      confirmButtonText: "Ok"
-  })};
 
   return (
     <button 
@@ -25,11 +16,7 @@ const OptionButton = ({shape='rectangle', option, addQuestion, qId, qText}) => {
           setState(!state); 
           if(qId===9){
             addQuestion(option)
-          } else if (qId === 11) {
-            console.log(qId)
-            showResultsModal();
-            navigate("/results")
-          }          
+          }
         }}
     >
         {option.answerText}
