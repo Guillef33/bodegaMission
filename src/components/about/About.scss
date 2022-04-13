@@ -87,14 +87,21 @@
 
   .aboutUs-title {
     font-size: 40px;
+    width: auto;
   }
 
   .aboutUs-image {
-    width: 250px;
+    width: 200px;
   }
 
   .getResultButton {
     width: 250px;
+  }
+
+  .aboutUs-loader {
+padding-bottom: 30px;
+    margin-top: 10px;
+
   }
   
 }

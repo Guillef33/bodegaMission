@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 .score-title {
   font-size: 60px;
@@ -183,5 +184,14 @@
     font-size: 16px;
     padding: 20px 40px;
     margin: 0px;
+  }
+
+  .text-result-wrapper {
+    width: auto;
+  }
+
+  .score-result-invite {
+    font-size: 16px;
+    padding: 0px 40px;
   }
 }

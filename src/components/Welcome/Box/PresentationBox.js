@@ -12,34 +12,33 @@ function PresentationalText() {
 
   return (
     <div className="presentation-container">
-      <h1>Before you start</h1>
+      <h1>YOU ARE ABOUT TO JOIN A MISSION</h1>
       <div className="grid-section">
         <div className="before-start-col">
-          <h2 
+          <h2
           // style={ { whiteSpace: 'pre'}}
           >
-            ​​Did you know that Spain has 
-            the largest vineyard surface in the world 
-            with more than 70 autochthonous varieties?
+            ​​Did you know that Spain has the largest vineyard surface in the
+            world with more than 70 autochthonous varieties?
           </h2>
         </div>
         <div className="content-start-col">
           <p>
-            Our path started to be traced: uncover the hidden value of
-            Spanish wine. And this is the mission you just signed for: uncover
-            what Spain has to offer. Follow the instructions and good luck!
+            Our path started to be traced: uncover the hidden value of Spanish
+            wine. And this is the mission you just signed for: uncover what
+            Spain has to offer. Follow the instructions and good luck!
           </p>
         </div>
         <Link to="/survey">
-          <button className="playGameButton">Next</button>
+          <button className="playGameButton">JOIN THE MISSION</button>
         </Link>
       </div>
       <div className="bottom-section">
         <img src={alert} alt="alert" className="alert-image" />
         <p>
-          Please open the bottle you have received & serve yourself a glass,
-          it's going to be amazing, we know but we recommend to drink in
-          moderation.
+          PLEASE OPEN THE BOTTLE YOU HAVE RECEIVED & SERVE YOURSELF A GLASS,
+          IT'S GOING TO BE AMAZING, WE KNOW BUT WE RECOMMEND TO DRINK IN
+          MODERATION.
         </p>
       </div>
       {/* </div> */}

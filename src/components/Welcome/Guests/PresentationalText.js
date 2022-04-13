@@ -10,7 +10,7 @@ function PresentationalText() {
 
   return (
     <div className="presentation-container">
-      <h1>Before you start</h1>
+      <h1>YOU ARE ABOUT TO JOIN A MISSION</h1>
       <div className="grid-section">
         <div className="before-start-col">
           <h2>
@@ -26,7 +26,7 @@ function PresentationalText() {
           </p>
         </div>
         <Link to="/game">
-          <button className="playGameButton playGameButtonMobile">Next</button>
+          <button className="playGameButton playGameButtonMobile">JOIN THE MISSION</button>
         </Link>
       </div>
       <div className="bottom-section">
