@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.grid-colums-3 {
+    grid-template-columns: repeat(auto-fill, 130px);
+}
+
 .grid-colums-5{
     grid-template-columns: repeat(auto-fill, 25px);
 }

@@ -5,17 +5,23 @@ import data from './data';
 
 import './scss/FormItem.scss';
 
-const FormItemList = ({currentScreen, formik, }) => {
+import Results from './Results';
+import ResultSurvey from './ResultSurvey';
+
+const FormItemList = ({currentScreen, formik, finish, setFinish }) => {
 
     const [newQuestion, setNewQuestion] = useState({
         questionText:
           "Now you have taste it, select which three varieties could be:",
         answerOptions: [],
         image: RaicesMalvar,
-        id: 9,
+        id: 11,
       });
 
+
+
     useEffect(() => {
+
         
     }, [])
     
@@ -25,7 +31,7 @@ const FormItemList = ({currentScreen, formik, }) => {
             return(
                 <>
                     <h2>{data[0].questionText}</h2>
-                    <FormItem key={0} question={data[0]} />
+                    <FormItem key={0} question={data[0]}  column="3"  />
                 </>
                 
             )
@@ -50,11 +56,14 @@ const FormItemList = ({currentScreen, formik, }) => {
                     <h2>Nose & Palate Impression</h2>
 
                     <h3>{data[4].questionText}</h3>
-                    <FormItem key={4} question={data[4]} shape={'circle'} column="5">
-                    </FormItem>
+                    <FormItem key={4} question={data[4]} shape={'circle'} column="5" />
+      
                     <h3>{data[5].questionText}</h3>
-                    <FormItem key={5} question={data[5]} shape={'circle'} column="5">
-                    </FormItem>
+                    <FormItem key={5} question={data[5]} shape={'circle'} column="5" />
+
+                     <h3>{data[6].questionText}</h3>
+                    <FormItem key={6} question={data[6]} shape={'circle'} column="5" />
+
                 </>
                 
             );
@@ -62,37 +71,41 @@ const FormItemList = ({currentScreen, formik, }) => {
         case 4:
             return(
                 <>  
-                    <h2>{data[6].questionText}</h2>
-                    <FormItem key={6} question={data[6]} />
+                    <h2>{data[7].questionText}</h2>
+                    <FormItem key={7} question={data[7]} />
                 </>
                 
             );
         case 5:
             return(
                 <>  
-                    <h2>{data[7].questionText}</h2>
-                    <FormItem key={7} question={data[7]} setNewQuestion={ setNewQuestion } newQuestion={newQuestion} />
+                    <h2>{data[8].questionText}</h2>
+                    <FormItem key={8} question={data[8]} setNewQuestion={ setNewQuestion } newQuestion={newQuestion} />
                 </>
                 
             );
         case 6:
             return(
                 <>  
-                    <h2>{data[8].questionText}</h2>
-                    <FormItem key={8} question={data[8]} />
+                    <h2>{data[9].questionText}</h2>
+                    <FormItem key={9} question={data[9]} />
                 </>
                 
             );
-        case 7:
+       case 7:
+
+                
+           
             return(
                 <>  
-                    <h2>{data[8].questionText}</h2>
-                    <FormItem key={8} question={data[8]} />
-                </>
-                    
+                    <h2>{newQuestion.questionText}</h2>
+                    <FormItem key={10} question={newQuestion}  />
+
+                </> 
             );
         default:
             return(<p style={{color:"white"}}>La opción de pantalla no existe</p>)
+
     }
 
 }

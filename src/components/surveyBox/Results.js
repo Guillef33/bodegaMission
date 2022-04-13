@@ -9,25 +9,7 @@ import logoPNG from "../../assets/LogosPNGOk.png";
 import "../about/AboutUs";
 import "./results.scss";
 
-const AboutUs = () => {
-  const [show, setShow] = useState(false);
-  const delay = 4;
-  let navigate = useNavigate();
-  useEffect(() => {
-    Swal.fire({
-      // position: "top-end",
-      title: "Thanks for your feedback.",
-      // icon: "success",
-      text: "Now you can see the correct answer",
-      customClass: "button-about",
-    });
-    let timer1 = setTimeout(() => setShow(true), delay * 1000);
-
-    // this will clear Timeout
-    return () => {
-      clearTimeout(timer1);
-    };
-  }, []);
+const Results = () => {
 
   return (
     <>
@@ -42,13 +24,10 @@ const AboutUs = () => {
         <div className="aboutUs-wrapper">
           <div className="aboutUs-title-container">
             <h2 className="results-subtitle">And the answer is:</h2>
-            {/* <div className="aboutUs-mid"></div>
-            <img className="aboutUs-image-vid" src={vector} alt="logo" /> */}
             <img className="aboutUs-image" src={logoPNG} alt="logo" />
           </div>
           <div className="results-text-container">
             <h2 className="results-title">Albarin</h2>
-
             <p className="results-text">
               This grape variety is originally from Asturias, then expanded in
               Cantabria & Castilla y León. It almost disappeared until 10 years
@@ -56,6 +35,10 @@ const AboutUs = () => {
               are over 100 years old. It is sometimes confused with albariño
               gallego or albillo but is not actually related to them.
             </p>
+            <p className="results-invite">
+          Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May Book your
+          meeting with us at a.draper@raices.wine - Andrea Draper
+        </p>
           </div>
         </div>
 
@@ -64,4 +47,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Results;

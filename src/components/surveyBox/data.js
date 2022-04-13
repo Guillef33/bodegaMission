@@ -21,27 +21,37 @@ const data = [
       { answerText: "Banana ", isCorrect: false },
       { answerText: "Vanilla ", isCorrect: false },
       { answerText: "Apple Blossom", isCorrect: false },
-
-      // { answerText: "White peach", isCorrect: true },
-      // { answerText: "Honeysuckle ", isCorrect: false },
-      // { answerText: "Orange Blossom", isCorrect: false },
+      { answerText: "Grass", isCorrect: true },
+      { answerText: "Honeysuckle ", isCorrect: false },
+      { answerText: "Fennel", isCorrect: false },
+      { answerText: "Mineral ", isCorrect: false },
+      { answerText: "Jasmine", isCorrect: false },
     ],
     input: "Others...",
     image: vinoCuna,
     id: 1,
   },
-  
   {
-    questionText: "| Swetness",
+    questionText: "| Intensity",
     answerOptions: [
       { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
       { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
       { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
       { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
     ],
     image: fondoPizarras,
     id: 2,
+  },
+  {
+    questionText: "| Sweetness",
+    answerOptions: [
+      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+    ],
+    image: fondoPizarras,
+    id: 3,
   },
   {
     questionText: "| Body",
@@ -50,10 +60,10 @@ const data = [
       { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
       { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
       { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      // { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
     ],
     image: fondoPizarras,
-    id: 3,
+    id: 4,
   },
   {
     questionText: "| Acidity",
@@ -62,10 +72,10 @@ const data = [
       { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
       { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
       { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
+      // { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
     ],
     image: fondoPizarras,
-    id: 4,
+    id: 5,
   },
   {
     questionText: "| Alcohol",
@@ -74,10 +84,9 @@ const data = [
       { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
       { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
       { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
     ],
     image: fondoPizarras,
-    id: 5,
+    id: 6,
   },
   {
     questionText: "| Length",
@@ -86,10 +95,9 @@ const data = [
       { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
       { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
       { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "5", isCorrect: false, value: [1, 2, 3, 4, 5] },
     ],
     image: fondoPizarras,
-    id: 6,
+    id: 7,
   },
   {
     questionText: "If you would need to guess the vintage:",
@@ -101,7 +109,7 @@ const data = [
     ],
     esRadio: true,
     image: Raices1,
-    id: 7,
+    id: 8,
   },
   {
     questionText:
@@ -119,7 +127,7 @@ const data = [
       { answerText: "Verdejo", isCorrect: false },
     ],
     image: RaicesMalvar,
-    id: 8,
+    id: 9,
   },
   {
     questionText: "From the regions listen below, pick the ones that could be:",
@@ -136,7 +144,7 @@ const data = [
       { answerText: "Rueda", isCorrect: false },
     ],
     image: RaicesMalvar1,
-    id: 9,
+    id: 10,
   },
 ];
 

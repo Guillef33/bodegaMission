@@ -28,10 +28,31 @@ function AppProvider(props) {
   // let navigate = useNavigate();
   const [timeIsUp, setTimeIsUp] = useState(false);
 
+  //Formulario nuevo para caja
+  const [formResp, setFormResp] = useState([]);
+
+  const addFormResp = (newResp) => {
+    if (inCollection(newResp.id, resp)) {
+      //Este map retorna un nuevo array añadiendo un respuesta más para una determinada pregunta
+      let newCollection = formResp.map((el) => {
+        if (el.id === newResp.id) {
+          el.answerOption.push(newResp.answerOption[0]);
+          return el;
+        } else {
+          return el;
+        }
+      });
+      setFormResp(newCollection);
+    } else {
+      //cuando más de una respuesta es correcta, solo identifico el id, y añado un objeto más al asnwerOption.
+      setFormResp([...formResp, newResp]);
+    }
+  }
+
+
   const addResp = (newResp) => {
     //inCollection verifica si el id de la pregunta ya existe en la coleción
     if (inCollection(newResp.id, resp)) {
-      console.log("entré", resp);
       //Este map retorna un nuevo array añadiendo un respuesta más para una determinada pregunta
       let newCollection = resp.map((el) => {
         if (el.id === newResp.id) {
@@ -166,6 +187,10 @@ function AppProvider(props) {
         addResp,
         removeResp,
         scoreCalculator,
+        //nuevo formulario
+        formResp,
+        addFormResp,
+        //---------
         showScore,
         showQuizz,
         showGame,

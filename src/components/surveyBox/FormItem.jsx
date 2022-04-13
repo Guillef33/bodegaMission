@@ -7,14 +7,29 @@ const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
 
   const addNewQuestion = (option) => {
 
-    const data = {...newQuestion};
-    data.answerOptions.push(option);
-    setNewQuestion(data);
+    if(newQuestion.answerOptions.length < 3){
+      const data = {...newQuestion};
+      data.answerOptions.push(option);
+      setNewQuestion(data);
+    }else{
+      console.warn('elementos superados');
+    }
 
   }
 
+
+
+
   useEffect(() => {
-    const arrayOptions = question.answerOptions.map( el => {return(<OptionButton key={el.answerText} shape={shape} option={el} addQuestion={addNewQuestion} />)});
+    const arrayOptions = question.answerOptions.map( el => {return(<OptionButton 
+                                                                        key={el.answerText} 
+                                                                        shape={shape} 
+                                                                        option={el} 
+                                                                        addQuestion={addNewQuestion} 
+                                                                        qId={question.id}
+                                                                        qText={question.questionText} 
+
+                                                                  />)});
     setOptions(arrayOptions);  
   }, [])
   
