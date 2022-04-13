@@ -44,9 +44,9 @@ export default function App() {
           <Route path="/ready" element={<ReadyToStart />} />
           <Route path="/ready-box" element={<ReadyToStartBox />} />
 
-          <Route path="/survey" element={<Survey />} />
+          {/* <Route path="/survey" element={<Survey />} /> */}
           {/* <Route path="/input" element={<Input />} /> */}
-          <Route path="/formcontainer" element={<FormContainer />} />
+          <Route path="/survey" element={<FormContainer />} />
 
 
           <Route path="/results" element={<Results />} />
@@ -65,7 +65,7 @@ export default function App() {
 
           <Route path="/about" element={<AboutUs />} />
           <Route path="/surveyjs" element={<SurveyJs />} />
-          <Route path="/newform" element={<FormContainer />} />
+          {/* <Route path="/newform" element={<FormContainer />} /> */}
         </Routes>
       </BrowserRouter>
     </AppProvider>

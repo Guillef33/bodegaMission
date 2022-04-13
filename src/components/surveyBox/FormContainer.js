@@ -44,7 +44,7 @@ const FormContainer = () => {
         currentScreen={currentScreen}
         setCurrentScreen={setCurrentScreen}
       />
-      <div className="box-form">
+      <div className="box-form form-answers">
         <FormItemList
           currentScreen={currentScreen}
           // setQuestions={setQuestions}
