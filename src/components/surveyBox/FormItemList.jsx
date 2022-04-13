@@ -6,7 +6,6 @@ import data from './data';
 import './scss/FormItem.scss';
 
 import Results from './Results';
-import ResultSurvey from './ResultSurvey';
 import SurveyForm from '../Form/SurveyForm'
 
 const FormItemList = ({currentScreen, formik, finish, setFinish }) => {

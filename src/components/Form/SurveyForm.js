@@ -50,14 +50,16 @@ const SurveyForm = () => {
     });
     setValues(initialState);
     isValid &&
-    Swal.fire({
-        title: "Thank you",
-        icon: "info",
-        text: "Now you can see the correct answer",
-        confirmButtonText: "Ok",
-    },
-    isValid && setEmailSend(docRef.id),
-    isValid && setTimeout(() => navigate("/results"), 4000))
+      Swal.fire(
+        {
+          title: "Thank you",
+          icon: "success",
+          text: "Now you can see the correct answer",
+          confirmButtonText: "Ok",
+        },
+        isValid && setEmailSend(docRef.id),
+        isValid && setTimeout(() => navigate("/results"), 4000)
+      );
   }
 
   //Arreglar Guilleur feedback

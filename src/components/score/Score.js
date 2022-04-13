@@ -57,8 +57,9 @@ function Score() {
               <br /> of some of the Spanish varieties mentioned.
             </p>
             <p className="score-result-invite">
-              Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May Book
-              your meeting with us at a.draper@raices.wine - Andrea Draper
+              Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May
+              <br />
+              Book your meeting with us at a.draper@raices.wine - Andrea Draper
             </p>
           </div>
           <ButtonsResult />

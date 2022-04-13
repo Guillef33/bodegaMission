@@ -56,4 +56,9 @@
   .option-button:nth-last-child(1):nth-child(odd) {
     grid-column: auto;
   }
+
+  .form-option-button {
+    padding: 6px 0;
+    font-size: 0.9rem;
+  }
 }
