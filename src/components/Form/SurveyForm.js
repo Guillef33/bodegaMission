@@ -64,7 +64,7 @@ const SurveyForm = () => {
   return (
     <div className>
       <h3 className="form-h3-survey">
-        Please share your email with us <br /> to start the game.
+        Please complete your name and email so we can store your feedback
       </h3>
       <Formik
         validationSchema={userSchema}
@@ -73,7 +73,7 @@ const SurveyForm = () => {
       >
         {({ errors, touched }) => (
           <Form className="form-wrapper" onSubmit={surveySubmit}>
-            <label> Your name </label>
+            <label className="survey-label"> Your name </label>
             <Field
               name="name"
               type="text"
@@ -85,7 +85,7 @@ const SurveyForm = () => {
               <p className="validation-Error">{errors.name}</p>
             ) : null}
             {/* <ErrorMessage name="name" /> */}
-            <label> Your email </label>
+            <label className="survey-label"> Your email </label>
             <Field
               name="email"
               type="email"
@@ -97,7 +97,7 @@ const SurveyForm = () => {
               <p className="validation-Error">{errors.email}</p>
             ) : null}
             <button
-              className="send-form-button"
+              className="send-form-button send-form-button-survey"
               type="submit"
               // onClick={(e) => {
               //   onSubmit(e);
