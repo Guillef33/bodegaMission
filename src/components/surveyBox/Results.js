@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import fondoVinedo from "../../assets/fondoVinedo.png";
 
 import logoPNG from "../../assets/LogosPNGOk.png";
+import InviteMail from "../score/InviteMail";
+
 
 import "../about/AboutUs";
 import "./results.scss";
@@ -34,11 +36,7 @@ const Results = () => {
               are over 100 years old. It is sometimes confused with albariño
               gallego or albillo but is not actually related to them.
             </p>
-            <p className="results-invite">
-              Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May
-              <br />
-              Book your meeting with us at a.draper@raices.wine - Andrea Draper
-            </p>
+            <InviteMail />
           </div>
         </div>
       </div>

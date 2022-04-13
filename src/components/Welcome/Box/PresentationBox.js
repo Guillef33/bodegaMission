@@ -9,10 +9,9 @@ import alert from "../../../assets/Vector.png";
 import "../welcome.scss";
 
 function PresentationalText() {
-
   return (
     <div className="presentation-container">
-      <h1>YOU ARE ABOUT TO JOIN A MISSION</h1>
+      <h1>You are about to join a mission</h1>
       <div className="grid-section">
         <div className="before-start-col">
           <h2

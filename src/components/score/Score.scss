@@ -36,17 +36,16 @@
   margin: 20px 0px;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  // color: white;
 }
 
 .score-result-invite {
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-    margin: 20px 0px;
-    font-family: "Montserrat",
-    sans-serif;
-    line-height: 1.5;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0px;
+  font-family: "Montserrat",
+  sans-serif;
+  line-height: 1.5;
 }
 
 .score-numbers {
@@ -58,12 +57,16 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .buttons-results {
   display: flex;
   justify-content: space-evenly;
 }
 .tryAgain-button-container {
-  margin-top: 19%;
+  // margin-top: 19%;
   text-align: center;
 }
 .tryAgainButton {
@@ -152,6 +155,19 @@
 
 .score-raices-logo {
   width: 100px;
+}
+
+.score-result-invite {
+    font-weight: 300;
+}
+
+.mail-text {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mail-text:hover {
+  color: #722F37;
 }
 
 @media screen and (max-width: 760px) {

@@ -5,6 +5,7 @@ import { AppContext } from "../../context/AppContext";
 import ButtonsResult from "./ButtonsResult";
 
 import raicesLogo from "../../assets/raices-ibericas.png";
+import InviteMail from "./InviteMail";
 
 import "./Score.scss";
 
@@ -56,11 +57,7 @@ function Score() {
               90% of the wine connoisseurs confess that they have never heard{" "}
               <br /> of some of the Spanish varieties mentioned.
             </p>
-            <p className="score-result-invite">
-              Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May
-              <br />
-              Book your meeting with us at a.draper@raices.wine - Andrea Draper
-            </p>
+            <InviteMail />
           </div>
           <ButtonsResult />
         </div>
