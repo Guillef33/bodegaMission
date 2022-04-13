@@ -36,7 +36,7 @@ const FormContainer = () => {
 
   return (
     <section className="box-form-container">
-      {finish ? "" : <h2>Step {currentScreen + 1} of 7</h2>}
+      {finish ? "" : <h2>Step {currentScreen + 1} of 8</h2>}
       <ControlButton
         type={"back"}
         initial={0}
@@ -44,7 +44,7 @@ const FormContainer = () => {
         currentScreen={currentScreen}
         setCurrentScreen={setCurrentScreen}
       />
-      <form onSubmit={formik.handleSubmit}>
+      <div className="box-form">
         <FormItemList
           currentScreen={currentScreen}
           // setQuestions={setQuestions}
@@ -52,11 +52,11 @@ const FormContainer = () => {
           finish={finish}
           setFinish={setFinish}
         />
-      </form>
+      </div>
       <ControlButton
         type={"next"}
         initial={0}
-        limit={6}
+        limit={7}
         currentScreen={currentScreen}
         setCurrentScreen={setCurrentScreen}
       />
