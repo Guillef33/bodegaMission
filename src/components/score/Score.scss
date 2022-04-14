@@ -29,6 +29,21 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.blanco p {
+  color: white;
+  text-align: left;
+}
+
+.negro, .blanco {
+ padding: 20px 0px;
+}
+
+.negro p {
+    color: rgb(27, 24, 24);
+    text-align: center;
+
+}
+
 .score-result-text {
   font-size: 20px;
   color: rgb(27, 24, 24);
@@ -38,13 +53,17 @@
   line-height: 1.5;
 }
 
-.score-result-invite {
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-  font-family: "Montserrat",
-  sans-serif;
-  line-height: 1.5;
+// .score-result-invite {
+//   font-size: 18px;
+//   font-weight: 400;
+//   text-align: center;
+//   font-family: "Montserrat",
+//   sans-serif;
+//   line-height: 1.5;
+// }
+
+.score-results-invite--white {
+  color: white;
 }
 
 .score-numbers {

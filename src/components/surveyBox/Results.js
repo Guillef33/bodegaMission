@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useHistory } from "react-router-dom";
 
 import fondoVinedo from "../../assets/fondoVinedo.png";
 
 import logoPNG from "../../assets/LogosPNGOk.png";
 import InviteMail from "../score/InviteMail";
-
 
 import "../about/AboutUs";
 import "./results.scss";

@@ -5,9 +5,7 @@ import { AppContext } from "../../context/AppContext";
 import Buttons from "../Buttons/Button";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import Results from './Results';
-import ResultsAbout from "../about/ResultsAbout";
-
+import Results from "./Results";
 
 import {
   FormControl,

@@ -39,7 +39,12 @@ const Yupform = () => {
     });
     setValues(initialState);
     isValid &&
-      Swal.fire("Data loaded", "Now let`s start the mission", "success");
+      Swal.fire({
+        title: "Thank you",
+        text: "Now let`s start the mission",
+        icon: "success",
+        customClass: "button-about",
+      });
     isValid && setEmailSend(docRef.id);
     isValid && setTimeout(() => navigate("/"), 4000);
   };

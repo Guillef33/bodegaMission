@@ -38,7 +38,13 @@ const GameForm = () => {
       values,
     });
     setValues(initialState);
-    isValid && Swal.fire("Thank you", "Good luck", "success");
+    isValid &&
+      Swal.fire({
+        title: "Thank you",
+        text: "Good luck",
+        icon: "success",
+        customClass: "button-about",
+      });
     isValid && setEmailSend(docRef.id);
     isValid && setTimeout(() => navigate("/score"), 3000);
   };

@@ -33,9 +33,7 @@ function Score() {
               But we are sure that there is still much to learn! Every day we
               will be uncovering a new autochthonous variety or an unknown DO.
             </p>
-            <p className="score-result-text">
-              Come & join us in Prowein: HALL 14 STAND A10
-            </p>
+            <InviteMail />
           </div>
           <ButtonsResult />
         </div>
@@ -54,8 +52,7 @@ function Score() {
           <div className="text-result-wrapper">
             <p className="score-result-title">There is still much to learn!</p>
             <p className="score-result-text">
-              90% of the wine connoisseurs confess that they have never heard{" "}
-              <br /> of some of the Spanish varieties mentioned.
+              90% of the wine connoisseurs confess that they have never heard of some of the Spanish varieties mentioned.
             </p>
             <InviteMail />
           </div>
