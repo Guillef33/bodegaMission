@@ -70,7 +70,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 }else{
                     await Toast.fire({
                         icon: 'warning',
-                        title: 'Choose an answer
+                        title: 'Choose an answer'
                     });
                 }
                 break;
