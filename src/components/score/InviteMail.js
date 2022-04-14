@@ -3,10 +3,10 @@ import React from "react";
 function InviteMail() {
   return (
     <>
-      <p className="score-result-text bold">
+      <p className="score-result-text">
         Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May
       </p>
-      <p className="score-result-invite bold">
+      <p className="score-result-invite">
         Book your meeting with us at <span> </span>
         <span
           className="mail-text"

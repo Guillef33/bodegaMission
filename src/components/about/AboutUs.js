@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import fondoVinedo from "../../assets/fondoVinedo.png";
 
 import logoPNG from "../../assets/LogosPNGOk.png";
+import GameForm from "../Form/GameForm";
 
 import "./About.scss";
 
@@ -68,12 +69,18 @@ const AboutUs = () => {
               <br /> Please wait...
             </p>
           ) : (
-            <button
-              className="getResultButton"
-              onClick={() => navigate("/score")}
-            >
-              Get Results
-            </button>
+            <>
+              <h3 className="form-text">
+                Please share your email with us to see the results
+              </h3>
+              <GameForm />
+            </>
+            // <button
+            //   className="getResultButton"
+            //   onClick={() => navigate("/score")}
+            // >
+            //   Get Results
+            // </button>
           )}
         </div>
       </div>
