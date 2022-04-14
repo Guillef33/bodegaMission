@@ -110,7 +110,8 @@ input[type="email"] {
   }
 
   .swal2-container {
-    margin: 15px;
+    //retiré esto porque interfería con los alerts
+    // margin: 15px;
   }
 
   .form-h3-survey {

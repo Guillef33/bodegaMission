@@ -1,15 +1,95 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { AppContext } from '../../context/AppContext';
+import { inCollection } from '../../helpers/validationsContext';
+import { Toast } from '../../ui/toast';
 
 import './scss/ControlButton.scss';
 
 const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen }) => {
+    const { formResp } = useContext(AppContext);
 
-
-    const handleClick = (op) =>{
+    const handleClick = async (op) =>{
         console.log(currentScreen);
-        setCurrentScreen(currentScreen + op);
+        
+        switch (currentScreen) {
+            case 0:
+                if(inCollection(1,formResp)){
+                    setCurrentScreen(currentScreen + op);
+                }else{
+                    await Toast.fire({
+                        icon: 'warning',
+                        title: 'Elije una respuesta'
+                    });
+                }
+                break;
+            case 1:
+                if(inCollection(2,formResp) && inCollection(3,formResp) && inCollection(4,formResp) ){
+                    setCurrentScreen(currentScreen + op);
+                }else{
+                    await Toast.fire({
+                        icon: 'warning',
+                        title: 'Elije una respuesta'
+                    });
+                }
+                break;
+            case 2:
+                if(inCollection(5,formResp) && inCollection(6,formResp) && inCollection(7,formResp) ){
+                    setCurrentScreen(currentScreen + op);
+                }else{
+                    await Toast.fire({
+                        icon: 'warning',
+                        title: 'Elije una respuesta'
+                    });
+                }
+                break;
+            case 3:
+                if(inCollection(8,formResp) ){
+                    setCurrentScreen(currentScreen + op);
+                }else{
+                    await Toast.fire({
+                        icon: 'warning',
+                        title: 'Elije una respuesta'
+                    });
+                }
+                break;
+            case 4:
+                if(inCollection(9,formResp) && formResp[8].answerOptions.length === 3){
+                    setCurrentScreen(currentScreen + op);
+                }else{
+                    await Toast.fire({
+                        icon: 'warning',
+                        title: 'Elije 3 respuestas'
+                    });
+                }
+                break;
+            case 5:
+                if(inCollection(10,formResp)){
+                    setCurrentScreen(currentScreen + op);
+                }else{
+                    await Toast.fire({
+                        icon: 'warning',
+                        title: 'Elije una respuesta'
+                    });
+                }
+                break;
+            case 6:
+                if(inCollection(11,formResp)){
+                    setCurrentScreen(currentScreen + op);
+                }else{
+                    await Toast.fire({
+                        icon: 'warning',
+                        title: 'Elije una respuesta'
+                    });
+                }
+                break;
+            
+        
+            default:
+                break;
+        }
+        
 
     }
 

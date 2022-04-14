@@ -32,11 +32,11 @@ function AppProvider(props) {
   const [formResp, setFormResp] = useState([]);
 
   const addFormResp = (newResp) => {
-    if (inCollection(newResp.id, resp)) {
+    if (inCollection(newResp.id, formResp)) {
       //Este map retorna un nuevo array añadiendo un respuesta más para una determinada pregunta
       let newCollection = formResp.map((el) => {
         if (el.id === newResp.id) {
-          el.answerOption.push(newResp.answerOption[0]);
+          el.answerOptions.push(newResp.answerOptions[0]);
           return el;
         } else {
           return el;

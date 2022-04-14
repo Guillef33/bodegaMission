@@ -12,6 +12,7 @@
 
 .grid-colums-5{
     grid-template-columns: repeat(auto-fill, 25px);
+    gap: 30px;
 }
 
 @media screen and (max-width: 760px) { 
