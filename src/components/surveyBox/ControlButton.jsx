@@ -20,7 +20,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 }else{
                     await Toast.fire({
                         icon: 'warning',
-                        title: 'Elije una respuesta'
+                        title: 'Choose an answer'
                     });
                 }
                 break;
@@ -30,7 +30,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 }else{
                     await Toast.fire({
                         icon: 'warning',
-                        title: 'Elije una respuesta'
+                        title: 'Choose an answer'
                     });
                 }
                 break;
@@ -40,7 +40,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 }else{
                     await Toast.fire({
                         icon: 'warning',
-                        title: 'Elije una respuesta'
+                        title: 'Choose an answer'
                     });
                 }
                 break;
@@ -50,7 +50,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 }else{
                     await Toast.fire({
                         icon: 'warning',
-                        title: 'Elije una respuesta'
+                        title: 'Choose an answer'
                     });
                 }
                 break;
@@ -60,7 +60,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 }else{
                     await Toast.fire({
                         icon: 'warning',
-                        title: 'Elije 3 respuestas'
+                        title: 'Choose three answers'
                     });
                 }
                 break;
@@ -70,7 +70,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 }else{
                     await Toast.fire({
                         icon: 'warning',
-                        title: 'Elije una respuesta'
+                        title: 'Choose an answer
                     });
                 }
                 break;
@@ -80,7 +80,7 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
                 }else{
                     await Toast.fire({
                         icon: 'warning',
-                        title: 'Elije una respuesta'
+                        title: 'Choose an answer'
                     });
                 }
                 break;
