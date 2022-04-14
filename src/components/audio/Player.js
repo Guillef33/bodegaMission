@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { FaStopCircle } from "react-icons/fa";
 
+import { BsSquareFill } from 'react-icons/bs'
+
+import { FaMusic } from 'react-icons/fa';
+
 // import PlayButton from "../Buttons/PlayButton";
 
 import "./player.css";
@@ -34,9 +38,16 @@ const Player = ({ url }) => {
     <>
       <span className="playIconWrapper" onClick={toggle}>
         {playing ? (
-          <FaStopCircle className="playerIcon" />
+          // <FaStopCircle className="playerIcon" />
+                    <BsSquareFill className="playerIcon" />
+
+
+
+
+
         ) : (
-          <AiFillPlayCircle className="playerIcon" />
+          // <AiFillPlayCircle className="playerIcon" />
+        <FaMusic className="playerIcon" />
         )}
       </span>
     </>
