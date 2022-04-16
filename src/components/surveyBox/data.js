@@ -30,6 +30,7 @@ const data = [
     input: "Others...",
     image: vinoCuna,
     id: 1,
+    correctQty:1
   },
   {
     questionText: "| Intensity",
@@ -41,6 +42,7 @@ const data = [
     ],
     image: fondoPizarras,
     id: 2,
+    correctQty:1
   },
   {
     questionText: "| Sweetness",
@@ -52,6 +54,7 @@ const data = [
     ],
     image: fondoPizarras,
     id: 3,
+    correctQty:1
   },
   {
     questionText: "| Body",
@@ -64,6 +67,7 @@ const data = [
     ],
     image: fondoPizarras,
     id: 4,
+    correctQty:1
   },
   {
     questionText: "| Acidity",
@@ -76,6 +80,7 @@ const data = [
     ],
     image: fondoPizarras,
     id: 5,
+    correctQty:1
   },
   {
     questionText: "| Alcohol",
@@ -87,6 +92,7 @@ const data = [
     ],
     image: fondoPizarras,
     id: 6,
+    correctQty:1
   },
   {
     questionText: "| Length",
@@ -98,6 +104,7 @@ const data = [
     ],
     image: fondoPizarras,
     id: 7,
+    correctQty:1
   },
   {
     questionText: "If you would need to guess the vintage:",
@@ -110,6 +117,7 @@ const data = [
     esRadio: true,
     image: Raices1,
     id: 8,
+    correctQty:1
   },
   {
     questionText:
@@ -128,6 +136,7 @@ const data = [
     ],
     image: RaicesMalvar,
     id: 9,
+    correctQty:3
   },
   {
     questionText: "From the regions listen below, pick the ones that could be:",
@@ -145,6 +154,7 @@ const data = [
     ],
     image: RaicesMalvar1,
     id: 10,
+    correctQty:1
   },
 ];
 

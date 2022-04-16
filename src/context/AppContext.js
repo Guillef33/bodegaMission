@@ -49,6 +49,29 @@ function AppProvider(props) {
     }
   }
 
+  const removeFormResp = (id, answerText) => {
+    console.table({ id, answerText });
+    let newResp = [...formResp];
+    newResp = newResp.map((el) => {
+      if (el.id === id) {
+        console.log("entre acaehfuehf0");
+        let newAnswerOptions = el.answerOptions.filter(
+          (answer) => answer.answerText !== answerText
+        );
+        console.log(newAnswerOptions, answerText);
+        return {
+          id: el.id,
+          questionText: el.questionText,
+          answerOptions: newAnswerOptions,
+        };
+      } else {
+        return el;
+      }
+    });
+    setFormResp(newResp);
+  };
+
+
 
   const addResp = (newResp) => {
     //inCollection verifica si el id de la pregunta ya existe en la coleción
@@ -190,6 +213,7 @@ function AppProvider(props) {
         //nuevo formulario
         formResp,
         addFormResp,
+        removeFormResp,
         //---------
         showScore,
         showQuizz,

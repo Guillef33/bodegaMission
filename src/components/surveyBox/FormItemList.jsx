@@ -16,6 +16,7 @@ const FormItemList = ({currentScreen, formik, finish, setFinish }) => {
         answerOptions: [],
         image: RaicesMalvar,
         id: 11,
+        correctQty:1
       });
 
 

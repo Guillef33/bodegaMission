@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import OptionButton from './OptionButton';
+import RaicesMalvar from "../../assets/RaicesMalvar.png";
 
 const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
   console.log(question);
@@ -17,6 +18,18 @@ const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
 
   }
 
+  const removeNewQuestion = (option) => {
+    const data = newQuestion.answerOptions.filter(el => el.answerText !== option.answerText);
+    setNewQuestion({
+        questionText:
+          "Now you have taste it, select which three varieties could be:",
+        answerOptions: data,
+        image: RaicesMalvar,
+        id: 11,
+        correctQty:1
+    });
+  }
+
 
 
 
@@ -26,9 +39,10 @@ const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
                                                                         shape={shape} 
                                                                         option={el} 
                                                                         addQuestion={addNewQuestion} 
+                                                                        removeQuestion={removeNewQuestion}
                                                                         qId={question.id}
                                                                         qText={question.questionText} 
-
+                                                                        correctQty={question.correctQty}
                                                                   />)});
     setOptions(arrayOptions);  
   }, [])
