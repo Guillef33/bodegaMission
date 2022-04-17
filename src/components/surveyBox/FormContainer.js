@@ -6,6 +6,8 @@ import FormItemList from "./FormItemList";
 import './scss/FormContainer.scss';
 import ControlButton from "./ControlButton";
 
+import data from './data'
+
 const FormContainer = () => {
   const validationSchema = yup.object({
     name: yup
@@ -35,7 +37,14 @@ const FormContainer = () => {
   const [finish, setFinish] = useState(false)
 
   return (
-    <section className="box-form-container">
+    <section
+      className="box-form-container"
+      style={{
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundImage: `url(${data[currentScreen].image})`,
+      }}
+    >
       {finish ? "" : <h2>Step {currentScreen + 1} of 8</h2>}
       <ControlButton
         type={"back"}
