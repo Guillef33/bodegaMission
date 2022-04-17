@@ -21,6 +21,7 @@ import Yupform from "./components/Form/Yupform";
 import Results from "./components/surveyBox/Results";
 
 import FormContainer from "./components/surveyBox/FormContainer";
+import SurveyForm from "./components/Form/SurveyForm";
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/ready-box" element={<ReadyToStartBox />} />
 
           <Route path="/survey" element={<FormContainer />} />
+          <Route path="/surveyForm" element={<SurveyForm />} />
 
           <Route path="/results" element={<Results />} />
 
@@ -54,7 +56,6 @@ export default function App() {
           <Route path="/yup" element={<Yupform />} />
 
           <Route path="/about" element={<AboutUs />} />
-
         </Routes>
       </BrowserRouter>
     </AppProvider>

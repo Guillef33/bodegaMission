@@ -46,12 +46,23 @@
 .form-wrapper input[type="text"],
 input[type="email"] {
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   font-family: "Montserrat", sans-serif;
   width: 600px;
   padding: 10px;
   color: black;
 }
+
+.form-wrapper .form-survey-input {
+    border: 1px solid black;
+    border-radius: 20px;
+    font-family: "Montserrat",
+    sans-serif;
+    width: 600px !important;
+    padding: 10px;
+    color: black;
+}
+
 .send-form-button {
   width: 600px;
   font-size: 20px;
@@ -95,11 +106,16 @@ input[type="email"] {
 
 
 @media screen and (max-width: 760px) {
-  .form-wrapper input[type="text"],
+  // .form-wrapper input[type="text"],
   .share-modal-container input,
   input[type="email"] {
     width: auto;
   }
+
+  .form-wrapper .form-survey-input {
+    width: auto;
+  } 
+
 
   .form-text {
     font-size: 18px;
