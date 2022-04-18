@@ -32,6 +32,7 @@ function AppProvider(props) {
   const [formResp, setFormResp] = useState([]);
 
   const addFormResp = (newResp) => {
+    // Este ID esta en la colection? Si es true, sigue. Sino va al else. 
     if (inCollection(newResp.id, formResp)) {
       //Este map retorna un nuevo array añadiendo un respuesta más para una determinada pregunta
       let newCollection = formResp.map((el) => {
