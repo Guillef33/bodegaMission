@@ -35,15 +35,15 @@ const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
 
   useEffect(() => {
     const arrayOptions = question.answerOptions.map( el => {return(<OptionButton 
-                                                                        key={el.answerText} 
-                                                                        shape={shape} 
-                                                                        option={el} 
-                                                                        addQuestion={addNewQuestion} 
-                                                                        removeQuestion={removeNewQuestion}
-                                                                        qId={question.id}
-                                                                        qText={question.questionText} 
-                                                                        correctQty={question.correctQty}
-                                                                  />)});
+        key={el.answerText} 
+        shape={shape} 
+        option={el} 
+        addQuestion={addNewQuestion} 
+        removeQuestion={removeNewQuestion}
+        qId={question.id}
+        qText={question.questionText} 
+        correctQty={question.correctQty}
+  />)});
     setOptions(arrayOptions);  
   }, [])
   

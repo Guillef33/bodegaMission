@@ -32,7 +32,6 @@ const FormItemList = ({currentScreen, formik, finish, setFinish }) => {
 
             return(
             <>  
-                {/* <h2>Send your feedback to us</h2> */}
                 <SurveyForm />
             </> 
         );
