@@ -104,11 +104,8 @@ const SurveyForm = () => {
             <button
               className="send-form-button send-form-button-survey"
               type="submit"
-              // onClick={(e) => {
-              //   onSubmit(e);
-              // }}
             >
-              Submit
+              See more
             </button>
           </Form>
         )}
