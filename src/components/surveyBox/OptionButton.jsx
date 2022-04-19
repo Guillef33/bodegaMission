@@ -30,6 +30,8 @@ const OptionButton = ({shape='rectangle', option, addQuestion, removeQuestion, q
       // if(formResp[qId - 1].answerOptions.length){//para volver a habilitar los botones para hacer click
         
       // }gi
+
+      
     }
   }, [formResp, state, active])
   
@@ -39,14 +41,15 @@ const OptionButton = ({shape='rectangle', option, addQuestion, removeQuestion, q
         className={`form-option-button form-option-button--${shape} form-option-button--${state ? 'active': 'nadaquever'}`}
         onClick={()=>{
           console.log('click', state);
-          setState(!state); 
-          if(qId===9){
-            if(!state){
-              addQuestion(option)
-            }else{
-              removeQuestion(option)
-            }
-          }
+          
+          setState(!state);
+      //     if(qId===9){
+      //   if(!state){
+      //     addQuestion(option)
+      //   }else{
+      //     removeQuestion(option)
+      //   }
+      // } 
           
           if(!state){
             addFormResp({
@@ -54,8 +57,11 @@ const OptionButton = ({shape='rectangle', option, addQuestion, removeQuestion, q
               questionText:qText,
               answerOptions:[option]
             });
+            if(qId===9){addQuestion(option);console.log('se agrega')}
+            
           }else{
             removeFormResp(qId, option.answerText)
+            if(qId===9){removeQuestion(option);console.log('se remueve')}
           }
 
         }}
