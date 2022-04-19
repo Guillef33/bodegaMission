@@ -83,6 +83,7 @@ const SurveyForm = () => {
               placeholder="Enter your name"
               onInput={handleChange}
               value={values.name}
+              className="form-survey-input"
             />
             {errors.name && touched.name ? (
               <p className="validation-Error">{errors.name}</p>
@@ -95,6 +96,7 @@ const SurveyForm = () => {
               placeholder="Enter your e-mail"
               onInput={handleChange}
               value={values.email}
+              className="form-survey-input"
             />
             {errors.email && touched.email ? (
               <p className="validation-Error">{errors.email}</p>
@@ -102,11 +104,8 @@ const SurveyForm = () => {
             <button
               className="send-form-button send-form-button-survey"
               type="submit"
-              // onClick={(e) => {
-              //   onSubmit(e);
-              // }}
             >
-              Submit
+              See more
             </button>
           </Form>
         )}

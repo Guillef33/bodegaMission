@@ -52,6 +52,7 @@ const questions = [
     id: 3,
   },
   {
+    // cinco correctas
     questionText: "Select the five grape varieties from Spain?",
 
     answerOptions: [
@@ -99,12 +100,15 @@ const questions = [
     id: 7,
   },
   {
+    // tres correctas
     questionText: "Mazuela is from?",
     answerOptions: [
-      { answerText: "Rioja", isCorrect: false },
-      { answerText: "Cariñena", isCorrect: false },
-      { answerText: "Priorat", isCorrect: false },
-      { answerText: "All", isCorrect: true },
+      { answerText: "Rioja", isCorrect: true },
+      { answerText: "Rías Baixas", isCorrect: false },
+      { answerText: "Valdeorras", isCorrect: false },
+      { answerText: "Madrid", isCorrect: false },
+      { answerText: "Cariñena", isCorrect: true },
+      { answerText: "Priorat", isCorrect: true },
     ],
     image: Cepa,
     id: 8,

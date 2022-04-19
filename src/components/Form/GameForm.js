@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
-import { userSchema } from "./userValidation";
+import { userSchemaSurvey } from "./userValidationForm";
 import "./GameForm.scss";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { addDoc } from "@firebase/firestore";
@@ -31,7 +31,7 @@ const GameForm = () => {
       name: event.target[0].value,
       email: event.target[1].value,
     };
-    const isValid = await userSchema.isValid(formData);
+    const isValid = await userSchemaSurvey.isValid(formData);
     console.log(formData, isValid);
 
     const docRef = await addDoc(collection(db, "mails"), {
@@ -51,12 +51,13 @@ const GameForm = () => {
 
   return (
     <Formik
-      validationSchema={userSchema}
+      validationSchema={userSchemaSurvey}
       initialValues={{ name: "", email: "" }}
     >
       {({ errors, touched }) => (
         <Form className="form-wrapper-game" onSubmit={createUser}>
           <Field
+            className="form-game-input"
             name="name"
             type="text"
             placeholder="Enter your name"
@@ -68,6 +69,7 @@ const GameForm = () => {
           ) : null}
           {/* <ErrorMessage name="name" /> */}
           <Field
+            className="form-game-input"
             name="email"
             type="email"
             placeholder="Enter your e-mail"
