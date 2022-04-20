@@ -45,7 +45,7 @@ const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
         correctQty={question.correctQty}
   />)});
     setOptions(arrayOptions);  
-  }, [])
+  }, [newQuestion])
   
 
   return (
