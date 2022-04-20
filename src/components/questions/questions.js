@@ -21,6 +21,7 @@ const questions = [
     ],
     image: vinoCuna,
     id: 1,
+    correctQty: 1,
   },
   {
     questionText: "Which is the region where the Garnacha was born?",
@@ -31,6 +32,7 @@ const questions = [
     ],
     image: fondoPizarras,
     id: 2,
+    correctQty: 1,
   },
   {
     questionText:
@@ -50,6 +52,7 @@ const questions = [
     ],
     image: fondoPaisaje,
     id: 3,
+    correctQty: 4,
   },
   {
     // cinco correctas
@@ -69,6 +72,7 @@ const questions = [
     ],
     image: Raices1,
     id: 4,
+    correctQty: 5,
   },
   {
     questionText: "Is it Rufete red, white or both?",
@@ -79,6 +83,7 @@ const questions = [
     ],
     image: RaicesMalvar,
     id: 5,
+    correctQty: 1,
   },
   {
     questionText: "Is Albarin related to Albariño?",
@@ -88,6 +93,7 @@ const questions = [
     ],
     image: RaicesMalvar1,
     id: 6,
+    correctQty: 1,
   },
   {
     questionText: "Malvar is a variety that can be found in?",
@@ -98,6 +104,7 @@ const questions = [
     ],
     image: CRPunto,
     id: 7,
+    correctQty: 1,
   },
   {
     // tres correctas
@@ -112,6 +119,7 @@ const questions = [
     ],
     image: Cepa,
     id: 8,
+    correctQty: 3,
   },
 ];
 

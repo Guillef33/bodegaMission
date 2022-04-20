@@ -4,6 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 import { AppContext } from "../../context/AppContext";
+import { Toast } from "../../ui/toast";
 
 import "./ControlButtonsGame.scss";
 
@@ -19,6 +20,21 @@ function ControlButtonsGame() {
     pasarPregunta,
     volverPregunta,
   } = useContext(AppContext);
+
+  const handleclickNext = async () => {
+    const question = resp.find( el => el.id === (currentQuestion + 1) );
+            if(question){
+              pasarPregunta()
+              console.log(question);
+            }else{
+              console.log('toast');
+              await Toast.fire({
+                        icon: 'warning',
+                        title: 'Choose an answer'
+                    });
+            }
+  }
+
   return (
     <div className="question-fila-mobile">
       <div className="box-form-control box-form-control--left">
@@ -37,11 +53,11 @@ function ControlButtonsGame() {
 
 
       <div className="box-form-control box-form-control--right">
-        <button className="arrow-back" onClick={() => pasarPregunta()}>
+        <button className="arrow-back" onClick={ handleclickNext }>
           {" "}
           <IoIosArrowForward />
         </button>
-        <button className="arrow-mobile-back" onClick={() => pasarPregunta()}>
+        <button className="arrow-mobile-back" onClick={handleclickNext}>
           {" "}
           <IoIosArrowForward />
         </button>
