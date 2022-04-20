@@ -57,6 +57,7 @@ const SurveyForm = () => {
           text: "Now you can see the correct answer",
           confirmButtonText: "Ok",
           customClass: "button-about",
+          timer: 3500,
         },
         isValid && setEmailSend(docRef.id),
         isValid && setTimeout(() => navigate("/results"), 4000)
