@@ -12,7 +12,7 @@ const FormItemList = ({currentScreen, formik, finish, setFinish }) => {
 
     const [newQuestion, setNewQuestion] = useState({
         questionText:
-          "Now you have taste it, select which three varieties could be:",
+          "From the 3 grape varieties  you selected before, which is your final guess?",
         answerOptions: [],
         image: RaicesMalvar,
         id: 11,
