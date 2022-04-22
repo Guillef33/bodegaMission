@@ -21,7 +21,6 @@ const GameForm = () => {
 
   const handleChange = (e) => {
     const { value, name } = e.target;
-    console.log(e.target);
     setValues({ ...values, [name]: value });
   };
 
@@ -32,7 +31,6 @@ const GameForm = () => {
       email: event.target[1].value,
     };
     const isValid = await userSchemaSurvey.isValid(formData);
-    console.log(formData, isValid);
 
     const docRef = await addDoc(collection(db, "mails"), {
       values,

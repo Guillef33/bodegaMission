@@ -25,9 +25,7 @@ function ControlButtonsGame() {
     const question = resp.find((el) => el.id === currentQuestion + 1);
     if (question) {
       pasarPregunta();
-      console.log(question);
     } else {
-      console.log("toast");
       await Toast.fire({
         icon: "warning",
         title: "Choose an answer",

@@ -29,9 +29,6 @@ function CircularProgressBar() {
 
   function TiempoDeJuego() {
     if (tiempoRestante < 40) {
-      console.log("Llego a cuarenta");
-      //    agregar clase que cambie el color o genere un borde o algo
-      //    setStyle("Danger");
     }
     if (tiempoRestante === 0) {
       setStatus(STATUS.STOPPED);

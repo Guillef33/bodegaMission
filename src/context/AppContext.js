@@ -55,11 +55,9 @@ function AppProvider(props) {
     let newResp = [...formResp];
     newResp = newResp.map((el) => {
       if (el.id === id) {
-        console.log("entre acaehfuehf0");
         let newAnswerOptions = el.answerOptions.filter(
           (answer) => answer.answerText !== answerText
         );
-        console.log(newAnswerOptions, answerText);
         return {
           id: el.id,
           questionText: el.questionText,
@@ -102,7 +100,7 @@ function AppProvider(props) {
         let newAnswerOption = el.answerOption.filter(
           (answer) => answer.answerText !== answerText
         );
-        console.log(newAnswerOption, answerText);
+        // console.log(newAnswerOption, answerText);
         return {
           id: el.id,
           questionText: el.questionText,
@@ -130,7 +128,7 @@ function AppProvider(props) {
     const result = arrayPoints.reduce(
       (acumulator, currentValue) => acumulator + currentValue
     );
-    console.log("result: ", arrayPoints.length);
+    // console.log("result: ", arrayPoints.length);
     setScore(result);
   };
 
@@ -200,7 +198,7 @@ function AppProvider(props) {
   }
 
   function handleClose() {
-    console.log(showQuizz);
+    // console.log(showQuizz);
     setShowQuizz(false);
   }
 

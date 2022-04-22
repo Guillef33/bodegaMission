@@ -28,7 +28,6 @@ const SurveyForm = () => {
 
   const handleChange = (e) => {
     const { value, name } = e.target;
-    console.log(e.target);
     setValues({ ...values, [name]: value });
   };
 
@@ -41,8 +40,6 @@ const SurveyForm = () => {
       // agregar las respuestas del usuario
     };
     const isValid = await userSchema.isValid(formData);
-    console.log(formData, isValid);
-
     const docRef = await addDoc(collection(db, "surveys"), {
       values,
     });

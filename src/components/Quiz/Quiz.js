@@ -31,7 +31,6 @@ function Quiz() {
 
   //TODO: Este hangleOptionClick va a decidir si tenemos que agregar la respuesta o eliminarla
   const handleOptionClick = (e, newResp) => {
-    console.log("hiceclick");
     addResp(newResp);
   };
 

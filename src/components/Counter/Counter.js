@@ -18,11 +18,6 @@ function Counter() {
   } = useContext(AppContext);
   const [style, setStyle] = useState("Normal");
 
-  console.log(secondsToDisplay);
-
-  /* componentDidMount */
-  /* componentDidUpdate */
-  /* componentDidUnmount */
   useEffect(() => {
     TiempoDeJuego();
   }, [secondsToDisplay]);

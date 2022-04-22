@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 function InviteMail() {
   const param = window.location.pathname;
-  console.log(param);
 
   const [colorText, setColorText] = useState(param);
   return (

@@ -3,7 +3,6 @@ import OptionButton from './OptionButton';
 import RaicesMalvar from "../../assets/RaicesMalvar.png";
 
 const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
-  console.log(question);
   const [options, setOptions] = useState(null);
 
   const addNewQuestion = (option) => {

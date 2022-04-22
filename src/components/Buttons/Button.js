@@ -14,7 +14,6 @@ const Button = ({
 
   const handleOptionClick = (newResp) => {
     if (!active) {
-      console.log("se añade respuesta");
       addResp(newResp);
       setActive(!active);
     } else {
@@ -26,7 +25,6 @@ const Button = ({
   useEffect(() => {
     //TODO: Probar que ande bien
     const currentAswenr = resp.find((el) => el.id === id);
-    // console.log("currentAswenr", currentAswenr);
     if (currentAswenr) {
       if (
         currentAswenr.answerOption.some(
