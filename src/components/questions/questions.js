@@ -11,7 +11,7 @@ import Cepa from "../../assets/Cepa.png";
 
 const questions = [
   {
-    questionText: "Which is the variety in Spain most planted?",
+    questionText: "Which is the most planted grape variety in Spain? ",
     answerOptions: [
       { answerText: "Garnacha", isCorrect: false },
       { answerText: "Airén", isCorrect: false },
@@ -24,7 +24,7 @@ const questions = [
     correctQty: 1,
   },
   {
-    questionText: "Which is the region where the Garnacha was born?",
+    questionText: "In what region was the garnacha grape born?",
     answerOptions: [
       { answerText: "Aragón", isCorrect: true },
       { answerText: "Cataluña", isCorrect: false },
@@ -36,7 +36,7 @@ const questions = [
   },
   {
     questionText:
-      "Talking about Aragon, which of the following wine regions belong to it?",
+      "Let’s talk about the Aragon province. Which of the following wine regions belong to it?",
 
     answerOptions: [
       { answerText: "Calatayud", isCorrect: true },
@@ -69,13 +69,14 @@ const questions = [
       { answerText: "Malvar", isCorrect: true },
       { answerText: "Olivella", isCorrect: false },
       { answerText: "Cesar", isCorrect: false },
+      { answerText: "Indigenous", isCorrect: false },
     ],
     image: Raices1,
     id: 4,
     correctQty: 5,
   },
   {
-    questionText: "Is it Rufete red, white or both?",
+    questionText: "Is Rufete a red or white grape variety? Or both?",
     answerOptions: [
       { answerText: "White", isCorrect: false },
       { answerText: "Red", isCorrect: false },

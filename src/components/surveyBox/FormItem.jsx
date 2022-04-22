@@ -22,7 +22,7 @@ const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
     const data = newQuestion.answerOptions.filter(el => el.answerText !== option.answerText);
     setNewQuestion({
         questionText:
-          "Now you have taste it, select which three varieties could be:",
+          "From the 3 grape varieties you selected before, which is your final guess?",
         answerOptions: data,
         image: RaicesMalvar,
         id: 11,

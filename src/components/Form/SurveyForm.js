@@ -14,14 +14,12 @@ import { AppContext } from "../../context/AppContext";
 const SurveyForm = () => {
   let navigate = useNavigate();
   // const [emailSend, setEmailSend] = useState(false);
-  const {
-    formResp  
-  } = useContext(AppContext);
+  const { formResp } = useContext(AppContext);
 
   const initialState = {
     name: "",
     email: "",
-    responses:[...formResp]
+    responses: [...formResp],
     // State de Preguntas
   };
 
@@ -36,7 +34,7 @@ const SurveyForm = () => {
 
   const surveySubmit = async (event) => {
     event.preventDefault();
-    console.warn('SE detuvo submit');
+    console.warn("SE detuvo submit");
     let formData = {
       name: event.target[0].value,
       email: event.target[1].value,
@@ -52,9 +50,8 @@ const SurveyForm = () => {
     isValid &&
       Swal.fire(
         {
-          title: "Thank you",
+          title: "Ready to see the correct answer? ",
           icon: "success",
-          text: "Now you can see the correct answer",
           confirmButtonText: "Ok",
           customClass: "button-about",
           timer: 3500,
@@ -62,7 +59,7 @@ const SurveyForm = () => {
         isValid && setEmailSend(docRef.id),
         isValid && setTimeout(() => navigate("/results"), 4000)
       );
-  }
+  };
 
   //Arreglar Guilleur feedback
   return (

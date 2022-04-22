@@ -7,23 +7,24 @@ import alert from "../../../assets/Vector.png";
 import "../welcome.scss";
 
 function PresentationalText() {
-
   return (
     <div className="presentation-container">
       <h1>You are about to join a mission</h1>
       <div className="grid-section">
         <div className="before-start-col">
           <h2>
-            ​​Did you know that Spain has the largest vineyard surface in the
-            world with more than 70 autochthonous varieties?
+            Did you know that Spain has the largest vineyard surface area in the
+            world and has more than 70 autochthonous grape varieties that are
+            largely unknown?
           </h2>
         </div>
         <div className="content-start-col">
           <p>
-            So our path started to be traced: uncover the hidden value of
-            Spanish wine. And this is the mission you just signed for: uncover
-            what Spain has to offer. Follow the instructions and good luck!
+            Our path became clear: to uncover the hidden value of Spanish wine.
           </p>
+          <p>This is the mission you just signed up for.</p>
+          <p>Follow the instructions.</p>
+          <p>Good luck!</p>
         </div>
         <Link to="/game">
           <button className="playGameButton playGameButtonMobile">

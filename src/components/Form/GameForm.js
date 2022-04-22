@@ -41,7 +41,6 @@ const GameForm = () => {
     isValid &&
       Swal.fire({
         title: "Thank you",
-        text: "Good luck",
         icon: "success",
         customClass: "button-about",
       });

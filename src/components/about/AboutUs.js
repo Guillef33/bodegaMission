@@ -53,9 +53,10 @@ const AboutUs = () => {
               <br />
               Yet a single belief has united us today, Spain is the country with
               the greatest wealth of terroirs for making wine, the strongest
-              identity and, paradoxically, the most undervalued production. So
-              our path started to be traced: we want to show to everyone the
-              hidden wonder of spanish wine. <br />
+              identity and, paradoxically, the most undervalued production. Our
+              path became clear: we want to show to everyone the hidden wonder
+              of Spanish wine.
+              <br />
               <br />
               <strong>Mark Schiettekat.</strong>
               <br /> Owner.
@@ -71,16 +72,11 @@ const AboutUs = () => {
           ) : (
             <>
               <h3 className="form-text">
-                Please share your email with us to see the results
+                Please share your email with us to see your results
               </h3>
               <GameForm />
             </>
-            // <button
-            //   className="getResultButton"
-            //   onClick={() => navigate("/score")}
-            // >
-            //   Get Results
-            // </button>
+
           )}
         </div>
       </div>

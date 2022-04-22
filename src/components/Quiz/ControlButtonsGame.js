@@ -22,18 +22,18 @@ function ControlButtonsGame() {
   } = useContext(AppContext);
 
   const handleclickNext = async () => {
-    const question = resp.find( el => el.id === (currentQuestion + 1) );
-            if(question){
-              pasarPregunta()
-              console.log(question);
-            }else{
-              console.log('toast');
-              await Toast.fire({
-                        icon: 'warning',
-                        title: 'Choose an answer'
-                    });
-            }
-  }
+    const question = resp.find((el) => el.id === currentQuestion + 1);
+    if (question) {
+      pasarPregunta();
+      console.log(question);
+    } else {
+      console.log("toast");
+      await Toast.fire({
+        icon: "warning",
+        title: "Choose an answer",
+      });
+    }
+  };
 
   return (
     <div className="question-fila-mobile">
@@ -51,9 +51,8 @@ function ControlButtonsGame() {
         </button>
       </div>
 
-
       <div className="box-form-control box-form-control--right">
-        <button className="arrow-back" onClick={ handleclickNext }>
+        <button className="arrow-back" onClick={handleclickNext}>
           {" "}
           <IoIosArrowForward />
         </button>

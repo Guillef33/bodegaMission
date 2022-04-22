@@ -29,11 +29,12 @@ const Results = () => {
             <h2 className="results-subtitle">And the answer is...</h2>
             <h2 className="results-title">Albarin</h2>
             <p className="results-text">
-              This grape variety is originally from Asturias, then expanded in
-              Cantabria & Castilla y León. It almost disappeared until 10 years
-              ago winegrowers began to replant it. You can still find vines that
-              are over 100 years old. It is sometimes confused with albariño
-              gallego or albillo but is not actually related to them.
+              This grape variety is originally from Asturias, then expanded to
+              Cantabria & Castilla y León. You can still find vines that are
+              over 100 years old. The variety almost disappeared, until 10 years
+              ago winegrowers started to replant it. Due to the name it is
+              sometimes confused with albariño gallego or albillo, but is
+              actually not related to them.
             </p>
             <InviteMail />
           </div>

@@ -26,11 +26,12 @@ const data = [
       { answerText: "Fennel", isCorrect: false },
       { answerText: "Mineral ", isCorrect: false },
       { answerText: "Jasmine", isCorrect: false },
+      { answerText: "Citrus zest", isCorrect: false },
     ],
     input: "Others...",
     image: vinoCuna,
     id: 1,
-    correctQty: 17,
+    correctQty: 18,
   },
   {
     questionText: "| Intensity",
@@ -121,7 +122,7 @@ const data = [
   },
   {
     questionText:
-      "Now you have taste it, select which three varieties could be:",
+      "Now you have tasted it, select which three varieties it could be:",
     answerOptions: [
       { answerText: "Garnacha Blanca", isCorrect: true },
       { answerText: "Albariño ", isCorrect: false },
@@ -139,7 +140,7 @@ const data = [
     correctQty: 3,
   },
   {
-    questionText: "From the regions listen below, pick the ones that could be:",
+    questionText: "From the regions listed below, pick the ones you think the wine could find its origins:",
     answerOptions: [
       { answerText: "Terra Alta", isCorrect: true },
       { answerText: "Rias Baixas", isCorrect: false },

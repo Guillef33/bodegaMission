@@ -7,7 +7,10 @@ function InviteMail() {
   const [colorText, setColorText] = useState(param);
   return (
     <div className={param === "/results" ? "blanco" : "negro"}>
-      <p>Come & join us at Prowein: HALL 14 STAND A10 | 15th-17th May</p>
+      <p>
+        To find out more about these varieties, come & join us at Prowein: HALL
+        14 STAND A10 | 15th-17th May
+      </p>
 
       <p>
         Book your meeting with us at <span> </span>
