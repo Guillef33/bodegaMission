@@ -22,15 +22,18 @@ const OptionButton = ({shape='rectangle', option, addQuestion, removeQuestion, q
         let answerOptions = getAnswerById(formResp, qId).answerOptions;
         
         if(answerOptions.some(el => el.answerText == option.answerText)){//para pintar los botones que ya fueron seleccionados
-          console.warn('se ejecuta pintar');
+          console.log('se ejecuta pintar');
           setState(true);
         }
       }else{
         setActive(false);
+        let answerOptions = getAnswerById(formResp, qId).answerOptions;
+        
+        if(answerOptions.some(el => el.answerText == option.answerText)){//para pintar los botones que ya fueron seleccionados
+          console.log('se ejecuta pintar');
+          setState(true);
+        }
       }
-  
-
-      
     }
   }, [formResp, state, active])
   

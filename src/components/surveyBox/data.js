@@ -29,7 +29,7 @@ const data = [
     input: "Others...",
     image: vinoCuna,
     id: 1,
-    correctQty: 18,
+    correctQty: 16,
   },
   {
     questionText: "| Intensity",
