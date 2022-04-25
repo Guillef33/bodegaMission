@@ -4,6 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 import { AppContext } from "../../context/AppContext";
+import { isResponseFull } from "../../helpers/validationsContext";
 import { Toast } from "../../ui/toast";
 
 import "./ControlButtonsGame.scss";
@@ -23,12 +24,12 @@ function ControlButtonsGame() {
 
   const handleclickNext = async () => {
     const question = resp.find((el) => el.id === currentQuestion + 1);
-    if (question) {
+    if (question && isResponseFull(resp,question.id,questions[currentQuestion].correctQty)) {
       pasarPregunta();
     } else {
       await Toast.fire({
         icon: "warning",
-        title: "Choose an answer",
+        title: `Choose ${questions[currentQuestion].correctQty} answer/s`,
       });
     }
   };

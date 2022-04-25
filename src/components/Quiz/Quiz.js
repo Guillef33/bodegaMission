@@ -89,6 +89,7 @@ function Quiz() {
                       addResp={addResp}
                       removeResp={removeResp}
                       id={questions[currentQuestion].id}
+                      maxQty={questions[currentQuestion].correctQty}
                       questionText={questions[currentQuestion].questionText}
                       answerOption={answerOption}
                     />

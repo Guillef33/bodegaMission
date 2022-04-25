@@ -16,6 +16,7 @@ export const getQtyAnswers = ( responses, id ) => {
 
 }
 
+//recibe las respuesta del context y el id y devuelve la respuesta actual
 export const getAnswerById = ( responses, id) => {
     const currentResp = responses.find(el => el.id === id);
 
@@ -25,3 +26,21 @@ export const getAnswerById = ( responses, id) => {
         return currentResp;
     }
 }
+
+//devuelva un true si ya se seleccionó el número exacto de preguntas
+export const isResponseFull = (responses, id, maxQty) => {
+
+    const currentResp = getAnswerById(responses, id);
+
+    if(currentResp){
+        if(currentResp.answerOption.length===maxQty){
+            return true;
+        }else{
+            return false
+        }
+    }else{
+        return false;
+    }
+ 
+}
+

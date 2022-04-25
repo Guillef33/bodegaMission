@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { isResponseFull } from "../../helpers/validationsContext";
 
 import "./Button.scss";
 
@@ -9,6 +10,7 @@ const Button = ({
   removeResp,
   id,
   questionText,
+  maxQty
 }) => {
   const [active, setActive] = useState(false);
 
@@ -52,6 +54,7 @@ const Button = ({
           answerOption: [answerOption],
         });
       }}
+      disabled={ (isResponseFull(resp, id, maxQty) && !active) ? true : false }
     >
       {answerOption.answerText}
     </button>

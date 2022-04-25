@@ -16,20 +16,19 @@ const OptionButton = ({shape='rectangle', option, addQuestion, removeQuestion, q
 
   useEffect(() => {
     if(inCollection(qId,formResp)) {
-      // if(formResp[qId - 1].answerOptions.length >= correctQty){
+
       if( getQtyAnswers(formResp, qId) >= correctQty){
         setActive(true);
         let answerOptions = getAnswerById(formResp, qId).answerOptions;
         
         if(answerOptions.some(el => el.answerText == option.answerText)){//para pintar los botones que ya fueron seleccionados
+          console.warn('se ejecuta pintar');
           setState(true);
         }
       }else{
         setActive(false);
       }
-      // if(formResp[qId - 1].answerOptions.length){//para volver a habilitar los botones para hacer click
-        
-      // }gi
+  
 
       
     }
@@ -43,13 +42,6 @@ const OptionButton = ({shape='rectangle', option, addQuestion, removeQuestion, q
           console.log('click', state);
           
           setState(!state);
-      //     if(qId===9){
-      //   if(!state){
-      //     addQuestion(option)
-      //   }else{
-      //     removeQuestion(option)
-      //   }
-      // } 
           
           if(!state){
             addFormResp({

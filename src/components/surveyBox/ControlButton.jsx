@@ -14,35 +14,48 @@ const ControlButton = ({type, limit, initial, currentScreen, setCurrentScreen })
         
         switch (currentScreen) {
             case 0:
-                if(inCollection(1,formResp)){
+                if(op > 0){
+                    if(inCollection(1,formResp)){
                     setCurrentScreen(currentScreen + op);
+                    }else{
+                        await Toast.fire({
+                            icon: 'warning',
+                            title: 'Choose an answer'
+                        });
+                    }
+                    break;
                 }else{
-                    await Toast.fire({
-                        icon: 'warning',
-                        title: 'Choose an answer'
-                    });
+                    setCurrentScreen(currentScreen + op);
                 }
-                break;
+                
             case 1:
-                if(inCollection(2,formResp) && inCollection(3,formResp) && inCollection(4,formResp) ){
-                    setCurrentScreen(currentScreen + op);
+                if(op > 0){
+                    if(inCollection(2,formResp) && inCollection(3,formResp) && inCollection(4,formResp) ){
+                        setCurrentScreen(currentScreen + op);
+                    }else{
+                        await Toast.fire({
+                            icon: 'warning',
+                            title: 'Choose an answer'
+                        });
+                    }
+                    break;
                 }else{
-                    await Toast.fire({
-                        icon: 'warning',
-                        title: 'Choose an answer'
-                    });
+                    setCurrentScreen(currentScreen + op);
                 }
-                break;
             case 2:
-                if(inCollection(5,formResp) && inCollection(6,formResp) && inCollection(7,formResp) ){
-                    setCurrentScreen(currentScreen + op);
+                if(op > 0){
+                    if(inCollection(5,formResp) && inCollection(6,formResp) && inCollection(7,formResp) ){
+                        setCurrentScreen(currentScreen + op);
+                    }else{
+                        await Toast.fire({
+                            icon: 'warning',
+                            title: 'Choose an answer'
+                        });
+                    }
+                    break;
                 }else{
-                    await Toast.fire({
-                        icon: 'warning',
-                        title: 'Choose an answer'
-                    });
+                    setCurrentScreen(currentScreen + op);
                 }
-                break;
             case 3:
                 if(inCollection(8,formResp) ){
                     setCurrentScreen(currentScreen + op);
