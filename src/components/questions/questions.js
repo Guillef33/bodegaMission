@@ -56,7 +56,7 @@ const questions = [
   },
   {
     // cinco correctas
-    questionText: "Select the five indigenous grape varieties from Spain?",
+    questionText: "Select the five indigenous grape varieties from Spain:",
 
     answerOptions: [
       { answerText: "Albillo", isCorrect: true },
