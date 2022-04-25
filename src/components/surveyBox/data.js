@@ -13,8 +13,6 @@ const data = [
       { answerText: "Lychee", isCorrect: false },
       { answerText: "Melon", isCorrect: true },
       { answerText: "Pineapple ", isCorrect: false },
-      { answerText: "Citrus ", isCorrect: false },
-      { answerText: "Zest", isCorrect: false },
       { answerText: "Apricot", isCorrect: false },
       { answerText: "White peach", isCorrect: true },
       { answerText: "Fresh almonds ", isCorrect: false },
@@ -140,7 +138,8 @@ const data = [
     correctQty: 3,
   },
   {
-    questionText: "From the regions listed below, pick the ones you think the wine could find its origins:",
+    questionText:
+      "From the regions listed below, pick the ones you think the wine could find its origins:",
     answerOptions: [
       { answerText: "Terra Alta", isCorrect: true },
       { answerText: "Rias Baixas", isCorrect: false },
