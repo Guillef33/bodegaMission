@@ -40,9 +40,8 @@ const FormContainer = () => {
   const [finish, setFinish] = useState(false)
 
       useEffect(() => {
-        ReactGA4.initialize("G-8PBY6X4E0X");
-        // ReactGA4.pageview("/caca");
-        ReactGA4.send({ hitType: "pageview", page: "/home" });
+        ReactGA4.initialize("G-6GXQ55LQ04");
+        ReactGA4.send({ hitType: "pageview", page: "/survey" });
       }, []);
 
   return (

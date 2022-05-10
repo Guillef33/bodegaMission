@@ -25,8 +25,7 @@ const Game = () => {
   } = useContext(AppContext);
 
    useEffect(() => {
-     ReactGA4.initialize("G-8PBY6X4E0X");
-     // ReactGA4.pageview("/caca");
+     ReactGA4.initialize("G-6GXQ55LQ04");
      ReactGA4.send({ hitType: "pageview", page: "/game" });
    }, []);
 

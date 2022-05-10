@@ -9,6 +9,12 @@ import WelcomeBox from "../components/Welcome/Box/WelcomeBox";
 
 function Box() {
 
+  
+   useEffect(() => {
+     ReactGA4.initialize("G-6GXQ55LQ04");
+     ReactGA4.send({ hitType: "pageview", page: "/game" });
+   }, []);
+
 
   return (
     <div className="container">
