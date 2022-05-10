@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import FormItemList from "./FormItemList";
@@ -6,7 +6,10 @@ import FormItemList from "./FormItemList";
 import './scss/FormContainer.scss';
 import ControlButton from "./ControlButton";
 
-import data from './data'
+import data from './data';
+
+import ReactGA4 from "react-ga4";
+
 
 const FormContainer = () => {
   const validationSchema = yup.object({
@@ -35,6 +38,12 @@ const FormContainer = () => {
   const [currentScreen, setCurrentScreen] = useState(0);
   
   const [finish, setFinish] = useState(false)
+
+      useEffect(() => {
+        ReactGA4.initialize("G-8PBY6X4E0X");
+        // ReactGA4.pageview("/caca");
+        ReactGA4.send({ hitType: "pageview", page: "/home" });
+      }, []);
 
   return (
     <section

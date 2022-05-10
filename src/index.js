@@ -1,17 +1,24 @@
-import React from 'react';
+import React from "react";
 import { hydrate, render } from "react-dom";
-import './index.scss';
-import App from './App';
+import "./index.scss";
+import App from "./App";
+import ReactDOM from "react-dom";
+// import {
+//   BrowserRouter,
+//   Route,
+//   Routes,
+//   Link,
+//   useLocation,
+// } from "react-router-dom";
 
 // ReactDOM.render(
 //   <React.StrictMode>
-//     {/* <Provider> */}
+//     <BrowserRouter>
 //       <App />
-//     {/* </Provider> */}
+//     </BrowserRouter>
 //   </React.StrictMode>,
 //   document.getElementById("root")
 // );
-
 
 const rootElement = document.getElementById("root");
 

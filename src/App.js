@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import React, { useState, useContext, useEffect } from "react";
+import { BrowserRouter, Route, Routes, Link, useLocation} from "react-router-dom";
 import AppProvider, { AppContext } from "./context/AppContext";
 import Home from "./pages/Home";
 import Box from "./pages/Box";
@@ -23,41 +23,92 @@ import Results from "./components/surveyBox/Results";
 import FormContainer from "./components/surveyBox/FormContainer";
 import SurveyForm from "./components/Form/SurveyForm";
 
+import googleAnalytics from "@analytics/google-analytics";
+import Analytics from "analytics";
+
+import { AnalyticsProvider, useAnalytics } from "use-analytics";
+
+import ReactGA from 'react-ga';
+
+
+
+const myPlugin = {
+  name: "my-custom-plugin",
+  page: ({ payload }) => {
+    console.log("page view fired", payload);
+  },
+  track: ({ payload }) => {
+    console.log("track event", payload);
+  },
+};
+
+const analytics = Analytics({
+  app: "awersome",
+  plugins: [
+    myPlugin,
+    googleAnalytics({
+      trackingId: "G-6GXQ55LQ04",
+    }),
+  ],
+});
+
+console.log("analytics", analytics);
+
 export default function App() {
+
+  // let location = useLocation();
+  // const analytics = useAnalytics();
+
+  // useEffect(() => {
+  //   console.log('New page view')
+  //   analytics.page()
+
+  // }, [location])
+
+
+//  useEffect(() => {
+//    ReactGA.initialize("UA-228406673-1");
+//    ReactGA.pageview(window.location.pathname + window.location.search);
+//  }, []);
+
+
+
   return (
     <AppProvider value={{ AppContext }}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/box" element={<Box />} />
-          <Route path="/guests" element={<Invitados />} />
+      {/* <AnalyticsProvider instance={analytics}> */}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/box" element={<Box />} />
+            <Route path="/guests" element={<Invitados />} />
 
-          {/*Rutas propuestas*/}
-          <Route path="/game" element={<Game />} />
+            {/*Rutas propuestas*/}
+            <Route path="/game" element={<Game />} />
 
-          {/*Pantalla 2*/}
-          <Route path="/ready" element={<ReadyToStart />} />
-          <Route path="/ready-box" element={<ReadyToStartBox />} />
+            {/*Pantalla 2*/}
+            <Route path="/ready" element={<ReadyToStart />} />
+            <Route path="/ready-box" element={<ReadyToStartBox />} />
 
-          <Route path="/survey" element={<FormContainer />} />
-          <Route path="/surveyForm" element={<SurveyForm />} />
+            <Route path="/survey" element={<FormContainer />} />
+            <Route path="/surveyForm" element={<SurveyForm />} />
 
-          <Route path="/results" element={<Results />} />
+            <Route path="/results" element={<Results />} />
 
-          <Route path="/progress" element={<CircularProgressBar />} />
-          <Route path="/material" element={<CircularProgressWithLabel />} />
+            <Route path="/progress" element={<CircularProgressBar />} />
+            <Route path="/material" element={<CircularProgressWithLabel />} />
 
-          <Route path="/presentacion" element={<PresentationalText />} />
-          <Route path="/presentacion-box" element={<PresentationalBox />} />
+            <Route path="/presentacion" element={<PresentationalText />} />
+            <Route path="/presentacion-box" element={<PresentationalBox />} />
 
-          <Route path="/outoftime" element={<OutOfTime />} />
-          <Route path="/score" element={<Score />} />
-          <Route path="/yup" element={<Yupform />} />
+            <Route path="/outoftime" element={<OutOfTime />} />
+            <Route path="/score" element={<Score />} />
+            <Route path="/yup" element={<Yupform />} />
 
-          <Route path="/about" element={<AboutUs />} />
-        </Routes>
-      </BrowserRouter>
+            <Route path="/about" element={<AboutUs />} />
+          </Routes>
+        </BrowserRouter>
+      {/* </AnalyticsProvider> */}
     </AppProvider>
   );
 }
