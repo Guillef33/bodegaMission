@@ -33,7 +33,7 @@ function Score() {
               But we are sure that there is still much to learn! Every day we
               will be uncovering a new autochthonous variety or an unknown DO.
             </p>
-            <InviteMail />
+            {/* <InviteMail /> */}
           </div>
           <ButtonsResult />
         </div>
@@ -54,7 +54,7 @@ function Score() {
             <p className="score-result-text">
               90% of the wine connoisseurs confess that they have never heard of some of the Spanish varieties mentioned.
             </p>
-            <InviteMail />
+            {/* <InviteMail /> */}
           </div>
           <ButtonsResult />
         </div>
