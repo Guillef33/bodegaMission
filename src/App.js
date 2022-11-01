@@ -56,6 +56,23 @@ console.log("analytics", analytics);
 
 export default function App() {
 
+  // let location = useLocation();
+  // const analytics = useAnalytics();
+
+  // useEffect(() => {
+  //   console.log('New page view')
+  //   analytics.page()
+
+  // }, [location])
+
+
+//  useEffect(() => {
+//    ReactGA.initialize("UA-228406673-1");
+//    ReactGA.pageview(window.location.pathname + window.location.search);
+//  }, []);
+
+
+
   return (
     <AppProvider value={{ AppContext }}>
       {/* <AnalyticsProvider instance={analytics}> */}
