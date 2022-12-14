@@ -77,7 +77,8 @@ function Quiz() {
                 <div className="question-count"></div>
 
                 <div className="question-text">
-                  {questions[currentQuestion].questionText}
+                  <h3>{questions[currentQuestion].questionTitle}</h3>
+                  <h4>{questions[currentQuestion].questionText}</h4>
                 </div>
               </div>
               <div className="answer-section">

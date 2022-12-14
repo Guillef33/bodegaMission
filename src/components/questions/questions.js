@@ -9,17 +9,18 @@ import RaicesMalvar1 from "../../assets/RaicesMalvar1.png";
 import CRPunto from "../../assets/CRPunto.png";
 import Cepa from "../../assets/Cepa.png";
 
-// Testing GitHub
-
 const questions = [
   {
-    questionText: "Which is the most planted grape variety in Spain? ",
+    questionTitle: "GRACIANO IS A SPANISH GRAPE VARIETY",
+    questionText:
+      "That adds “Grace” when used in blends, both in terms of aroma and taste. It can mainly be found in:",
     answerOptions: [
-      { answerText: "Garnacha", isCorrect: false },
-      { answerText: "Airén", isCorrect: false },
-      { answerText: "Bobal", isCorrect: false },
-      { answerText: "Tempranillo ", isCorrect: true },
-      { answerText: "Albariño ", isCorrect: false },
+      { answerText: "Ribera", isCorrect: false },
+      { answerText: "Penedes", isCorrect: false },
+      { answerText: "Castilla La Mancha", isCorrect: false },
+      { answerText: "Campo de Borja", isCorrect: false },
+      { answerText: "Rioja ", isCorrect: true },
+      { answerText: "Navarra ", isCorrect: false },
     ],
     image: vinoCuna,
     id: 1,
