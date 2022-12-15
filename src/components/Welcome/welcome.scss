@@ -82,7 +82,22 @@
   position: absolute;
   bottom: 35px;
   right: 20px;
+}
 
+.logo-image-box {
+  height: 100px;
+  position: absolute;
+  top: 35px;
+  right: 20px;
+}
+
+.title-box {
+  width: 30%;
+  position: absolute;
+  left: 10px;
+  top: 55px;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .presentation-container h1 {
@@ -214,4 +229,16 @@
       bottom: auto; 
       right: auto;
   }
+
+    .logo-image-box {
+      display: none;
+    }
+
+    .title-box {
+      width: 100%; 
+      position: relative;
+      font-weight: 300;
+      font-size: 12px;
+      margin-bottom: 60px;
+}
 }

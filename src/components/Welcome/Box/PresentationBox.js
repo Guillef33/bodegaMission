@@ -5,18 +5,20 @@ import AppProvider, { AppContext } from "../../../context/AppContext";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 import alert from "../../../assets/Vector.png";
+import logoRaices from "../../../assets/BodegaRaicesBlanco-01.png";
+
 
 import "../welcome.scss";
 
 function PresentationalText() {
   return (
     <div className="presentation-container">
-      <h1>You are about to join a mission</h1>
+      <img src={logoRaices} alt="logo-raices" className="logo-image" />
+
+      <h1>Welcome!</h1>
       <div className="grid-section">
         <div className="before-start-col">
-          <h2
-          // style={ { whiteSpace: 'pre'}}
-          >
+          <h2>
             Did you know that Spain has the largest vineyard surface area in the
             world and has more than 70 autochthonous grape varieties that are
             largely unknown?
@@ -42,7 +44,6 @@ function PresentationalText() {
           MODERATION.
         </p>
       </div>
-      {/* </div> */}
     </div>
   );
 }
