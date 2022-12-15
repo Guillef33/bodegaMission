@@ -15,9 +15,7 @@ const AboutUs = () => {
   let navigate = useNavigate();
   useEffect(() => {
     Swal.fire({
-      // position: "top-end",
       title: "Thanks for playing.",
-      // icon: "success",
       text: "Get to know us, while we calculate your results",
       customClass: "button-about",
     });
@@ -42,8 +40,6 @@ const AboutUs = () => {
         <div className="aboutUs-wrapper">
           <div className="aboutUs-title-container">
             <h2 className="aboutUs-title">About Us</h2>
-            {/* <div className="aboutUs-mid"></div>
-            <img className="aboutUs-image-vid" src={vector} alt="logo" /> */}
             <img className="aboutUs-image" src={logoPNG} alt="logo" />
           </div>
           <div className="aboutUs-text-container">
@@ -76,7 +72,6 @@ const AboutUs = () => {
               </h3>
               <GameForm />
             </>
-
           )}
         </div>
       </div>

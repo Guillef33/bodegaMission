@@ -27,7 +27,7 @@ const questions = [
     correctQty: 1,
   },
   {
-    questionText: "In what region was the garnacha grape born?",
+    questionText: " In what region was the garnacha grape born?",
     answerOptions: [
       { answerText: "Aragón", isCorrect: true },
       { answerText: "Cataluña", isCorrect: false },
@@ -65,7 +65,7 @@ const questions = [
       { answerText: "Albillo", isCorrect: true },
       { answerText: "Aspiran", isCorrect: false },
       { answerText: "Carménère", isCorrect: false },
-      { answerText: "Garnacha", isCorrect: true },
+      { answerText: "Pietro Picudo", isCorrect: true },
       { answerText: "Albarin", isCorrect: true },
       { answerText: "Elvira", isCorrect: false },
       { answerText: "Rufete", isCorrect: true },
@@ -123,6 +123,21 @@ const questions = [
     image: Cepa,
     id: 8,
     correctQty: 3,
+  },
+  {
+    questionText:
+      "Prieto Picudo is a rare, dark-skinned red wine grape variety grown predominantly in and around its homeland of: ",
+    answerOptions: [
+      { answerText: "Emporda", isCorrect: false },
+      { answerText: "Castilla León", isCorrect: true },
+      { answerText: "Navarra", isCorrect: false },
+      { answerText: "Ribera del duero", isCorrect: false },
+      { answerText: "Jerez", isCorrect: false },
+      { answerText: "Campo de Borja", isCorrect: false },
+    ],
+    image: Cepa,
+    id: 9,
+    correctQty: 1,
   },
 ];
 

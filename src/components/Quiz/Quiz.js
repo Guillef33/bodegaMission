@@ -69,7 +69,7 @@ function Quiz() {
                 <span style={{ fontWeight: "bold" }}>
                   {questions[currentQuestion].id}
                 </span>{" "}
-                of 8
+                of 9
               </h2>
               <ControlButtonsGame />
 

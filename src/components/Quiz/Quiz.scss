@@ -44,14 +44,16 @@
 
 .question-text {
   padding: 10px 0px;
-  // text-transform: capitalize;
   font-size: 2rem;
   text-align: center;
   margin-top: 2rem;
-  // margin-bottom: 1rem;
   font-weight: 900;
   min-height: 100px;
   color: white;
+}
+
+.question-text h3 {
+  font-size: 1.6rem;
 }
 
 .question-fila-mobile {

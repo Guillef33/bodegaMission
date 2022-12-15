@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import AppProvider, { AppContext } from "../../../context/AppContext";
 
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import equipoVinedo from "../../../assets/RaicesIbericasEquipo.jpg";
 
 import fondoVinedo from "../../../assets/fondoVinedo.png";
 
@@ -20,7 +21,7 @@ function Welcome({ type }) {
         style={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundImage: `url(${fondoVinedo})`,
+          backgroundImage: `url(${equipoVinedo})`,
         }}
       >
         <PresentationalText />

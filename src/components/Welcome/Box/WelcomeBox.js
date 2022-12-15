@@ -1,6 +1,7 @@
 import React from "react";
 
 import fondoVinedo from "../../../assets/fondoVinedo.png";
+import equipoVinedo from "../../../assets/RaicesIbericasEquipo.jpg";
 
 import "../welcome.scss";
 
@@ -14,7 +15,7 @@ function Welcome({ type }) {
         style={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundImage: `url(${fondoVinedo})`,
+          backgroundImage: `url(${equipoVinedo})`,
         }}
       >
         <PresentationBox />
