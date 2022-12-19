@@ -16,6 +16,8 @@ const SurveyForm = () => {
   // const [emailSend, setEmailSend] = useState(false);
   const { formResp } = useContext(AppContext);
 
+  const [selectOption, setSelectOption] = useState(false);
+
   const initialState = {
     name: "",
     email: "",
@@ -29,6 +31,11 @@ const SurveyForm = () => {
   const handleChange = (e) => {
     const { value, name } = e.target;
     setValues({ ...values, [name]: value });
+  };
+
+  const handleSelect = (e) => {
+    console.log(selectOption);
+    setSelectOption(true);
   };
 
   const surveySubmit = async (event) => {
@@ -78,20 +85,20 @@ const SurveyForm = () => {
               name="select"
               as="select"
               placeholder="Enter your name"
-              onInput={handleChange}
+              onInput={handleSelect}
               value={values.name}
               className="form-survey-select"
             >
-              <option value="red">
+              <option value="barcelona">
                 I want to schedule a meeting at Barcelona Wine Week
               </option>
-              <option value="green">
+              <option value="prowein">
                 I want to schedule a meeting at Prowein
               </option>
-              <option value="blue">
+              <option value="meeting">
                 I want to schedule a meeting at Wine Expo{" "}
               </option>
-              <option value="blue">
+              <option value="singapur">
                 I want to schedule a meeting at Prowein Singapur{" "}
               </option>
             </Field>
@@ -99,37 +106,41 @@ const SurveyForm = () => {
               <p className="validation-Error">{errors.select}</p>
             ) : null}
 
-            <label className="survey-label"> Your name </label>
-            <Field
-              name="name"
-              type="text"
-              placeholder="Enter your name"
-              onInput={handleChange}
-              value={values.name}
-              className="form-survey-input"
-            />
-            {errors.name && touched.name ? (
-              <p className="validation-Error">{errors.name}</p>
-            ) : null}
-            {/* <ErrorMessage name="name" /> */}
-            <label className="survey-label"> Your email </label>
-            <Field
-              name="email"
-              type="email"
-              placeholder="Enter your e-mail"
-              onInput={handleChange}
-              value={values.email}
-              className="form-survey-input"
-            />
-            {errors.email && touched.email ? (
-              <p className="validation-Error">{errors.email}</p>
-            ) : null}
-            <button
-              className="send-form-button send-form-button-survey"
-              type="submit"
-            >
-              See more
-            </button>
+            {selectOption === true && (
+              <>
+                <label className="survey-label"> Your name </label>
+                <Field
+                  name="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  onInput={handleChange}
+                  value={values.name}
+                  className="form-survey-input"
+                />
+                {errors.name && touched.name ? (
+                  <p className="validation-Error">{errors.name}</p>
+                ) : null}
+                {/* <ErrorMessage name="name" /> */}
+                <label className="survey-label"> Your email </label>
+                <Field
+                  name="email"
+                  type="email"
+                  placeholder="Enter your e-mail"
+                  onInput={handleChange}
+                  value={values.email}
+                  className="form-survey-input"
+                />
+                {errors.email && touched.email ? (
+                  <p className="validation-Error">{errors.email}</p>
+                ) : null}
+                <button
+                  className="send-form-button send-form-button-survey"
+                  type="submit"
+                >
+                  See more
+                </button>
+              </>
+            )}
           </Form>
         )}
       </Formik>

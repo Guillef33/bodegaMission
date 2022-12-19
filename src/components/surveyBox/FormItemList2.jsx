@@ -14,7 +14,7 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       "From the 3 grape varieties  you selected before, which is your final guess?",
     answerOptions: [],
     image: RaicesMalvar,
-    id: 11,
+    id: 14,
     correctQty: 1,
   });
 
@@ -47,6 +47,9 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
 
           <h3>{data[3].questionText}</h3>
           <FormItem key={3} question={data[3]} shape={"circle"} column="5" />
+
+          <h3>{data[10].questionText}</h3>
+          <FormItem key={10} question={data[10]} shape={"circle"} column="5" />
         </>
       );
     case 3:
@@ -62,6 +65,9 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
 
           <h3>{data[6].questionText}</h3>
           <FormItem key={6} question={data[6]} shape={"circle"} column="5" />
+
+          <h3>{data[11].questionText}</h3>
+          <FormItem key={11} question={data[11]} shape={"circle"} column="5" />
         </>
       );
 
@@ -95,7 +101,7 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h2>{newQuestion.questionText}</h2>
-          <FormItem key={10} question={newQuestion} />
+          <FormItem key={newQuestion.id} question={newQuestion} />
         </>
       );
 

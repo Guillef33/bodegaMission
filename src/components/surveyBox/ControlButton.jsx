@@ -16,6 +16,9 @@ const ControlButton = ({
 }) => {
   const { formResp } = useContext(AppContext);
 
+  console.log(formResp);
+  console.log(currentScreen);
+
   const handleClick = async (op) => {
     switch (currentScreen) {
       case 0:
@@ -91,7 +94,7 @@ const ControlButton = ({
         if (op > 0) {
           if (
             inCollection(9, formResp) &&
-            formResp[8].answerOptions.length === 3
+            formResp[10].answerOptions.length === 3
           ) {
             setCurrentScreen(currentScreen + op);
 

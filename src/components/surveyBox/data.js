@@ -158,10 +158,10 @@ const data = [
   {
     questionText: "| Oak",
     answerOptions: [
-      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "1", value: [1, 2, 3, 4, 5] },
+      { answerText: "2", value: [1, 2, 3, 4, 5] },
+      { answerText: "3", value: [1, 2, 3, 4, 5] },
+      { answerText: "4", value: [1, 2, 3, 4, 5] },
     ],
     image: RaicesMalvar1,
     id: 11,
@@ -170,10 +170,10 @@ const data = [
   {
     questionText: "| Tannins",
     answerOptions: [
-      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "1", value: [1, 2, 3, 4, 5] },
+      { answerText: "2", value: [1, 2, 3, 4, 5] },
+      { answerText: "3", value: [1, 2, 3, 4, 5] },
+      { answerText: "4", value: [1, 2, 3, 4, 5] },
     ],
     image: RaicesMalvar1,
     id: 12,
@@ -182,10 +182,10 @@ const data = [
   {
     questionText: "| Length",
     answerOptions: [
-      { answerText: "1", isCorrect: false, value: [1, 2, 3, 4, 5] },
-      { answerText: "2", isCorrect: true, value: [1, 2, 3, 4, 5] },
-      { answerText: "3", isCorrect: false, value: [1, 2, 3, 4, 5] },
-      { answerText: "4", isCorrect: true, value: [1, 2, 3, 4, 5] },
+      { answerText: "1", value: [1, 2, 3, 4, 5] },
+      { answerText: "2", value: [1, 2, 3, 4, 5] },
+      { answerText: "3", value: [1, 2, 3, 4, 5] },
+      { answerText: "4", value: [1, 2, 3, 4, 5] },
     ],
     image: fondoPizarras,
     id: 13,
