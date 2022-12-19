@@ -13,8 +13,6 @@ import "../welcome.scss";
 function PresentationalText() {
   return (
     <div className="presentation-container">
-      <img src={logoRaices} alt="logo-raices" className="logo-image" />
-
       <h1>Welcome!</h1>
       <div className="grid-section">
         <div className="before-start-col">
@@ -37,12 +35,17 @@ function PresentationalText() {
         </Link>
       </div>
       <div className="bottom-section">
-        <img src={alert} alt="alert" className="alert-image" />
-        <p>
-          PLEASE OPEN THE BOTTLE YOU HAVE RECEIVED & SERVE YOURSELF A GLASS,
-          IT'S GOING TO BE AMAZING, WE KNOW BUT WE RECOMMEND TO DRINK IN
-          MODERATION.
-        </p>
+        <div className="bottom-section-text">
+          <img src={alert} alt="alert" className="alert-image" />
+          <p>
+            PLEASE OPEN THE BOTTLE YOU HAVE RECEIVED & SERVE YOURSELF A GLASS,
+            IT'S GOING TO BE AMAZING, WE KNOW BUT WE RECOMMEND TO DRINK IN
+            MODERATION.
+          </p>
+        </div>
+        <div className="bottom-section-logo">
+          <img src={logoRaices} alt="logo-raices" className="logo-image" />
+        </div>
       </div>
     </div>
   );

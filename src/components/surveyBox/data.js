@@ -149,7 +149,7 @@ const data = [
       { answerText: "Rueda", isCorrect: false },
       { answerText: "Penedes", isCorrect: false },
       { answerText: "Rioja", isCorrect: false },
-      { answerText: "Calayatud", isCorrect: false },
+      { answerText: "Calatayud", isCorrect: false },
     ],
     image: RaicesMalvar1,
     id: 10,

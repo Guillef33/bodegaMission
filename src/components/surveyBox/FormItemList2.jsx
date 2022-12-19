@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import FormItem from "./FormItem";
 import RaicesMalvar from "../../assets/RaicesMalvar.png";
 import data from "./data";
+import logoRaices from "../../assets/BodegaRaicesBlanco-01.png";
 
 import "./scss/FormItem.scss";
 
-import Results from "./Results";
 import SurveyForm from "../Form/SurveyForm";
 
 const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
@@ -30,6 +30,11 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
     case 1:
       return (
         <>
+          <h1 className="title-box">
+            The challenge, try to guess the grape variety, but do not worry, we
+            will help you let's go step by step.
+          </h1>
+          <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
           <h2>{data[0].questionText}</h2>
           <FormItem key={0} question={data[0]} column="3" />
         </>
@@ -38,6 +43,7 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h2>Nose & Palate Impression</h2>
+          <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
 
           <h3>{data[1].questionText}</h3>
           <FormItem key={1} question={data[1]} shape={"circle"} column="5" />
@@ -56,6 +62,7 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h2>Nose & Palate Impression</h2>
+          <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
 
           <h3>{data[4].questionText}</h3>
           <FormItem key={4} question={data[4]} shape={"circle"} column="5" />
@@ -75,6 +82,8 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h2>{data[7].questionText}</h2>
+          <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
+
           <FormItem key={7} question={data[7]} />
         </>
       );
@@ -82,6 +91,8 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h2>{data[8].questionText}</h2>
+          <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
+
           <FormItem
             key={8}
             question={data[8]}
@@ -94,6 +105,8 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h2>{data[9].questionText}</h2>
+          <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
+
           <FormItem key={9} question={data[9]} />
         </>
       );
@@ -101,7 +114,13 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h2>{newQuestion.questionText}</h2>
-          <FormItem key={newQuestion.id} question={newQuestion} column={'tres'} />
+          <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
+
+          <FormItem
+            key={newQuestion.id}
+            question={newQuestion}
+            column={"tres"}
+          />
         </>
       );
 

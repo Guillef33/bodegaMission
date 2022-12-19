@@ -16,9 +16,6 @@ const ControlButton = ({
 }) => {
   const { formResp } = useContext(AppContext);
 
-  console.log(formResp);
-  console.log(currentScreen);
-
   const handleClick = async (op) => {
     switch (currentScreen) {
       case 0:
