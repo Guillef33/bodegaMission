@@ -10,7 +10,7 @@ import "../welcome.scss";
 function PresentationalText() {
   return (
     <div className="presentation-container">
-      <img src={logoRaices} alt="logo-raices" className="logo-image" />
+      <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
 
       <h1>Welcome!</h1>
       <div className="grid-section">

@@ -44,6 +44,7 @@ const SurveyForm = () => {
     let formData = {
       name: event.target[0].value,
       email: event.target[1].value,
+      option: event.target[2].value,
       // agregar las respuestas del usuario
     };
     console.log(formData);
@@ -53,8 +54,6 @@ const SurveyForm = () => {
       values,
     });
     setValues(initialState);
-    console.log(initialState);
-    console.log(isValid);
 
     isValid &&
       Swal.fire(
@@ -90,7 +89,7 @@ const SurveyForm = () => {
               as="select"
               placeholder="Enter your name"
               onInput={handleSelect}
-              value={values.name}
+              value={values.select}
               className="form-survey-select"
             >
               <option value="barcelona">

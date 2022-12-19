@@ -7,7 +7,6 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import alert from "../../../assets/Vector.png";
 import logoRaices from "../../../assets/BodegaRaicesBlanco-01.png";
 
-
 import "../welcome.scss";
 
 function PresentationalText() {

@@ -26,17 +26,23 @@ const Results = () => {
             <img className="aboutUs-image" src={logoPNG} alt="logo" />
           </div>
           <div className="results-text-container">
-            <h2 className="results-subtitle">And the answer is...</h2>
-            <h2 className="results-title">Albarin</h2>
+            <h2 className="results-subtitle">And the answer is:</h2>
+            {/* <h2 className="results-title">Albarin</h2> */}
             <p className="results-text">
-              This grape variety is originally from Asturias, then expanded to
-              Cantabria & Castilla y León. You can still find vines that are
-              over 100 years old. The variety almost disappeared, until 10 years
-              ago winegrowers started to replant it. Due to the name it is
-              sometimes confused with albariño gallego or albillo, but is
-              actually not related to them.
+              Prieto Picudo is a rare, dark-skinned red wine grape variety grown
+              predominantly in and around its homeland of León, northern Spain.
+              The variety is used to create both light rosés and deeply
+              pigmented reds, and can be found as a single-variety wine or in
+              blends with Tempranillo or Mencia. <br></br>
+              <br></br>Prieto Picudo grows best in difficult terrains, hot and
+              dry being its preference as it has a high degree of drought
+              resistance. <br></br>
+              <br></br>A typical Prieto Picudo wine has moderate tannins,
+              retains good acidity and may respond well to a judicious use of
+              oak. The aromatic variety gives intense color to wine. Typical
+              flavors include redcurrant, blackberry and licorice.
             </p>
-            <InviteMail />
+            {/* <InviteMail /> */}
           </div>
         </div>
       </div>
