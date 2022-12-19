@@ -62,8 +62,10 @@ const SurveyForm = () => {
   return (
     <div className>
       <h3 className="form-h3-survey">
-        Please complete your name and email so we can store your feedback
+        WHILE WE CALCULATE YOUR RESULTS, CLICK HERE TO BOOK A MEETING WITH US,
+        AND WE WILL PREPARE A SPECIAL TASTING FOR YOU.
       </h3>
+
       <Formik
         validationSchema={userSchema}
         initialValues={{ name: "", email: "" }}
@@ -71,6 +73,32 @@ const SurveyForm = () => {
       >
         {({ errors, touched }) => (
           <Form className="form-wrapper" onSubmit={surveySubmit}>
+            <label className="survey-label"> Select an option </label>
+            <Field
+              name="select"
+              as="select"
+              placeholder="Enter your name"
+              onInput={handleChange}
+              value={values.name}
+              className="form-survey-select"
+            >
+              <option value="red">
+                I want to schedule a meeting at Barcelona Wine Week
+              </option>
+              <option value="green">
+                I want to schedule a meeting at Prowein
+              </option>
+              <option value="blue">
+                I want to schedule a meeting at Wine Expo{" "}
+              </option>
+              <option value="blue">
+                I want to schedule a meeting at Prowein Singapur{" "}
+              </option>
+            </Field>
+            {errors.select && touched.select ? (
+              <p className="validation-Error">{errors.select}</p>
+            ) : null}
+
             <label className="survey-label"> Your name </label>
             <Field
               name="name"

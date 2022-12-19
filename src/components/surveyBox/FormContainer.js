@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import FormItemList from "./FormItemList";
+import FormItemList from "./FormItemList2";
 
 import './scss/FormContainer.scss';
 import ControlButton from "./ControlButton";
