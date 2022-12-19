@@ -53,6 +53,9 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
           <h3>{data[2].questionText}</h3>
           <FormItem key={2} question={data[2]} shape={"circle"} column="5" />
 
+          <h3>{data[10].questionText}</h3>
+          <FormItem key={10} question={data[10]} shape={"circle"} column="5" />
+
           <h3>{data[3].questionText}</h3>
           <FormItem key={3} question={data[3]} shape={"circle"} column="5" />
         </>
@@ -69,6 +72,9 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
 
           <h3>{data[5].questionText}</h3>
           <FormItem key={5} question={data[5]} shape={"circle"} column="5" />
+
+          <h3>{data[11].questionText}</h3>
+          <FormItem key={11} question={data[11]} shape={"circle"} column="5" />
 
           <h3>{data[6].questionText}</h3>
           <FormItem key={6} question={data[6]} shape={"circle"} column="5" />

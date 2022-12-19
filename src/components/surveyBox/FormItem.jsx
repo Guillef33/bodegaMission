@@ -29,9 +29,6 @@ const FormItem = ({question, column, shape, setNewQuestion, newQuestion}) => {
     });
   }
 
-
-
-
   useEffect(() => {
     const arrayOptions = question.answerOptions.map( el => {return(<OptionButton 
         key={el.answerText} 
