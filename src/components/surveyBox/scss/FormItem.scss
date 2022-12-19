@@ -15,6 +15,10 @@
     gap: 30px;
 }
 
+.grid-colums-tres {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 @media screen and (max-width: 760px) { 
 
 // .item-container {

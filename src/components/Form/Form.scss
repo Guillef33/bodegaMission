@@ -88,6 +88,10 @@ input[type="email"] {
   margin: 20px 0px;
 }
 
+.box-form .form-answers .item-container {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .send-form-button-survey {
   background-color: #f5f5f5 !important;
     color:#050505 !important;

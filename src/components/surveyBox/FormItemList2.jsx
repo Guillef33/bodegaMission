@@ -101,7 +101,7 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h2>{newQuestion.questionText}</h2>
-          <FormItem key={newQuestion.id} question={newQuestion} />
+          <FormItem key={newQuestion.id} question={newQuestion} column={'tres'} />
         </>
       );
 
