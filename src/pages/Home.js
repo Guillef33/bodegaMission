@@ -1,52 +1,37 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  useParam,
+  useLocation,
+} from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
-import Quizz from "../components/Quizz/Quizz";
-import questions from "../components/questions/questions";
-import Player from "../components/audio/Player";
+import Welcome from "../components/Welcome/Guests/Welcome";
 
-import Welcome from "../components/InitialText/Welcome";
+import { useAnalytics } from "use-analytics";
 
-import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
+import ReactGA from "react-ga";
+import ReactGA4 from "react-ga4";
 
-import OutOfTime from "../components/outOfTime/OutOfTime";
-
-// import { collection, getDocs } from "firebase/firestore";
-// import { db } from "../data/config.js";
 
 function Home() {
-  const {
-    showScore,
-    questions,
-    currentQuestion,
-    score,
-    restartGame,
-    handleAnswerOptionClick,
-    showQuizz,
-    showGame,
-    setShowQuizz,
-    setStatus,
-    STATUS,
-    StartGame,
-  } = useContext(AppContext);
   const [timeIsUp, setTimeIsUp] = useState(false);
-  // useEffect (() => {
 
-  //     const obtenerDatos = async () => {
-  //     const datos = await getDocs(collection(db, "test"));
-  //     datos.forEach((dato) => {
-  //       return console.log(dato.data());
-  //     })
+  // useEffect(() => {
+  //   ReactGA.initialize("UA-228406673-1");
+  //   ReactGA.pageview("/");
+  // }, []);
 
-  //     }
-  //     obtenerDatos();
-
-  // }, [])
+    useEffect(() => {
+      ReactGA4.initialize("G-6GXQ55LQ04");
+      ReactGA4.send({ hitType: "pageview", page: "/home" });
+    }, []);
 
   return (
     <div className="container">
-          <Welcome />
+      <Welcome type={"sin botella"} />
     </div>
   );
 }

@@ -1,43 +1,44 @@
 import * as React from "react";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 import PropTypes from "prop-types";
 import CircularProgress from "@mui/material/CircularProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 // import "./progressBar.css";
-
-function CircularProgressWithLabel(props, { timeIsUp, setTimeIsUp }) {
+const normalise = (value) => ((value - 1) * 100) / (120 - 1);
+function CircularProgressWithLabel(props) {
   return (
-    <Box sx={{ position: "relative", display: "inline-flex" }}>
+    <Box sx={{ position: "relative" }}>
       <CircularProgress
-        timeIsUp={timeIsUp}
-        setTimeIsUp={setTimeIsUp}
+        className="circular-progress"
         variant="determinate"
-        {...props}
-      />
-      <Box
+        value={normalise(props.value)}
         sx={{
           top: 0,
-          left: 0,
-          bottom: 0,
           right: 0,
+          bottom: 0,
+          left: 3,
           position: "absolute",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          // display: "flex",
+          // alignItems: "center",
+          // justifyContent: "center",
         }}
+        size={65}
+        thickness={3.5}
+        color={props.value < 21 ? "error" : "inherit"}
+      />
+
+      <Typography
+        // variant="caption"
+        color={props.value < 21 ? "#d32f2f" : "white"}
+        fontSize={18}
+        fontWeight={600}
+        className="counter-text"
+        position="relative"
       >
-        <Typography
-          variant="caption"
-          color={props.value < 11 ? "red" : "white"}
-          component="h2"
-          fontSize={18}
-          fontWeight={600}
-          // className="counter-text"
-          // color="text.secondary"
-        >
-          {`${Math.round(props.value)}`}
-        </Typography>
-      </Box>
+        {`${Math.round(props.value)}`}
+      </Typography>
     </Box>
   );
 }
@@ -51,9 +52,9 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularStatic({ timeIsUp, setTimeIsUp }) {
-  const [progress, setProgress] = React.useState(99);
-
+export default function CircularStatic() {
+  const [progress, setProgress] = React.useState(120);
+  const { timeIsUp, setTimeIsUp } = useContext(AppContext);
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) => (prevProgress <= 0 ? 0 : prevProgress - 1));

@@ -1,0 +1,31 @@
+.box-form-control{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width:60px;
+    cursor:pointer;
+    color: var(--just-white);
+    position:fixed;
+    bottom: 20px;
+    
+   
+    .button-icon{
+        font-size:50px;
+        height:50px;
+        background:none;
+        border:none;
+        color: var(--just-white);
+    }
+    span{
+        font-size:18px;
+    }
+}
+
+.box-form-control--rigth{
+    right:15px;
+}
+
+.box-form-control--left{
+    left:15px;
+}

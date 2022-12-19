@@ -1,19 +1,16 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import AppProvider, { AppContext } from "../context/AppContext";
 
+
+import Quizz from "../components/Quiz/Quiz";
+import Player from "../components/audio/Player";
 import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
-import Quizz from "../components/Quizz/Quizz";
-import questions from "../components/questions/questions";
+import ReactGA4 from "react-ga4";
 
-import Play from "../components/audio/Play";
-import Player from "../components/audio/Player";
-
-import Welcome from "../components/InitialText/Welcome";
 
 import OutOfTime from "../components/outOfTime/OutOfTime";
-
 
 const Game = () => {
   const {
@@ -23,36 +20,33 @@ const Game = () => {
     score,
     restartGame,
     handleAnswerOptionClick,
-    showQuizz,
-    showGame,
     setShowQuizz,
-    StartGame,
+    timeIsUp
   } = useContext(AppContext);
-  const [timeIsUp, setTimeIsUp] = useState(false);
+
+   useEffect(() => {
+     ReactGA4.initialize("G-6GXQ55LQ04");
+     ReactGA4.send({ hitType: "pageview", page: "/game" });
+   }, []);
+
+
   return (
     <>
       {timeIsUp ? (
         <OutOfTime />
       ) : (
-          <div className="game-container">
-            <Quizz
-              currentQuestion={currentQuestion}
-              showScore={showScore}
-              score={score}
-              questions={questions}
-              restartGame={restartGame}
-              handleAnswerOptionClick={handleAnswerOptionClick}
-              setShowQuizz={setShowQuizz}
-            />
+        <div className="game-container">
+          <Quizz
+            currentQuestion={currentQuestion}
+            showScore={showScore}
+            score={score}
+            questions={questions}
+            restartGame={restartGame}
+            handleAnswerOptionClick={handleAnswerOptionClick}
+            setShowQuizz={setShowQuizz}
+          />
 
-            <Player />
-            <div className="Counter">
-              <CircularProgressWithLabel
-                timeIsUp={timeIsUp}
-                setTimeIsUp={setTimeIsUp}
-              />
-            </div>
-          </div>
+        </div>
       )}
     </>
   );

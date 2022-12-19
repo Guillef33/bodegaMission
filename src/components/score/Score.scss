@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 
-// .score-container {
-//   color: blueviolet;
-// }
-
 .text-result-wrapper {
   font-family: "Montserrat", sans-serif;
   width: 800px;
@@ -16,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 .score-title {
   font-size: 60px;
@@ -32,12 +29,41 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.blanco p {
+  color: white;
+  text-align: left;
+}
+
+.negro, .blanco {
+ padding: 20px 0px;
+}
+
+.negro p {
+    color: rgb(27, 24, 24);
+    text-align: center;
+
+}
+
 .score-result-text {
   font-size: 20px;
   color: rgb(27, 24, 24);
   text-align: center;
-  margin: 20px 0px;
+  margin-top: 20px 0px;
   font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+// .score-result-invite {
+//   font-size: 18px;
+//   font-weight: 400;
+//   text-align: center;
+//   font-family: "Montserrat",
+//   sans-serif;
+//   line-height: 1.5;
+// }
+
+.score-results-invite--white {
+  color: white;
 }
 
 .score-numbers {
@@ -49,19 +75,23 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .buttons-results {
   display: flex;
   justify-content: space-evenly;
 }
 .tryAgain-button-container {
-  margin-top: 19%;
+  // margin-top: 19%;
   text-align: center;
 }
 .tryAgainButton {
   width: 250px;
   font-size: 20px;
   color: #f5f5f5;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 5px;
   cursor: pointer;
   margin: 5px 0px;
@@ -75,44 +105,124 @@
   width: 250px;
   font-size: 20px;
   color: #f5f5f5;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 5px;
   cursor: pointer;
-  margin: 5px 0px;
+  margin: 5px 20px;
   border: none;
   height: 45px;
   font-family: "Montserrat", sans-serif;
   background-color: gray;
 }
 
-// .share-modal-container {
+.shareButton:active, .tryAgainButton:active {
+    transform: scale(0.98);
+}
 
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   padding: 50px;
-//   width: 800px;
-//   height: 400px;
-//   // height: 800px;
-//   background-color: #f5f5f5;
-// =======
-//   width: 400px;
-//   heigh: 200px;
-//   background-color: white;
-// >>>>>>> 364cd3650ea0471ff1dfe53424d7f2f82a8f6a6c
-// =======
-//   width: 400px;
-//   heigh: 200px;
-//   background-color: white;
-// >>>>>>> 364cd3650ea0471ff1dfe53424d7f2f82a8f6a6c
-// }
+ 
 
+.share-modal-container input {
+  border: none;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  width: 300px;
+  padding: 10px;
+  color: black;
+  height: 45px;
+  margin: 0px 20px;
+}
+
+.share-modal-container {
+  width: 700px;
+  height: 400px;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding: 30px;
+  border: #050505 solid 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .share-modal-container h2 {
   color: black;
+  padding: 20px 0px;
+}
+
+.close-modal {
+  font-size: 20px !important;
+  color: black;
+  background: white;
+  border-radius: 50%;
+  width: 50px;
+  border: none;
+  height: 50px;
+}
+
+.modal-container-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-raices-logo {
+  width: 100px;
+}
+
+
+.mail-text {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mail-text:hover {
+  color: #722F37;
+}
+
+@media screen and (max-width: 760px) {
+  .modal-container-buttons {
+    flex-direction: column;
+  }
+  .share-modal-container {
+    width: auto;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 30px;
+    border: #050505 solid 1px;
+    max-width: 400px;
+  }
+
+  .score-title {
+    font-size: 30px;
+  }
+  .score-result-title {
+    font-size: 20px;
+  }
+
+  .score-result-text {
+    font-size: 16px;
+    padding: 20px 40px;
+    margin: 0px;
+  }
+
+  .text-result-wrapper {
+    width: auto;
+  }
+
+  .score-result-invite {
+    font-size: 16px;
+    padding: 0px 40px;
+  }
 }

@@ -1,49 +1,32 @@
-import React, { useState } from "react";
+// import React, { useEffect } from "react";
 
-import { WhatsappShareButton, WhatsappIcon } from "react-share";
+// import "./Score.scss";
 
-import './Score.scss';
+// import Swal from "sweetalert2";
 
-function ShareModal({ show, setShow, closeModal }) {
-  // if (!show) {
-  //   return null;
-  // }
+// function ShareModal({ show, setShow }) {
+//   return (
+//     <div className="share-modal-container">
+//       <button className="close-modal" onClick={() => setShow(false)}>
+//         X
+//       </button>
+//       <h2>Share this mission with a friend</h2>
 
-  console.log(show);
+//       <div className="modal-container-buttons">
+//         <input value="https://prowein.raicesibericas.com/guests"></input>
+//         <button
+//           className="tryAgainButton"
+//           onClick={() =>
+//             navigator.clipboard.writeText(
+//               "https://prowein.raicesibericas.com/guests"
+//             )
+//           }
+//         >
+//           Copy
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
 
-  const shareUrl =
-    "https://api.whatsapp.com/send?phone=1167062068&text=Ven%20a%20jugar%20con%20Bodega%20Raices.%20Cuanto%20sabes%20de%20los%20vinos%20espanoles";
-
-  return (
-    <div className="share-modal-container">
-      <h2>Compate por WhatsApp con tus amigos</h2>
-      <button
-        style={{ fontSize: "50px", color: "black" }}
-        onClick={() => setShow(false)}
-      >
-        X
-      </button>
-
-      <div style={{ display: "flex" }}>
-        <input value="https://prowein.raicesibericas.com/"></input>
-        <button
-          className="tryAgainButton"
-          onClick={() =>
-            navigator.clipboard.writeText("https://prowein.raicesibericas.com/")
-          }
-        >
-          Copy
-        </button>
-      </div>
-    </div>
-  );
-}
-
-export default ShareModal;
-
-
-      {
-        /* <WhatsappShareButton url={shareUrl}>
-        <WhatsappIcon size={32} round={true} />
-      </WhatsappShareButton> */
-      }
+// export default ShareModal;

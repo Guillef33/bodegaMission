@@ -1,6 +1,8 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
 // import { useNavigate } from "react-router-dom";
 import questions from "../components/questions/questions";
+import data from "../components/surveyBox/data";
+
 import { inCollection } from "../helpers/validationsContext";
 
 export const AppContext = createContext(null);
@@ -11,18 +13,68 @@ function AppProvider(props) {
   const [showBeforeComponent, setShowBeforeComponent] = useState(false);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  // Survey
+  const [currentScreen, setCurrentScreen] = useState(0);
+  const [results, setResults] = useState(false);
+  const [rating, setRating] = useState(false);
+  const [esRadio, setEsRadio] = useState(false);
+
+
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
   // Modelo para guardar los datos y las respuestas del usuario
   const [resp, setResp] = useState([]);
   // let navigate = useNavigate();
+  const [timeIsUp, setTimeIsUp] = useState(false);
 
-  //TODO:
+  //Formulario nuevo para caja
+  const [formResp, setFormResp] = useState([]);
+
+  const addFormResp = (newResp) => {
+    // Este ID esta en la colection? Si es true, sigue. Sino va al else. 
+    if (inCollection(newResp.id, formResp)) {
+      //Este map retorna un nuevo array añadiendo un respuesta más para una determinada pregunta
+      let newCollection = formResp.map((el) => {
+        if (el.id === newResp.id) {
+          el.answerOptions.push(newResp.answerOptions[0]);
+          return el;
+        } else {
+          return el;
+        }
+      });
+      setFormResp(newCollection);
+    } else {
+      //cuando más de una respuesta es correcta, solo identifico el id, y añado un objeto más al asnwerOption.
+      setFormResp([...formResp, newResp]);
+    }
+  }
+
+  const removeFormResp = (id, answerText) => {
+    console.table({ id, answerText });
+    let newResp = [...formResp];
+    newResp = newResp.map((el) => {
+      if (el.id === id) {
+        let newAnswerOptions = el.answerOptions.filter(
+          (answer) => answer.answerText !== answerText
+        );
+        return {
+          id: el.id,
+          questionText: el.questionText,
+          answerOptions: newAnswerOptions,
+        };
+      } else {
+        return el;
+      }
+    });
+    setFormResp(newResp);
+  };
+
+
+
   const addResp = (newResp) => {
-    // const {  }
     //inCollection verifica si el id de la pregunta ya existe en la coleción
     if (inCollection(newResp.id, resp)) {
-      console.log("entré", resp);
       //Este map retorna un nuevo array añadiendo un respuesta más para una determinada pregunta
       let newCollection = resp.map((el) => {
         if (el.id === newResp.id) {
@@ -39,10 +91,45 @@ function AppProvider(props) {
     }
   };
 
-  const handleAnswerOptionClick = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
+  const removeResp = (id, answerText) => {
+    console.table({ id, answerText });
+    let newResp = [...resp];
+    newResp = newResp.map((el) => {
+      if (el.id === id) {
+        console.log("entre acaehfuehf0");
+        let newAnswerOption = el.answerOption.filter(
+          (answer) => answer.answerText !== answerText
+        );
+        // console.log(newAnswerOption, answerText);
+        return {
+          id: el.id,
+          questionText: el.questionText,
+          answerOption: newAnswerOption,
+        };
+      } else {
+        return el;
+      }
+    });
+    setResp(newResp);
+  };
+
+  const scoreCalculator = () => {
+    const arrayPoints = resp.map((el) => {
+      if (el.answerOption.length) {
+        let respValue = true;
+        el.answerOption.forEach((answer) => {
+          respValue = respValue * answer.isCorrect;
+        });
+        return respValue;
+      } else {
+        return false;
+      }
+    });
+    const result = arrayPoints.reduce(
+      (acumulator, currentValue) => acumulator + currentValue
+    );
+    // console.log("result: ", arrayPoints.length);
+    setScore(result);
   };
 
   const pasarPregunta = () => {
@@ -50,6 +137,7 @@ function AppProvider(props) {
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
+      scoreCalculator();
       setShowScore(true);
     }
   };
@@ -65,13 +153,30 @@ function AppProvider(props) {
     }
   };
 
-  const omitirPregunta = () => {
-    pasarPregunta();
+  const pasarScreen = () => {
+    const nextScreen = currentScreen + 1;
+    if (nextScreen < data.length) {
+      setCurrentScreen(nextScreen);
+    } else {
+      // scoreCalculator();
+      setResults(true);
+    }
   };
 
+  const volverScreen = () => {
+    if (currentScreen !== 0) {
+      const beforeScreen = currentScreen - 1;
+      if (beforeScreen < data.length) {
+        setCurrentScreen(beforeScreen);
+      } else {
+        setResults(true);
+      }
+    }
+  };
   const restartGame = (e) => {
+    setTimeIsUp(false);
     setShowScore(false);
-    setResp( [] );
+    setResp([]);
     setCurrentQuestion(0);
   };
 
@@ -92,28 +197,9 @@ function AppProvider(props) {
     setShowBeforeComponent(true);
   }
 
-  const handleStart = () => {
-    // setStatus(STATUS.STARTED);
-  };
-
   function handleClose() {
-    console.log(showQuizz);
+    // console.log(showQuizz);
     setShowQuizz(false);
-    // setStatus(STATUS.STOPPED);
-  }
-  function localStorageSet(key, item) {
-    try {
-      localStorage.setItem(key, JSON.stringify(item));
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  function localStorageGet(key) {
-    try {
-      let result = JSON.parse(localStorage.getItem(key));
-    } catch (error) {
-      console.log(error);
-    }
   }
 
   return (
@@ -121,6 +207,13 @@ function AppProvider(props) {
       value={{
         resp,
         addResp,
+        removeResp,
+        scoreCalculator,
+        //nuevo formulario
+        formResp,
+        addFormResp,
+        removeFormResp,
+        //---------
         showScore,
         showQuizz,
         showGame,
@@ -128,20 +221,11 @@ function AppProvider(props) {
         currentQuestion,
         score,
         restartGame,
-        handleAnswerOptionClick,
-        // setStatus,
-        // STATUS,
-        // secondsRemaining,
-        // secondsToDisplay,
-        // twoDigits,
-        // useInterval,
-        handleStart,
-        // losing,
         handleClose,
         setShowQuizz,
         StartGame,
         pasarPregunta,
-        omitirPregunta,
+        // omitirPregunta,
         volverPregunta,
         showStartMission,
         setShowStartMission,
@@ -149,6 +233,17 @@ function AppProvider(props) {
         showBefore,
         setShowBeforeComponent,
         showBeforeComponent,
+        timeIsUp,
+        setTimeIsUp,
+        data,
+        currentScreen,
+        setCurrentScreen,
+        pasarScreen,
+        volverScreen,
+        results,
+        setResults,
+        rating,
+        setRating,
       }}
     >
       {props.children}
@@ -157,19 +252,3 @@ function AppProvider(props) {
 }
 
 export default AppProvider;
-
-// const STATUS = {
-//   STARTED: "Started",
-//   STOPPED: "Stopped",
-// };
-
-// LIMPIAR CONTADOR
-// Parte del contador
-// const INITIAL_COUNT = 90;
-
-// const [secondsRemaining, setSecondsRemaining] = useState(INITIAL_COUNT);
-// const [status, setStatus] = useState(STATUS.STOPPED);
-
-// const [losing, SetLosing] = useState(false);
-
-// const secondsToDisplay = secondsRemaini

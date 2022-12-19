@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-import { AiFillPlayCircle }  from "react-icons/ai";
+import { AiFillPlayCircle } from "react-icons/ai";
 import { FaStopCircle } from "react-icons/fa";
 
+import { BsSquareFill } from 'react-icons/bs'
 
+import { FaMusic } from 'react-icons/fa';
 
 // import PlayButton from "../Buttons/PlayButton";
 
-import './player.css'
+import "./player.css";
 
 const useAudio = () => {
-  const [audio] = useState(new Audio("/never.mp3"));
+  const [audio] = useState(new Audio("/suspenso.mp3"));
   const [playing, setPlaying] = useState(false);
 
   const toggle = () => setPlaying(!playing);
@@ -36,9 +38,16 @@ const Player = ({ url }) => {
     <>
       <span className="playIconWrapper" onClick={toggle}>
         {playing ? (
-          <FaStopCircle className="playerIcon" />
+          // <FaStopCircle className="playerIcon" />
+                    <BsSquareFill className="playerIcon" />
+
+
+
+
+
         ) : (
-          <AiFillPlayCircle className="playerIcon" />
+          // <AiFillPlayCircle className="playerIcon" />
+        <FaMusic className="playerIcon" />
         )}
       </span>
     </>

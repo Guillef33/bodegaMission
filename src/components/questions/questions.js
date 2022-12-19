@@ -1,99 +1,101 @@
-import RaicesBack1 from "../../assets/back1.jpg";
-import RaicesBack2 from "../../assets/back2.jpg";
-import RaicesBack3 from "../../assets/back3.jpeg";
-import RaicesBack4 from "../../assets/back4.jpeg";
-import RaicesBack5 from "../../assets/back5.jpeg";
-import RaicesBack6 from "../../assets/back6.jpg";
-import RaicesBack7 from "../../assets/back7.jpg";
-import RaicesBack8 from "../../assets/back8.jpg";
-
 // Nuevas Imagenes
-import vinoCuna from "../../assets/vinoCuna.png";
-import fondoPizarras from "../../assets/fondoPizarras.png";
-import fondoSombras from "../../assets/fondoSombras.png";
-import fondoVinedo from "../../assets/fondoVinedo.png";
-import fondoPaisaje from "../../assets/fondoPaisaje.png";
+import vinoCuna from "../../assets/vinoCuna.jpg";
+import fondoPizarras from "../../assets/fondoPizarras.jpg";
+import fondoPaisaje from "../../assets/fondoPaisaje.jpg";
 
+import Raices1 from "../../assets/Raices1.png";
+import RaicesMalvar from "../../assets/RaicesMalvar.png";
+import RaicesMalvar1 from "../../assets/RaicesMalvar1.png";
+import CRPunto from "../../assets/CRPunto.png";
+import Cepa from "../../assets/Cepa.png";
 
+// Testing GitHub
 
 const questions = [
   {
-    questionText: "Which is the variety in Spain most planted?",
+    questionText: "Which is the most planted grape variety in Spain? ",
     answerOptions: [
       { answerText: "Garnacha", isCorrect: false },
-      { answerText: "Airen", isCorrect: false },
-      { answerText: "Bobal", isCorrect: true },
-      { answerText: "Tempranillo ", isCorrect: false },
+      { answerText: "Airén", isCorrect: false },
+      { answerText: "Bobal", isCorrect: false },
+      { answerText: "Tempranillo ", isCorrect: true },
       { answerText: "Albariño ", isCorrect: false },
     ],
     image: vinoCuna,
     id: 1,
+    correctQty: 1,
   },
   {
-    questionText: "Which is the region where the Garnacha was born?",
+    questionText: "In what region was the garnacha grape born?",
     answerOptions: [
-      { answerText: "Aragón", isCorrect: false },
-      { answerText: "Cataluña", isCorrect: true },
+      { answerText: "Aragón", isCorrect: true },
+      { answerText: "Cataluña", isCorrect: false },
       { answerText: "Rioja", isCorrect: false },
     ],
     image: fondoPizarras,
     id: 2,
+    correctQty: 1,
   },
   {
     questionText:
-      "Talking about Aragon, which of the following wine regions belong to the region?",
+      "Let’s talk about the Aragon province. Which of the following wine regions belong to it?",
 
     answerOptions: [
-      // { answerText: "Calatayud", isCorrect: true },
-      // { answerText: "Utiel Requena", isCorrect: false },
-      // { answerText: "Campo de Borja", isCorrect: false },
-      // { answerText: "Yecla", isCorrect: false },
-      // { answerText: "Cariñena", isCorrect: true },
-      { answerText: "Cigales", isCorrect: true },
-      { answerText: "Somontano", isCorrect: false },
-      { answerText: "Pla de bages", isCorrect: true },
+      { answerText: "Calatayud", isCorrect: true },
+      { answerText: "Utiel-Requena", isCorrect: false },
+      { answerText: "Yecla", isCorrect: false },
+      { answerText: "Cariñena", isCorrect: true },
+      { answerText: "Cigales", isCorrect: false },
+      { answerText: "Somontano", isCorrect: true },
+      { answerText: "Pla de Bages", isCorrect: false },
+      { answerText: "Campo de Borja", isCorrect: true },
       { answerText: "Arlanza", isCorrect: false },
-      { answerText: "Bierzo", isCorrect: true },
+      { answerText: "Bierzo", isCorrect: false },
     ],
     image: fondoPaisaje,
     id: 3,
+    correctQty: 4,
   },
   {
-    questionText: "Select 5 autochthonous varieties from Spain?",
+    // cinco correctas
+    questionText: "Select the five indigenous grape varieties from Spain:",
 
     answerOptions: [
-      // { answerText: "Cigales", isCorrect: false },
-      // { answerText: "Somontano", isCorrect: false },
-      // { answerText: "Pla de bages", isCorrect: false },
-      // { answerText: "Arlanza", isCorrect: false },
-      // { answerText: "Bierzo", isCorrect: false },
-      { answerText: "Calatayud", isCorrect: true },
-      { answerText: "Utiel Requena", isCorrect: false },
-      { answerText: "Campo de Borja", isCorrect: false },
-      { answerText: "Yecla", isCorrect: false },
-      { answerText: "Cariñena", isCorrect: true },
+      { answerText: "Albillo", isCorrect: true },
+      { answerText: "Aspiran", isCorrect: false },
+      { answerText: "Carménère", isCorrect: false },
+      { answerText: "Garnacha", isCorrect: true },
+      { answerText: "Albarin", isCorrect: true },
+      { answerText: "Elvira", isCorrect: false },
+      { answerText: "Rufete", isCorrect: true },
+      { answerText: "Malvar", isCorrect: true },
+      { answerText: "Olivella", isCorrect: false },
+      { answerText: "Cesar", isCorrect: false },
     ],
-    image: fondoPaisaje,
+    image: Raices1,
     id: 4,
+    correctQty: 5,
   },
   {
-    questionText: "Is it Rufete red, white or both?",
+    questionText: "Is Rufete a red or white grape variety? Or both?",
     answerOptions: [
-      { answerText: "White", isCorrect: true },
+      { answerText: "White", isCorrect: false },
       { answerText: "Red", isCorrect: false },
-      { answerText: "Both", isCorrect: false },
+      { answerText: "Both", isCorrect: true },
     ],
-    image: fondoPaisaje,
+    image: RaicesMalvar,
     id: 5,
+    correctQty: 1,
   },
   {
-    questionText: "Is Albarin related to Alrariño?",
+    questionText: "Is Albarin related to Albariño?",
     answerOptions: [
-      { answerText: "Yes", isCorrect: true },
-      { answerText: "No", isCorrect: false },
+      { answerText: "Yes", isCorrect: false },
+      { answerText: "No", isCorrect: true },
     ],
-    image: fondoPaisaje,
+    image: RaicesMalvar1,
     id: 6,
+    correctQty: 1,
   },
   {
     questionText: "Malvar is a variety that can be found in?",
@@ -102,19 +104,24 @@ const questions = [
       { answerText: "Jerez", isCorrect: false },
       { answerText: "Galicia", isCorrect: false },
     ],
-    image: fondoPaisaje,
+    image: CRPunto,
     id: 7,
+    correctQty: 1,
   },
   {
+    // tres correctas
     questionText: "Mazuela is from?",
     answerOptions: [
-      { answerText: "Rioja", isCorrect: false },
+      { answerText: "Rioja", isCorrect: true },
+      { answerText: "Rías Baixas", isCorrect: false },
+      { answerText: "Valdeorras", isCorrect: false },
+      { answerText: "Madrid", isCorrect: false },
       { answerText: "Cariñena", isCorrect: true },
-      { answerText: "Priorat", isCorrect: false },
-      { answerText: "All", isCorrect: true },
+      { answerText: "Priorat", isCorrect: true },
     ],
-    image: fondoPaisaje,
+    image: Cepa,
     id: 8,
+    correctQty: 3,
   },
 ];
 
