@@ -40,17 +40,22 @@ const SurveyForm = () => {
 
   const surveySubmit = async (event) => {
     event.preventDefault();
-    console.warn("SE detuvo submit");
+    console.warn("Se detuvo submit");
     let formData = {
       name: event.target[0].value,
       email: event.target[1].value,
       // agregar las respuestas del usuario
     };
-    const isValid = await userSchema.isValid(formData);
+    console.log(formData);
+    let  isValid = await userSchema.isValid(formData);
+     isValid = true;
     const docRef = await addDoc(collection(db, "surveys"), {
       values,
     });
     setValues(initialState);
+    console.log(initialState);
+    console.log(isValid);
+
     isValid &&
       Swal.fire(
         {
@@ -65,7 +70,6 @@ const SurveyForm = () => {
       );
   };
 
-  //Arreglar Guilleur feedback
   return (
     <div className>
       <h3 className="form-h3-survey">
