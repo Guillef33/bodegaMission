@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
 import { userSchema } from "./userValidation";
@@ -8,21 +8,22 @@ import { addDoc } from "@firebase/firestore";
 import { db } from "../../data/config";
 import Swal from "sweetalert2";
 import { AppContext } from "../../context/AppContext";
-
-//Traer del context la data
+import emailjs from "@emailjs/browser";
 
 const SurveyForm = () => {
   let navigate = useNavigate();
-  // const [emailSend, setEmailSend] = useState(false);
+  const form = useRef();
+
   const { formResp } = useContext(AppContext);
 
+  // Ojo con esta varoiable es un booleanoi
   const [selectOption, setSelectOption] = useState(false);
 
   const initialState = {
     name: "",
     email: "",
+    option: "",
     responses: [...formResp],
-    // State de Preguntas
   };
 
   const [values, setValues] = useState(initialState);
@@ -40,20 +41,39 @@ const SurveyForm = () => {
 
   const surveySubmit = async (event) => {
     event.preventDefault();
-    console.warn("Se detuvo submit");
     let formData = {
       name: event.target[0].value,
       email: event.target[1].value,
       option: event.target[2].value,
-      // agregar las respuestas del usuario
     };
     console.log(formData);
-    let  isValid = await userSchema.isValid(formData);
-     isValid = true;
+    console.log(form.current);
+
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_iurxj7h",
+        form.current,
+        "user_vqPFxAk62xt1529ZNfLfd"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log(form.current);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    let isValid = await userSchema.isValid(formData);
+    isValid = true;
     const docRef = await addDoc(collection(db, "surveys"), {
       values,
     });
     setValues(initialState);
+
+    console.log(values);
 
     isValid &&
       Swal.fire(
@@ -78,20 +98,20 @@ const SurveyForm = () => {
 
       <Formik
         validationSchema={userSchema}
-        initialValues={{ name: "", email: "" }}
-        // onSubmit={dataBase}
+        initialValues={{ name: "", email: "", option: "" }}
       >
         {({ errors, touched }) => (
-          <Form className="form-wrapper" onSubmit={surveySubmit}>
+          <Form className="form-wrapper" onSubmit={surveySubmit} ref={form}>
             <label className="survey-label"> Select an option </label>
             <Field
               name="select"
               as="select"
-              placeholder="Enter your name"
+              placeholder="Pick one option"
               onInput={handleSelect}
               value={values.select}
               className="form-survey-select"
             >
+              <option>Pick one option</option>
               <option value="barcelona">
                 I want to schedule a meeting at Barcelona Wine Week
               </option>
