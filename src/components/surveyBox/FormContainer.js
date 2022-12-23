@@ -3,19 +3,16 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import FormItemList from "./FormItemList2";
 
-import './scss/FormContainer.scss';
+import "./scss/FormContainer.scss";
 import ControlButton from "./ControlButton";
 
-import data from './data';
+import data from "./data";
 
 import ReactGA4 from "react-ga4";
 
-
 const FormContainer = () => {
   const validationSchema = yup.object({
-    name: yup
-      .string("Enter your email")
-      .required("Name is required"),
+    name: yup.string("Enter your email").required("Name is required"),
     email: yup
       .string("Enter your email")
       .email("Enter a valid email")
@@ -24,25 +21,21 @@ const FormContainer = () => {
 
   const formik = useFormik({
     initialValues: {
-      //TODO: definir todos los datos que quiero recaudar
-      name: 'juan cruz',
-      email: 'email@email.com',
+      name: "juan cruz",
+      email: "email@email.com",
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
-      //Acá va el envío a firebase
-      // alert(JSON.stringify(values, null, 2));
-    },
+    onSubmit: (values) => {},
   });
 
   const [currentScreen, setCurrentScreen] = useState(0);
-  
-  const [finish, setFinish] = useState(false)
 
-      useEffect(() => {
-        ReactGA4.initialize("G-6GXQ55LQ04");
-        ReactGA4.send({ hitType: "pageview", page: "/survey" });
-      }, []);
+  const [finish, setFinish] = useState(false);
+
+  useEffect(() => {
+    ReactGA4.initialize("G-6GXQ55LQ04");
+    ReactGA4.send({ hitType: "pageview", page: "/survey" });
+  }, []);
 
   return (
     <section
@@ -57,14 +50,13 @@ const FormContainer = () => {
       <ControlButton
         type={"back"}
         initial={0}
-        limit={6}
+        limit={9}
         currentScreen={currentScreen}
         setCurrentScreen={setCurrentScreen}
       />
       <div className="box-form form-answers">
         <FormItemList
           currentScreen={currentScreen}
-          // setQuestions={setQuestions}
           formik={formik}
           finish={finish}
           setFinish={setFinish}
@@ -73,7 +65,7 @@ const FormContainer = () => {
       <ControlButton
         type={"next"}
         initial={0}
-        limit={7}
+        limit={9}
         currentScreen={currentScreen}
         setCurrentScreen={setCurrentScreen}
       />

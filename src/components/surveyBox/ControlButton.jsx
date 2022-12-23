@@ -144,6 +144,8 @@ const ControlButton = ({
     }
   };
 
+  console.log(limit, initial, currentScreen);
+
   switch (type) {
     case "next":
       return (
@@ -153,6 +155,7 @@ const ControlButton = ({
             disabled={currentScreen >= limit ? true : false}
             onClick={() => {
               handleClick(1);
+              console.log("next");
             }}
           >
             <IoIosArrowForward />
@@ -168,6 +171,7 @@ const ControlButton = ({
             disabled={currentScreen <= initial ? true : false}
             onClick={() => {
               handleClick(-1);
+              console.log("back");
             }}
           >
             <IoIosArrowBack />
