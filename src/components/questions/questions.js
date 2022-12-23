@@ -13,7 +13,7 @@ const questions = [
   {
     questionTitle: "GRACIANO IS A SPANISH GRAPE VARIETY",
     questionText:
-      "That adds “Grace” when used in blends, both in terms of aroma and taste. It can mainly be found in:",
+      "that adds “grace” when used in blends, both in terms of aroma and taste. It can mainly be found in:",
     answerOptions: [
       { answerText: "Ribera", isCorrect: false },
       { answerText: "Penedes", isCorrect: false },

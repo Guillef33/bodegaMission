@@ -7,6 +7,8 @@ import ButtonsResult from "./ButtonsResult";
 import raicesLogo from "../../assets/raices-ibericas.png";
 import InviteMail from "./InviteMail";
 
+import SurveyForm from '../Form/SurveyForm'
+
 import "./Score.scss";
 
 function Score() {
@@ -36,6 +38,7 @@ function Score() {
             {/* <InviteMail /> */}
           </div>
           <ButtonsResult />
+          {/* <SurveyForm /> */}
         </div>
       ) : (
         <div className="score-section">

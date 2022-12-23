@@ -50,7 +50,7 @@ const FormContainer = () => {
       <ControlButton
         type={"back"}
         initial={0}
-        limit={9}
+        limit={7}
         currentScreen={currentScreen}
         setCurrentScreen={setCurrentScreen}
       />
@@ -65,7 +65,7 @@ const FormContainer = () => {
       <ControlButton
         type={"next"}
         initial={0}
-        limit={9}
+        limit={7}
         currentScreen={currentScreen}
         setCurrentScreen={setCurrentScreen}
       />
