@@ -52,13 +52,13 @@ const SurveyForm = () => {
             const { answerOptions, questionText } = answer;
             const responses = answerOptions.map((answer) => answer.answerText);
             return {
-                question: questionText,
+                // question: questionText,
                 answer: responses.toString(),
             };
         });
 
-        const respObject = formRespMapped.reduce((acc, resp) => {
-            acc[resp.question] = resp.answer;
+        const respObject = formRespMapped.reduce((acc, resp, idx) => {
+            acc['answer' + idx] = resp.answer;
             return acc;
         }, {});
 
