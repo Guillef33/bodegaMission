@@ -23,7 +23,6 @@ const SurveyForm = () => {
         name: '',
         email: '',
         option: '',
-        responses: [...formResp],
     };
 
     const [values, setValues] = useState(initialState);
@@ -35,8 +34,10 @@ const SurveyForm = () => {
     };
 
     const handleSelect = (e) => {
+        const { value, name } = e.target;
         console.log(selectOption);
         setSelectOption(true);
+        setValues({ ...values, [name]: value });
     };
 
     const surveySubmit = async (event) => {
@@ -46,14 +47,26 @@ const SurveyForm = () => {
             email: event.target[1].value,
             option: event.target[2].value,
         };
-        console.log(formData);
-        console.log(form.current);
+
+        const formRespMapped = formResp.map((answer) => {
+            const { answerOptions, questionText } = answer;
+            const responses = answerOptions.map((answer) => answer.answerText);
+            return {
+                // question: questionText,
+                answer: responses.toString(),
+            };
+        });
+
+        const respObject = formRespMapped.reduce((acc, resp, idx) => {
+            acc['answer' + idx] = resp.answer;
+            return acc;
+        }, {});
 
         emailjs
-            .sendForm(
+            .send(
                 'gmail',
                 'template_iurxj7h',
-                form.current,
+                { ...values, ...respObject },
                 'user_vqPFxAk62xt1529ZNfLfd'
             )
             .then(
@@ -111,7 +124,7 @@ const SurveyForm = () => {
                             Select an option{' '}
                         </label>
                         <Field
-                            name="select"
+                            name="option"
                             as="select"
                             placeholder="Pick one option"
                             onInput={handleSelect}

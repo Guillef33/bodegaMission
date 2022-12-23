@@ -31,7 +31,7 @@ const FormItemList = ({ currentScreen, formik, finish, setFinish }) => {
       return (
         <>
           <h1 className="title-box">
-            The challenge, try to guess the grape variety, but do not worry, we
+            The challenge: try to guess the grape variety, but do not worry, we
             will help you let's go step by step.
           </h1>
           <img src={logoRaices} alt="logo-raices" className="logo-image-box" />
