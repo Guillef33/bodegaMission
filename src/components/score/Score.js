@@ -7,7 +7,7 @@ import ButtonsResult from "./ButtonsResult";
 import raicesLogo from "../../assets/raices-ibericas.png";
 import InviteMail from "./InviteMail";
 
-import SurveyForm from '../Form/SurveyForm'
+import SurveyForm from "../Form/SurveyForm";
 
 import "./Score.scss";
 
@@ -55,11 +55,13 @@ function Score() {
           <div className="text-result-wrapper">
             <p className="score-result-title">There is still much to learn!</p>
             <p className="score-result-text">
-              90% of the wine connoisseurs confess that they have never heard of some of the Spanish varieties mentioned.
+              90% of the wine connoisseurs confess that they have never heard of
+              some of the Spanish varieties mentioned.
             </p>
             {/* <InviteMail /> */}
+            <ButtonsResult />
           </div>
-          <ButtonsResult />
+          <SurveyForm />
         </div>
       )}
     </>
