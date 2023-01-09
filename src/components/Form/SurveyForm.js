@@ -108,8 +108,7 @@ const SurveyForm = () => {
   return (
     <div>
       <h3 className="form-h3-survey">
-        WHILE WE CALCULATE YOUR RESULTS, CLICK HERE TO BOOK A MEETING WITH US,
-        AND WE WILL PREPARE A SPECIAL TASTING FOR YOU.
+        IF YOU WANT TO TASTE SOME HIDDEN TREASURES, CLICK HERE TO BOOK
       </h3>
 
       <Formik
