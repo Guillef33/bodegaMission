@@ -59,15 +59,25 @@
 }
 
 .button-about {
-    border: none !important;
+  border: none !important;
+  background-color: black;
 }
 
 .swal2-styled.swal2-confirm {
-  background-color: black;
+  background-color: white;
   border: none !important;
   border-radius: 20px;
   width: 250px;
   height: 45px;
+  color: black;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  border: none !important;
+}
+
+.swal2-html-container {
+  color: white;
 }
 
 @media screen and (max-width: 768px) {

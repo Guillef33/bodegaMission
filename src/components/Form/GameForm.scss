@@ -57,6 +57,11 @@
 }
 
 
+.getResultButton:active {
+    transform: scale(0.98);
+}
+
+
 
 @media screen and (max-width: 760px) {
     .form-wrapper-game {

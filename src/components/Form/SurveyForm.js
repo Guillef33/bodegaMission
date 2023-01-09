@@ -108,7 +108,7 @@ const SurveyForm = () => {
   return (
     <div>
       <h3 className="form-h3-survey">
-        F YOU WANT TO TASTE SOME HIDDEN TREASURES, CLICK HERE TO BOOK A MEETING
+        IF YOU WANT TO TASTE SOME HIDDEN TREASURES, CLICK HERE TO BOOK A MEETING
         WITH US, AND WE WILL PREPARE A SPECIAL TASTIG FOR YOU.
       </h3>
 
@@ -150,7 +150,10 @@ const SurveyForm = () => {
 
             {selectOption === true && (
               <>
-                <label className="survey-label"> Your name </label>
+                {location.pathname === "/score" ? null : (
+                  <label className="survey-label"> Your name </label>
+                )}
+
                 <Field
                   name="name"
                   type="text"
@@ -163,7 +166,9 @@ const SurveyForm = () => {
                   <p className="validation-Error">{errors.name}</p>
                 ) : null}
                 {/* <ErrorMessage name="name" /> */}
-                <label className="survey-label"> Your email </label>
+                {location.pathname === "/score" ? null : (
+                  <label className="survey-label"> Your email </label>
+                )}
                 <Field
                   name="email"
                   type="email"
@@ -175,12 +180,19 @@ const SurveyForm = () => {
                 {errors.email && touched.email ? (
                   <p className="validation-Error">{errors.email}</p>
                 ) : null}
-                <button
-                  className="send-form-button send-form-button-survey"
-                  type="submit"
-                >
-                  See more
-                </button>
+
+                {location.pathname === "/score" ? (
+                  <button className="send-form-button" type="submit">
+                    Submit
+                  </button>
+                ) : (
+                  <button
+                    className="send-form-button send-form-button-survey"
+                    type="submit"
+                  >
+                    See more
+                  </button>
+                )}
               </>
             )}
           </Form>
