@@ -109,7 +109,7 @@ const SurveyForm = () => {
     <div>
       <h3 className="form-h3-survey">
         IF YOU WANT TO TASTE SOME HIDDEN TREASURES, CLICK HERE TO BOOK A MEETING
-        WITH US, AND WE WILL PREPARE A SPECIAL TASTIG FOR YOU.
+        WITH US, AND WE WILL PREPARE A SPECIAL TASTING FOR YOU.
       </h3>
 
       <Formik
