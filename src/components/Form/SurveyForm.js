@@ -94,22 +94,27 @@ const SurveyForm = () => {
     isValid &&
       Swal.fire(
         {
-          title: "Ready to see the correct answer? ",
+          title: "Thank you!",
           icon: "success",
           confirmButtonText: "Ok",
           customClass: "button-about",
           timer: 3500,
         },
         isValid && setEmailSend(docRef.id),
-        isValid && setTimeout(() => navigate("/results"), 4000)
+        isValid &&
+          setTimeout(
+            () => window.location.replace("https://raicesibericas.com"),
+            //  navigate("https://raicesibericas.com"),
+            4000
+          )
       );
   };
 
   return (
     <div>
       <h3 className="form-h3-survey">
-        OUR NEXT ASSIGNMENT WILL BE GIVEN TO YOU IN THE FOLLOWING EVENT. JOIN US
-        IN PERSON, book a meeting with us:
+        YOUR NEXT ASSIGNMENT WILL BE GIVEN TO YOU IN THE FOLLOWING EVENT. Book a
+        meeting with us:
       </h3>
 
       <Formik
@@ -190,7 +195,7 @@ const SurveyForm = () => {
                     className="send-form-button send-form-button-survey"
                     type="submit"
                   >
-                    See more
+                    Submit
                   </button>
                 )}
               </>
