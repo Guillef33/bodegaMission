@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import fondoVinedo from "../../assets/fondoVinedo.png";
 
@@ -67,10 +67,13 @@ const AboutUs = () => {
             </p>
           ) : (
             <>
-              <h3 className="form-text">
+              <Link to="/score" className="getResultButton">
+                Get Results
+              </Link>
+              {/* <h3 className="form-text">
                 Please share your email with us to see your results
               </h3>
-              <GameForm />
+              <GameForm /> */}
             </>
           )}
         </div>

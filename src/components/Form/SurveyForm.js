@@ -108,8 +108,8 @@ const SurveyForm = () => {
   return (
     <div>
       <h3 className="form-h3-survey">
-        IF YOU WANT TO TASTE SOME HIDDEN TREASURES, CLICK HERE TO BOOK A MEETING
-        WITH US, AND WE WILL PREPARE A SPECIAL TASTING FOR YOU.
+        OUR NEXT ASSIGNMENT WILL BE GIVEN TO YOU IN THE FOLLOWING EVENT. JOIN US
+        IN PERSON, book a meeting with us:
       </h3>
 
       <Formik
@@ -132,16 +132,16 @@ const SurveyForm = () => {
             >
               <option>Pick one option</option>
               <option value="barcelona">
-                I want to schedule a meeting at Barcelona Wine Week
+                I want to schedule a meeting at Barcelona Wine Week 6-8 February{" "}
               </option>
               <option value="prowein">
-                I want to schedule a meeting at Prowein
+                I want to schedule a meeting at Wine Paris 13-15 February{" "}
               </option>
               <option value="meeting">
-                I want to schedule a meeting at Wine Expo{" "}
+                I want to schedule a meeting at ProWein 19-21 March{" "}
               </option>
               <option value="singapur">
-                I want to schedule a meeting at Prowein Singapur{" "}
+                I want to schedule a meeting at Vinexpo Asia 23-25 May{" "}
               </option>
             </Field>
             {errors.select && touched.select ? (

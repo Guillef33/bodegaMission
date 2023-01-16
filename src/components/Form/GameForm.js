@@ -64,7 +64,6 @@ const GameForm = () => {
           {errors.name && touched.name ? (
             <p className="validation-Error">{errors.name}</p>
           ) : null}
-          {/* <ErrorMessage name="name" /> */}
           <Field
             className="form-game-input"
             name="email"
