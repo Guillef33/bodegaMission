@@ -89,22 +89,32 @@ const SurveyForm = () => {
     });
     setValues(initialState);
 
+    if (location.pathname === "/survey") {
       isValid &&
-      Swal.fire(
-        {
-          title: "Thank you!",
-          icon: "success",
-          confirmButtonText: "Ok",
-          customClass: "button-about",
-          timer: 3500,
-        },
-        isValid && setEmailSend(docRef.id),
-
-        if (location.pathname == "/survey") {
-          isValid && setTimeout(() => navigate("/results"), 4000),
-        }
-
-      );
+        Swal.fire(
+          {
+            title: "Thank you!",
+            icon: "success",
+            confirmButtonText: "Ok",
+            customClass: "button-about",
+            timer: 3500,
+          },
+          isValid && setEmailSend(docRef.id),
+          isValid && setTimeout(() => navigate("/results"), 4000)
+        );
+    } else {
+      isValid &&
+        Swal.fire(
+          {
+            title: "Thank you!",
+            icon: "success",
+            confirmButtonText: "Ok",
+            customClass: "button-about",
+            timer: 3500,
+          },
+          isValid && setEmailSend(docRef.id)
+        );
+    }
   };
 
   return (
