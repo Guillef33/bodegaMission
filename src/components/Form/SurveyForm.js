@@ -89,9 +89,7 @@ const SurveyForm = () => {
     });
     setValues(initialState);
 
-    console.log(values);
-
-    isValid &&
+      isValid &&
       Swal.fire(
         {
           title: "Thank you!",
@@ -101,12 +99,11 @@ const SurveyForm = () => {
           timer: 3500,
         },
         isValid && setEmailSend(docRef.id),
-        isValid &&
-          setTimeout(
-            () => window.location.replace("https://raicesibericas.com"),
-            //  navigate("https://raicesibericas.com"),
-            4000
-          )
+
+        if (location.pathname == "/survey") {
+          isValid && setTimeout(() => navigate("/results"), 4000),
+        }
+
       );
   };
 
