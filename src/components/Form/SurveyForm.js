@@ -93,14 +93,19 @@ const SurveyForm = () => {
       isValid &&
         Swal.fire(
           {
-            title: "Thank you!",
+            title: "Ready to see the correct answer?",
             icon: "success",
             confirmButtonText: "Ok",
             customClass: "button-about",
             timer: 3500,
           },
           isValid && setEmailSend(docRef.id),
-          isValid && setTimeout(() => navigate("/results"), 4000)
+          isValid && setTimeout(() => navigate("/results"), 4000),
+          isValid &&
+            setTimeout(
+              () => window.location.replace("https://raicesibericas.com"),
+              12000
+            )
         );
     } else {
       isValid &&
@@ -112,7 +117,12 @@ const SurveyForm = () => {
             customClass: "button-about",
             timer: 3500,
           },
-          isValid && setEmailSend(docRef.id)
+          isValid && setEmailSend(docRef.id),
+          isValid &&
+            setTimeout(
+              () => window.location.replace("https://raicesibericas.com"),
+              4000
+            )
         );
     }
   };
