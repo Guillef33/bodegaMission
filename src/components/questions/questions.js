@@ -122,7 +122,7 @@ const questions = [
     ],
     image: Cepa,
     id: 8,
-    correctQty: 3,
+    correctQty: 1,
   },
   {
     questionText:
