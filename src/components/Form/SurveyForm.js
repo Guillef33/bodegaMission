@@ -104,7 +104,7 @@ const SurveyForm = () => {
           isValid &&
             setTimeout(
               () => window.location.replace("https://raicesibericas.com"),
-              12000
+              15000
             )
         );
     } else {
