@@ -100,6 +100,7 @@ const SurveyForm = () => {
             timer: 3500,
           },
           isValid && setEmailSend(docRef.id),
+          console.log("Survey", docRef.id),
           isValid && setTimeout(() => navigate("/results"), 4000),
           isValid &&
             setTimeout(
@@ -118,6 +119,8 @@ const SurveyForm = () => {
             timer: 3500,
           },
           isValid && setEmailSend(docRef.id),
+          console.log("Game", docRef.id),
+
           isValid &&
             setTimeout(
               () => window.location.replace("https://raicesibericas.com"),
@@ -156,10 +159,10 @@ const SurveyForm = () => {
               <option value="barcelona">
                 I want to schedule a meeting at Barcelona Wine Week 6-8 February{" "}
               </option>
-              <option value="prowein">
+              <option value="paris">
                 I want to schedule a meeting at Wine Paris 13-15 February{" "}
               </option>
-              <option value="meeting">
+              <option value="prowein">
                 I want to schedule a meeting at ProWein 19-21 March{" "}
               </option>
               <option value="singapur">
